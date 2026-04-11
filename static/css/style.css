@@ -3030,7 +3030,7 @@ section.team-section.bg-cream {
 }
 
 .archiv-list-col {
-    flex: 0 0 260px;
+    flex: 0 0 340px;
     min-width: 0;
 }
 
@@ -3639,7 +3639,7 @@ section.team-section.bg-cream {
 .archiv-search-bar {
     position: relative;
     margin: 0;
-    flex: 0 0 260px;
+    flex: 0 0 340px;
 }
 
 .archiv-search-bar input {
@@ -3738,7 +3738,7 @@ section.team-section.bg-cream {
 .archiv-col-jahr { width: 65px; }
 .archiv-col-flag { width: 36px; text-align: center; font-size: 1.2rem; }
 .archiv-flag { text-align: center; font-size: 1.15rem; }
-.archiv-col-land { width: 90px; }
+.archiv-col-land { width: 105px; }
 .archiv-col-stadt { width: 160px; }
 
 .archiv-no-results {
