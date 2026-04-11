@@ -1,0 +1,43 @@
+name: Build & Deploy to Strato
+
+on:
+  push:
+    branches:
+      - main          # Jeder Push auf main löst automatisch Deploy aus
+  workflow_dispatch:  # Manueller Start jederzeit möglich (GitHub → Actions → Run)
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Code auschecken
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      # 2. Hugo installieren (Extended Version für SCSS etc.)
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.147.0'
+          extended: true
+
+      # 3. Hugo bauen → erzeugt public/ Ordner
+      - name: Build
+        run: hugo --minify
+
+      # 4. Per SFTP zu Strato hochladen
+      #    Zugangsdaten kommen aus GitHub Secrets (nie im Code sichtbar)
+      - name: Deploy via SFTP to Strato
+        run: |
+          sudo apt-get install -y lftp
+          lftp -c "
+            set sftp:auto-confirm yes;
+            set net:max-retries 3;
+            open sftp://${{ secrets.SFTP_USER }}:${{ secrets.SFTP_PASSWORD }}@${{ secrets.SFTP_HOST }};
+            mirror --reverse --delete --verbose public/ ${{ secrets.SFTP_DIR }}/;
+            bye
+          "

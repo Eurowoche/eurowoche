@@ -3005,12 +3005,10 @@ section.team-section.bg-cream {
 /* === ARCHIVE TABLE === */
 /* === ARCHIV === */
 
-/* Karten-Abschnitt */
+/* Karten-Abschnitt: kein eigenes max-width/padding/margin — füllt exakt die 2fr-Spalte */
 .archiv-map-section {
-    max-width: 1060px;
-    margin: 3rem auto 0;
-    padding: 0 2rem;
-    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 /* Karte + Info-Panel nebeneinander */
@@ -3020,10 +3018,11 @@ section.team-section.bg-cream {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
-    column-gap: 1rem;
+    column-gap: 1.5rem;
     row-gap: 0;
     padding: 0 1.5rem;
     box-sizing: border-box;
+    max-width: 1400px;
     width: 100%;
     align-items: start;
 }
