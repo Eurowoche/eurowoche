@@ -1033,15 +1033,46 @@ body.menu-open .leaflet-container {
 .mach-mit-section-2 { background: #E8E4DC; }
 .mach-mit-section-3 { background: #E8E4DC; }
 
-/* Section 3 (Spende): schmaleres Foto, längerer Abschnitt, mehr Platz für Widget */
+/* Section 3 (Spende): 3-Spalten-Layout – Foto | Text | Widget */
 .mach-mit-section-3 {
-    height: 580px;
+    height: auto;
+    min-height: 500px;
+    align-items: stretch;
 }
 .mach-mit-section-3 .mach-mit-photo-side {
-    flex: 0 0 28%;
+    flex: 0 0 22%;
 }
 .mach-mit-section-3 .mach-mit-photo-side img {
     object-position: center top;
+}
+.spende-text-col {
+    flex: 1;
+    padding: 2.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.spende-text-col h2 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h4);
+    font-weight: 400;
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 1.1rem;
+    text-align: center;
+}
+.spende-text-col p {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0;
+}
+.spende-widget-col {
+    flex: 0 0 290px;
+    padding: 1.8rem 1.8rem 1.8rem 0;
+    display: flex;
+    align-items: center;
 }
 
 .mach-mit-photo-side {
@@ -3905,49 +3936,8 @@ section.team-section.bg-cream {
     border: 1px solid rgba(139,83,77,0.22);
     border-radius: 10px;
     overflow: hidden;
-    margin-top: 0.5rem;
     background: #fff;
-}
-
-.spende-tabs {
-    display: flex;
-    border-bottom: 1px solid rgba(139,83,77,0.18);
-    background: rgba(139,83,77,0.04);
-}
-
-.spende-tab {
-    flex: 1;
-    padding: 0.75rem 1rem;
-    background: none;
-    border: none;
-    border-bottom: 2px solid transparent;
-    cursor: pointer;
-    font-size: 0.88rem;
-    font-weight: 500;
-    color: #666;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.45rem;
-    transition: background 0.15s, color 0.15s;
-    margin-bottom: -1px;
-    font-family: inherit;
-}
-
-.spende-tab:hover:not([disabled]) {
-    background: rgba(139,83,77,0.07);
-    color: var(--primary);
-}
-
-.spende-tab.active {
-    background: #fff;
-    color: var(--primary);
-    border-bottom: 2px solid var(--primary);
-}
-
-.spende-tab-disabled {
-    opacity: 0.45;
-    cursor: not-allowed;
+    width: 100%;
 }
 
 .spende-soon-badge {
@@ -3962,20 +3952,36 @@ section.team-section.bg-cream {
     line-height: 1.4;
 }
 
-.spende-panel {
-    padding: 1.1rem 1.3rem;
+.spende-paypal-row {
+    padding: 0.7rem 1rem;
+    border-top: 1px solid rgba(139,83,77,0.12);
+    text-align: center;
+}
+
+.spende-paypal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 1.2rem;
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #aaa;
+    font-size: 0.82rem;
+    font-family: inherit;
+    cursor: not-allowed;
+    opacity: 0.55;
 }
 
 .spende-qr-top {
     text-align: center;
-    padding-bottom: 0.9rem;
-    margin-bottom: 0.9rem;
+    padding: 1rem 1rem 0.8rem;
     border-bottom: 1px solid rgba(139,83,77,0.12);
 }
 
 .spende-qr-top img {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 4px;
     display: block;
     margin: 0 auto 0.4rem;
@@ -3990,6 +3996,7 @@ section.team-section.bg-cream {
 
 .spende-bank-details {
     text-align: center;
+    padding: 0.8rem 1rem;
 }
 
 .spende-bank-details p {

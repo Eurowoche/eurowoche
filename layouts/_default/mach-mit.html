@@ -30,53 +30,40 @@
         </div>
     </div>
 
-    <!-- Abschnitt 3: Spende (Foto LINKS, Text RECHTS) -->
+    <!-- Abschnitt 3: Spende – 3 Spalten: Hochformat-Foto | Text | Spendenwidget -->
     <div class="mach-mit-section mach-mit-section-3">
         <div class="mach-mit-photo-side">
             <img src="/img/involvement/mach-mit-3.jpg" alt="Spende" loading="lazy">
         </div>
-        <div class="mach-mit-text-side">
+        <div class="spende-text-col">
             <h2>{{ i18n "donate" }}</h2>
             <p>{{ if eq .Lang "de" }}Deine Spende hilft uns, die Eurowoche am Leben zu erhalten – einen Ort, an dem junge Menschen aus ganz Europa zusammenkommen und gegenseitiges Verständnis entwickeln. Jede Unterstützung, ob groß oder klein, trägt dazu bei, diese Tradition der Freundschaft und des Friedens fortzuführen.{{ else if eq .Lang "en" }}Your donation helps us keep the Eurowoche alive – a place where young people from across Europe come together and develop mutual understanding. Every contribution, big or small, helps preserve this tradition of friendship and peace.{{ else if eq .Lang "fr" }}Votre don nous aide à maintenir l'Eurowoche vivante – un lieu où les jeunes de toute l'Europe se rencontrent et développent une compréhension mutuelle. Chaque contribution, grande ou petite, aide à préserver cette tradition d'amitié et de paix.{{ end }}</p>
-            <!-- Spenden-Widget -->
-            <div class="spende-widget" id="spende">
-                <div class="spende-tabs">
-                    <button class="spende-tab active" id="spende-tab-bank" onclick="spendeTab('bank')">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
-                        {{ if eq .Lang "de" }}Banküberweisung{{ else if eq .Lang "en" }}Bank Transfer{{ else if eq .Lang "fr" }}Virement bancaire{{ end }}
-                    </button>
-                    <button class="spende-tab spende-tab-disabled" id="spende-tab-paypal" title="{{ if eq .Lang "de" }}Demnächst verfügbar{{ else if eq .Lang "en" }}Coming soon{{ else if eq .Lang "fr" }}Bientôt disponible{{ end }}" disabled>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.563.563 0 0 0-.556.479l-1.187 7.527h-.506l-.24 1.516a.56.56 0 0 0 .554.647h3.882c.46 0 .85-.334.922-.788.06-.26.76-4.852.816-5.09a.932.932 0 0 1 .923-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.777-4.471z"/></svg>
+        </div>
+        <div class="spende-widget-col" id="spende">
+            <div class="spende-widget">
+                <!-- QR Code -->
+                <div class="spende-qr-top">
+                    <img src="/img/spende-qr.png" alt="QR-Code Banküberweisung" width="130" height="130">
+                    <p class="spende-qr-hint">{{ if eq .Lang "de" }}In Banking-App öffnen{{ else if eq .Lang "en" }}Open in banking app{{ else if eq .Lang "fr" }}Ouvrir dans votre app bancaire{{ end }}</p>
+                </div>
+                <!-- Kontoverbindung -->
+                <div class="spende-bank-details">
+                    <p><strong>Arbeitskreis Europäische Jugendwoche</strong></p>
+                    <p>Sparkasse Werra-Meißner</p>
+                    <p>IBAN:&nbsp;<code>DE23&nbsp;5225&nbsp;0030&nbsp;0050&nbsp;0056&nbsp;69</code></p>
+                    <p>BIC:&nbsp;<code>HELADEF1ESW</code></p>
+                    <p class="spende-amount">{{ if eq .Lang "de" }}Betrag: 20 € (oder nach Wunsch){{ else if eq .Lang "en" }}Amount: €20 (or as you wish){{ else if eq .Lang "fr" }}Montant : 20 € (ou selon vos souhaits){{ end }}</p>
+                    <p class="spende-purpose">{{ if eq .Lang "de" }}Verwendungszweck: <em>Spende Eurowoche</em>{{ else if eq .Lang "en" }}Reference: <em>Spende Eurowoche</em>{{ else if eq .Lang "fr" }}Référence : <em>Spende Eurowoche</em>{{ end }}</p>
+                </div>
+                <!-- PayPal (ausgegraut) -->
+                <div class="spende-paypal-row">
+                    <button class="spende-paypal-btn" disabled title="{{ if eq .Lang "de" }}Demnächst verfügbar{{ else if eq .Lang "en" }}Coming soon{{ else if eq .Lang "fr" }}Bientôt disponible{{ end }}">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.563.563 0 0 0-.556.479l-1.187 7.527h-.506l-.24 1.516a.56.56 0 0 0 .554.647h3.882c.46 0 .85-.334.922-.788.06-.26.76-4.852.816-5.09a.932.932 0 0 1 .923-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.777-4.471z"/></svg>
                         PayPal
                         <span class="spende-soon-badge">{{ if eq .Lang "de" }}demnächst{{ else if eq .Lang "en" }}soon{{ else if eq .Lang "fr" }}bientôt{{ end }}</span>
                     </button>
                 </div>
-                <div class="spende-panel" id="spende-panel-bank">
-                    <div class="spende-qr-top">
-                        <img src="/img/spende-qr.png" alt="QR-Code Banküberweisung" width="120" height="120">
-                        <p class="spende-qr-hint">{{ if eq .Lang "de" }}In Banking-App öffnen{{ else if eq .Lang "en" }}Open in banking app{{ else if eq .Lang "fr" }}Ouvrir dans votre app bancaire{{ end }}</p>
-                    </div>
-                    <div class="spende-bank-details">
-                        <p><strong>Arbeitskreis Europäische Jugendwoche</strong></p>
-                        <p>Sparkasse Werra-Meißner</p>
-                        <p>IBAN:&nbsp;<code>DE23&nbsp;5225&nbsp;0030&nbsp;0050&nbsp;0056&nbsp;69</code></p>
-                        <p>BIC:&nbsp;<code>HELADEF1ESW</code></p>
-                        <p class="spende-amount">{{ if eq .Lang "de" }}Betrag: 20 € (oder nach Wunsch){{ else if eq .Lang "en" }}Amount: €20 (or as you wish){{ else if eq .Lang "fr" }}Montant : 20 € (ou selon vos souhaits){{ end }}</p>
-                        <p class="spende-purpose">{{ if eq .Lang "de" }}Verwendungszweck: <em>Spende Eurowoche</em>{{ else if eq .Lang "en" }}Reference: <em>Spende Eurowoche</em>{{ else if eq .Lang "fr" }}Référence : <em>Spende Eurowoche</em>{{ end }}</p>
-                    </div>
-                </div>
-                <div class="spende-panel" id="spende-panel-paypal" style="display:none">
-                    <p style="color:#aaa;text-align:center;padding:1rem 0">{{ if eq .Lang "de" }}PayPal wird bald verfügbar sein.{{ else if eq .Lang "en" }}PayPal will be available soon.{{ else if eq .Lang "fr" }}PayPal sera bientôt disponible.{{ end }}</p>
-                </div>
             </div>
-            <script>
-            function spendeTab(tab) {
-                document.getElementById('spende-panel-bank').style.display = tab === 'bank' ? '' : 'none';
-                document.getElementById('spende-panel-paypal').style.display = tab === 'paypal' ? '' : 'none';
-                document.getElementById('spende-tab-bank').classList.toggle('active', tab === 'bank');
-                document.getElementById('spende-tab-paypal').classList.toggle('active', tab === 'paypal');
-            }
-            </script>
         </div>
     </div>
 
