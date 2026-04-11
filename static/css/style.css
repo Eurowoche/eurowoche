@@ -3023,14 +3023,14 @@ section.team-section.bg-cream {
 .archiv-layout {
     display: flex;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 0.6rem;
     padding: 0 2rem;
     box-sizing: border-box;
     width: 100%;
 }
 
 .archiv-list-col {
-    flex: 1;
+    flex: 0 0 260px;
     min-width: 0;
 }
 
@@ -3044,9 +3044,10 @@ section.team-section.bg-cream {
     min-width: 0;
 }
 
-/* Tabelle in der Liste: scrollbar, gleiche Höhe wie Karte */
+/* Tabelle in der Liste: exakt gleich hoch wie Karte */
 .archiv-list-col .archiv-table-wrap {
-    max-height: 490px;
+    height: 540px;
+    max-height: 540px;
     overflow-y: auto;
 }
 
@@ -3595,7 +3596,7 @@ section.team-section.bg-cream {
     flex-wrap: wrap;
 }
 
-/* Jahrzehnt-Filter */
+/* Jahrzehnt-Filter — nimmt restlichen Platz rechts */
 .archiv-decade-filter {
     display: flex;
     flex-wrap: wrap;
@@ -3603,6 +3604,7 @@ section.team-section.bg-cream {
     gap: 0.4rem;
     flex: 1;
     margin: 0;
+    justify-content: flex-end;
 }
 
 .archiv-decade-label {
@@ -3637,7 +3639,7 @@ section.team-section.bg-cream {
 .archiv-search-bar {
     position: relative;
     margin: 0;
-    flex: 0 0 220px;
+    flex: 0 0 260px;
 }
 
 .archiv-search-bar input {
@@ -3736,7 +3738,7 @@ section.team-section.bg-cream {
 .archiv-col-jahr { width: 65px; }
 .archiv-col-flag { width: 36px; text-align: center; font-size: 1.2rem; }
 .archiv-flag { text-align: center; font-size: 1.15rem; }
-.archiv-col-land { width: 200px; }   /* breiter – passt zu 2/3-Spalte */
+.archiv-col-land { width: 90px; }
 .archiv-col-stadt { width: 160px; }
 
 .archiv-no-results {

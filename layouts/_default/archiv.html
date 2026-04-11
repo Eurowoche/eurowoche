@@ -99,8 +99,12 @@
         <h2 class="archiv-map-heading">Gastgruppen seit 1953</h2>
     </div>
 
-    <!-- Steuerleiste: Jahrzehntfilter + Suche über alle drei Spalten -->
+    <!-- Steuerleiste: Suche links | Jahrzehntfilter rechts -->
     <div class="archiv-controls-row">
+        <div class="archiv-search-bar">
+            <input type="text" id="archiv-search" placeholder="{{ i18n "search_placeholder" }}" autocomplete="off">
+            <span class="archiv-search-icon">🔍</span>
+        </div>
         <div class="archiv-decade-filter">
             <span class="archiv-decade-label">Jahrzehnt:</span>
             <button class="archiv-decade-btn active" data-decade="all">Alle</button>
@@ -112,10 +116,6 @@
             <button class="archiv-decade-btn" data-decade="2000">2000er</button>
             <button class="archiv-decade-btn" data-decade="2010">2010er</button>
             <button class="archiv-decade-btn" data-decade="2020">2020er</button>
-        </div>
-        <div class="archiv-search-bar">
-            <input type="text" id="archiv-search" placeholder="{{ i18n "search_placeholder" }}" autocomplete="off">
-            <span class="archiv-search-icon">🔍</span>
         </div>
     </div>
 
@@ -176,7 +176,7 @@
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
         <script>
           document.addEventListener('DOMContentLoaded', function() {
-          var archivMap = L.map('archiv-map', { center: [52, 22], zoom: 4, scrollWheelZoom: false });
+          var archivMap = L.map('archiv-map', { center: [52, 10], zoom: 4, scrollWheelZoom: false });
           var infoPanel = document.getElementById('archiv-info-panel');
           var panelContent = infoPanel.querySelector('.archiv-panel-content');
           var panelPlaceholder = infoPanel.querySelector('.archiv-panel-placeholder');
