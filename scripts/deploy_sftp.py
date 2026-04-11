@@ -6,7 +6,7 @@ from pathlib import Path
 host     = os.environ['SFTP_HOST']
 user     = os.environ['SFTP_USER']
 password = os.environ['SFTP_PASS']
-remote   = os.environ['SFTP_DIR']
+remote   = os.environ.get('SFTP_DIR', '/').strip() or '/'
 local    = Path('public')
 
 print(f"Connecting to {host} as {user} ...")
@@ -40,8 +40,10 @@ errors   = 0
 for item in sorted(local.rglob('*')):
     if item.is_file():
         rel         = item.relative_to(local)
-        remote_path = remote.rstrip('/') + '/' + str(rel).replace('\\', '/')
-        remote_dir  = '/'.join(remote_path.split('/')[:-1])
+        # remote='/' → Dateien direkt ins Wurzelverzeichnis des SFTP-Users
+        base        = remote.rstrip('/') if remote != '/' else ''
+        remote_path = base + '/' + str(rel).replace('\\', '/')
+        remote_dir  = '/'.join(remote_path.split('/')[:-1]) or '/'
         mkdir_p(sftp, remote_dir)
         try:
             sftp.put(str(item), remote_path)
