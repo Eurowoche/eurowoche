@@ -408,7 +408,7 @@ h3 {
     right: 0;
     bottom: 0;
     background: var(--primary);
-    z-index: 200;
+    z-index: 9999; /* über Leaflet-Karten-Ebenen (max. 700) */
     display: flex;
     flex-direction: column;
     opacity: 0;
