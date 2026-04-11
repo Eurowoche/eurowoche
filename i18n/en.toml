@@ -183,3 +183,6 @@ other = "Click for details"
 
 [map_panel_placeholder]
 other = "Click a circle\nfor details"
+
+[menu]
+other = "Menu"
