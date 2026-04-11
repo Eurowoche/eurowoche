@@ -1803,7 +1803,7 @@ h3 {
 }
 
 .burg-split-image {
-    flex: 0 0 45%;
+    flex: 0 0 30%;
     overflow: hidden;
     border-radius: 0;
 }
@@ -1819,20 +1819,20 @@ h3 {
 .burg-split-text {
     padding-left: 4rem;
     padding-right: 4rem;
-    max-width: 600px;
+    flex: 1;
 }
 
 .burg-split-text h2 {
     font-family: var(--font-heading);
     font-size: var(--fs-h3);
-    margin-bottom: 1rem;
+    margin-bottom: 1.8rem;
     font-weight: 300;
 }
 
 .burg-split-text p {
     margin-bottom: 1rem;
-    font-size: var(--fs-sm);
-    line-height: 1.8;
+    font-size: var(--fs-base);
+    line-height: 1.85;
     text-align: justify;
 }
 
@@ -2151,10 +2151,10 @@ h3 {
     background: #FFFFFF;
 }
 
-/* Innenbereiche — Photo 1/3, Text Rest, gleiche Höhe */
+/* Innenbereiche — Photo 1/4, Text Rest, gleiche Höhe */
 .maerkte-section-inner {
     display: grid;
-    grid-template-columns: 33% 1fr;
+    grid-template-columns: 25% 1fr;
     gap: 3rem;
     align-items: stretch;
 }
@@ -2171,7 +2171,7 @@ h3 {
 
 /* Adventsmarkt: Text schmal links, Bild groß rechts */
 .maerkte-section-inner-reverse {
-    grid-template-columns: 1fr 33%;
+    grid-template-columns: 1fr 25%;
 }
 
 /* Bild-Container mit Overlay */
@@ -2339,7 +2339,7 @@ h3 {
 }
 
 .maerkte-text-block {
-    width: 50%;
+    width: 75%;
 }
 
 /* Button unter Textblock zentrieren */
@@ -4039,7 +4039,7 @@ section.team-section.bg-cream {
 }
 
 .verein-zweck-text {
-    flex: 0 0 55%;
+    flex: 1;
     padding: 3rem 3rem 3rem 6rem;
     display: flex;
     flex-direction: column;
@@ -4052,17 +4052,24 @@ section.team-section.bg-cream {
     font-weight: 400;
     font-style: normal;
     margin-top: 0;
+    margin-bottom: 1.8rem;
 }
 
 .verein-zweck-text p {
     font-family: var(--font-body);
     font-size: var(--fs-md);
-    line-height: 1.8;
+    line-height: 1.85;
     text-align: justify;
 }
 
+.verein-zweck-text li {
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    line-height: 1.85;
+}
+
 .verein-zweck-image {
-    flex: 0 0 45%;
+    flex: 0 0 30%;
     overflow: hidden;
     padding: 0;
     margin: 0;
@@ -4109,7 +4116,7 @@ section.team-section.bg-cream {
 }
 
 .verein-split-image {
-    flex: 0 0 35%;
+    flex: 0 0 28%;
     overflow: hidden;
     padding: 0;
     margin: 0;
@@ -4149,12 +4156,13 @@ section.team-section.bg-cream {
     font-weight: 400;
     font-style: normal;
     margin-top: 0;
+    margin-bottom: 1.8rem;
 }
 
 .verein-split-text p {
     font-family: var(--font-body);
     font-size: var(--fs-md);
-    line-height: 1.8;
+    line-height: 1.85;
     margin-bottom: 1rem;
     text-align: justify;
 }
@@ -4399,7 +4407,7 @@ section.team-section.bg-cream {
     padding: 1rem 2rem;
     border-radius: 4px;
     text-decoration: none;
-    font-size: var(--fs-sm);
+    font-size: var(--fs-base);
     line-height: 1.5;
     transition: opacity 0.3s;
 }
@@ -5138,7 +5146,7 @@ section.team-section.bg-cream {
     /* Vorstand: Foto und Banner auf Spaltenbreite skalieren */
     .vorstand-photo {
         width: 100%;
-        height: 220px;
+        height: 320px;
     }
 
     .vorstand-banner {
