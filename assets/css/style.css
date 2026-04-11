@@ -3018,29 +3018,30 @@ section.team-section.bg-cream {
 }
 
 /* Karte + Info-Panel: Flexbox
-   c) Karte = 1.25 × Foto-Breite (900px) = 1125px
-      Linker Rand = max(2rem, 50vw - 1125px) → rechter Rand Karte ≈ Seitenmitte */
+   Karte = 1035px (900px × 1,15), Panel = 437px (380px × 1,15)
+   Karte um 67px nach rechts verschoben (halbe Extrabreite 135px/2)
+   → padding-left = 50vw - 968px (= 50vw - 1035px + 67px) */
 .archiv-layout {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
-    padding-left: max(2rem, calc(50vw - 900px));   /* rechter Rand der Karte ≈ Seitenmitte */
+    padding-left: max(2rem, calc(50vw - 968px));
     padding-right: 2rem;
     box-sizing: border-box;
     width: 100%;
 }
 
 .archiv-left-col {
-    width: min(900px, calc(50vw - 1rem));   /* gleiche Breite wie Foto; rechter Rand ≈ Seitenmitte */
+    width: 1035px;
     flex-shrink: 0;
     min-width: 0;
 }
 
 .archiv-right-col {
-    width: 380px;
+    width: 437px;
     flex-shrink: 0;
     min-width: 200px;
-    max-width: 380px;
+    max-width: 437px;
 }
 
 .archiv-info-panel {
