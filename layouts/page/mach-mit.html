@@ -1,0 +1,63 @@
+{{ define "main" }}
+<article class="page-content mach-mit-page">
+    <div class="page-intro">
+        <h1>{{ .Title }}</h1>
+        <p class="mach-mit-untertitel">{{ if eq .Lang "de" }}So wirst du Teil der Europäischen Jugendwoche{{ else if eq .Lang "en" }}Here's how you can become part of the European Youth Week{{ else if eq .Lang "fr" }}Voici comment devenir partie de la Semaine européenne de la jeunesse{{ end }}</p>
+        <p class="page-intro-lead">{{ if eq .Lang "de" }}Durch die Menschen, die Teil von ihr sind, wird die Eurowoche erst möglich! Ob als Tänzer*in, als Freiwillige*r oder als Unterstützer des Vereins – du bist herzlich willkommen.{{ else if eq .Lang "en" }}The Eurowoche is only possible through the people who are part of it! Whether as a dancer, volunteer, or supporter of the association – you are warmly welcome.{{ else if eq .Lang "fr" }}L'Eurowoche n'existe que par les gens qui en font partie ! Que ce soit en tant que danseur, bénévole ou soutien de l'association – vous êtes chaleureusement bienvenu.{{ end }}</p>
+    </div>
+
+    <!-- Abschnitt 1: Tanz Mit (Foto LINKS, Text RECHTS) -->
+    <div class="mach-mit-section mach-mit-section-1">
+        <div class="mach-mit-photo-side">
+            <img src="/img/involvement/mach-mit-1.jpg" alt="Tanz Mit" loading="lazy">
+        </div>
+        <div class="mach-mit-text-side">
+            <h2>{{ i18n "dance_along" }}</h2>
+            <p>{{ if eq .Lang "de" }}Du möchtest mit uns tanzen und Teil unserer Tanzgruppe werden? Egal ob mit viel oder wenig Erfahrung – wenn du Interesse hast, melde dich gerne bei unserer Tanzleitung.{{ else if eq .Lang "en" }}Would you like to dance with us and become part of our dance group? Whether you have lots of experience or none at all – if you're interested, please contact our dance director.{{ else if eq .Lang "fr" }}Vous aimeriez danser avec nous et faire partie de notre groupe de danse ? Que vous ayez beaucoup d'expérience ou pas du tout – si vous êtes intéressé, n'hésitez pas à contacter notre directeur de danse.{{ end }}</p>
+            <a href="{{ if eq .Lang "de" }}/kontakt/{{ else if eq .Lang "en" }}/en/contact/{{ else if eq .Lang "fr" }}/fr/contact/{{ end }}" class="btn btn-primary">{{ i18n "contact" }}</a>
+        </div>
+    </div>
+
+    <!-- Abschnitt 2: Helfe mit (Text LINKS, Foto RECHTS) -->
+    <div class="mach-mit-section mach-mit-section-2">
+        <div class="mach-mit-text-side">
+            <h2>{{ if eq .Lang "de" }}Helfe mit{{ else if eq .Lang "en" }}Get Involved{{ else if eq .Lang "fr" }}Engagez-vous{{ end }}</h2>
+            <p>{{ if eq .Lang "de" }}Die Europäische Jugendwoche wird von engagierten Freiwilligen getragen. Wenn du Lust hast, uns bei Organisation, Küche, Technik oder anderen Aufgaben zu unterstützen, melde dich gerne beim Vorstand. Gemeinsam setzen wir Ideen um und machen die Eurowoche möglich.{{ else if eq .Lang "en" }}The European Youth Week is carried by committed volunteers. If you'd like to support us with organization, catering, technology, or other tasks, please contact our board. Together we implement ideas and make the Eurowoche possible.{{ else if eq .Lang "fr" }}La Semaine européenne de la jeunesse est portée par des bénévoles engagés. Si vous souhaitez nous soutenir dans l'organisation, la restauration, la technologie ou d'autres tâches, veuillez contacter notre conseil. Ensemble, nous réalisons des idées et rendons l'Eurowoche possible.{{ end }}</p>
+            <a href="{{ if eq .Lang "de" }}/kontakt/{{ else if eq .Lang "en" }}/en/contact/{{ else if eq .Lang "fr" }}/fr/contact/{{ end }}" class="btn btn-primary">{{ i18n "contact" }}</a>
+        </div>
+        <div class="mach-mit-photo-side">
+            <img src="/img/involvement/mach-mit-2.jpg" alt="Helfe mit" loading="lazy">
+        </div>
+    </div>
+
+    <!-- Abschnitt 3: Spende (Foto LINKS, Text RECHTS) -->
+    <div class="mach-mit-section mach-mit-section-3">
+        <div class="mach-mit-photo-side">
+            <img src="/img/involvement/mach-mit-3.jpg" alt="Spende" loading="lazy">
+        </div>
+        <div class="mach-mit-text-side">
+            <h2>{{ i18n "donate" }}</h2>
+            <p>{{ if eq .Lang "de" }}Ihre Spende hilft uns, die Eurowoche am Leben zu erhalten – einen Ort, an dem junge Menschen aus ganz Europa zusammenkommen und gegenseitiges Verständnis entwickeln. Jede Unterstützung, ob groß oder klein, trägt dazu bei, diese Tradition der Freundschaft und des Friedens fortzuführen.{{ else if eq .Lang "en" }}Your donation helps us keep the Eurowoche alive – a place where young people from across Europe come together and develop mutual understanding. Every contribution, big or small, helps preserve this tradition of friendship and peace.{{ else if eq .Lang "fr" }}Votre don nous aide à maintenir l'Eurowoche vivante – un lieu où les jeunes de toute l'Europe se rencontrent et développent une compréhension mutuelle. Chaque contribution, grande ou petite, aide à préserver cette tradition d'amitié et de paix.{{ end }}</p>
+            <div class="spende-box spende-box-red" id="spende">
+                <h3>{{ i18n "bank_details" }}</h3>
+                <p><strong>Arbeitskreis Europäische Jugendwoche</strong><br>
+                Sparkasse Werra-Meißnen<br>
+                IBAN: DE23 5225 0030 0050 0056 69<br>
+                BIC: HELADEF1ESW</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mitgliedschaft Sektion -->
+    <div class="mitglied-section">
+        <div class="mitglied-inner">
+            <h2>{{ i18n "become_member" }}</h2>
+            <p>{{ i18n "become_member_text" }}</p>
+            <div class="button-row">
+                <a href="{{ if eq .Lang "de" }}/downloads/beitritt.pdf{{ else if eq .Lang "en" }}/downloads/beitritt.pdf{{ else if eq .Lang "fr" }}/downloads/beitritt.pdf{{ end }}" class="btn btn-primary" target="_blank">{{ i18n "membership_form" }}</a>
+                <a href="{{ if eq .Lang "de" }}/kontakt/{{ else if eq .Lang "en" }}/en/contact/{{ else if eq .Lang "fr" }}/fr/contact/{{ end }}" class="btn btn-outline">{{ i18n "contact_board" }}</a>
+            </div>
+        </div>
+    </div>
+</article>
+{{ end }}

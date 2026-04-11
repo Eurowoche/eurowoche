@@ -1,0 +1,64 @@
+<header class="site-header" id="site-header">
+    <div class="header-inner">
+        <a href="{{ if eq .Lang "de" }}/{{ else }}/en/{{ end }}" class="logo">
+            <img src="/img/logo.png" alt="Europäische Jugendwoche" class="logo-icon">
+        </a>
+        <div class="header-right">
+            <button class="menu-toggle" id="menu-toggle" aria-label="{{ i18n "menu" }}">
+                <span class="menu-icon">☰</span> {{ i18n "menu" }}
+            </button>
+            <div class="lang-switch">
+                {{/* Sprachpfade: RelPermalink (relativ) statt Permalink (absolut mit baseURL) */}}
+                {{ $dePath := "/" }}
+                {{ $enPath := "/en/" }}
+                {{ $frPath := "/fr/" }}
+                {{ range .Translations }}
+                    {{ if eq .Lang "de" }}{{ $dePath = .RelPermalink }}{{ end }}
+                    {{ if eq .Lang "en" }}{{ $enPath = .RelPermalink }}{{ end }}
+                    {{ if eq .Lang "fr" }}{{ $frPath = .RelPermalink }}{{ end }}
+                {{ end }}
+                {{ if eq .Lang "de" }}{{ $dePath = .RelPermalink }}{{ end }}
+                {{ if eq .Lang "en" }}{{ $enPath = .RelPermalink }}{{ end }}
+                {{ if eq .Lang "fr" }}{{ $frPath = .RelPermalink }}{{ end }}
+                <select onchange="window.location.href=this.value" class="lang-select">
+                    <option value="{{ $dePath }}"{{ if eq .Lang "de" }} selected{{ end }}>Deutsch</option>
+                    <option value="{{ $enPath }}"{{ if eq .Lang "en" }} selected{{ end }}>English</option>
+                    <option value="{{ $frPath }}"{{ if eq .Lang "fr" }} selected{{ end }}>Français</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="nav-overlay" id="nav-overlay">
+    <div class="nav-overlay-header">
+        <span class="nav-overlay-title">{{ .Site.Title }}</span>
+        <button class="nav-close" id="nav-close" aria-label="{{ i18n "close" }}">✕</button>
+    </div>
+    <div class="nav-overlay-links">
+        {{ $lang := .Lang }}
+        {{ range index .Site.Menus $lang }}
+            <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+    </div>
+    <div class="nav-overlay-lang">
+        {{/* Sprachpfade: RelPermalink (relativ) statt Permalink (absolut mit baseURL) */}}
+        {{ $dePath := "/" }}
+        {{ $enPath := "/en/" }}
+        {{ $frPath := "/fr/" }}
+        {{ range .Translations }}
+            {{ if eq .Lang "de" }}{{ $dePath = .RelPermalink }}{{ end }}
+            {{ if eq .Lang "en" }}{{ $enPath = .RelPermalink }}{{ end }}
+            {{ if eq .Lang "fr" }}{{ $frPath = .RelPermalink }}{{ end }}
+        {{ end }}
+        {{ if eq .Lang "de" }}{{ $dePath = .RelPermalink }}{{ end }}
+        {{ if eq .Lang "en" }}{{ $enPath = .RelPermalink }}{{ end }}
+        {{ if eq .Lang "fr" }}{{ $frPath = .RelPermalink }}{{ end }}
+
+        <a href="{{ $dePath }}" class="{{ if eq .Lang "de" }}nav-lang-active{{ else }}nav-lang-link{{ end }}">Deutsch</a>
+        <span class="nav-lang-divider">|</span>
+        <a href="{{ $enPath }}" class="{{ if eq .Lang "en" }}nav-lang-active{{ else }}nav-lang-link{{ end }}">English</a>
+        <span class="nav-lang-divider">|</span>
+        <a href="{{ $frPath }}" class="{{ if eq .Lang "fr" }}nav-lang-active{{ else }}nav-lang-link{{ end }}">Français</a>
+    </div>
+</nav>

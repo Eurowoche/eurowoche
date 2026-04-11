@@ -1,0 +1,35 @@
+{{ define "main" }}
+<article class="page-content botschaft-page">
+
+    <!-- Zentrierte Intro-Sektion -->
+    <div class="page-intro page-intro-centered">
+        <h1>{{ .Title }}</h1>
+        <p class="page-intro-lead">{{ .Params.intro }}</p>
+        <a href="{{ if eq .Lang "de" }}/festival/{{ else }}/en/festival/{{ end }}" class="btn btn-primary">{{ i18n "more_to_festival" }}</a>
+    </div>
+
+    <!-- Großes Foto — zentriert mit max-width des page-body -->
+    <div class="botschaft-photo-hero-constrained">
+        <img src="/img/hero/botschaft-1.jpg" alt="Europäische Jugendwoche – Begegnung" loading="lazy">
+    </div>
+
+    <!-- Text-Inhalt -->
+    <div class="page-body">
+        {{ .Content }}
+    </div>
+
+    <!-- 3 Fotos in einer Reihe -->
+    <div class="page-photos-3">
+        <div class="page-photos-3-item">
+            <img src="/img/hero/botschaft-2.jpg" alt="Begegnung" loading="lazy">
+        </div>
+        <div class="page-photos-3-item">
+            <img src="/img/hero/botschaft-3.jpg" alt="Internationale Tanzgruppen beim Folklorefestival auf Burg Ludwigstein" loading="lazy">
+        </div>
+        <div class="page-photos-3-item">
+            <img src="/img/hero/botschaft-4.jpg" alt="Gemeinschaft und Begegnung junger Europäerinnen und Europäer" loading="lazy">
+        </div>
+    </div>
+
+</article>
+{{ end }}

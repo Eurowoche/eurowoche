@@ -1,0 +1,458 @@
+{{ define "main" }}
+
+{{/* Flaggen-Mapping: Ländername (lowercase) → Emoji */}}
+{{ $flags := dict
+  "germany" "🇩🇪"
+  "deutschland" "🇩🇪"
+  "france" "🇫🇷"
+  "frankreich" "🇫🇷"
+  "poland" "🇵🇱"
+  "polen" "🇵🇱"
+  "great britain" "🇬🇧"
+  "scotland" "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+  "czech republic" "🇨🇿"
+  "tschech republic" "🇨🇿"
+  "cssr" "🇨🇿"
+  "austria" "🇦🇹"
+  "österreich" "🇦🇹"
+  "finland" "🇫🇮"
+  "finnland" "🇫🇮"
+  "serbia" "🇷🇸"
+  "yugoslavia" "🇷🇸"
+  "jugoslawien" "🇷🇸"
+  "belgium" "🇧🇪"
+  "belgien" "🇧🇪"
+  "latvia" "🇱🇻"
+  "lettland" "🇱🇻"
+  "spain" "🇪🇸"
+  "spanien" "🇪🇸"
+  "baskenland" "🇪🇸"
+  "sweden" "🇸🇪"
+  "schweden" "🇸🇪"
+  "hungary" "🇭🇺"
+  "hungaria" "🇭🇺"
+  "ungarn" "🇭🇺"
+  "north macedonia" "🇲🇰"
+  "macedonia" "🇲🇰"
+  "netherlands" "🇳🇱"
+  "the netherlands" "🇳🇱"
+  "niederlande" "🇳🇱"
+  "greece" "🇬🇷"
+  "greeke" "🇬🇷"
+  "griechenland" "🇬🇷"
+  "portugal" "🇵🇹"
+  "romania" "🇷🇴"
+  "rumänien" "🇷🇴"
+  "belarus" "🇧🇾"
+  "belorussia" "🇧🇾"
+  "weißrussland" "🇧🇾"
+  "bulgaria" "🇧🇬"
+  "bulgarien" "🇧🇬"
+  "denmark" "🇩🇰"
+  "danmark" "🇩🇰"
+  "dänemark" "🇩🇰"
+  "croatia" "🇭🇷"
+  "kroatien" "🇭🇷"
+  "italy" "🇮🇹"
+  "italien" "🇮🇹"
+  "turkey" "🇹🇷"
+  "türkei" "🇹🇷"
+  "georgia" "🇬🇪"
+  "georgien" "🇬🇪"
+  "slovakia" "🇸🇰"
+  "slovak republic" "🇸🇰"
+  "slowakei" "🇸🇰"
+  "russia" "🇷🇺"
+  "ussr" "🇷🇺"
+  "ukraine" "🇺🇦"
+  "ireland" "🇮🇪"
+  "irland" "🇮🇪"
+  "norway" "🇳🇴"
+  "norwegen" "🇳🇴"
+  "usa" "🇺🇸"
+  "latin america" "🌎"
+  "mexico" "🇲🇽"
+  "bosnia and herzegovina" "🇧🇦"
+  "bosnien" "🇧🇦"
+  "estonia" "🇪🇪"
+  "estland" "🇪🇪"
+  "israel" "🇮🇱"
+  "nepal" "🇳🇵"
+  "switzerland" "🇨🇭"
+  "schweiz" "🇨🇭"
+}}
+
+<article class="page-content archiv-page">
+
+    <!-- Überschrift -->
+    <div class="page-intro">
+        <h1>{{ .Title }}</h1>
+        <p class="page-intro-lead">{{ i18n "archive_intro" }}</p>
+    </div>
+
+    <!-- Archiv-Foto -->
+    <div class="geschichte-wide-photo archiv-hero-photo">
+        <img src="/img/archiv/archiv-hero.jpg" alt="Europäische Jugendwoche – Gruppenfoto" loading="lazy">
+    </div>
+
+    <!-- Überschrift + Subtext: volle Breite, AUSSERHALB des Grids → Panel bündig mit Karte -->
+    <div class="archiv-map-intro">
+        <h2 class="archiv-map-heading">Gastgruppen aus Europa und der Welt</h2>
+        <p class="archiv-map-sub">Kreise zeigen, wie oft ein Land an der Eurowoche teilgenommen hat – je größer, desto mehr Besuche.</p>
+    </div>
+
+    <!-- Zweispaltiges Layout: 2/3 Karte+Tabelle, 1/3 Panel -->
+    <div class="archiv-layout">
+
+      <!-- LINKE SPALTE -->
+      <div class="archiv-left-col">
+
+        <!-- Europa-Karte -->
+        <div class="archiv-map-section">
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+            <div id="archiv-map" style="height:540px; border-radius:10px; border:1px solid #ddd; box-shadow:0 2px 12px rgba(0,0,0,0.08);"></div>
+        </div>
+
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+          var archivMap = L.map('archiv-map', { center: [51, 22], zoom: 4, scrollWheelZoom: false });
+          var infoPanel = document.getElementById('archiv-info-panel');
+          var panelContent = infoPanel.querySelector('.archiv-panel-content');
+          var panelPlaceholder = infoPanel.querySelector('.archiv-panel-placeholder');
+          var panelCountryEl = document.getElementById('archiv-panel-country');
+          var panelFlagEl   = document.getElementById('archiv-panel-flag');
+          var panelCountEl  = document.getElementById('archiv-panel-count');
+          var panelListEl   = document.getElementById('archiv-panel-list');
+          L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+            subdomains: 'abcd', maxZoom: 19
+          }).addTo(archivMap);
+          var PRIMARY = '#8B534D', maxCount = 60;
+          var mapCountries = [
+            {iso:"DE",lat:51.165,lng:10.455,name:"Deutschland",count:60,years:"1953–2025"},
+            {iso:"FR",lat:46.228,lng:2.214,name:"Frankreich",count:33,years:"1954–2023"},
+            {iso:"PL",lat:51.919,lng:19.145,name:"Polen",count:21,years:"1970–2023"},
+            {iso:"GB",lat:55.378,lng:-3.436,name:"Großbritannien",count:18,years:"1956–2018"},
+            {iso:"CZ",lat:49.818,lng:15.473,name:"Tschechien / ČSSR",count:15,years:"1966–2025"},
+            {iso:"AT",lat:47.516,lng:14.550,name:"Österreich",count:13,years:"1953–1976"},
+            {iso:"FI",lat:61.924,lng:25.748,name:"Finnland",count:13,years:"1962–2023"},
+            {iso:"RS",lat:44.017,lng:21.006,name:"Serbien / Jugoslawien",count:13,years:"1962–2019"},
+            {iso:"BE",lat:50.501,lng:4.470,name:"Belgien",count:12,years:"1962–2019"},
+            {iso:"LV",lat:56.880,lng:24.603,name:"Lettland",count:10,years:"1992–2025"},
+            {iso:"ES",lat:40.464,lng:-3.749,name:"Spanien",count:10,years:"1982–2024"},
+            {iso:"SE",lat:60.128,lng:18.644,name:"Schweden",count:10,years:"1953–2003"},
+            {iso:"HU",lat:47.163,lng:19.503,name:"Ungarn",count:9,years:"1968–2017"},
+            {iso:"MK",lat:41.609,lng:21.745,name:"Nordmazedonien",count:6,years:"1992–2023"},
+            {iso:"NL",lat:52.133,lng:5.291,name:"Niederlande",count:6,years:"1961–2017"},
+            {iso:"GR",lat:39.074,lng:21.824,name:"Griechenland",count:6,years:"1983–2008"},
+            {iso:"PT",lat:39.400,lng:-8.224,name:"Portugal",count:6,years:"1962–2000"},
+            {iso:"RO",lat:45.943,lng:24.967,name:"Rumänien",count:5,years:"1972–2024"},
+            {iso:"BY",lat:53.710,lng:27.953,name:"Belarus",count:5,years:"1991–2018"},
+            {iso:"BG",lat:42.734,lng:25.486,name:"Bulgarien",count:5,years:"1988–2015"},
+            {iso:"DK",lat:56.264,lng:9.502,name:"Dänemark",count:5,years:"1953–2006"},
+            {iso:"HR",lat:45.100,lng:15.200,name:"Kroatien",count:4,years:"2005–2024"},
+            {iso:"IT",lat:41.872,lng:12.567,name:"Italien",count:4,years:"1980–2016"},
+            {iso:"TR",lat:38.964,lng:35.243,name:"Türkei",count:2,years:"2005–2017"},
+            {iso:"GE",lat:42.315,lng:43.357,name:"Georgien",count:2,years:"2010–2016"},
+            {iso:"SK",lat:48.669,lng:19.699,name:"Slowakei",count:2,years:"2007–2009"},
+            {iso:"RU",lat:55.751,lng:37.618,name:"Russland / Sowjetunion",count:2,years:"1990–2005"},
+            {iso:"UA",lat:48.379,lng:31.166,name:"Ukraine",count:2,years:"1993–2002"},
+            {iso:"IE",lat:53.413,lng:-8.244,name:"Irland",count:2,years:"1978–2000"},
+            {iso:"NO",lat:60.472,lng:8.469,name:"Norwegen",count:2,years:"1985–1986"},
+            {iso:"US",lat:37.090,lng:-95.713,name:"USA",count:2,years:"2019–2024"},
+            {iso:"MX",lat:19.433,lng:-99.133,name:"Mexiko",count:2,years:"1969–2008"},
+            {iso:"BA",lat:43.916,lng:17.679,name:"Bosnien-Herzegowina",count:1,years:"2025"},
+            {iso:"EE",lat:58.595,lng:25.014,name:"Estland",count:1,years:"2018"},
+            {iso:"IL",lat:31.046,lng:34.852,name:"Israel",count:1,years:"2009"},
+            {iso:"NP",lat:28.394,lng:84.124,name:"Nepal",count:1,years:"1974"},
+            {iso:"CH",lat:46.818,lng:8.228,name:"Schweiz",count:1,years:"1953"}
+          ];
+          var mapDetails={"LV":[[1992,"Vizbulite"],[1993,"Die Schlingel"],[1994,"Vizbulite"],[1999,"Vizbulite"],[2002,"Vizbulite"],[2006,"Ex-Vizbulite"],[2008,"Ex-Vizbulite"],[2012,"Ex-Vizbulite"],[2017,"Volkstanzensemble JDK 'Vizbulite"],[2025,"Vizbulite"]],"CZ":[[1966,"USMEV"],[1967,""],[1968,""],[1969,"Podluzan"],[1985,"Cesky Raj"],[1987,"Svetlovan"],[1988,"Vrsatec"],[1990,"Cesky Raj"],[1993,"Jaro"],[1997,"Podjavořičan"],[1998,"Kalamajka"],[2006,"Podjavořičan"],[2013,"Lidová muzika z Chrástu"],[2016,"Lidova muzika z Chrástu"],[2025,"Dolina"]],"BA":[[2025,"VESELIN MASLEŠA"]],"DE":[[1953,"Individual participants"],[1954,"Individual participants"],[1955,""],[1956,"Deutsche Turnerjugend"],[1957,"Wandervogel"],[1958,""],[1958,""],[1959,"Deutscher Wanderbund"],[1961,"Deutscher Wanderbund"],[1962,"Deutsche Jugend des Ostens"],[1963,"Deutscher Wanderbund"],[1964,"Wandervogel"],[1965,""],[1966,""],[1967,""],[1968,""],[1969,"Landjugendgruppe"],[1970,"Landjugendgruppe"],[1972,"Hans-von-der-Au"],[1973,"Landjugendgruppe"],[1974,"Aulataler Volkstumsgruppe"],[1974,"Neustädter Volkstanzkreis"],[1976,""],[1976,"Ballettgruppe"],[1978,"Fröhlicher Kreis"],[1979,"Naturfreunde Fürstenhagen"],[1980,""],[1982,"Die Hessen"],[1982,"Hans-von-der-Au"],[1983,"Fröhlicher Kreis"],[1984,"Die Burgwaldskälwer"],[1985,"Hans-von-der-Au"],[1986,"Die Hessen"],[1986,"Die Naturfreunde"],[1987,"Fröhlicher Kreis"],[1988,"Fröhlicher Kreis"],[1989,"Hans-von-der-Au"],[1990,"Ballett-Studio Fischer"],[1990,"Vogteier Trachtengruppe"],[1991,"Die Ludwigsteiner"],[1991,"Tanzkreis Werrataler"],[1992,"Die Ludwigsteiner"],[1993,"Die Ludwigsteiner"],[1994,"Die Ludwigsteiner"],[1995,"Die Ludwigsteiner"],[1996,"Die Ludwigsteiner"],[1997,"Die Ludwigsteiner"],[1998,"Hans-von-der-Au"],[1999,"Die Ludwigsteiner"],[2000,"Die Ludwigsteiner"],[2001,"Die Ludwigsteiner"],[2002,"Die Ludwigsteiner"],[2003,"Die Ludwigsteiner"],[2005,"Tanzkreis Werrataler"],[2008,"Die Ludwigsteiner"],[2009,"Die Ludwigsteiner"],[2010,"Die Ludwigsteiner"],[2012,"Die Ludwigsteiner"],[2013,"Die Ludwigsteiner"],[2015,"Jugendgruppe Schlitzerländer"],[2016,"Die Ludwigsteiner"],[2017,"Die Ludwigsteiner"],[2018,"Die Ludwigsteiner"],[2019,"Folklore-Kooperationsgruppe Ludwigsteiner"],[2023,"Die Ludwigsteiner"],[2024,"Die Ludwigsteiner"],[2025,"Die Ludwigsteiner"]],"HR":[[2005,"Kud Jedinstvo"],[2012,"Ivan Goran Kovačić"],[2019,"KUD Salona"],[2024,"Ivan Goran Kovačić"]],"ES":[[1982,""],[1989,"Goizaldi"],[1995,"Ballet Elena Munguia"],[1999,"Grupo Granada"],[2003,"Arantzarte Dantza Taldea"],[2006,"Grupo Granada"],[2009,"Gero Axular Dantza Taldea"],[2010,"Fran Allegre"],[2015,"Gero Axular Dantza Taldea"],[2024,"Gero Axular Dantza Taldea"]],"US":[[2019,"Irish-Folk Ensemble Trinity"],[2024,"Irish-Folk Ensemble Trinity"]],"RO":[[1972,"Aro-Edelweiß"],[1974,"Aro-Edelweiß"],[2004,"Lugojana"],[2012,"Lugojana"],[2024,"Somesul Napoca Ensemble"]],"FI":[[1962,"Varkauden Tanhuujat"],[1963,"Varkauden Tanhuujat"],[1964,"Varkauden Tanhuujat"],[1965,"Einzelteilnehmer"],[1966,"Varkauden Tanhuujat"],[1967,"Varkauden Tanhuujat"],[1970,"Varkauden Tanhuujat"],[1971,"Varkauden Tanhuujat"],[1978,"Varkauden Tanhuujat"],[1991,""],[1997,"Vinksin Vonksin"],[2013,"Finlands Svenska Folkdansring"],[2023,"Motora"]],"FR":[[1954,""],[1955,""],[1956,""],[1957,"Individual participants"],[1958,"La Ciamada"],[1959,"Rodelet Félibréen"],[1959,"Tarandoleur Cheminots"],[1961,"La Couqueto"],[1962,"I Macchiaghioli"],[1963,"Ferandoleur cheminots"],[1963,"Lou Ramelet Moundi"],[1964,"La Couqueto"],[1966,"Assemblée du Vieux"],[1966,"Lou Ramelet Moundi"],[1967,"Groupe d'Art Basque Crai Bat"],[1968,""],[1969,"La Couqueto"],[1970,"La Couqueto"],[1971,"Lou Ramelet Moundi"],[1973,"La Couqueto"],[1976,"La Couqueto"],[1978,"Le Quadrille Occitan"],[1979,"De Landouwe"],[1980,"Le Quadrille Occitan"],[1982,"Le Quadrille Occitan"],[1983,"La Couqueto"],[1984,"Le Quadrille Occitan"],[1986,"Le Quadrille Occitan"],[1988,"Le Quadrille Occitan"],[1992,"Le Quadrille Occitan"],[1996,"Le Quadrille Occitan"],[2001,"Le Quadrille Occitan"],[2006,"Le Quadrille Occitan"],[2013,"Le Quadrille Occitan"],[2019,"Le Quadrille Occitan Toulouse"],[2023,"Le Quadrille Occitan"]],"MK":[[1992,"Oteks"],[1994,"Oteks"],[2001,"Oteks"],[2007,"Kud Oteks"],[2015,"Oteks Folk"],[2023,"KUD Oteks Folk"]],"PL":[[1970,"Landwirtschaftliche Hochschule"],[1971,"Marie Curie-Sklodowska Universität"],[1972,"Slowianki"],[1973,"Slowianki"],[1974,"Slowianki"],[1976,"Sing- und Spielkreis"],[1978,"Landwirtschaftliche Hochschule"],[1980,"Landwirtschaftliche Hochschule"],[1983,"Wislok"],[1984,"Wislok"],[1985,"Beskid"],[1986,"Wislok"],[1987,""],[1991,"Mädchenchor"],[1996,"Slowianki"],[2001,"Kaszubskie Nuty"],[2002,"Tanzensemble Walbrzych"],[2006,"Kaszubskie Nuty"],[2010,"Bielsko Folklore Dance Ensemble"],[2018,"Kaszubskie Nuty Koscierzyna"],[2023,"Slowianki"]],"BE":[[1962,"Volkskulturele Gemeenschap"],[1963,"Lange Wapper"],[1964,"Lange Wapper"],[1965,"Vereinigte ukrainische Jugend"],[1966,"De Landouwe"],[1967,"De Langman"],[1969,"De Vliier"],[1972,"De Vliier"],[1979,"AKUD Mirce Acev"],[1980,"De Langeman"],[1994,"Sint Sebastiansgilde"],[2019,"Folklore Ensemble Gelmel"]],"EE":[[2018,"TLÜ SOLVEDAJA"]],"BY":[[1991,"Krupizkije Musyki"],[1992,"Praleski"],[1994,"Folkloreorchester"],[1997,"Krupizkije Musyki"],[2018,"Folk group VALACHOBNIKI"]],"GB":[[1956,""],[1957,""],[1958,""],[1959,""],[1963,""],[1965,"The Wayfarers Folk Dance Club"],[1966,"The Wayfarers Folk Dance Club"],[1967,"The Wayfarers Folk Dance Club"],[1968,"The Wayfarers Folk Dance Club"],[1969,"The Wayfarers Folk Dance Club"],[1970,"The Wayfarers Folk Dance Club"],[1971,"The Wayfarers Folk Dance Club"],[1973,"The Wayfarers Folk Dance Club"],[1979,"La Couqueto"],[1996,"Edinburgh Uni. Country Dance Society"],[1998,"Edinburgh Uni. Country Dance Society"],[2006,"Edinburgh Uni. Country Dance Society"],[2018,"Edinburgh Uni. Country Dance Society"]],"HU":[[1968,""],[1971,"Banyaipari Dolgozok"],[1982,"Ungarndeutsche Tanzgruppe"],[1984,"Ungarndeutsche Tanzgruppe"],[1986,"Ungarndeutsche Tanzgruppe"],[1987,"Ungarndeutsche Tanzgruppe"],[1995,"Vidroczici"],[2013,"Nagyabaracska Folkdance Group"],[2017,"Donauschwäbisches Volkstanzensemble"]],"TR":[[2005,"Sisli Culture and Tourism Association"],[2017,"Merzifon Belediyesi Halkoyunlari"]],"NL":[[1961,"Volksdans Centrum"],[1962,"Volksdans Centrum"],[1964,"Volksdans Centrum"],[2007,"Holland Express"],[2010,"Holland Express"],[2017,"Kansemble"]],"GE":[[2010,"Nartebi"],[2016,"Folkloreensemble Marula"]],"IT":[[1980,"Naturfreunde Fürstenhagen"],[1990,"Associazione pro Susa"],[2004,"I Timetos"],[2016,"Centro Culturale Terrazzani"]],"BG":[[1988,"Neftohimik"],[2003,"Rouschoukleeche"],[2008,"Rouschoukleeche"],[2009,"The Children of Sevlievo"],[2015,"The Children of Sevlievo"]],"RS":[[1962,""],[1964,""],[1966,"Koleda"],[1967,"Koleda"],[1969,"Adria"],[1970,"Adria"],[1971,"Adria"],[1976,"Koleda"],[1979,"The Wayfarers Folk Dance Club"],[1980,"AKUD Mirce Acev"],[1989,"Ivan Mladen"],[2004,"Folklor Group Teleoptik"],[2010,"Gradac"]],"IL":[[2009,"Shalom Israel"]],"SK":[[2007,"Vihorlat"],[2009,"Rozmarija"]],"MX":[[1969,"15 Sozialarbeiterinnen"],[2008,"Folkloreensemble Tsasnà"]],"GR":[[1983,"Volkstanzgruppe des Lyceums"],[1987,"Georgios K. Fotiadis"],[1995,"Musical Dancing Club of Alexandria"],[1998,"Horeftikos"],[2000,"Poutiakos Siligos"],[2008,"Cultural Association of Lagadas"]],"DK":[[1953,"Individual participants"],[1993,"The Junior Dance Team"],[1996,"The Junior Dance Team"],[2004,"Dancing Danes"],[2006,"Dancing Danes"]],"RU":[[1990,"Krupizkije Musyki"],[2005,"Russian Group Tziganes Romen"]],"SE":[[1953,"Individual participants"],[1955,""],[1958,""],[1961,""],[1965,""],[1966,"Svenska ungdomringen"],[1968,""],[1972,""],[1974,""],[2003,"Dalarnas Ungdomsdanslag"]],"UA":[[1993,"Horitsvit"],[2002,"Veselka"]],"IE":[[1978,""],[2000,"Geraldine Clifford Folk Group"]],"PT":[[1962,""],[1968,""],[1983,""],[1989,"As Lavradeiros"],[1991,"Rancho Folclorico de Godim"],[2000,"Academia de Dancas do Norte"]],"NO":[[1985,"Haugtussa Leikarring"],[1986,"Haugtussa Leikarring"]],"AT":[[1953,""],[1954,""],[1955,""],[1956,""],[1957,""],[1958,""],[1959,""],[1961,""],[1962,""],[1964,""],[1965,""],[1973,""],[1976,"Sporthochschule"]],"NP":[[1974,"Bairab Dance Ensemble"]],"CH":[[1953,"Individual participants"]]};
+
+          // ISO-2-Buchstaben → Flaggen-Emoji (Unicode Regional Indicator)
+          function isoToFlag(iso) {
+            if (!iso || iso.length !== 2) return '';
+            var base = 0x1F1E6;
+            return String.fromCodePoint(base + iso.charCodeAt(0) - 65)
+                 + String.fromCodePoint(base + iso.charCodeAt(1) - 65);
+          }
+
+          function showCountryPanel(c) {
+            var flag    = isoToFlag(c.iso);
+            var details = mapDetails[c.iso] || [];
+            var listHTML = '';
+            details.forEach(function(d) {
+              var yr = d[0];
+              var gr = d[1] || '';
+              var grHTML = gr ? '<span class="archiv-panel-group">' + gr + '</span>' : '';
+              listHTML += '<div class="archiv-panel-row" data-year="' + yr
+                + '" data-gruppe="' + gr.replace(/"/g,'&quot;') + '" title="In der Tabelle anzeigen ↓">'
+                + '<span class="archiv-panel-year">' + yr + '</span>'
+                + grHTML + '</div>';
+            });
+            panelCountryEl.textContent = c.name;
+            panelFlagEl.textContent   = flag;
+            panelCountEl.textContent  = '(' + c.count + '×)';
+            panelListEl.innerHTML = listHTML;
+            panelPlaceholder.style.display = 'none';
+            panelContent.style.display = 'block';
+          }
+
+          // Klick auf Panel-Zeile → passende Tabellenzeile anzeigen und anspringen
+          panelListEl.addEventListener('click', function(e) {
+            var row = e.target.closest('.archiv-panel-row');
+            if (!row) return;
+            var year    = parseInt(row.dataset.year, 10);
+            var gruppe  = row.dataset.gruppe || '';
+            scrollToArchivRow(year, gruppe);
+          });
+
+          function scrollToArchivRow(year, gruppe) {
+            // 1. Jahrzehnt-Filter aktivieren (nutzt den bestehenden Button-Handler)
+            var decade = String(Math.floor(year / 10) * 10);
+            var btn = document.querySelector('.archiv-decade-btn[data-decade="' + decade + '"]');
+            if (btn) btn.click();
+
+            // 2. Textsuche zurücksetzen
+            var inp = document.getElementById('archiv-search');
+            if (inp && inp.value) { inp.value = ''; inp.dispatchEvent(new Event('input')); }
+
+            // 3. Passende Tabellenzeile finden
+            var table    = document.getElementById('archiv-table');
+            var yearRows = table.querySelectorAll('tbody tr[data-jahr="' + year + '"]');
+            var target   = null;
+
+            if (gruppe) {
+              yearRows.forEach(function(tr) {
+                if (target) return;
+                var tds = tr.querySelectorAll('td');
+                var lastTd = tds[tds.length - 1];
+                if (lastTd && lastTd.textContent.trim() === gruppe) target = tr;
+              });
+            }
+            if (!target && yearRows.length) target = yearRows[0];
+            if (!target) return;
+
+            // 4. Seite zur Tabelle scrollen, dann innerhalb des Wrappers anspringen
+            var wrap = document.querySelector('.archiv-table-wrap');
+            wrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            setTimeout(function() {
+              var wrapRect = wrap.getBoundingClientRect();
+              var rowRect  = target.getBoundingClientRect();
+              wrap.scrollTop += rowRect.top - wrapRect.top - 56; // 56px = thead-Höhe
+              // 5. Zeile kurz aufleuchten lassen
+              target.classList.add('archiv-row-highlight');
+              setTimeout(function() { target.classList.remove('archiv-row-highlight'); }, 1800);
+            }, 320);
+          }
+
+          // Länder außerhalb des europäischen Kartenausschnitts → Inset-Box
+          var overseasISOs = { 'US': true, 'MX': true, 'NP': true, 'IL': true };
+
+          mapCountries.forEach(function(c) {
+            if (overseasISOs[c.iso]) return; // Außereuropa → Inset, nicht Karte
+
+            var r = 5 + Math.round(30 * Math.log(c.count + 1) / Math.log(maxCount + 1));
+            var opacity = 0.25 + 0.65 * (c.count / maxCount);
+
+            var marker = L.circleMarker([c.lat, c.lng], {
+              radius: r, fillColor: PRIMARY, color: '#fff', weight: 1.5, opacity: 1, fillOpacity: opacity
+            }).addTo(archivMap);
+
+            // Kleines Tooltip beim Hover: Name + Flagge + Anzahl + Hinweis
+            var tipHTML = '<div class="archiv-tip-name">' + c.name + ' <span class="archiv-tip-flag">' + isoToFlag(c.iso) + '</span></div>'
+              + '<div class="archiv-tip-count">' + c.count + ' {{ i18n "map_participations" }}</div>'
+              + '<div class="archiv-tip-hint">↗ {{ i18n "map_click_details" }}</div>';
+            marker.bindTooltip(tipHTML, {
+              className: 'archiv-hover-tip',
+              direction: 'top',
+              sticky: true,
+              offset: [0, -r]
+            });
+
+            marker.on('mouseover', function() {
+              marker.setStyle({ weight: 2.5, color: PRIMARY });
+            });
+
+            marker.on('mouseout', function() {
+              marker.setStyle({ weight: 1.5, color: '#fff' });
+            });
+
+            // Klick füllt das Detail-Panel rechts
+            marker.on('click', function() {
+              showCountryPanel(c);
+            });
+          });
+
+          // Overseas-Inset: feste L.Control-Box oben links
+          var OverseasControl = L.Control.extend({
+            options: { position: 'topleft' },
+            onAdd: function() {
+              var box = L.DomUtil.create('div', 'archiv-overseas-inset');
+              box.style.marginTop = '155px';   /* unterhalb UK/Irland – inline überschreibt Leaflet */
+              L.DomEvent.disableClickPropagation(box);
+              L.DomEvent.disableScrollPropagation(box);
+
+              var ttl = L.DomUtil.create('div', 'archiv-overseas-title', box);
+              ttl.textContent = 'Außer Europa';
+
+              mapCountries
+                .filter(function(c) { return overseasISOs[c.iso]; })
+                .forEach(function(c) {
+                  var r = 5 + Math.round(30 * Math.log(c.count + 1) / Math.log(maxCount + 1));
+                  var op = 0.25 + 0.65 * (c.count / maxCount);
+                  var sz = r * 2 + 6;
+
+                  var item = L.DomUtil.create('div', 'archiv-overseas-item', box);
+                  item.innerHTML =
+                    '<svg width="' + sz + '" height="' + sz + '" class="archiv-overseas-svg">'
+                    + '<circle cx="' + (sz/2) + '" cy="' + (sz/2) + '" r="' + r + '" '
+                    + 'fill="' + PRIMARY + '" fill-opacity="' + op + '" '
+                    + 'stroke="#fff" stroke-width="1.5"/></svg>'
+                    + '<span class="archiv-overseas-label">' + c.name + '</span>';
+
+                  // Hover zeigt Tooltip
+                  item.title = c.name + ' ' + isoToFlag(c.iso) + ' · ' + c.count + '× · Klicken für Details';
+
+                  item.addEventListener('click', function() { showCountryPanel(c); });
+                });
+
+              return box;
+            }
+          });
+          new OverseasControl().addTo(archivMap);
+          }); // end DOMContentLoaded
+        </script>
+
+        <!-- Filter + Suche + Tabelle in linker Spalte -->
+        <div class="archiv-container">
+
+        <!-- Jahrzehnt-Filter -->
+        <div class="archiv-decade-filter">
+            <span class="archiv-decade-label">Jahrzehnt:</span>
+            <button class="archiv-decade-btn active" data-decade="all">Alle</button>
+            <button class="archiv-decade-btn" data-decade="1950">1950er</button>
+            <button class="archiv-decade-btn" data-decade="1960">1960er</button>
+            <button class="archiv-decade-btn" data-decade="1970">1970er</button>
+            <button class="archiv-decade-btn" data-decade="1980">1980er</button>
+            <button class="archiv-decade-btn" data-decade="1990">1990er</button>
+            <button class="archiv-decade-btn" data-decade="2000">2000er</button>
+            <button class="archiv-decade-btn" data-decade="2010">2010er</button>
+            <button class="archiv-decade-btn" data-decade="2020">2020er</button>
+        </div>
+
+        <!-- Suchmaske -->
+        <div class="archiv-search-bar">
+            <input type="text" id="archiv-search" placeholder="{{ i18n "search_placeholder" }}" autocomplete="off">
+            <span class="archiv-search-icon">🔍</span>
+        </div>
+
+        <!-- Scrollbare Tabelle -->
+        <div class="archiv-table-wrap">
+            <table class="archiv-table" id="archiv-table">
+                <thead>
+                    <tr>
+                        <th class="archiv-col-nr">{{ i18n "eurowoche_nr" }}</th>
+                        <th class="archiv-col-jahr">{{ i18n "year" }}</th>
+                        <th class="archiv-col-land">{{ i18n "country" }}</th>
+                        <th class="archiv-col-flag"></th>
+                        <th class="archiv-col-stadt">{{ i18n "city" }}</th>
+                        <th class="archiv-col-gruppe">{{ i18n "dance_group" }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ range .Site.Data.archiv }}
+                    {{ $nummer := .nummer }}
+                    {{ $jahr := .jahr }}
+                    {{ $gruppen := .gruppen }}
+                    {{ range $idx, $g := $gruppen }}
+                    {{ $landKey := $g.land | lower }}
+                    {{/* Partial matches für Länder mit Zusatz wie "Spain (Basque)" */}}
+                    {{ if hasPrefix $landKey "spain" }}{{ $landKey = "spain" }}{{ end }}
+                    {{ if hasPrefix $landKey "denmark" }}{{ $landKey = "denmark" }}{{ end }}
+                    {{ if hasPrefix $landKey "ireland" }}{{ $landKey = "ireland" }}{{ end }}
+                    {{ $flag := index $flags $landKey | default "🏳️" }}
+                    <tr data-nummer="{{ $nummer }}" data-jahr="{{ $jahr }}">
+                        {{ if eq $idx 0 }}
+                        <td class="archiv-nr" rowspan="{{ len $gruppen }}">{{ $nummer }}.</td>
+                        <td class="archiv-jahr" rowspan="{{ len $gruppen }}">{{ $jahr }}</td>
+                        {{ end }}
+                        <td>{{ $g.land }}</td>
+                        <td class="archiv-flag">{{ $flag }}</td>
+                        <td>{{ $g.stadt }}</td>
+                        <td>{{ $g.tanzgruppe }}</td>
+                    </tr>
+                    {{ end }}
+                    {{ end }}
+                </tbody>
+            </table>
+        </div>
+        </div><!-- /archiv-container -->
+      </div><!-- /archiv-left-col -->
+
+      <!-- RECHTE SPALTE: Panel sticky neben Karte + Tabelle -->
+      <div class="archiv-right-col">
+        <div id="archiv-info-panel" class="archiv-info-panel">
+            <div class="archiv-panel-placeholder">
+                <span class="archiv-panel-icon">🗺</span>
+                <p>{{ i18n "map_panel_placeholder" }}</p>
+            </div>
+            <div class="archiv-panel-content">
+                <div class="archiv-panel-header">
+                    <strong id="archiv-panel-country"></strong>
+                    <span class="archiv-panel-flag" id="archiv-panel-flag"></span>
+                    <span id="archiv-panel-count"></span>
+                </div>
+                <div id="archiv-panel-list" class="archiv-panel-list"></div>
+            </div>
+        </div>
+      </div><!-- /archiv-right-col -->
+
+    </div><!-- /archiv-layout -->
+
+</article>
+
+<script>
+(function() {
+  var searchInput  = document.getElementById('archiv-search');
+  var table        = document.getElementById('archiv-table');
+  var decadeFilter = 'all';
+  var textFilter   = '';
+
+  // Zähle sichtbare Gruppen-Zeilen (nur erste Zeile einer Eurowoche → hat td.archiv-nr)
+
+  function applyFilters() {
+    var rows = table.querySelectorAll('tbody tr');
+    rows.forEach(function(tr) {
+      var jahr = parseInt(tr.dataset.jahr, 10);
+      var decadeOk = (decadeFilter === 'all') || (Math.floor(jahr / 10) * 10 === parseInt(decadeFilter, 10));
+      var text = tr.textContent.toLowerCase();
+      var textOk = (textFilter === '') || text.includes(textFilter);
+      if (decadeOk && textOk) {
+        tr.classList.remove('archiv-hidden');
+      } else {
+        tr.classList.add('archiv-hidden');
+      }
+    });
+  }
+
+  // Textsuche
+  searchInput.addEventListener('input', function() {
+    textFilter = this.value.toLowerCase().trim();
+    applyFilters();
+  });
+
+  // Jahrzehnt-Buttons
+  document.querySelectorAll('.archiv-decade-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.archiv-decade-btn').forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      decadeFilter = this.dataset.decade;
+      applyFilters();
+    });
+  });
+
+})();
+</script>
+{{ end }}

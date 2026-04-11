@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="page-content">
+    <div class="page-body">
+        <h1>{{ .Title }}</h1>
+        {{ range .Site.Data.downloads }}
+        <div class="download-category">
+            <h2>{{ .titel }}</h2>
+            <ul class="download-list">
+                {{ range .dateien }}
+                <li>
+                    <a href="{{ .url }}" target="_blank">{{ .name }}</a>
+                    {{ with .format }}<span class="file-format">({{ . }})</span>{{ end }}
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+    </div>
+</article>
+{{ end }}

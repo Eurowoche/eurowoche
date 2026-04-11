@@ -1,0 +1,5125 @@
+/* === SELF-HOSTED FONTS (DSGVO-konform) === */
+
+/* Fraunces Variable Font (full axes: opsz 9–144, wght 100–900, SOFT, WONK)
+   WIX uses fraunces_120pt-light = opsz 120 / wght 300 / WONK 1 */
+@font-face {
+    font-family: 'FrauncesVar';
+    src: url('/fonts/fraunces-latin-full-normal.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'FrauncesVar';
+    src: url('/fonts/fraunces-latin-full-italic.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Statische Fraunces-Varianten als Fallback */
+@font-face {
+    font-family: 'Fraunces';
+    src: url('/fonts/fraunces-latin-300-normal.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fraunces';
+    src: url('/fonts/fraunces-latin-300-italic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fraunces';
+    src: url('/fonts/fraunces-latin-400-normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fraunces';
+    src: url('/fonts/fraunces-latin-400-italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fraunces';
+    src: url('/fonts/fraunces-latin-600-normal.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fraunces';
+    src: url('/fonts/fraunces-latin-600-italic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/lato-latin-300-normal.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/lato-latin-400-normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/lato-latin-700-normal.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* === RESET & BASE === */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #8B534D;
+    --primary-dark: #6B3F3A;
+    --primary-light: #A8706A;
+    --bg-cream: #F0EEE9;
+    --bg-mauve: #EFE1C8;
+    --bg-footer: #E8E6E2;
+    --bg-info: #EFE1C8;
+    --text-dark: #484848;
+    --text-light: #F0EEE9;
+    --white: #FFFFFF;
+    --font-heading: 'FrauncesVar', 'Fraunces', serif;
+    --font-body: 'Lato', sans-serif;
+
+    /* ── Typografische Skala ─────────────────────────── */
+    --fs-xs:   0.8rem;                        /* Captions, Labels     */
+    --fs-sm:   0.9rem;                        /* Sekundärtext         */
+    --fs-base: 1rem;                          /* Fließtext            */
+    --fs-md:   1.1rem;                        /* Größerer Fließtext   */
+    --fs-lg:   1.2rem;                        /* Lead-Text            */
+    --fs-xl:   1.5rem;                        /* Kleine Überschrift   */
+    --fs-h4:   clamp(1.4rem, 2.5vw, 1.8rem); /* Karten-Titel         */
+    --fs-h3:   clamp(1.6rem, 3vw, 2.2rem);   /* Abschnitts-Titel     */
+    --fs-h2:   clamp(2rem, 4vw, 3rem);       /* Seiten-Abschnitte    */
+    --fs-h1:   clamp(2.5rem, 5vw, 4rem);     /* Seitenüberschriften  */
+    --fs-hero: clamp(3rem, 6vw, 5rem);       /* Hero-Schlagzeilen    */
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: var(--bg-cream);
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-dark);
+    background-color: var(--bg-cream);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-variation-settings: 'opsz' 120;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    font-style: normal;
+}
+
+h2 {
+    font-size: var(--fs-h3);
+    font-style: normal;
+}
+
+h3 {
+    font-size: var(--fs-h4);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: var(--fs-sm);
+    color: #666;
+    margin-bottom: 2.5rem;
+}
+
+/* Heart section: centered (wie WIX-Original) */
+.heart-section .section-title,
+.heart-section .section-subtitle {
+    text-align: left;
+}
+
+/* Mach mit section */
+.mach-mit-section .section-title {
+    text-align: left;
+    font-size: var(--fs-h1);
+    font-weight: 420;
+    margin-bottom: 1rem;
+    padding-left: 8rem;
+    color: #727270;
+}
+.mach-mit-section .section-subtitle {
+    text-align: left;
+    padding-left: 8rem;
+}
+
+/* === BUTTONS === */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1.4rem;
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    border: 1px solid var(--primary);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--text-light);
+    border-color: var(--primary);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    color: var(--text-light);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: var(--text-light);
+}
+
+.btn-full {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.button-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+/* === HEADER === */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(240, 238, 233, 0.97);
+    backdrop-filter: blur(10px);
+    border-top: none;
+    border-bottom: 1px solid rgba(139, 83, 77, 0.15);
+    transition: all 0.3s;
+}
+
+.site-header.scrolled {
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+}
+
+.header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+.logo-text {
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    line-height: 1.3;
+    color: var(--primary);
+    letter-spacing: 0.02em;
+    text-transform: none;
+}
+
+.logo-text strong {
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    font-size: var(--fs-xs);
+}
+
+.logo-icon {
+    height: 72px;
+    width: auto;
+    max-width: 50vw;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-icon {
+    transform: scale(1.1);
+}
+
+/* Logo: Entferne Hover-Effekt auf Touch-Devices */
+@media (hover: none) {
+    .logo:hover .logo-icon {
+        transform: none;
+    }
+
+    .logo {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0.5rem;
+    }
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+    margin-left: 3rem;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    color: var(--primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: 0.05em;
+    margin-right: auto;
+    padding: 0.4rem 0.6rem;
+    border-radius: 3px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.menu-toggle {
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.menu-toggle:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.menu-toggle:hover .menu-icon {
+    color: #fff;
+}
+
+.menu-icon {
+    font-size: var(--fs-xl);
+    color: var(--primary);
+}
+
+.lang-select {
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    font-weight: 300;
+    color: var(--text-dark);
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23484848' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat right 1.2rem center;
+    border: 1px solid rgba(139, 107, 97, 0.35);
+    padding: 0.85rem 3rem 0.85rem 1.6rem;
+    cursor: pointer;
+    border-radius: 2px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    letter-spacing: 0.02em;
+    min-width: 170px;
+    border-color: rgba(100, 60, 55, 0.5);
+    margin-right: 6rem;
+    margin-top: -0.3rem;
+}
+
+.lang-select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* === NAV OVERLAY === */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    overflow-y: auto;
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-overlay-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+}
+
+.nav-overlay-title {
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
+.nav-close {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: var(--fs-xl);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav-overlay-links {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 0.5rem 3rem;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.nav-overlay-links a {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h2);
+    color: var(--text-light);
+    text-decoration: none;
+    transition: opacity 0.3s;
+    padding: 0.3rem 0;
+}
+
+.nav-overlay-links a:hover {
+    opacity: 0.7;
+    color: var(--text-light);
+}
+
+/* --- Sprachumschalter im Nav-Overlay --- */
+.nav-overlay-lang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.5rem 2rem 2.5rem;
+}
+
+.nav-lang-active,
+.nav-lang-link {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    color: var(--text-light);
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.nav-lang-active {
+    opacity: 1;
+    font-weight: 500;
+}
+
+.nav-lang-link {
+    opacity: 0.6;
+}
+
+.nav-lang-link:hover {
+    opacity: 1;
+}
+
+.nav-lang-divider {
+    color: var(--text-light);
+    opacity: 0.4;
+    font-size: var(--fs-base);
+}
+
+/* === HERO SECTION === */
+/* Hero-Hintergrund = helles Mauve (cream 80% auf #8B534D) */
+.hero-section {
+    margin-top: 66px;
+    background: #DCCFCA;
+    display: flex;
+}
+
+.hero-inner {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+.hero-text {
+    flex: 0 0 48%;
+    background: #8B534D;
+    color: var(--text-light);
+    padding: 4rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text-inner {
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.hero-text h1 {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-size: var(--fs-h2);
+}
+
+.hero-subtitle {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: var(--fs-lg);
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.hero-desc {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: var(--fs-base);
+    line-height: 1.8;
+    opacity: 0.85;
+    margin-bottom: 2rem;
+}
+
+.hero-desc p {
+    margin: 0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+/* Buttons: alle gleich breit wie WIX (161px) */
+.btn-hero {
+    display: inline-block;
+    min-width: 10rem;
+    padding: 0.6rem 1.2rem;
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    border: none;
+    color: var(--text-dark);
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: filter 0.2s;
+    border-radius: 0;
+}
+
+.btn-hero:hover {
+    filter: brightness(0.93);
+    color: var(--text-dark);
+}
+
+/* Button-Farben = Sektions-Farben */
+.btn-hero-1 { background: #F0EEE9; } /* Creme  — Zum Festival — = "Das Herz" Hintergrund */
+.btn-hero-2 { background: #EFE1C8; } /* Beige  — Demnächst   — = Hero Hintergrund       */
+.btn-hero-3 { background: #C6C5C1; } /* Grau   — Mach mit    — = Kreise Hintergrund      */
+
+/* Bild etwas kleiner, mit rechtem Rand */
+.hero-image {
+    flex: 0 0 36%;
+    margin-left: 6%;
+    margin-right: 0;
+    display: flex;
+    align-items: stretch;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+/* === CIRCLE TRIANGLE SECTION === */
+.heart-section {
+    padding: 5rem 2rem 0;
+    background: var(--bg-cream);
+}
+
+.heart-section .section-title {
+    font-size: var(--fs-h1);
+    font-style: normal;
+    font-weight: 420;
+    color: #727270;
+    margin-bottom: 1.2rem;
+    text-align: left;
+    padding-left: 8rem;
+}
+
+.heart-section .section-subtitle {
+    font-size: var(--fs-base);
+    max-width: 100%;
+    margin: 0 0 3rem;
+    text-align: left;
+    padding-left: 8rem;
+}
+
+/* Kreise-Hintergrund = warm beige #EFE1C8 bei 80% Opazität (WIX-exakt)
+   Einschub: nicht full-width, ca. 93–94% mit Seitenrändern */
+.circles-triangle-wrap {
+    background: rgba(239, 225, 200, 0.8);
+    padding: 4rem 2rem 5rem;
+    margin: 0;
+    max-width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.circles-triangle {
+    max-width: 750px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.circle-item {
+    display: flex;
+    justify-content: center;
+}
+
+.circle-top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.3rem;
+}
+
+.circle-center-text {
+    text-align: center;
+    padding: 0.3rem 0;
+}
+
+.circle-center-title {
+    font-family: var(--font-heading);
+    font-style: normal;
+    font-weight: 350;
+    font-variation-settings: 'opsz' 120;
+    font-size: var(--fs-h3);
+    color: #5a5a58;
+    margin-bottom: -0.2rem;
+}
+
+.circle-center-sub {
+    font-family: var(--font-body);
+    font-size: var(--fs-lg);
+    font-weight: 300;
+    color: #5a5a58;
+    letter-spacing: 0.04em;
+}
+
+.circle-bottom-row {
+    display: flex;
+    justify-content: center;
+    gap: 13rem;
+    margin-top: -1rem;
+}
+
+.circle-img {
+    width: 305px;
+    height: 305px;
+    border-radius: 50%;
+    overflow: visible;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease;
+}
+
+.circle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.circle-img:hover {
+    transform: scale(1.1);
+}
+
+.circle-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(122, 46, 38, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: background 0.3s;
+    border-radius: 50%;
+}
+
+/* Oberer Kreis: etwas helleres Overlay (WIX: rgba(139,83,77,0.6)) */
+.circle-top .circle-overlay {
+    background: rgba(139, 83, 77, 0.6);
+}
+
+.circle-img:hover .circle-overlay {
+    background: rgba(122, 46, 38, 0.65);
+}
+
+.circle-label {
+    font-family: var(--font-body);
+    font-size: var(--fs-h2);
+    font-weight: 400;
+    color: #F0EEE9;
+    text-align: center;
+    padding: 0 1.5rem;
+    line-height: 1.4;
+    letter-spacing: -0.03em;
+}
+
+/* Oberer Kreis: kleinere Schrift (WIX 38px vs 48px) */
+.circle-top .circle-label {
+    font-size: var(--fs-h3);
+}
+
+.circle-btn {
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    color: var(--primary);
+    background: #F0EEE9;
+    border: 1px solid var(--primary);
+    padding: 0.5rem 1.2rem;
+    letter-spacing: 1.5px;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.circle-img:hover .circle-btn {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+    transition: background 0.3s, color 0.3s;
+}
+
+.circle-btn:active,
+.circle-img:active .circle-btn {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+/* === EVENTS SECTION === */
+.events-section {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.events-section .section-title {
+    text-align: left;
+    padding-left: 8rem;
+    margin-bottom: 0.5rem;
+    font-size: var(--fs-h1);
+    font-weight: 420;
+    color: #727270;
+}
+
+.events-section .section-subtitle {
+    text-align: left;
+    padding-left: 8rem;
+    font-size: var(--fs-md);
+    margin-bottom: 3rem;
+}
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.event-row {
+    display: flex;
+    align-items: stretch;
+    min-height: 420px;
+}
+
+/* odd rows: image left, text right */
+/* even rows: text left, image right */
+.event-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.event-image {
+    flex: 0 0 50%;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.event-info {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    padding: 4rem 6rem;
+    background: var(--bg-cream);
+}
+
+.event-info h3 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h4);
+    font-style: normal;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 0.7rem;
+}
+
+.event-meta {
+    font-size: var(--fs-base);
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+/* .event-date und .event-location jetzt in .event-meta (event-card-body) */
+
+/* === MÄRKTE TEASER === */
+.maerkte-teaser-section {
+    background: #E3D1D1;
+    padding: 0;
+}
+
+.maerkte-teaser-split {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.maerkte-teaser-image {
+    flex: 0 0 35%;
+    overflow: hidden;
+}
+
+.maerkte-teaser-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.maerkte-teaser-text {
+    flex: 1;
+    padding: 3rem 4rem;
+    max-width: 550px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.maerkte-teaser-text h2 {
+    font-size: var(--fs-h4);
+    margin-bottom: 0.8rem;
+}
+
+.maerkte-teaser-text p {
+    margin-bottom: 1.5rem;
+    font-size: var(--fs-md);
+    line-height: 1.7;
+}
+
+/* === TESTIMONIALS === */
+.testimonials-section {
+    padding: 1.5rem 2rem;
+    background: var(--primary);
+    transition: background-color 0.8s ease;
+}
+
+.testimonials-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.testimonials-image {
+    display: none;
+}
+
+.testimonials-content {
+    flex: 1;
+    text-align: center;
+    background: transparent;
+    padding: 2rem 0;
+}
+
+.testimonials-slider {
+    position: relative;
+    min-height: 140px;
+}
+
+.testimonial-slide {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.testimonial-slide.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.testimonial-source {
+    font-family: var(--font-heading);
+    font-size: var(--fs-md);
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.testimonial-quote {
+    font-family: var(--font-heading);
+    font-size: var(--fs-xl);
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+.testimonial-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.testimonial-prev,
+.testimonial-next {
+    background: none;
+    border: none;
+    font-size: var(--fs-h1);
+    color: var(--text-light);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: opacity 0.3s;
+    opacity: 0.7;
+}
+
+.testimonial-prev:hover,
+.testimonial-next:hover {
+    opacity: 0.6;
+}
+
+.testimonial-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(240, 238, 233, 0.4);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: var(--text-light);
+}
+
+/* === MACH MIT CARDS === */
+.mach-mit-section {
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+    background: var(--bg-cream);
+    min-height: 400px;
+}
+
+.mach-mit-section-1 { background: #E8E4DC; }
+.mach-mit-section-2 { background: #E8E4DC; }
+.mach-mit-section-3 { background: #E8E4DC; }
+
+.mach-mit-photo-side {
+    flex: 0 0 50%;
+    overflow: hidden;
+}
+
+.mach-mit-photo-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mach-mit-text-side {
+    flex: 1;
+    padding: 2.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mach-mit-text-side h2 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h4);
+    font-weight: 400;
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 1.1rem;
+}
+
+.mach-mit-text-side p {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    line-height: 1.8;
+    text-align: center;
+    max-width: 400px;
+    margin-bottom: 1.8rem;
+}
+
+.mach-mit-text-side .btn {
+    font-size: var(--fs-sm);
+    padding: 0.6rem 1.8rem;
+    margin-top: 0;
+}
+
+.mach-mit-untertitel {
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-top: 0.5rem;
+}
+
+/* Homepage Mach-mit: Titel links, Cards rechts */
+/* === MACH MIT HOMEPAGE — Zweiteilig ===
+   6a: Creme-Hintergrund, zentrierte Überschrift
+   6b: Mauve-Einschub, 3 Karten über volle Breite */
+
+.mach-mit-heading-section {
+    background: var(--bg-cream);
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+}
+
+.mach-mit-heading-section .section-title {
+    margin-bottom: 0.5rem;
+    font-size: var(--fs-hero);
+}
+
+.mach-mit-cards-section {
+    background: var(--bg-mauve);
+    /* gleiche horizontale Begrenzung wie der Gallery-Slider darunter */
+    padding: 3rem 2rem 2rem;
+}
+
+.mach-mit-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(4rem - 5px);
+    width: 100%;
+    max-width: 1083px;
+    margin: 0 auto;
+    transform: translateX(-15px);
+}
+
+/* Karte: overflow visible damit Label übersteht */
+.mach-mit-card {
+    text-decoration: none;
+    color: var(--text-dark);
+    position: relative;
+    overflow: visible;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.mach-mit-card:hover {
+    transform: translateY(-4px);
+    color: var(--text-dark);
+}
+
+/* Bild-Wrapper: overflow hidden für saubere Kanten */
+.mach-mit-card-img-wrap {
+    overflow: hidden;
+    width: 100%;
+}
+
+.mach-mit-card-img-wrap img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.55s ease;
+}
+
+.mach-mit-card:hover .mach-mit-card-img-wrap img {
+    transform: scale(1.05);
+}
+
+/* Label: rechte untere Ecke — nur wenige px ins Photo hineinragend, rechts außen */
+.card-label {
+    position: absolute;
+    bottom: -10px;
+    right: -22px;
+    display: block;
+    font-family: var(--font-body);
+    font-size: var(--fs-xl);
+    font-weight: 300;
+    padding: 0.55rem 1.4rem 0.65rem;
+    background: #fff;
+    letter-spacing: 0.01em;
+    z-index: 2;
+    box-shadow: -2px 2px 10px rgba(0,0,0,0.12);
+    white-space: nowrap;
+}
+
+/* === GALLERY === */
+.gallery-section {
+    padding: 2rem;
+    background: var(--bg-cream);
+}
+
+/* Mosaik-Slider wie WIX Pro Gallery — absolute Positionierung */
+.gallery-slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+    transform: translateX(30px);
+}
+
+.gallery-track {
+    position: relative;
+    height: 384px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.mosaic-item {
+    position: absolute;
+    overflow: hidden;
+}
+
+.mosaic-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.mosaic-item:hover img {
+    transform: scale(1.03);
+}
+
+/* Navigationspfeile (rund, cream, wie WIX) */
+.gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(240, 238, 233, 0.9);
+    border: none;
+    font-size: var(--fs-xl);
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    transition: background 0.3s, opacity 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.gallery-arrow:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.gallery-arrow-left {
+    left: 12px;
+}
+
+.gallery-arrow-right {
+    right: 12px;
+}
+
+/* === GALLERY LIGHTBOX === */
+.gallery-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.gallery-lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.lightbox-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+.lightbox-img {
+    position: relative;
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 4px;
+    z-index: 1;
+}
+.lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: var(--fs-h1);
+    cursor: pointer;
+    z-index: 2;
+    line-height: 1;
+}
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: #fff;
+    font-size: var(--fs-h1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: rgba(255,255,255,0.3);
+}
+.lightbox-prev {
+    left: 1.5rem;
+}
+.lightbox-next {
+    right: 1.5rem;
+}
+
+/* === MÄRKTE LIGHTBOX (#maerkte-lightbox) === */
+#maerkte-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+#maerkte-lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+#maerkte-lightbox .lb-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.92);
+}
+#maerkte-lightbox .lb-img {
+    position: relative;
+    max-width: 90vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 3px;
+    z-index: 1;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+}
+#maerkte-lightbox .lb-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: var(--fs-h2);
+    cursor: pointer;
+    z-index: 2;
+    line-height: 1;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+#maerkte-lightbox .lb-close:hover { opacity: 1; }
+#maerkte-lightbox .lb-prev,
+#maerkte-lightbox .lb-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.13);
+    border: none;
+    color: #fff;
+    font-size: var(--fs-h2);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#maerkte-lightbox .lb-prev:hover,
+#maerkte-lightbox .lb-next:hover {
+    background: rgba(255,255,255,0.28);
+}
+#maerkte-lightbox .lb-prev { left: 1.5rem; }
+#maerkte-lightbox .lb-next { right: 1.5rem; }
+
+/* === SHOP TEASER === */
+.shop-teaser-section {
+    padding: 4rem 2rem;
+    background: var(--bg-cream);
+}
+
+.shop-teaser-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background: var(--bg-mauve);
+    border-radius: 4px;
+    padding: 2.5rem;
+}
+
+.shop-teaser-image {
+    flex: 0 0 40%;
+    overflow: hidden;
+}
+
+.shop-teaser-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.shop-teaser-text {
+    flex: 1;
+    text-align: center;
+}
+
+.shop-teaser-text h2 {
+    margin-bottom: 0.8rem;
+    font-size: var(--fs-h4);
+}
+
+.shop-teaser-text p {
+    margin-bottom: 1.5rem;
+    font-size: var(--fs-sm);
+    color: #666;
+}
+
+/* === CONTACT SECTION === */
+.contact-section {
+    padding: 4rem 2rem 4rem;
+    background: var(--bg-mauve);
+}
+
+.contact-section .section-title {
+    text-align: left;
+    margin: 0 0 0.5rem;
+    padding-left: 8rem;
+    font-size: var(--fs-h1);
+    font-weight: 420;
+    color: #727270;
+}
+
+.contact-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+    margin-top: 1.5rem;
+    padding-left: 8rem;
+}
+
+.contact-greeting {
+    font-size: var(--fs-xs);
+    color: #888;
+    margin-bottom: 0.8rem;
+}
+
+.contact-text p {
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+    font-size: var(--fs-sm);
+}
+
+.contact-email-direct {
+    margin-top: 1.2rem;
+}
+
+.contact-email-direct a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-size: var(--fs-sm);
+}
+
+/* === CONTACT FORM === */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: var(--fs-sm);
+    margin-bottom: 0.3rem;
+    color: #666;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(139, 107, 97, 0.3);
+    background: rgba(245, 240, 232, 0.6);
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    color: var(--text-dark);
+    transition: border-color 0.3s;
+    border-radius: 1px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* DSGVO-Checkbox */
+.form-dsgvo {
+    margin-top: 0.5rem;
+}
+
+.dsgvo-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    cursor: pointer;
+    font-size: var(--fs-sm);
+    color: #555;
+    line-height: 1.5;
+}
+
+.dsgvo-label input[type="checkbox"] {
+    width: auto;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+    accent-color: var(--primary);
+}
+
+.dsgvo-label a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.form-required-hint {
+    font-size: var(--fs-xs);
+    color: #999;
+    margin-top: -0.5rem;
+}
+
+/* Fehlermeldung auf Kontakt-Seite */
+.contact-error-msg {
+    background: #fdf0ef;
+    border-left: 3px solid var(--primary);
+    padding: 0.8rem 1rem;
+    font-size: var(--fs-sm);
+    color: #7a3030;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+
+/* Danke-Seite */
+.danke-page {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.danke-inner {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.danke-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.danke-inner h1 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h2);
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.danke-text {
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* === FOOTER === */
+/* === FOOTER (WIX-Style) === */
+.site-footer {
+    background: var(--bg-mauve);
+    padding: 0;
+}
+
+.footer-top-bar {
+    display: none;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1px 1fr;
+    gap: 3rem;
+    padding: 3.5rem 2rem 2.5rem;
+    align-items: start;
+}
+
+.footer-divider {
+    background: rgba(139, 107, 97, 0.35);
+    width: 1px;
+    align-self: stretch;
+}
+
+.footer-title {
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.footer-claim {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h1);
+    font-style: normal;
+    font-weight: 300;
+    font-variation-settings: 'opsz' 120;
+    color: var(--text-dark);
+    line-height: 1.15;
+}
+
+.footer-contact {
+    font-size: var(--fs-sm);
+    line-height: 2;
+    color: var(--text-dark);
+}
+
+.footer-contact a {
+    color: var(--text-dark);
+}
+
+.footer-social {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--text-dark);
+    color: var(--bg-cream);
+    transition: opacity 0.3s;
+}
+
+.footer-social a:hover {
+    opacity: 0.85;
+    color: var(--bg-cream);
+    transform: scale(1.25);
+}
+
+.footer-social a {
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem 1.5rem;
+    border-top: 1px solid rgba(139, 107, 97, 0.15);
+}
+
+.footer-legal {
+    display: flex;
+    gap: 1.5rem;
+    font-size: var(--fs-sm);
+}
+
+.footer-legal a {
+    color: var(--text-dark);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.footer-copy {
+    font-size: var(--fs-xs);
+    color: #888;
+    margin: 0;
+}
+
+/* === PAGE TEMPLATES === */
+
+/* Fix: header is 66px fixed — all subpages need this top margin */
+.page-content {
+    margin-top: 66px;
+}
+
+/* === ZENTRIERTE INTRO-SEKTION (Festival, Botschaft) === */
+.page-intro {
+    padding: 4rem 2rem 2.5rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-intro h1 {
+    font-size: var(--fs-h1);
+    font-style: normal;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+}
+
+.page-intro-lead {
+    font-size: var(--fs-md);
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+}
+
+/* === FESTIVAL FOTOS === */
+.festival-photo-hero {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.festival-photo-hero img {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    display: block;
+}
+
+.festival-photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 240px 240px;
+    gap: 12px;
+    margin-top: 0;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+}
+
+.festival-grid-item {
+    overflow: hidden;
+    border: 4px solid #fff;
+    border-radius: 4px;
+}
+
+.festival-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.festival-grid-item:hover img {
+    transform: scale(1.03);
+}
+
+/* === BURG-SPLIT-SEKTION === */
+.burg-split-section {
+    display: flex;
+    gap: 3rem;
+    padding: 4rem 0;
+    max-width: none;
+    margin: 0;
+    align-items: center;
+}
+
+.burg-split-image {
+    flex: 0 0 45%;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.burg-split-image img {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.burg-split-text {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    max-width: 600px;
+}
+
+.burg-split-text h2 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h3);
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.burg-split-text p {
+    margin-bottom: 1rem;
+    font-size: var(--fs-sm);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* === NÄCHSTE TERMINE === */
+.termine-section {
+    background: var(--bg-mauve);
+    padding: 4rem 2rem;
+}
+
+.termine-section h2 {
+    font-size: var(--fs-h2);
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--color-primary);
+}
+
+.termine-section > .termine-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.termine-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-top: 0.5rem;
+}
+
+.termine-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--fs-sm);
+    padding: 0.5rem 0;
+    border-bottom: none;
+    gap: 2rem;
+}
+
+/* === TEILNAHME FÜR GRUPPEN === */
+.teilnahme-section {
+    background: #E3D1D1;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.teilnahme-section h2 {
+    font-size: var(--fs-h2);
+    margin-bottom: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--color-primary);
+    text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.teilnahme-section p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: var(--fs-sm);
+    line-height: 1.8;
+}
+
+.teilnahme-section .button-row {
+    justify-content: center;
+}
+
+/* === BOTSCHAFT FOTOS === */
+.botschaft-photo-hero {
+    width: 100%;
+    overflow: hidden;
+    max-height: 500px;
+}
+
+.botschaft-photo-hero img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* 3 Fotos in einer Reihe — gleiche Breite wie .page-body */
+.page-photos-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    padding: 0 2rem 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-photos-3-item {
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.page-photos-3-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.page-photos-3-item:hover img {
+    transform: scale(1.03);
+}
+
+.page-hero-banner {
+    margin-top: 60px;
+    height: 45vh;
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 3rem;
+    position: relative;
+}
+
+.page-hero-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(44,44,44,0.6) 0%, rgba(44,44,44,0) 60%);
+}
+
+.page-hero-banner h1 {
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.page-body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem 5rem;
+}
+
+.page-body h1 {
+    margin-bottom: 1.5rem;
+}
+
+.page-body h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-body h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.page-body p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.verein-page .page-body p {
+    font-size: var(--fs-base);
+}
+
+.page-body ul, .page-body ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-body li {
+    margin-bottom: 0.4rem;
+}
+
+.page-images-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+}
+
+/* === SECTION HELPERS === */
+.section-mauve {
+    padding: 2.5rem;
+    border-radius: 2px;
+    margin: 2rem 0;
+}
+
+.section-rose {
+    padding: 3rem 2rem;
+    border-radius: 2px;
+    margin: 0;
+    background: #E8D5D5;
+    text-align: center;
+    max-width: 100%;
+}
+
+.section-rose h2 {
+    font-size: var(--fs-h3);
+    margin-bottom: 1rem;
+    margin-top: 0;
+    color: var(--text-dark);
+}
+
+.section-rose p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: var(--fs-sm);
+    line-height: 1.8;
+}
+
+.section-rose .button-row {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* === BOTSCHAFT SPEZIAL === */
+.botschaft-photo-hero-constrained {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.botschaft-photo-hero-constrained img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* === MACH MIT FOTOS === */
+.mach-mit-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.mach-mit-photo-item {
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.mach-mit-photo-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.mach-mit-photo-item:hover img {
+    transform: scale(1.05);
+}
+
+/* === MÄRKTE SEKTIONEN === */
+/* Märkte: Untertitel DIREKT unter Titel — kein Abstand */
+.maerkte-page .page-intro {
+    padding-bottom: 0;
+}
+.maerkte-page .page-intro h1 {
+    margin-bottom: 0;
+}
+.maerkte-page .maerkte-untertitel {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.maerkte-intro {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: calc(2.5rem + 10px) 2rem 2.5rem;
+    text-align: center;
+}
+
+.maerkte-intro h2 {
+    margin-bottom: 1rem;
+}
+
+.maerkte-intro p {
+    margin-bottom: 1rem;
+    font-family: 'Lato', var(--font-body), sans-serif;
+    font-size: var(--fs-md);
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* Ostermarkt-Wrapper: 50px links */
+/* Ostermarkt: Foto startet an oberer Kante des Einschubs, 60px links */
+.maerkte-section-cream.maerkte-section-wrapper {
+    padding: 0 3rem 3rem 60px;
+}
+
+/* Adventsmarkt: gespiegelt, 60px rechts */
+.maerkte-section-light.maerkte-section-wrapper {
+    padding: 0 60px 3rem 3rem;
+}
+
+.maerkte-section-cream {
+    background: #EFE1C8;
+}
+
+.maerkte-section-light {
+    background: #FFFFFF;
+}
+
+/* Innenbereiche — Photo 1/3, Text Rest, gleiche Höhe */
+.maerkte-section-inner {
+    display: grid;
+    grid-template-columns: 33% 1fr;
+    gap: 3rem;
+    align-items: stretch;
+}
+
+/* Photo füllt die volle Höhe des Textfelds */
+.maerkte-image-container {
+    height: 100%;
+}
+
+.maerkte-image-with-overlay {
+    height: 100%;
+    min-height: 600px;
+}
+
+/* Adventsmarkt: Text schmal links, Bild groß rechts */
+.maerkte-section-inner-reverse {
+    grid-template-columns: 1fr 33%;
+}
+
+/* Bild-Container mit Overlay */
+.maerkte-image-container {
+    position: relative;
+}
+
+.maerkte-image-with-overlay {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.maerkte-image-with-overlay img {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.maerkte-image-with-overlay:hover img {
+    transform: scale(1.05);
+}
+
+.maerkte-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    padding: 2rem 1.5rem 1.5rem;
+    color: #fff;
+}
+
+/* Overlay-Text OBEN statt unten — zentriert, größer */
+.maerkte-overlay-top {
+    top: 0;
+    bottom: auto;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+}
+
+.maerkte-image-overlay h3 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-hero);
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+}
+
+.maerkte-image-subtitle {
+    font-size: var(--fs-md);
+    font-weight: 300;
+    color: rgba(255,255,255,0.95);
+    margin: 0.1rem 0 0;
+    font-style: normal;
+    text-align: center;
+}
+
+/* Roter Filter auf Markt-Bildern — deutlich stärker */
+.maerkte-image-red-filter::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(139, 83, 77, 0.68);
+    pointer-events: none;
+    z-index: 1;
+}
+.maerkte-image-red-filter .maerkte-image-overlay {
+    z-index: 2;
+}
+
+/* Untertitel unter Seitentitel — Lato Light, zentriert */
+.maerkte-untertitel {
+    font-family: 'Lato', var(--font-body), sans-serif;
+    font-size: var(--fs-lg);
+    font-weight: 300;
+    color: var(--text-dark);
+    text-align: center;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+/* "Alle Details..." Hinweis vor Button */
+.maerkte-detail-hint {
+    font-weight: 600;
+    font-size: var(--fs-sm);
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+/* Kontakt und Teilnahme - volle Breite */
+.maerkte-kontakt-section {
+    background: var(--bg-mauve);
+    padding: 4rem 2rem;
+    text-align: center;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.maerkte-kontakt-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.maerkte-kontakt-inner h2 {
+    font-size: var(--fs-h2);
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.maerkte-kontakt-inner p {
+    font-size: var(--fs-base);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.maerkte-kontakt-btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    background: #F0EEE9;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.maerkte-kontakt-btn:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Kontakt-Buttons nebeneinander */
+.maerkte-kontakt-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.maerkte-kontakt-buttons .btn-primary {
+    padding: 0.9rem 2rem;
+    font-size: var(--fs-base);
+    border-radius: 4px;
+}
+
+/* Text-Container */
+.maerkte-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 3rem 0;
+}
+
+.maerkte-text-block {
+    width: 50%;
+}
+
+/* Button unter Textblock zentrieren */
+.maerkte-text-block .button-row {
+    justify-content: center;
+}
+
+.maerkte-text-block h2 {
+    font-size: var(--fs-h4);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.maerkte-text-block p {
+    font-family: 'Lato', var(--font-body), sans-serif;
+    font-size: var(--fs-md);
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    text-align: justify;
+}
+
+/* Märkte Bildergalerie — Horizontaler Mosaik-Slider */
+.maerkte-slider-wrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+}
+
+.maerkte-slider {
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+/* Mosaik-Slider: horizontal scrollbar, 2 Reihen, keine Lücken */
+.maerkte-slider-track {
+    display: grid;
+    grid-template-rows: 175px 175px;
+    grid-auto-flow: column;
+    grid-auto-columns: 263px;
+    gap: 2px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.maerkte-slider-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Jedes Item füllt seine Grid-Zelle vollständig */
+.maerkte-slider-item {
+    overflow: hidden;
+    border-radius: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Querformat: 1 Reihe (175px hoch, 263px breit = 3:2) */
+.maerkte-slider-item.mosaic-landscape {
+    grid-row: span 1;
+}
+
+/* Hochformat: 2 Reihen (350px hoch = 2:3 Verhältnis) */
+.maerkte-slider-item.mosaic-portrait {
+    grid-row: span 2;
+}
+
+/* Breite/Tall Varianten: gleiche Spaltenbreite, object-fit: cover passt an */
+.maerkte-slider-item.mosaic-wide,
+.maerkte-slider-item.mosaic-tall {
+    grid-row: span 1;
+}
+
+/* Adventsmarkt nutzt denselben 2-Reihen-Grid wie Ostermarkt (advent-slider-track entfernt) */
+
+.maerkte-slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.maerkte-slider-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Lightbox-Cursor */
+.maerkte-slider-item {
+    cursor: zoom-in;
+}
+
+/* Slider Navigation Buttons */
+.maerkte-slider-prev,
+.maerkte-slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.85);
+    border: none;
+    font-size: var(--fs-xl);
+    line-height: 1;
+    color: var(--text-dark);
+    cursor: pointer;
+    z-index: 3;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maerkte-slider-prev:hover,
+.maerkte-slider-next:hover {
+    background: #fff;
+}
+
+.maerkte-slider-prev {
+    left: 0.5rem;
+}
+
+.maerkte-slider-next {
+    right: 0.5rem;
+}
+
+/* === VORSTAND / KONTAKT === */
+/* --- Vorstand: Gleiche Größen, ausgerichtete Kontaktdaten --- */
+.vorstand-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 2rem 0 0;
+    padding: 0 3rem;
+}
+
+.vorstand-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Foto — identische Größe für alle */
+.vorstand-photo {
+    width: 220px;
+    height: 275px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.vorstand-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+/* Banner: Name + Position — breiter als Foto */
+.vorstand-banner {
+    width: 260px;
+    background: rgba(255,255,255,0.6);
+    padding: 0.7rem 0.9rem;
+    margin-top: -2px;
+    border-radius: 0 0 2px 2px;
+    text-align: left;
+    min-height: 3.5rem;
+}
+
+.vorstand-banner h3 {
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+.vorstand-banner .funktion {
+    font-size: var(--fs-sm);
+    color: #777;
+    margin: 0.2rem 0 0;
+    text-align: left;
+}
+
+/* Kontaktdaten — ausgerichtet, größere Schrift */
+.vorstand-kontakt {
+    width: 100%;
+    padding: 1.2rem 0.5rem 1.5rem;
+    text-align: center;
+}
+
+.vorstand-kontakt .email,
+.vorstand-kontakt .tel {
+    font-size: var(--fs-sm);
+    margin: 0.25rem 0;
+    white-space: nowrap;
+}
+
+.vorstand-kontakt .email {
+    margin-top: 0.6rem;
+}
+
+.vorstand-kontakt .email a {
+    color: var(--primary);
+}
+
+.vorstand-kontakt .tel:last-child {
+    margin-bottom: 0;
+}
+
+/* erweiterter-vorstand styles moved to kontakt sections below */
+
+.board-name {
+    font-size: var(--fs-sm);
+}
+
+.ehrenvorsitz {
+    margin-bottom: 2rem;
+}
+
+.ehrenvorsitz p {
+    font-size: var(--fs-sm);
+}
+
+.team-block {
+    margin-bottom: 2rem;
+}
+
+.team-block p {
+    font-size: var(--fs-sm);
+}
+
+/* Visitenkarte Allgemeines — dunkler Rotton */
+.allgemeines-card {
+    background: var(--primary);
+    color: #fff;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    padding: 2.5rem 3rem;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.allgemeines-columns {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    text-align: center;
+}
+
+.allgemeines-col h3 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    color: rgba(255,255,255,0.6);
+}
+
+.allgemeines-col p {
+    font-size: var(--fs-sm);
+    line-height: 1.7;
+    color: #fff;
+}
+
+.allgemeines-col a {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: rgba(255,255,255,0.4);
+}
+
+.allgemeines-col a:hover {
+    text-decoration-color: #fff;
+}
+
+.allgemeines-social {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.allgemeines-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.allgemeines-social a:hover {
+    transform: scale(1.15);
+    background: rgba(255,255,255,0.3);
+}
+
+/* === KONTAKT PAGE HERO === */
+.kontakt-hero-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 2rem 0;
+    margin-top: 60px;
+}
+
+.kontakt-hero-image {
+    width: 85%;
+    max-width: 1000px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center 70%;
+    display: block;
+    border-radius: 4px;
+}
+
+/* === KONTAKT SECTIONS === */
+.bg-cream {
+    background-color: var(--bg-mauve);
+    padding: 2.5rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    border-radius: 8px;
+}
+
+.bg-light {
+    background-color: var(--bg-mauve);
+    padding: 2.5rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    border-radius: 2px;
+}
+
+.vorstand-section {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    background: var(--bg-mauve);
+    padding: 2rem 4rem 4rem;
+    max-width: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+section.extended-board-section.bg-light {
+    margin: 0 0 2rem;
+    background: var(--bg-mauve);
+    padding: 3rem 4rem 4rem;
+    width: 100%;
+    max-width: none;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+.extended-board-section h2 {
+    margin-top: 0;
+    color: var(--text-dark);
+}
+
+.erweiterter-vorstand {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+.board-name-box {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.7);
+    padding: 1.6rem 1.4rem;
+    border-radius: 4px;
+    font-size: var(--fs-lg);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+section.honorary-section.bg-cream {
+    margin: 0 auto 2rem;
+    background: var(--bg-mauve);
+    padding: 2rem 4rem 4rem;
+    max-width: 700px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.honorary-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* h2 ist jetzt außerhalb — keine h2 mehr in der honorary-section */
+
+.ehrenvorsitz-content h2 {
+    display: none;
+}
+
+.ehrenvorsitz-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    order: -1;
+}
+
+.ehrenvorsitz-image img {
+    width: 220px;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+    object-position: center center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: block;
+}
+
+.ehrenvorsitz-content {
+    text-align: center;
+}
+
+.ehrenvorsitz-content h3 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-xl);
+    font-weight: 300;
+}
+
+/* Alle Kontakt-Überschriften: außerhalb der Sektionen, einheitlich eingerückt */
+.kontakt-section-heading {
+    margin: 3.5rem 0 calc(1.2rem + 10px);
+    padding: 0;
+    padding-left: calc(50% - 430px);
+    text-align: left;
+    max-width: none;
+    font-weight: 400;
+    font-size: var(--fs-h2);
+}
+
+section.team-section.bg-cream {
+    margin: 0 auto 2rem;
+    background: var(--bg-mauve);
+    padding: 2rem 4rem 4rem;
+    max-width: 700px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.team-section h2 {
+    display: none;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.team-member-name {
+    font-family: var(--font-heading);
+    font-size: var(--fs-xl);
+    font-weight: 300;
+    color: var(--text-dark);
+}
+
+.team-detail {
+    text-align: center;
+    font-size: var(--fs-sm);
+    margin: 0.3rem 0;
+}
+
+.aussteller-info {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-sm {
+    padding: 0.4rem 1.2rem;
+    font-size: var(--fs-sm);
+}
+
+.team-block {
+    margin: 1.5rem 0;
+}
+
+.team-block p {
+    font-size: var(--fs-sm);
+    line-height: 1.6;
+}
+
+/* Responsive Kontakt */
+@media (max-width: 768px) {
+    .kontakt-hero-image {
+        width: 90%;
+    }
+
+    .honorary-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .ehrenvorsitz-image img {
+        width: 150px;
+        height: auto;
+    }
+
+    .bg-cream,
+    .bg-light {
+        margin: 1rem auto;
+        padding: 1.5rem;
+    }
+
+    .board-name-box {
+        font-size: var(--fs-sm);
+        padding: 0.6rem 1rem;
+    }
+}
+
+/* === EVENTS PAGE === */
+/* Veranstaltungen-Seite: Überschrift kleiner */
+.veranstaltungen-heading {
+    font-size: var(--fs-h2);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Veranstaltungen: page-body weniger Rand, damit Fotos deutlich größer */
+.veranstaltungen-page .page-body {
+    max-width: 1300px;
+    padding: 3rem 1.5rem 5rem;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Kein Kachel-Hintergrund, kein Schatten */
+.event-card {
+    background: none;
+    border-radius: 0;
+    overflow: visible;
+    box-shadow: none;
+}
+
+/* Quadratisches Foto, ~1/3 Seitenbreite, mit Zoom */
+.event-card .event-card-image {
+    overflow: hidden;
+    border-radius: 0;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+}
+
+.event-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.55s ease;
+}
+
+.event-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Text direkt unter dem Bild, zentriert */
+.event-card-body {
+    padding: 1rem 0 0;
+    text-align: center;
+}
+
+/* Titel: Heading-Font, größer */
+.event-card-body h2 {
+    font-family: var(--font-body);
+    font-size: var(--fs-xl);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    margin-top: 0;
+    line-height: 1.3;
+}
+
+/* Datum erste Zeile, Ort zweite Zeile — beide zentriert */
+.event-meta {
+    font-family: var(--font-body);
+    font-size: var(--fs-lg);
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 0.9rem;
+}
+
+.event-meta .event-date {
+    font-size: inherit;
+    color: inherit;
+}
+
+/* Ort als dezenter Link */
+.event-meta .event-location {
+    font-size: inherit;
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(139,83,77,0.4);
+}
+
+.event-meta .event-location:hover {
+    text-decoration-color: var(--primary);
+}
+
+/* "Mehr Infos" – schlichter Link */
+.event-mehr-link {
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.event-mehr-link:hover {
+    color: var(--primary-dark, #6e3d39);
+}
+
+/* === TERMINE TABLE === */
+.termine-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.termine-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgba(139, 107, 97, 0.2);
+    font-size: var(--fs-sm);
+}
+
+.termine-table td:first-child {
+    font-weight: 700;
+}
+
+/* === ARCHIVE TABLE === */
+/* === ARCHIV === */
+
+/* Karten-Abschnitt */
+.archiv-map-section {
+    max-width: 1060px;
+    margin: 3rem auto 0;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+/* Karte + Info-Panel nebeneinander */
+/* Zweispaltiges Layout: 2/3 links (Karte + Tabelle), 1/3 rechts (Panel) */
+/* Überschrift ist ERSTE GRID-ZEILE (grid-column: 1/-1) → Panel startet exakt auf Kartenhöhe */
+.archiv-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 1rem;
+    row-gap: 0;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    align-items: start;
+}
+
+/* Überschrift: volle Breite über beide Spalten, schwarz, zentriert */
+.archiv-map-intro {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+.archiv-left-col {
+    grid-column: 1;
+    grid-row: 2;
+    min-width: 0;
+    width: 100%;
+}
+
+.archiv-right-col {
+    grid-column: 2;
+    grid-row: 2;
+    min-width: 0;
+}
+
+.archiv-info-panel {
+    position: sticky;
+    top: 1rem;
+    /* Panel wächst so lang wie nötig, scrollt aber intern ab Viewport-Höhe */
+    max-height: calc(100vh - 2rem);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-body);
+}
+
+/* Altklasse — nicht mehr genutzt, schadet aber nicht */
+.archiv-map-and-panel {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.archiv-panel-placeholder {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #bbb;
+    font-size: var(--fs-sm);
+    text-align: center;
+    padding: 1.5rem;
+    gap: 0.6rem;
+    line-height: 1.5;
+}
+
+.archiv-panel-icon {
+    font-size: 2rem;
+    opacity: 0.35;
+}
+
+.archiv-panel-content {
+    display: none;
+    padding: 1rem;
+}
+
+.archiv-panel-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.7rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+    gap: 0.3rem;
+}
+
+.archiv-panel-header strong {
+    font-size: var(--fs-base);
+    color: var(--primary);
+    font-weight: 600;
+    flex: 1;           /* nimmt linken Platz ein */
+}
+
+/* Flagge mittig zwischen Name und Zähler */
+.archiv-panel-flag {
+    font-size: 1.6em;
+    line-height: 1;
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.archiv-panel-header > span:last-child {
+    font-size: var(--fs-sm);
+    color: #999;
+    font-weight: 400;
+    flex: 1;           /* nimmt rechten Platz ein */
+    text-align: right;
+}
+
+.archiv-panel-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.archiv-panel-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    padding: 0.28rem 0.4rem;
+    border-bottom: 1px solid #f5eeec;
+    font-size: var(--fs-sm);
+    line-height: 1.5;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background 0.15s;
+    text-align: left;
+}
+
+.archiv-panel-row:last-child {
+    border-bottom: none;
+}
+
+.archiv-panel-row:hover {
+    background: rgba(139, 83, 77, 0.09);
+}
+
+/* Tabellenzeile aufleuchten lassen nach Klick aus Panel */
+@keyframes archiv-flash {
+    0%   { background: rgba(139, 83, 77, 0.28); }
+    100% { background: transparent; }
+}
+
+.archiv-row-highlight td {
+    animation: archiv-flash 1.8s ease-out forwards;
+}
+
+.archiv-panel-year {
+    font-weight: 700;
+    color: var(--primary);
+    flex: 0 0 2.8rem;   /* feste Breite → Jahre immer linksbündig ausgerichtet */
+    text-align: left;
+}
+
+.archiv-panel-group {
+    color: #555;
+    flex: 1;
+}
+
+.archiv-panel-group:not(:empty)::before {
+    content: '· ';
+    color: #ccc;
+}
+
+/* Kleines Hover-Tooltip über Karten-Kreis */
+.archiv-hover-tip {
+    background: #fff !important;
+    border: 1px solid #ddd !important;
+    border-radius: 8px !important;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12) !important;
+    padding: 7px 11px !important;
+    pointer-events: none;
+}
+
+.archiv-hover-tip::before {
+    display: none !important;  /* Leaflet-Pfeil entfernen */
+}
+
+.archiv-tip-name {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: var(--fs-sm);
+    color: var(--primary);
+    white-space: nowrap;
+}
+
+.archiv-tip-flag {
+    font-size: 1.15em;
+}
+
+.archiv-tip-count {
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    color: #666;
+    margin-top: 1px;
+}
+
+.archiv-tip-hint {
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    color: #aaa;
+    margin-top: 3px;
+    font-style: italic;
+}
+
+/* === OVERSEAS-INSET (L.Control oben links in der Karte) === */
+.archiv-overseas-inset {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(180, 180, 180, 0.5);
+    border-radius: 8px;
+    padding: 0.4rem 0.75rem 0.5rem;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+    min-width: 0;
+    margin-top: 140px;
+    backdrop-filter: blur(3px);
+}
+
+.archiv-overseas-title {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: 0.35rem;
+    border-bottom: 1px solid rgba(139,83,77,0.2);
+    padding-bottom: 0.2rem;
+}
+
+.archiv-overseas-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.12rem 0.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.archiv-overseas-item:hover {
+    background: rgba(139, 83, 77, 0.08);
+}
+
+/* a) Hover auf Overseas-Kreis: Rand färbt sich */
+.archiv-overseas-item:hover .archiv-overseas-svg circle {
+    stroke: var(--primary);
+    stroke-width: 2.5px;
+}
+
+.archiv-overseas-svg {
+    flex-shrink: 0;
+    display: block;
+}
+
+.archiv-overseas-label {
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    color: #333;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+/* Flagge in Overseas-Box etwas größer */
+.archiv-overseas-flag {
+    font-size: 1.1em;
+}
+
+.archiv-map-heading {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h3);
+    color: #1a1a1a;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.archiv-map-sub {
+    display: none; /* entfernt */
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    color: #666;
+    margin-bottom: 1.2rem;
+}
+
+.archiv-map-wrap {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    background: #dde9f0;
+}
+
+#archiv-map-canvas {
+    display: block;
+    width: 100%;
+}
+
+.archiv-map-tooltip {
+    position: absolute;
+    background: rgba(255,255,255,0.96);
+    border: 1px solid #d0bfbd;
+    border-radius: 6px;
+    padding: 7px 11px;
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    line-height: 1.5;
+    pointer-events: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    max-width: 180px;
+    color: #333;
+    z-index: 10;
+}
+
+.archiv-container {
+    padding: 0 0 3rem;
+}
+
+/* Jahrzehnt-Filter */
+.archiv-decade-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+
+.archiv-decade-label {
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    color: #666;
+    margin-right: 0.3rem;
+}
+
+.archiv-decade-btn {
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    padding: 0.3rem 0.75rem;
+    border: 1px solid rgba(139, 83, 77, 0.35);
+    background: transparent;
+    color: var(--primary);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.archiv-decade-btn:hover {
+    background: rgba(139, 83, 77, 0.08);
+}
+
+.archiv-decade-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.archiv-search-bar {
+    position: relative;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+}
+
+.archiv-search-bar input {
+    width: 100%;
+    padding: 0.9rem 1.2rem 0.9rem 2.8rem;
+    border: 1px solid rgba(139, 107, 97, 0.3);
+    background: #ffffff;
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.archiv-search-bar input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(139, 83, 77, 0.1);
+}
+
+.archiv-search-icon {
+    position: absolute;
+    left: 0.9rem;
+    top: 0.85rem;
+    transform: none;
+    font-size: var(--fs-md);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.archiv-subtitle {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h2);
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.archiv-result-count {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: var(--fs-sm);
+    color: #727270;
+    min-height: 1.2em;
+}
+
+.archiv-table-wrap {
+    max-height: 70vh;
+    overflow-y: auto;
+    border: 1px solid rgba(139, 107, 97, 0.15);
+    border-radius: 4px;
+}
+
+.archiv-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.archiv-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.archiv-table th {
+    background: var(--primary);
+    color: var(--text-light);
+    padding: 0.8rem 1rem;
+    text-align: left;
+    font-weight: 400;
+    font-size: var(--fs-sm);
+    white-space: nowrap;
+}
+
+.archiv-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid rgba(139, 107, 97, 0.1);
+    font-size: var(--fs-sm);
+    vertical-align: top;
+}
+
+.archiv-table .archiv-nr,
+.archiv-table .archiv-jahr {
+    font-weight: 500;
+    background: rgba(245, 240, 232, 0.5);
+}
+
+.archiv-table tbody tr:hover td {
+    background: rgba(232, 216, 208, 0.3);
+}
+
+.archiv-table tbody tr.archiv-hidden {
+    display: none;
+}
+
+.archiv-col-nr { width: 55px; }
+.archiv-col-jahr { width: 65px; }
+.archiv-col-flag { width: 36px; text-align: center; font-size: 1.2rem; }
+.archiv-flag { text-align: center; font-size: 1.15rem; }
+.archiv-col-land { width: 200px; }   /* breiter – passt zu 2/3-Spalte */
+.archiv-col-stadt { width: 160px; }
+
+.archiv-no-results {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #999;
+    font-size: var(--fs-base);
+}
+
+/* === DOWNLOADS === */
+.download-category {
+    margin-bottom: 2.5rem;
+}
+
+.download-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.download-list li {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(139, 107, 97, 0.15);
+}
+
+.download-list a {
+    font-size: var(--fs-sm);
+}
+
+.file-format {
+    font-size: var(--fs-xs);
+    color: #888;
+    margin-left: 0.3rem;
+}
+
+/* === MÄRKTE PAGE === */
+.maerkte-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+}
+
+.markt-image img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.kontakt-teilnahme {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+/* === SPENDE BOX === */
+.spende-box {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+}
+
+.spende-box-red {
+    background: var(--primary);
+    color: #fff;
+    text-align: left;
+}
+
+.spende-box-red h3 {
+    color: #fff;
+    margin-bottom: 0.8rem;
+    margin-top: 0;
+    font-size: var(--fs-base);
+}
+
+.spende-box-red p {
+    color: #fff;
+    font-size: var(--fs-sm);
+    line-height: 1.6;
+    text-align: left;
+}
+
+.spende-box h3 {
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+/* Mitglied werden */
+.mitglied-section {
+    background: #E3D1D1;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.mitglied-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.mitglied-section h2 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-xl);
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+.mitglied-section p {
+    font-size: var(--fs-md);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+.mitglied-section .button-row {
+    justify-content: center;
+    gap: 1rem;
+}
+.mitglied-section .btn {
+    font-size: var(--fs-base);
+}
+
+/* === TIMELINE === */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin: 3rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--primary);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2.5rem;
+    padding-left: 1.5rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -2rem;
+    top: 0.3rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--primary);
+    border: 2px solid var(--bg-cream);
+    transform: translateX(-5px);
+}
+
+.timeline-year {
+    font-family: var(--font-body);
+    font-size: var(--fs-xl);
+    font-style: normal;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+}
+
+.timeline-content h4 {
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    font-style: normal;
+    color: #555;
+}
+
+/* === VEREIN GALERIE === */
+.verein-galerie {
+    padding: 3rem 2rem;
+    background: var(--bg-cream);
+}
+
+.verein-galerie-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.verein-galerie-item {
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.verein-galerie-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.verein-galerie-item:hover img {
+    transform: scale(1.05);
+}
+
+/* --- Verein: H1 auf einer Zeile, Untertitel kleiner darunter --- */
+.verein-page .page-intro h1 {
+    white-space: nowrap;
+    font-size: var(--fs-h1);
+    margin-bottom: 0.5rem;
+}
+
+.verein-page-subtitle {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    font-weight: 400;
+    color: #666;
+    margin: 0 0 2rem;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* --- Verein: Gruppenfoto beschnitten unten --- */
+.verein-page .geschichte-wide-photo {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.verein-page .geschichte-wide-photo img {
+    width: 100%;
+    height: 420px;
+    display: block;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+/* --- Verein: Porträts-Sektion (Musik, Tanz und Organisation) --- */
+.verein-portraits-section {
+    background: #ffffff;
+    padding: 3.5rem 2rem;
+}
+
+.verein-portraits-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.verein-portrait {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.verein-portrait-image {
+    flex: 0 0 200px;
+}
+
+.verein-portrait-image img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    margin-left: 3px;
+}
+
+.verein-portrait-text {
+    flex: 1;
+}
+
+.verein-portrait-text h3 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-xl);
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.verein-portrait-text p {
+    font-size: var(--fs-base);
+    line-height: 1.8;
+    margin: 0;
+}
+
+.verein-portrait-text a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.verein-portrait-text a:hover {
+    text-decoration: underline;
+}
+
+/* --- Verein: Zweck des Vereins — Creme-Hintergrund mit Photo rechts über volle Höhe --- */
+.verein-zweck-section {
+    background: #EDE5D4;
+    padding: 0;
+    overflow: hidden;
+}
+
+.verein-zweck-inner {
+    display: flex;
+    max-width: none;
+    margin: 0;
+    gap: 0;
+    align-items: stretch;
+    min-height: 450px;
+}
+
+.verein-zweck-text {
+    flex: 0 0 55%;
+    padding: 3rem 3rem 3rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.verein-zweck-text h2 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h3);
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 0;
+}
+
+.verein-zweck-text p {
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.verein-zweck-image {
+    flex: 0 0 45%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.verein-zweck-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+}
+
+/* --- Verein: Split-Sektionen — Fotos über volle Höhe, Text mit Padding --- */
+.verein-split-section {
+    padding: 0;
+    overflow: hidden;
+}
+
+.verein-split-section.bg-white {
+    background: #E8E4DC;
+    margin-top: 0;
+}
+
+.verein-split-section.bg-cream {
+    background: #E8E4DC;
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+}
+
+.verein-split-inner {
+    display: flex;
+    max-width: none;
+    margin: 0;
+    gap: 0;
+    align-items: stretch;
+    min-height: auto;
+}
+
+.verein-split-inner.reverse {
+    flex-direction: row-reverse;
+}
+
+.verein-split-image {
+    flex: 0 0 35%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    aspect-ratio: 1;
+}
+
+.verein-split-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 0;
+    display: block;
+}
+
+/* Tänzer-Foto: oberen Bereich zeigen (Köpfe + Oberkörper) */
+.verein-split-image img.img-dancers {
+    object-position: center 20%;
+}
+
+/* Musiker-Foto: Mitte zeigen */
+.verein-split-image img.img-musicians {
+    object-position: center 40%;
+}
+
+.verein-split-text {
+    flex: 1;
+    padding: 3rem 3rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.verein-split-text h2 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h3);
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 0;
+}
+
+.verein-split-text p {
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* --- CIOFF Bereich farblich abgesetzt --- */
+.verein-cioff {
+    background: #E3D1D1;
+    padding: 3.5rem 2rem;
+    text-align: center;
+}
+
+.verein-cioff .page-body-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.verein-cioff h2,
+.verein-cioff .page-body-inner h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.verein-cioff p {
+    font-size: var(--fs-base);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* --- Zweck des Vereins: Aufzählung --- */
+.verein-zweck-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.verein-zweck-list li {
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    line-height: 1.8;
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+    text-align: justify;
+}
+
+/* === MAPS === */
+.maps-embed {
+    max-width: 860px;
+    margin: 2rem auto 0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+/* === HOME ICON LINK === */
+.page-home-link {
+    text-align: center;
+    margin-top: 70px;
+    padding: 1rem 0 0;
+}
+
+.page-home-link a {
+    font-size: var(--fs-xl);
+    color: var(--text-dark);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.page-home-link a:hover {
+    opacity: 1;
+}
+
+/* === GESCHICHTE PAGE OVERRIDES === */
+.geschichte-page .page-intro h1 {
+    font-size: var(--fs-h2);
+}
+
+.geschichte-page .page-intro-lead {
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--font-body);
+}
+
+.geschichte-page .page-body p {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.geschichte-page .page-body h2 {
+    margin-bottom: 1rem;
+}
+
+/* === GESCHICHTE IMAGE GRID === */
+/* --- Geschichte: Breites Foto, Breite wie Text darunter (900px) --- */
+.geschichte-wide-photo {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 0 2rem;
+}
+
+.geschichte-wide-photo img {
+    width: 100%;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+/* Archiv-Photo: größere Höhe und volle Breite */
+.archiv-hero-photo {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+}
+.archiv-hero-photo img {
+    height: 500px;
+    object-position: center 40%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.geschichte-wide-photo-inline {
+    max-width: 70%;
+    margin: 1.5rem auto 2rem;
+}
+
+.geschichte-wide-photo-inline img {
+    height: auto;
+    max-height: 350px;
+    object-fit: contain;
+}
+
+/* geschichte-link-box: entfernt — Link ist jetzt inline im Text */
+
+/* --- Geschichte: Weißer Bereich (Musik/Tanz + Porträts) --- */
+.geschichte-white-section {
+    background: #ffffff;
+    padding: 3.5rem 0 3.5rem 0;
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
+.geschichte-white-inner {
+    max-width: none;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.geschichte-portraits {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-left: 4rem;
+}
+
+.geschichte-portrait-item {
+    text-align: center;
+}
+
+.geschichte-portrait-hartmut {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e5e5;
+}
+
+.geschichte-portrait-item img {
+    width: 230px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+.geschichte-portrait-caption {
+    display: block;
+    font-size: var(--fs-base);
+    color: #727270;
+    margin-top: 0.6rem;
+    font-style: italic;
+    text-align: center;
+}
+
+.geschichte-white-text {
+    flex: 1;
+    padding: 0 3rem 0 0;
+    max-width: none;
+}
+
+.geschichte-white-text h2 {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+}
+
+.geschichte-white-text p {
+    margin-bottom: 1rem;
+    font-size: var(--fs-base);
+    line-height: 1.8;
+    font-family: var(--font-body);
+    text-align: justify;
+}
+
+.geschichte-portrait-text-block {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.geschichte-portrait-text-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 4rem;
+}
+
+.geschichte-portrait-text-block h3 {
+    margin: 0 0 1rem 0;
+    font-size: var(--fs-md);
+    font-weight: 600;
+    color: #333;
+}
+
+.geschichte-report-link {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.geschichte-report-link a {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: var(--fs-sm);
+    line-height: 1.5;
+    transition: opacity 0.3s;
+}
+
+.geschichte-report-link a:hover {
+    opacity: 0.85;
+    color: #fff;
+}
+
+.geschichte-inline-link {
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--primary);
+    transition: opacity 0.3s;
+}
+
+.geschichte-inline-link:hover {
+    opacity: 0.7;
+}
+
+/* --- Geschichte: Split-Sektion (Text + Bild nebeneinander) --- */
+.geschichte-split-section {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.geschichte-split-section.bg-white {
+    background: #ffffff;
+}
+
+.geschichte-split-section.bg-cream {
+    background: #EFE1C8;
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+}
+
+.geschichte-split-inner {
+    max-width: none;
+    margin: 0;
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+}
+
+.geschichte-split-inner.reverse {
+    flex-direction: row-reverse;
+}
+
+.geschichte-split-text {
+    flex: 1;
+    padding: 2.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.geschichte-split-text h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: var(--fs-xl);
+}
+
+.geschichte-split-text p {
+    font-size: var(--fs-base);
+    font-family: var(--font-body);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Geschichte-Seite: Bilder ca. 35% Breite, volle Höhe */
+.geschichte-page .geschichte-split-image {
+    flex: 0 0 35%;
+    overflow: hidden;
+    border-radius: 0;
+    padding: 0;
+}
+
+.geschichte-page .geschichte-split-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Portrait-Split: schmälere Bildspalte für Hochformat-Porträtfotos */
+.geschichte-page .geschichte-portrait-split {
+    flex: 0 0 26%;
+    background: #f5f0ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+}
+
+.geschichte-page .geschichte-portrait-split img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    min-height: unset;
+    object-fit: contain;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Default (für andere Seiten wie Verein): 50% breit */
+.geschichte-split-image {
+    flex: 0 0 50%;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.geschichte-split-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Geschichte: Foto-Duo (2 Bilder nebeneinander) --- */
+.geschichte-images-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin: 2rem 0;
+}
+
+.geschichte-image-item {
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.geschichte-image-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Geschichte: altes Grid (nicht mehr verwendet) --- */
+.geschichte-images-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 220px;
+    gap: 0.5rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.geschichte-images-grid:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.geschichte-images-grid .grid-img {
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.geschichte-images-grid .grid-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* === RESPONSIVE === */
+/* ==========================================
+   TABLET (max-width: 1024px)
+   ========================================== */
+@media (max-width: 1024px) {
+    .hero-text {
+        flex: 0 0 52%;
+        padding: 3rem;
+    }
+
+    .hero-image {
+        flex: 0 0 32%;
+        margin-right: 4%;
+    }
+
+    .circle-img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .circle-bottom-row {
+        gap: 3rem;
+    }
+
+    .circles-triangle-wrap {
+        max-width: 96%;
+    }
+}
+
+/* ==========================================
+   MOBILE (max-width: 768px)
+   WIX-Original: Hero ist full-width Text,
+   Bild darunter, Logo + Hamburger im Header
+   ========================================== */
+@media (max-width: 768px) {
+    /* --- HEADER MOBILE (wie WIX: Logo links, Hamburger rechts, kein Sprachumschalter) --- */
+    .header-inner {
+        padding: 0.5rem 1rem;
+    }
+
+    .logo {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .logo-icon {
+        height: auto;
+        width: 100%;
+        max-width: 300px;
+        max-height: 65px;
+    }
+
+    .header-right {
+        margin-left: 0;
+        gap: 0.5rem;
+        flex: 0;
+    }
+
+    .lang-switch {
+        display: none;
+    }
+
+    .menu-toggle {
+        font-size: 0;
+        gap: 0;
+        padding: 0.5rem;
+    }
+
+    .menu-icon {
+        font-size: var(--fs-h2);
+    }
+
+    /* Hamburger Button: mindestens 44x44px für Touch-Freundlichkeit */
+    .menu-toggle {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* --- HERO MOBILE: Nur Text, kein Bild (wie WIX) --- */
+    .hero-section {
+        margin-top: 56px;
+    }
+
+    .hero-inner {
+        flex-direction: column;
+    }
+
+    .hero-text {
+        flex: none;
+        width: 100%;
+        padding: 3rem 1.5rem 2rem;
+        text-align: center;
+        min-height: calc(100vh - 56px);
+        min-height: calc(100svh - 56px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-text-inner {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: var(--fs-h2);
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: var(--fs-xl);
+        margin-bottom: 1rem;
+    }
+
+    .hero-desc {
+        font-size: var(--fs-md);
+        line-height: 1.8;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.6rem;
+        margin-top: 1.5rem;
+    }
+
+    .btn-hero {
+        min-width: 100%;
+        font-size: var(--fs-sm);
+        padding: 0.75rem 1rem;
+        text-align: center;
+    }
+
+    .hero-image {
+        flex: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* --- HEART SECTION MOBILE --- */
+    .heart-section {
+        padding: 3rem 1.5rem 0;
+    }
+
+    .heart-section .section-title {
+        font-size: var(--fs-h2);
+    }
+
+    /* --- CIRCLES MOBILE: vertikal statt Dreieck --- */
+    .circles-triangle-wrap {
+        max-width: 100%;
+        padding: 3rem 1.5rem 4rem;
+        margin: 0;
+    }
+
+    .circles-triangle {
+        max-width: 100%;
+    }
+
+    .circle-top {
+        margin-bottom: 0.5rem;
+    }
+
+    .circle-center-text {
+        padding: 0.8rem 0 0.3rem;
+    }
+
+    .circle-center-title {
+        font-size: var(--fs-h4);
+        margin-top: -1rem;
+    }
+
+    .circle-center-sub {
+        font-size: var(--fs-base);
+    }
+
+    .circle-img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .circle-bottom-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        margin-top: 1rem;
+    }
+
+    .circle-label {
+        font-size: var(--fs-xl);
+    }
+
+    .circle-top .circle-label {
+        font-size: var(--fs-lg);
+    }
+
+    .circle-btn {
+        font-size: var(--fs-xs);
+        padding: 0.4rem 1rem;
+    }
+
+    /* --- SECTION TITLES MOBILE: zentriert --- */
+    .section-title {
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .section-subtitle {
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .heart-section .section-title,
+    .heart-section .section-subtitle {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    .contact-section .section-title {
+        padding-left: 0 !important;
+    }
+
+    .contact-inner {
+        padding-left: 0;
+    }
+
+    .mach-mit-section .section-title,
+    .mach-mit-section .section-subtitle {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    /* --- EVENTS MOBILE --- */
+    .event-row,
+    .event-row:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .event-image {
+        flex: none;
+        height: 260px;
+    }
+
+    .event-info {
+        flex: none;
+        padding: 2.5rem 2rem;
+    }
+
+    /* --- GRID SECTIONS MOBILE --- */
+    .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .mach-mit-cards {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+    }
+
+    .card-label {
+        right: 0;
+        bottom: 1rem;
+        font-size: var(--fs-md);
+    }
+
+    .mach-mit-cards-section {
+        padding: 2rem 1.5rem 3rem;
+    }
+
+    .gallery-track {
+        height: 280px;
+    }
+
+    .shop-teaser-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .maerkte-teaser-split {
+        flex-direction: column;
+    }
+
+    .maerkte-teaser-image {
+        flex: none;
+    }
+
+    .testimonials-inner {
+        flex-direction: column;
+    }
+
+    .testimonials-image {
+        flex: none;
+    }
+
+    .geschichte-images-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 160px;
+    }
+
+    .geschichte-wide-photo {
+        max-width: 90%;
+    }
+
+    .geschichte-white-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .geschichte-portraits {
+        flex-direction: row;
+        flex: none;
+        gap: 1.5rem;
+    }
+
+    .geschichte-split-inner {
+        flex-direction: column;
+    }
+
+    .geschichte-split-inner.reverse {
+        flex-direction: column;
+    }
+
+    /* Portrait-Split auf Mobile: Bild kleiner, zentriert */
+    .geschichte-page .geschichte-portrait-split {
+        flex: none;
+        padding: 1.5rem;
+    }
+
+    .geschichte-page .geschichte-portrait-split img {
+        max-width: 160px;
+    }
+
+    .geschichte-split-image {
+        flex: none;
+    }
+
+    .geschichte-images-duo {
+        grid-template-columns: 1fr;
+    }
+
+    .geschichte-image-item img {
+        height: 220px;
+    }
+
+    /* --- Verein Zweck mobile --- */
+    .verein-zweck-inner {
+        flex-direction: column;
+    }
+
+    .verein-zweck-image {
+        flex: none;
+    }
+
+    .verein-zweck-image img {
+        width: 100%;
+        height: 220px;
+    }
+
+    /* --- Verein Split mobile (quadratische Fotos) --- */
+    .verein-split-inner,
+    .verein-split-inner.reverse {
+        flex-direction: column;
+    }
+
+    .verein-split-image {
+        flex: none;
+    }
+
+    .verein-split-image img {
+        width: 100%;
+        height: 220px;
+    }
+
+    /* Bildausschnitt auf Mobile beibehalten */
+    .verein-split-image img.img-dancers {
+        object-position: center 20%;
+    }
+
+    .verein-split-image img.img-musicians {
+        object-position: center 40%;
+    }
+
+    .verein-galerie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .verein-galerie-item img {
+        height: 160px;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-divider {
+        display: none;
+    }
+
+    .nav-overlay-links {
+        flex: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.1rem;
+        padding: 1rem 2rem;
+    }
+
+    .nav-overlay-links a {
+        font-size: var(--fs-xl);
+        padding: 0.1rem 0;
+    }
+
+    .nav-overlay-lang {
+        padding: 1rem 2rem 2rem;
+    }
+
+    /* Social Media Icons: mindestens 44x44px für Touch-Freundlichkeit */
+    .footer-social a,
+    .social-link {
+        min-width: 44px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Entferne Hover-Effekte auf Touch-Devices für Social Links */
+    @media (hover: none) {
+        .footer-social a:hover,
+        .social-link:hover {
+            opacity: 1;
+            transform: none;
+        }
+
+        .footer-social a:active,
+        .social-link:active {
+            opacity: 0.7;
+        }
+    }
+
+    .page-hero-banner {
+        height: 35vh;
+        min-height: 220px;
+    }
+
+    .page-images-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- MÄRKTE MOBILE --- */
+    .maerkte-section-inner,
+    .maerkte-section-inner-reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .maerkte-section-inner-reverse > :nth-child(1),
+    .maerkte-section-inner-reverse > :nth-child(2) {
+        grid-column: auto;
+    }
+
+    .maerkte-image-with-overlay img {
+        height: 300px;
+    }
+
+    /* MÄRKTE TEXT BLOCK: Mobile-optimiert */
+    .maerkte-text-container {
+        padding: 1.5rem 0;
+    }
+
+    .maerkte-text-block {
+        width: 90%;
+        padding: 0 1.5rem;
+    }
+
+    .maerkte-text-block h2 {
+        font-size: var(--fs-xl);
+    }
+
+    .maerkte-text-block p {
+        text-align: left;
+        font-size: var(--fs-base);
+        line-height: 1.7;
+    }
+
+    /* MÄRKTE SECTIONS: Mobile Padding */
+    .maerkte-section-cream.maerkte-section-wrapper,
+    .maerkte-section-light.maerkte-section-wrapper {
+        padding-top: 2rem;
+    }
+
+    /* MÄRKTE BUTTONS: Touch-freundlich */
+    .maerkte-text-block .button-row .btn {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0.75rem 1.5rem;
+        font-size: var(--fs-base);
+    }
+
+    .maerkte-slider-track {
+        grid-template-rows: 120px 120px;
+        grid-auto-columns: 130px;
+    }
+
+
+    .mach-mit-photos {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .mach-mit-photo-item img {
+        height: 200px;
+    }
+
+    .mach-mit-section {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .mach-mit-photo-side {
+        flex: none;
+        height: 280px;
+    }
+
+    .mach-mit-text-side {
+        padding: 2rem 1.5rem;
+    }
+
+    .section-rose {
+        padding: 2rem 1.5rem;
+    }
+
+    .section-rose h2 {
+        font-size: var(--fs-h4);
+        margin-bottom: 0.8rem;
+    }
+
+    /* Kontakt-Seitenüberschriften: padding-left-Formel funktioniert auf Mobile nicht */
+    .kontakt-section-heading {
+        padding-left: 1.2rem;
+        font-size: var(--fs-h3);
+    }
+
+    /* Vorstand-Bereich: 1 Spalte, innen mehr Luft */
+    .vorstand-section {
+        padding: 1.5rem 1.2rem 2rem;
+    }
+
+    .vorstand-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+        gap: 2rem;
+    }
+
+    /* Vorstand: Foto und Banner auf Spaltenbreite skalieren */
+    .vorstand-photo {
+        width: 100%;
+        height: 220px;
+    }
+
+    .vorstand-banner {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 0.8rem 1rem;
+    }
+
+    /* Name unter dem Foto: größer */
+    .vorstand-banner h3 {
+        font-size: var(--fs-md);
+    }
+
+    .vorstand-banner .funktion {
+        text-align: center;
+        font-size: var(--fs-base);
+    }
+
+    /* Telefon / E-Mail: größer und umbruchfähig */
+    .vorstand-kontakt {
+        padding: 1rem 1rem 1.5rem;
+    }
+
+    .vorstand-kontakt .email,
+    .vorstand-kontakt .tel {
+        white-space: normal;
+        font-size: var(--fs-base);
+    }
+
+    /* Erweiterter Vorstand: 1 Spalte auf mobile */
+    .erweiterter-vorstand {
+        grid-template-columns: 1fr;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .maerkte-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE (max-width: 480px)
+   ========================================== */
+@media (max-width: 480px) {
+    .header-inner {
+        padding: 0.4rem 0.8rem;
+    }
+
+    .logo-icon {
+        height: 42px;
+    }
+
+    .hero-text {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .hero-text h1 {
+        font-size: var(--fs-xl);
+    }
+
+    .circle-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .circle-label {
+        font-size: var(--fs-lg);
+    }
+
+    .circle-top .circle-label {
+        font-size: var(--fs-base);
+    }
+
+    .circle-btn {
+        font-size: var(--fs-xs);
+        padding: 0.3rem 0.8rem;
+    }
+
+    .circle-center-title {
+        font-size: var(--fs-xl);
+    }
+
+    .circle-center-sub {
+        font-size: var(--fs-sm);
+    }
+
+    .vorstand-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-track {
+        height: 200px;
+    }
+
+    /* MÄRKTE EXTRA SMALL MOBILE (480px) */
+    .maerkte-text-block {
+        width: 95%;
+        padding: 0 1rem;
+    }
+
+    .maerkte-text-block p {
+        font-size: var(--fs-sm);
+    }
+
+    /* ARCHIV MAP: noch kürzer auf sehr kleinen Screens */
+    #archiv-map {
+        height: 220px !important;
+    }
+
+    .archiv-info-panel {
+        max-height: 180px;
+        height: 180px;
+    }
+
+    /* Verein Titel: kein Nowrap erzwingen */
+    .verein-page .page-intro h1,
+    .verein-page-subtitle {
+        white-space: normal;
+        font-size: var(--fs-h3);
+    }
+}
+
+/* ==========================================
+   MOBILE ERGÄNZUNGEN
+   Weitere Fixes für Layouts auf kleinen Screens
+   ========================================== */
+@media (max-width: 768px) {
+    /* Archiv Tabelle: horizontal scrollbar auf kleinen Screens */
+    .archiv-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Archiv: auf Mobile alles untereinander stapeln */
+    .archiv-map-intro {
+        grid-column: 1;  /* nur 1 Spalte auf Mobile */
+    }
+
+    .archiv-layout {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .archiv-left-col {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .archiv-right-col {
+        grid-column: 1;
+        grid-row: 3;
+        width: 100%;
+    }
+
+    .archiv-info-panel {
+        position: static;   /* kein sticky auf Mobile */
+        max-height: 220px;
+        height: 220px;
+    }
+
+    /* Archiv Map: kürzer auf mobilen */
+    #archiv-map {
+        height: 300px !important;
+    }
+
+    /* Archiv decade filter: kleinere Buttons */
+    .archiv-decade-btn {
+        font-size: var(--fs-xs);
+        padding: 0.25rem 0.6rem;
+    }
+
+    /* Allgemeines Kontakt-Card: stapeln statt nebeneinander */
+    .allgemeines-columns {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    /* Verein Porträts: vertikal stapeln auf mobilen */
+    .verein-portrait {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .verein-portrait-image {
+        flex: none;
+    }
+
+    /* Verein: H1 nicht erzwingen auf einer Zeile */
+    .verein-page .page-intro h1,
+    .verein-page-subtitle {
+        white-space: normal;
+    }
+
+    /* Gallery slider: kein horizontales Offset auf mobile */
+    .gallery-slider {
+        transform: translateX(0);
+    }
+
+    /* Verein Split-Text: weniger Padding auf mobile */
+    .verein-split-text,
+    .verein-zweck-text {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Geschichte split text: weniger Padding */
+    .geschichte-split-text {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Mach-mit Photo-Side: etwas niedriger */
+    .mach-mit-photo-side {
+        height: 220px;
+    }
+
+    /* Map embed (OpenStreetMap): volle Breite auf mobile */
+    .maps-embed {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+}

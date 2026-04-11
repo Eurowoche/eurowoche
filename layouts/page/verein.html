@@ -1,0 +1,101 @@
+{{ define "main" }}
+<article class="page-content verein-page">
+
+    <!-- Überschrift ohne Hero-Bild -->
+    <div class="page-intro">
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.subtitle }}<p class="verein-page-subtitle">{{ . }}</p>{{ end }}
+    </div>
+
+    <!-- Großes Gruppenfoto (volle Höhe, kein Beschnitt) -->
+    <div class="geschichte-wide-photo">
+        <img src="/img/verein/verein-gruppe.jpg" alt="Vereinsmitglieder im Fachwerkinnenhof" loading="lazy">
+    </div>
+
+    <div class="page-body">
+        <h2>Über uns</h2>
+        <p>Unser Verein trägt den Namen Arbeitskreis Europäische Jugendwochen Burg Ludwigstein e.V. Er hat seinen Sitz in Witzenhausen und ist im Vereinsregister des Amtsgerichts Eschwege eingetragen. Der Verein dient ausschließlich und unmittelbar gemeinnützigen Zwecken im Sinne des Abschnitts über steuerbegünstigte Zwecke der Abgabenordnung.</p>
+
+        <h2>Mehr als nur Tanz und Musik: Kommunikation auf Augenhöhe</h2>
+        <p>Bei uns wird Kultur lebendig. Wir glauben daran, dass gemeinsames Singen, Musizieren und Tanzen die besten Wege sind, um Sprachbarrieren zu überwinden und echte Gespräche zu führen. Während die ersten Treffen vor allem durch den Volkstanz geprägt waren, bilden heute auch Chor- und Instrumentalmusik die tragenden Säulen unserer gemeinsamen Arbeit.</p>
+    </div>
+
+    <!-- Cremefarbener Bereich: Zweck mit Photo rechts -->
+    <div class="verein-zweck-section">
+        <div class="verein-zweck-inner">
+            <div class="verein-zweck-text">
+                <h2>Zweck des Vereins</h2>
+                <p>Der Verein verfolgt ausschließlich gemeinnützige Zwecke. Er verwirklicht seine Ziele insbesondere durch:</p>
+                <ul class="verein-zweck-list">
+                    <li><strong>Organisation und Durchführung</strong> der Europäischen Jugendwochen auf Burg Ludwigstein.</li>
+                    <li><strong>Förderung des europäischen Gedankens</strong> und des interkulturellen Austauschs junger Menschen aus verschiedenen Ländern.</li>
+                    <li><strong>Unterstützung der teilnehmenden Gruppen</strong> in ihrer kulturellen, kreativen und sozialen Arbeit.</li>
+                    <li><strong>Pflege der Zusammenarbeit mit europäischen Partnerorganisationen</strong> und ehemaligen Teilnehmenden.</li>
+                    <li><strong>Stärkung von Verständigung, Freundschaft und Solidarität</strong> über nationale, ethnische und religiöse Grenzen hinweg.</li>
+                </ul>
+            </div>
+            <div class="verein-zweck-image">
+                <img src="/img/verein/verein-buehne.jpg" alt="Europäische Jugendwoche – Bühne mit Fahnen" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+<!-- Weißer Bereich: Ludwigsteiner Tänzer — Photo links über volle Höhe, Text rechts -->
+    <div class="verein-split-section bg-white">
+        <div class="verein-split-inner">
+            <div class="verein-split-image">
+                <img src="/img/verein/ludwigsteiner.jpg" alt="Die Ludwigsteiner – Tanzpaar" loading="lazy" class="img-dancers">
+            </div>
+            <div class="verein-split-text">
+                <h2>Die Ludwigsteiner</h2>
+                <p>Die Ludwigsteiner sind die vereinseigene Tanzgruppe des Arbeitskreises Europäische Jugendwochen.</p>
+                <p>Die Tänzerinnen und Tänzer kommen aus ganz Deutschland zusammen. Aus diesem Grund treffen sich sie nur wenige Male im Jahr. Dafür proben sie dann sehr intensiv und mit einer großen Leidenschaft.</p>
+                <p>Die Gruppe zeigt verschiedene deutsche Traditionen, welche sie in Geschichten vertanzen. Dazu nutzen sie alte Volkstänze sowie verschiedene Trachten und verarbeiten sie in neuen Choreographien. Dabei werden sie stets von der Musikgruppe „die Lusiker" live begleitet.</p>
+                <p>Diese Geschichten präsentiert die Gruppe jährlich auf der Europäischen Jugendwoche, sowie bei verschiedenen Auftritten innerhalb und außerhalb Deutschlands.</p>
+                <p class="verein-eckdaten"><strong>Eckdaten:</strong><br>
+                Gegründet 1990 von Fritz Lenz<br>
+                Seit 1991 feste deutsche Vertretung bei der Europäischen Jugendwoche<br>
+                Internationale Auftritte in über 10 Ländern weltweit<br>
+                Aktuelle Leitung: Annika Meyer &amp; Johanna Klauer</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cremefarbener Bereich: Musiker — Text links, Quadratisches Photo rechts -->
+    <div class="verein-split-section bg-cream">
+        <div class="verein-split-inner">
+            <div class="verein-split-text">
+                <h2>Die Ludwigsteiner Musiker</h2>
+                <p>Die Lusiker (Wortspiel aus Ludwigsteiner Musiker) sind die vereinseigene Musikgruppe des Arbeitskreises Europäische Jugendwoche. Sie besteht aus einem 7-köpfigen Team, welches zusammen mit der Ludwigsteiner Tanzgruppe die deutsche Vertretung bei der Europäischen Jugendwoche übernimmt.</p>
+                <p>Die Gruppe kommt aus verschiedenen Teilen Deutschlands, Österreichs, Dänemarks, Polens und Lettlands. Neben verschiedenen traditionellen deutschen Musikstücken spielt die Gruppe auch modernere Stücke sowie eigene Kompositionen.</p>
+                <p>Aktuelle Leitung: Maciej Derra.<br>Instrumente: Querflöte, Akkordeon, Bass, Gitarre, Horn, Gesang.</p>
+            </div>
+            <div class="verein-split-image">
+                <img src="/img/verein/ludwigsteiner-musiker.jpg" alt="Die Ludwigsteiner Musiker – Musikgruppe vor Fachwerkhaus" loading="lazy" class="img-musicians">
+            </div>
+        </div>
+    </div>
+
+    <!-- CIOFF farblich abgesetzt (Mauve) -->
+    <div class="verein-cioff">
+        <div class="page-body-inner">
+            <h2>Mitglied bei CIOFF®</h2>
+            <p>Der Arbeitskreis Europäische Jugendwochen Burg Ludwigstein e.V. ist Mitglied bei CIOFF® (Conseil International des Organisations de Festivals de Folklore et d'Arts Traditionnels), einer internationalen Partnerorganisation der UNESCO im Bereich der traditionellen Kultur und Folklore.</p>
+            <p>Die Mitgliedschaft unterstreicht unseren internationalen Anspruch und unser Engagement für kulturellen Austausch und Völkerverständigung.</p>
+            <a href="https://www.cioff.org" class="btn btn-primary" target="_blank" rel="noopener">Mehr Infos zu CIOFF®</a>
+        </div>
+    </div>
+
+    <!-- Fotogalerie -->
+    <div class="verein-galerie">
+        <div class="verein-galerie-grid">
+            {{ range $i := seq 12 }}
+            <div class="verein-galerie-item">
+                <img src="/img/verein/galerie-{{ $i }}.jpg" alt="Europäische Jugendwoche Impression {{ $i }}" loading="lazy">
+            </div>
+            {{ end }}
+        </div>
+    </div>
+
+</article>
+{{ end }}

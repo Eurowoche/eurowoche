@@ -1,0 +1,233 @@
+{{ define "main" }}
+
+<!-- Section 1: Hero -->
+<section class="hero-section">
+    <div class="hero-inner">
+        <div class="hero-text">
+            <div class="hero-text-inner">
+            <h1>{{ i18n "discover_eurowoche" }}</h1>
+            <p class="hero-subtitle">{{ .Params.hero_subtitle | default (i18n "hero_subtitle") }}</p>
+            <div class="hero-desc">{{ .Content }}</div>
+            <div class="hero-buttons">
+                {{ if eq .Lang "de" }}
+                <a href="/festival/" class="btn btn-hero btn-hero-1">{{ i18n "to_festival" }}</a>
+                <a href="/veranstaltungen/" class="btn btn-hero btn-hero-2">{{ i18n "soon" }}</a>
+                <a href="/mach-mit/" class="btn btn-hero btn-hero-3">{{ i18n "get_involved_title" }}</a>
+                {{ else if eq .Lang "en" }}
+                <a href="/en/festival/" class="btn btn-hero btn-hero-1">Festival</a>
+                <a href="/en/events/" class="btn btn-hero btn-hero-2">Upcoming</a>
+                <a href="/en/get-involved/" class="btn btn-hero btn-hero-3">Get Involved</a>
+                {{ else if eq .Lang "fr" }}
+                <a href="/fr/festival/" class="btn btn-hero btn-hero-1">{{ i18n "to_festival" }}</a>
+                <a href="/fr/evenements/" class="btn btn-hero btn-hero-2">{{ i18n "soon" }}</a>
+                <a href="/fr/s-engager/" class="btn btn-hero btn-hero-3">{{ i18n "get_involved_title" }}</a>
+                {{ end }}
+            </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/img/hero/hero-home.jpg" alt="Europäische Jugendwoche auf Burg Ludwigstein" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Das Herz der Eurowoche - Triangle Circles -->
+<section class="heart-section">
+    <h2 class="section-title">{{ i18n "heart_title" }}</h2>
+    <p class="section-subtitle">{{ i18n "heart_subtitle" | safeHTML }}</p>
+
+    <div class="circles-triangle-wrap">
+    <div class="circles-triangle">
+        <div class="circle-item circle-top">
+            <a href="{{ if eq .Lang "de" }}/botschaft/{{ else }}/en/message/{{ end }}">
+                <div class="circle-img">
+                    <img src="/img/hero/circle-verstaendigung.jpg" alt="{{ i18n "international_understanding" }}">
+                    <div class="circle-overlay">
+                        <span class="circle-label">{{ i18n "international_understanding" }}</span>
+                        <span class="circle-btn">{{ i18n "read_more" }}</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="circle-center-text">
+            <p class="circle-center-title">Eurowoche</p>
+            <p class="circle-center-sub">{{ i18n "where_it_comes_together" }}</p>
+        </div>
+
+        <div class="circle-bottom-row">
+            <div class="circle-item circle-bottom-left">
+                <a href="{{ if eq .Lang "de" }}/festival/{{ else }}/en/festival/{{ end }}">
+                    <div class="circle-img">
+                        <img src="/img/hero/circle-festival.jpg" alt="{{ i18n "the_festival" }}">
+                        <div class="circle-overlay">
+                            <span class="circle-label">{{ i18n "the_festival" }}</span>
+                            <span class="circle-btn">{{ i18n "read_more" }}</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="circle-item circle-bottom-right">
+                <a href="{{ if eq .Lang "de" }}/verein/{{ else }}/en/association/{{ end }}">
+                    <div class="circle-img">
+                        <img src="/img/hero/circle-verein.jpg" alt="{{ i18n "the_association" }}">
+                        <div class="circle-overlay">
+                            <span class="circle-label">{{ i18n "the_association" }}</span>
+                            <span class="circle-btn">{{ i18n "read_more" }}</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div><!-- end circles-triangle-wrap -->
+</section>
+
+<!-- Section 3: Als nächstes (Upcoming Events) -->
+<section class="events-section">
+    <h2 class="section-title">{{ i18n "upcoming_next" }}</h2>
+    <p class="section-subtitle">{{ i18n "upcoming_subtitle" }}</p>
+
+    <div class="events-list">
+        {{ $events := where .Site.RegularPages "Section" "veranstaltungen" }}
+        {{ range sort $events "Params.date_start" }}
+        <div class="event-row">
+            <div class="event-image">
+                <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+            </div>
+            <div class="event-info">
+                <h3>{{ .Title }}</h3>
+                <p class="event-meta">{{ .Params.date_display }}{{ if .Params.location }} &nbsp;|&nbsp; {{ .Params.location }}{{ end }}</p>
+                <a href="{{ .RelPermalink }}" class="btn btn-primary">{{ i18n "learn_more" }}</a>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+<!-- Section 4: Märkte Teaser -->
+<section class="maerkte-teaser-section">
+    <div class="maerkte-teaser-split">
+        <div class="maerkte-teaser-image">
+            <img src="/img/maerkte/maerkte-teaser.jpg" alt="{{ i18n "markets_teaser_title" }}" loading="lazy">
+        </div>
+        <div class="maerkte-teaser-text">
+            <h2>{{ i18n "markets_teaser_title" }}</h2>
+            <p>{{ i18n "markets_teaser_text" }}</p>
+            <a href="{{ if eq .Lang "de" }}/maerkte/{{ else }}/en/markets/{{ end }}" class="btn btn-primary">{{ i18n "to_markets" }}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Section 5: Testimonials -->
+<section class="testimonials-section">
+    <div class="testimonials-inner">
+        <div class="testimonials-content">
+            <div class="testimonials-slider" id="testimonials-slider">
+                {{ range $i, $t := .Site.Data.testimonials }}
+                <div class="testimonial-slide {{ if eq $i 0 }}active{{ end }}" data-bg="{{ $t.farbe }}">
+                    <p class="testimonial-source">{{ $t.name }} – {{ $t.land }}</p>
+                    <blockquote class="testimonial-quote">„{{ $t.zitat }}"</blockquote>
+                </div>
+                {{ end }}
+            </div>
+            <div class="testimonial-controls">
+                <button class="testimonial-prev" id="testimonial-prev" aria-label="Previous">‹</button>
+                <div class="testimonial-dots" id="testimonial-dots">
+                    {{ range $i, $t := .Site.Data.testimonials }}
+                    <span class="dot {{ if eq $i 0 }}active{{ end }}" data-index="{{ $i }}"></span>
+                    {{ end }}
+                </div>
+                <button class="testimonial-next" id="testimonial-next" aria-label="Next">›</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 6a: Mach Mit Heading — Creme Hintergrund, Überschrift zentriert -->
+<section class="mach-mit-heading-section">
+    <h2 class="section-title">{{ i18n "get_involved_title" }}</h2>
+    <p class="section-subtitle">{{ i18n "get_involved_subtitle" }}</p>
+</section>
+
+<!-- Section 6b: Mach Mit Cards — Mauve Einschub, Fotos über volle Breite verteilt -->
+<section class="mach-mit-cards-section">
+    <div class="mach-mit-cards">
+        <a href="{{ if eq .Lang "de" }}/mach-mit/{{ else }}/en/get-involved/{{ end }}#tanz" class="mach-mit-card">
+            <div class="mach-mit-card-img-wrap">
+                <img src="/img/involvement/tanz-mit.jpg" alt="{{ i18n "dance_along" }}" loading="lazy">
+            </div>
+            <span class="card-label">{{ i18n "dance_along" }}</span>
+        </a>
+        <a href="{{ if eq .Lang "de" }}/mach-mit/{{ else }}/en/get-involved/{{ end }}#helfe" class="mach-mit-card">
+            <div class="mach-mit-card-img-wrap">
+                <img src="/img/involvement/engagiere-dich.jpg" alt="{{ i18n "get_engaged" }}" loading="lazy">
+            </div>
+            <span class="card-label">{{ i18n "get_engaged" }}</span>
+        </a>
+        <a href="{{ if eq .Lang "de" }}/mach-mit/{{ else }}/en/get-involved/{{ end }}#spende" class="mach-mit-card">
+            <div class="mach-mit-card-img-wrap">
+                <img src="/img/involvement/spende.jpg" alt="{{ i18n "donate" }}" loading="lazy">
+            </div>
+            <span class="card-label">{{ i18n "donate" }}</span>
+        </a>
+    </div>
+</section>
+
+<!-- Section 7: Photo Gallery — Mosaik-Slider wie WIX Pro Gallery
+     Jedes Bild hat: data-x (left px), data-y (top %), data-w (width px), data-h (height %)
+     Höhe in % der Gesamthöhe (384px), x/w in Pixeln. JS berechnet die Positionen. -->
+<section class="gallery-section">
+    <div class="gallery-slider" id="gallery-slider">
+        <div class="gallery-track" id="gallery-track">
+            <!-- Gruppe A: zwei kleine oben, ein breites unten -->
+            <div class="mosaic-item" data-x="0"   data-y="0"  data-w="178" data-h="35"><img src="/img/gallery/gallery-1.jpg" alt="Eurowoche Impression 1" loading="lazy"></div>
+            <div class="mosaic-item" data-x="183"  data-y="0"  data-w="178" data-h="35"><img src="/img/gallery/gallery-2.jpg" alt="Eurowoche Impression 2" loading="lazy"></div>
+            <div class="mosaic-item" data-x="0"    data-y="36" data-w="361" data-h="64"><img src="/img/gallery/gallery-3.jpg" alt="Eurowoche Impression 3" loading="lazy"></div>
+            <!-- Gruppe B: oben groß (55%), unten kleiner (45%) -->
+            <div class="mosaic-item" data-x="366"  data-y="0"  data-w="260" data-h="55"><img src="/img/gallery/gallery-4.jpg" alt="Eurowoche Impression 4" loading="lazy"></div>
+            <div class="mosaic-item" data-x="366"  data-y="56" data-w="260" data-h="44"><img src="/img/gallery/gallery-5.jpg" alt="Eurowoche Impression 5" loading="lazy"></div>
+            <!-- Gruppe C: Hochformat über volle Höhe -->
+            <div class="mosaic-item" data-x="631"  data-y="0"  data-w="190" data-h="100"><img src="/img/gallery/gallery-8.jpg" alt="Eurowoche Impression 8" loading="lazy"></div>
+            <!-- Gruppe D: oben 65%, unten 35% -->
+            <div class="mosaic-item" data-x="826"  data-y="0"  data-w="280" data-h="65"><img src="/img/gallery/gallery-6.jpg" alt="Eurowoche Impression 6" loading="lazy"></div>
+            <div class="mosaic-item" data-x="826"  data-y="66" data-w="280" data-h="34"><img src="/img/gallery/gallery-7.jpg" alt="Eurowoche Impression 7" loading="lazy" style="object-position: center top;"></div>
+        </div>
+        <button class="gallery-arrow gallery-arrow-left" id="gallery-prev" aria-label="{{ i18n "back" }}">&#8249;</button>
+        <button class="gallery-arrow gallery-arrow-right" id="gallery-next" aria-label="{{ i18n "next" }}">&#8250;</button>
+    </div>
+</section>
+
+<!-- Section 8: Shop Teaser -->
+<section class="shop-teaser-section">
+    <div class="shop-teaser-inner">
+        <div class="shop-teaser-image">
+            <picture>
+                <source srcset="/img/shop/onlineshop.avif" type="image/avif">
+                <img src="/img/shop/onlineshop.jpg" alt="Eurowoche Online-Shop" loading="lazy">
+            </picture>
+        </div>
+        <div class="shop-teaser-text">
+            <h2>{{ i18n "shop_title" }}</h2>
+            <p>{{ i18n "shop_text" }}</p>
+            <a href="https://fanshop4you.de/produkt-kategorie/fanshops/arbeitskreis-europaeische-jugendwochen-burg-ludwigstein-e-v/" class="btn btn-primary" target="_blank" rel="noopener">Shop</a>
+        </div>
+    </div>
+</section>
+
+<!-- Section 9: Contact -->
+<section class="contact-section" id="kontakt">
+    <h2 class="section-title">{{ i18n "contact_title" }}</h2>
+    <div class="contact-inner">
+        <div class="contact-text">
+            <p class="contact-greeting">{{ i18n "contact_greeting" }}</p>
+            <p>{{ i18n "contact_text" }}</p>
+            <p class="contact-email-direct"><a href="mailto:{{ .Site.Params.email }}">{{ if eq .Lang "de" }}Fragen an {{ .Site.Params.email }}{{ else if eq .Lang "en" }}Questions to {{ .Site.Params.email }}{{ else }}Questions à {{ .Site.Params.email }}{{ end }}</a></p>
+        </div>
+        <div class="contact-form-wrapper">
+            {{ partial "contact-form.html" . }}
+        </div>
+    </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,252 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/img"
+public_folder: "/img"
+
+locale: "de"
+
+collections:
+  # === SEITEN (Deutsch) ===
+  - name: "seiten_de"
+    label: "Seiten (Deutsch)"
+    files:
+      - name: "home_de"
+        label: "Startseite"
+        file: "content/de/_index.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Beschreibung", name: "description", widget: "string" }
+          - { label: "Inhalt (Hero-Text)", name: "body", widget: "markdown" }
+
+      - name: "botschaft_de"
+        label: "Botschaft"
+        file: "content/de/botschaft.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "botschaft" }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
+
+      - name: "festival_de"
+        label: "Festival"
+        file: "content/de/festival.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "festival" }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
+
+      - name: "verein_de"
+        label: "Verein"
+        file: "content/de/verein.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "verein" }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
+
+      - name: "maerkte_de"
+        label: "Märkte"
+        file: "content/de/maerkte.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "maerkte" }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
+
+      - name: "mach_mit_de"
+        label: "Mach mit"
+        file: "content/de/mach-mit.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "mach-mit" }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
+
+      - name: "geschichte_de"
+        label: "Geschichte"
+        file: "content/de/geschichte.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "geschichte" }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
+
+      - name: "impressum_de"
+        label: "Impressum"
+        file: "content/de/impressum.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
+
+      - name: "disclaimer_de"
+        label: "Disclaimer"
+        file: "content/de/disclaimer.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
+
+  # === SEITEN (English) ===
+  - name: "pages_en"
+    label: "Pages (English)"
+    files:
+      - name: "home_en"
+        label: "Homepage"
+        file: "content/en/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Content (Hero text)", name: "body", widget: "markdown" }
+
+      - name: "message_en"
+        label: "Message"
+        file: "content/en/message.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "botschaft" }
+          - { label: "Content", name: "body", widget: "markdown" }
+
+      - name: "festival_en"
+        label: "Festival"
+        file: "content/en/festival.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "festival" }
+          - { label: "Content", name: "body", widget: "markdown" }
+
+      - name: "association_en"
+        label: "Association"
+        file: "content/en/association.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "verein" }
+          - { label: "Content", name: "body", widget: "markdown" }
+
+  # === VERANSTALTUNGEN (Deutsch) ===
+  - name: "veranstaltungen_de"
+    label: "Veranstaltungen (DE)"
+    folder: "content/de/veranstaltungen"
+    create: true
+    slug: "{{slug}}"
+    filter: { field: "title", pattern: "^(?!Bevorstehende)" }
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Startdatum", name: "date_start", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Enddatum", name: "date_end", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Datum-Anzeige", name: "date_display", widget: "string" }
+      - { label: "Ort", name: "location", widget: "string", default: "Burg Ludwigstein, Witzenhausen" }
+      - { label: "Bild", name: "image", widget: "image" }
+      - { label: "Beschreibung", name: "body", widget: "markdown" }
+
+  # === VERANSTALTUNGEN (English) ===
+  - name: "events_en"
+    label: "Events (EN)"
+    folder: "content/en/events"
+    create: true
+    slug: "{{slug}}"
+    filter: { field: "title", pattern: "^(?!Upcoming)" }
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Start date", name: "date_start", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "End date", name: "date_end", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Date display", name: "date_display", widget: "string" }
+      - { label: "Location", name: "location", widget: "string", default: "Burg Ludwigstein, Witzenhausen" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "body", widget: "markdown" }
+
+  # === VORSTAND & TEAMS ===
+  - name: "vorstand"
+    label: "Vorstand & Teams"
+    files:
+      - name: "vorstand_data"
+        label: "Vorstand & Teams"
+        file: "data/vorstand.yaml"
+        fields:
+          - label: "Vorstand"
+            name: "vorstand"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Funktion (DE)", name: "funktion", widget: "string" }
+              - { label: "Funktion (EN)", name: "funktion_en", widget: "string" }
+              - { label: "E-Mail", name: "email", widget: "string", required: false }
+              - { label: "Telefon", name: "telefon", widget: "string", required: false }
+              - { label: "Mobil", name: "mobil", widget: "string", required: false }
+              - { label: "Foto", name: "foto", widget: "image", required: false }
+          - label: "Erweiterter Vorstand"
+            name: "erweiterter_vorstand"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+          - label: "Ehrenvorsitzender"
+            name: "ehrenvorsitzender"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Adresse", name: "adresse", widget: "string" }
+              - { label: "Telefon", name: "telefon", widget: "string" }
+              - { label: "Mobil", name: "mobil", widget: "string" }
+              - { label: "E-Mail", name: "email", widget: "string" }
+          - label: "Teams"
+            name: "teams"
+            widget: "list"
+            fields:
+              - { label: "Teamname (DE)", name: "name", widget: "string" }
+              - { label: "Teamname (EN)", name: "name_en", widget: "string" }
+              - { label: "Mitglieder", name: "mitglieder", widget: "list", field: { label: "Name", name: "name", widget: "string" } }
+              - { label: "E-Mail", name: "email", widget: "string", required: false }
+              - { label: "Adresse", name: "adresse", widget: "string", required: false }
+
+  # === TESTIMONIALS ===
+  - name: "testimonials"
+    label: "Testimonials / Zitate"
+    files:
+      - name: "testimonials_data"
+        label: "Zitate"
+        file: "data/testimonials.yaml"
+        fields:
+          - label: "Zitate"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Name / Gruppe", name: "name", widget: "string" }
+              - { label: "Land (DE)", name: "land", widget: "string" }
+              - { label: "Land (EN)", name: "land_en", widget: "string" }
+              - { label: "Zitat (DE)", name: "zitat", widget: "text" }
+              - { label: "Zitat (EN)", name: "zitat_en", widget: "text" }
+
+  # === ARCHIV ===
+  - name: "archiv"
+    label: "Archiv (Gastgruppen)"
+    files:
+      - name: "archiv_data"
+        label: "Archiv-Einträge"
+        file: "data/archiv.yaml"
+        fields:
+          - label: "Eurowochen"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Nummer", name: "nummer", widget: "number" }
+              - { label: "Jahr", name: "jahr", widget: "number" }
+              - label: "Gruppen"
+                name: "gruppen"
+                widget: "list"
+                fields:
+                  - { label: "Land", name: "land", widget: "string" }
+                  - { label: "Stadt", name: "stadt", widget: "string", required: false }
+                  - { label: "Tanzgruppe", name: "tanzgruppe", widget: "string", required: false }
+
+  # === TIMELINE ===
+  - name: "timeline"
+    label: "Geschichte Timeline"
+    files:
+      - name: "timeline_data"
+        label: "Timeline-Einträge"
+        file: "data/timeline.yaml"
+        fields:
+          - label: "Einträge"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Jahr", name: "jahr", widget: "string" }
+              - { label: "Titel (DE)", name: "titel", widget: "string" }
+              - { label: "Titel (EN)", name: "titel_en", widget: "string" }
+              - { label: "Text (DE)", name: "text", widget: "text" }
+              - { label: "Text (EN)", name: "text_en", widget: "text" }

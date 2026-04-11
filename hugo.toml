@@ -1,0 +1,182 @@
+baseURL = "https://aktuell.eurowoche.org/"
+title = "Europäische Jugendwoche"
+defaultContentLanguage = "de"
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.de]
+    languageName = "Deutsch"
+    weight = 1
+    contentDir = "content/de"
+    [languages.de.params]
+      description = "Europäische Jugendwoche auf Burg Ludwigstein – Ein besonderes Folklorefestival"
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    contentDir = "content/en"
+    languagePrefix = "/en"
+    [languages.en.params]
+      description = "European Youth Week at Burg Ludwigstein – A unique folklore festival"
+  [languages.fr]
+    languageName = "Français"
+    weight = 3
+    contentDir = "content/fr"
+    languagePrefix = "/fr"
+    [languages.fr.params]
+      description = "Semaine européenne de la jeunesse à Burg Ludwigstein – Un festival folklorique unique"
+
+[menus]
+  [[menus.de]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menus.de]]
+    name = "Botschaft"
+    url = "/botschaft/"
+    weight = 2
+  [[menus.de]]
+    name = "Festival"
+    url = "/festival/"
+    weight = 3
+  [[menus.de]]
+    name = "Veranstaltungen"
+    url = "/veranstaltungen/"
+    weight = 4
+  [[menus.de]]
+    name = "Verein"
+    url = "/verein/"
+    weight = 5
+  [[menus.de]]
+    name = "Märkte"
+    url = "/maerkte/"
+    weight = 6
+  [[menus.de]]
+    name = "Mach Mit"
+    url = "/mach-mit/"
+    weight = 7
+  [[menus.de]]
+    name = "Kontakt"
+    url = "/kontakt/"
+    weight = 8
+  [[menus.de]]
+    name = "Geschichte"
+    url = "/geschichte/"
+    weight = 9
+  [[menus.de]]
+    name = "Archiv"
+    url = "/archiv/"
+    weight = 10
+  [[menus.de]]
+    name = "Shop"
+    url = "https://fanshop4you.de/produkt-kategorie/fanshops/arbeitskreis-europaeische-jugendwochen-burg-ludwigstein-e-v/"
+    weight = 11
+  [[menus.de]]
+    name = "Downloads"
+    url = "/downloads/"
+    weight = 12
+
+  [[menus.en]]
+    name = "Home"
+    url = "/en/"
+    weight = 1
+  [[menus.en]]
+    name = "Message"
+    url = "/en/message/"
+    weight = 2
+  [[menus.en]]
+    name = "Festival"
+    url = "/en/festival/"
+    weight = 3
+  [[menus.en]]
+    name = "Events"
+    url = "/en/events/"
+    weight = 4
+  [[menus.en]]
+    name = "Association"
+    url = "/en/association/"
+    weight = 5
+  [[menus.en]]
+    name = "Markets"
+    url = "/en/markets/"
+    weight = 6
+  [[menus.en]]
+    name = "Get Involved"
+    url = "/en/get-involved/"
+    weight = 7
+  [[menus.en]]
+    name = "Contact"
+    url = "/en/contact/"
+    weight = 8
+  [[menus.en]]
+    name = "History"
+    url = "/en/history/"
+    weight = 9
+  [[menus.en]]
+    name = "Archive"
+    url = "/en/archive/"
+    weight = 10
+  [[menus.en]]
+    name = "Shop"
+    url = "https://fanshop4you.de/produkt-kategorie/fanshops/arbeitskreis-europaeische-jugendwochen-burg-ludwigstein-e-v/"
+    weight = 11
+  [[menus.en]]
+    name = "Downloads"
+    url = "/en/downloads/"
+    weight = 12
+
+  [[menus.fr]]
+    name = "Accueil"
+    url = "/fr/"
+    weight = 1
+  [[menus.fr]]
+    name = "Message"
+    url = "/fr/message/"
+    weight = 2
+  [[menus.fr]]
+    name = "Festival"
+    url = "/fr/festival/"
+    weight = 3
+  [[menus.fr]]
+    name = "Événements"
+    url = "/fr/evenements/"
+    weight = 4
+  [[menus.fr]]
+    name = "Association"
+    url = "/fr/association/"
+    weight = 5
+  [[menus.fr]]
+    name = "Marchés"
+    url = "/fr/marches/"
+    weight = 6
+  [[menus.fr]]
+    name = "S'engager"
+    url = "/fr/s-engager/"
+    weight = 7
+  [[menus.fr]]
+    name = "Contact"
+    url = "/fr/contact/"
+    weight = 8
+  [[menus.fr]]
+    name = "Histoire"
+    url = "/fr/histoire/"
+    weight = 9
+  [[menus.fr]]
+    name = "Archive"
+    url = "/fr/archive/"
+    weight = 10
+  [[menus.fr]]
+    name = "Boutique"
+    url = "https://fanshop4you.de/produkt-kategorie/fanshops/arbeitskreis-europaeische-jugendwochen-burg-ludwigstein-e-v/"
+    weight = 11
+  [[menus.fr]]
+    name = "Téléchargements"
+    url = "/fr/telechargements/"
+    weight = 12
+
+[params]
+  email = "pr@eurowoche.org"
+  address = "Burg Ludwigstein, 37214 Witzenhausen, Germany"
+  facebook = "https://www.facebook.com/viva.europa/"
+  instagram = "https://www.instagram.com/europaeische_jugendwochen"
+  youtube = "https://tr.ee/Z6EtkWvlUo"
+  spotify = "https://www.youtube.com/@DieLudwigsteiner"

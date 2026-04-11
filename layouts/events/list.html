@@ -1,0 +1,22 @@
+{{ define "main" }}
+<article class="page-content">
+    <div class="page-body">
+        <h1>{{ .Title }}</h1>
+        <div class="events-grid">
+            {{ range .Pages }}
+            <div class="event-card">
+                {{ with .Params.image }}
+                <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+                {{ end }}
+                <div class="event-card-body">
+                    <h2>{{ .Title }}</h2>
+                    <p class="event-date">{{ .Params.date_display }}</p>
+                    <p class="event-location">{{ .Params.location }}</p>
+                    <a href="{{ .RelPermalink }}" class="btn btn-primary">{{ i18n "learn_more" }}</a>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</article>
+{{ end }}

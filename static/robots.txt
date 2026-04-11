@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Verwaltungsbereiche ausschließen
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://www.eurowoche.org/sitemap.xml

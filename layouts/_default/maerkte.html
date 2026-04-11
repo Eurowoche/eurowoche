@@ -1,0 +1,131 @@
+{{ define "main" }}
+<article class="page-content maerkte-page">
+    <!-- Überschrift: Fraunces, 1 Zeile -->
+    <div class="page-intro">
+        <h1>{{ .Title }}</h1>
+    </div>
+
+    <!-- Untertitel: Arial, 1 Zeile -->
+    <p class="maerkte-untertitel">{{ if eq .Lang "de" }}Ostermarkt &amp; Adventsmarkt auf Burg Ludwigstein{{ else if eq .Lang "en" }}Easter &amp; Christmas Markets at Ludwigstein Castle{{ else if eq .Lang "fr" }}Marché de Pâques &amp; Marché de Noël au château Ludwigstein{{ end }}</p>
+
+    <!-- Intro-Text: Arial, zentriert, abgesetzt -->
+    <div class="maerkte-intro">
+        <p>Mit viel Herzblut organisieren die Mitglieder des Arbeitskreises Europäische Jugendwochen zwei besondere Kunsthandwerksmärkte im Jahr. <strong>Die Erlöse sichern die Finanzierung der Europäischen Jugendwoche</strong> und schaffen gleichzeitig Orte der Begegnung für Gäste, Aussteller und Ehrenamtliche.</p>
+    </div>
+
+    <!-- OSTERMARKT: Bild links, Text rechts -->
+    <section class="maerkte-section-wrapper maerkte-section-cream">
+        <div class="maerkte-section-inner">
+            <!-- Bild links mit Rot-Filter, Overlay-Text OBEN -->
+            <div class="maerkte-image-container">
+                <div class="maerkte-image-with-overlay maerkte-image-red-filter">
+                    <img src="/img/maerkte/ostermarkt.jpg" alt="Ostermarkt" loading="lazy">
+                    <div class="maerkte-image-overlay maerkte-overlay-top">
+                        <h3>Ostermarkt</h3>
+                        <p class="maerkte-image-subtitle">Kunsthandwerk, Frühlingsbräuche<br>und Begegnung</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text rechts: Arial, Blocksatz -->
+            <div class="maerkte-text-container">
+                <div class="maerkte-text-block">
+                    <p>Der Ostermarkt ist ein Kunsthandwerker- und Erzeugermarkt, der ehrenamtlich von Mitgliedern des Arbeitskreises Europäische Jugendwochen organisiert wird. Ziel ist es, mit den Erlösen die Finanzierung der Europäischen Jugendwoche im Sommer zu sichern.</p>
+                    <p>Ausstellerinnen und Aussteller aus verschiedenen Regionen Deutschlands präsentieren österliche Bräuche und handgefertigte Produkte. Besonders beliebt ist das kunstvolle Eierhandwerk, bei dem vom Straußen- bis zum Wellensittichei kleine Kunstwerke entstehen.</p>
+                    <p>Der Ostermarkt findet in den barrierefrei zugänglichen Räumen des alten Klosters statt und lädt zum entspannten Bummeln ein. Im Innenhof sorgen Marktstände, Frühlingsdekorationen sowie der Duft von Bratwurst und Crêpes für eine lebendige Atmosphäre.</p>
+                    <p>Die Cafeteria bietet Kaffee und selbstgebackenen Kuchen, während die Osterbastelstube Besucher jeden Alters zum Mitmachen einlädt. Eine Tombola mit handgefertigten Preisen rundet das Angebot ab.</p>
+                    <p>Viele Aussteller und Mitglieder des Arbeitskreises übernachten auf der Burg Ludwigstein. Beim gemeinsamen Abendessen am Samstag entstehen Begegnungen, neue Kontakte und langjährige Freundschaften.</p>
+                    <p class="maerkte-detail-hint"><strong>{{ if eq .Lang "de" }}Alle Details zum kommenden Ostermarkt:{{ else if eq .Lang "en" }}All details on the upcoming Easter market:{{ else if eq .Lang "fr" }}Tous les détails sur le marché de Pâques à venir:{{ end }}</strong></p>
+                    <div class="button-row">
+                        <a href="{{ if eq .Lang "de" }}/veranstaltungen/{{ else if eq .Lang "en" }}/en/events/{{ else if eq .Lang "fr" }}/fr/evenements/{{ end }}" class="btn btn-primary">{{ if eq .Lang "de" }}Mehr Infos{{ else if eq .Lang "en" }}More Info{{ else if eq .Lang "fr" }}Plus d'infos{{ end }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bildergalerie Ostermarkt — Mosaik-Slider -->
+        <div class="maerkte-slider-wrapper">
+            <div class="maerkte-slider" data-gallery="ostermarkt">
+                <div class="maerkte-slider-track gallery">
+                    {{/* Ostermarkt: L=Landscape 1200x800, P=Portrait 800x1200
+                         Echte Formate: 1L 2P 3L 4L 5L 6L 7P 8P 9P 10P 11L 12P 13L 14P 15P 16L 17P 18L 19L 20P
+                         Mosaik-Sequenz (keine Lücken, abwechslungsreich):
+                         Gruppen: P | LL | PP | LL | PP | LL | P | LL | PP | LL | PP
+                         = img1→P  img2+3→LL  img4+5→PP  img6+7→LL  img8+9→PP  img10+11→LL  img12→P  img13+14→LL  img15+16→PP  img17+18→LL  img19+20→PP */}}
+                    {{ $oster := slice "P" "L" "L" "P" "P" "L" "L" "P" "P" "L" "L" "P" "L" "L" "P" "P" "L" "L" "P" "P" }}
+                    {{ range $i, $fmt := $oster }}
+                    <div class="maerkte-slider-item gallery-item{{ if eq $fmt "P" }} mosaic-portrait{{ else }} mosaic-landscape{{ end }}" data-index="{{ $i }}">
+                        <img src="/img/maerkte/ostermarkt-galerie-{{ add $i 1 }}.jpg" alt="Ostermarkt auf Burg Ludwigstein" loading="lazy">
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            <button class="maerkte-slider-prev" aria-label="{{ i18n "back" }}">&#8249;</button>
+            <button class="maerkte-slider-next" aria-label="{{ i18n "next" }}">&#8250;</button>
+        </div>
+    </section>
+
+    <!-- ADVENTSMARKT: Text LINKS, Bild RECHTS -->
+    <section class="maerkte-section-wrapper maerkte-section-light">
+        <div class="maerkte-section-inner maerkte-section-inner-reverse">
+            <!-- Text links: Arial, Blocksatz -->
+            <div class="maerkte-text-container">
+                <div class="maerkte-text-block">
+                    <p>Am zweiten Advent verwandelt sich die Burg Ludwigstein in einen stimmungsvoll geschmückten Weihnachtsmarkt. In den historischen Räumen präsentieren Aussteller ihre kunsthandwerklichen Arbeiten und geben Einblicke in traditionelle Herstellungstechniken.</p>
+                    <p>Ein besonderer Höhepunkt ist die Weihnachts- und Krippenausstellung mit Exponaten aus aller Welt. Musikalisch begleiten die Kapelle des Arbeitskreises sowie weitere Gruppen das Marktgeschehen.</p>
+                    <p>Im Burghof laden lebende Krippe, Glühwein, Crêpes und Bratwurst zum Verweilen ein. Die Cafeteria bietet selbstgebackenen Kuchen der Vereinsmitglieder.</p>
+                    <p>Die Weihnachtsbastelstube steht an beiden Tagen offen und lädt Besucher jeden Alters zum kreativen Gestalten ein. Sinterklaas aus den Niederlanden besucht den Markt und beschenkt die Kinder.</p>
+                    <p>Wie der Ostermarkt wird auch der Adventsmarkt vollständig ehrenamtlich organisiert und trägt maßgeblich zur Finanzierung der Europäischen Jugendwoche bei.</p>
+                    <p class="maerkte-detail-hint"><strong>{{ if eq .Lang "de" }}Alle Details zum kommenden Adventsmarkt:{{ else if eq .Lang "en" }}All details on the upcoming Christmas market:{{ else if eq .Lang "fr" }}Tous les détails sur le marché de Noël à venir:{{ end }}</strong></p>
+                    <div class="button-row">
+                        <a href="{{ if eq .Lang "de" }}/veranstaltungen/{{ else if eq .Lang "en" }}/en/events/{{ else if eq .Lang "fr" }}/fr/evenements/{{ end }}" class="btn btn-primary">{{ if eq .Lang "de" }}Mehr Infos{{ else if eq .Lang "en" }}More Info{{ else if eq .Lang "fr" }}Plus d'infos{{ end }}</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bild rechts mit Rot-Filter, Overlay-Text OBEN -->
+            <div class="maerkte-image-container">
+                <div class="maerkte-image-with-overlay maerkte-image-red-filter">
+                    <img src="/img/maerkte/adventsmarkt.jpg" alt="Adventsmarkt auf Burg Ludwigstein – Kerzen und Handwerk im Burghof" loading="lazy">
+                    <div class="maerkte-image-overlay maerkte-overlay-top">
+                        <h3>Adventsmarkt</h3>
+                        <p class="maerkte-image-subtitle">Licht, Musik und winterliche Atmosphäre</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bildergalerie Adventsmarkt — Einreihiger Flex-Slider, natürliche Bildverhältnisse -->
+        <div class="maerkte-slider-wrapper">
+            <div class="maerkte-slider" data-gallery="adventsmarkt">
+                <div class="maerkte-slider-track gallery">
+                    {{/* Adventsmarkt: alle Landscape-Fotos (1200×677–1200×1011)
+                         Mosaik-Sequenz (keine Lücken, Hochformat-Slots durch Crop erzeugt):
+                         Gruppen: P | LL | PP | LL | PP | LL | PP | LL
+                         = img1→P  img2+3→LL  img4+5→PP  img6+7→LL  img8+9→PP  img10+11→LL  img12+13→PP  img14+15→LL */}}
+                    {{ $advent := slice "P" "L" "L" "P" "P" "L" "L" "P" "P" "L" "L" "P" "P" "L" "L" }}
+                    {{ range $i, $fmt := $advent }}
+                    <div class="maerkte-slider-item gallery-item{{ if eq $fmt "P" }} mosaic-portrait{{ else }} mosaic-landscape{{ end }}" data-index="{{ $i }}">
+                        <img src="/img/maerkte/adventsmarkt-galerie-{{ add $i 1 }}.jpg" alt="Adventsmarkt auf Burg Ludwigstein" loading="lazy">
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            <button class="maerkte-slider-prev" aria-label="{{ i18n "back" }}">&#8249;</button>
+            <button class="maerkte-slider-next" aria-label="{{ i18n "next" }}">&#8250;</button>
+        </div>
+    </section>
+
+    <!-- KONTAKT / TEILNAHME -->
+    <section class="maerkte-kontakt-section">
+        <div class="maerkte-kontakt-inner">
+            <h2>{{ i18n "contact_participation" }}</h2>
+            <p>{{ i18n "market_contact_text" }}</p>
+            <div class="button-row maerkte-kontakt-buttons">
+                <a href="{{ if eq .Lang "de" }}/docs/Anmeldeformular_Markt.pdf{{ else if eq .Lang "en" }}/en/docs/registration-form-market.pdf{{ else if eq .Lang "fr" }}/fr/docs/Formulaire_inscription_marche.pdf{{ end }}" class="btn btn-primary" target="_blank">{{ i18n "download_form" }}</a>
+                <a href="{{ if eq .Lang "de" }}/kontakt/#marktleitung{{ else if eq .Lang "en" }}/en/contact/#marktleitung{{ else if eq .Lang "fr" }}/fr/contact/#marktleitung{{ end }}" class="btn maerkte-kontakt-btn">{{ i18n "contact_market_team" }}</a>
+            </div>
+        </div>
+    </section>
+</article>
+{{ end }}

@@ -1,0 +1,26 @@
+{{ define "main" }}
+<article class="page-content veranstaltungen-page">
+    <div class="page-body">
+        <h1 class="veranstaltungen-heading">{{ .Title }}</h1>
+        <div class="events-grid">
+            {{ range sort .Pages "Params.date_start" "asc" }}
+            <div class="event-card">
+                {{ with .Params.image }}
+                <div class="event-card-image">
+                    <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+                </div>
+                {{ end }}
+                <div class="event-card-body">
+                    <h2>{{ .Title }}</h2>
+                    <p class="event-meta">
+                        <span class="event-date">{{ .Params.date_display }}</span>
+                        <a class="event-location" href="https://maps.google.com/maps?q={{ .Params.location | urlquery }}" target="_blank" rel="noopener">{{ .Params.location }}</a>
+                    </p>
+                    <a href="{{ .RelPermalink }}" class="event-mehr-link">{{ i18n "learn_more" }}</a>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</article>
+{{ end }}

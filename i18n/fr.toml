@@ -1,0 +1,215 @@
+[discover_eurowoche]
+other = "Découvrez l'Eurowoche"
+
+[hero_subtitle]
+other = "Semaine européenne de la jeunesse – un festival folklorique unique"
+
+[heart_title]
+other = "Le cœur de l'Eurowoche"
+
+[heart_subtitle]
+other = "L'Eurowoche est bien plus qu'un festival – elle est un symbole de connexion, de culture et de collaboration. Découvrez les trois piliers qui façonnent notre travail."
+
+[international_understanding]
+other = "Compréhension internationale"
+
+[the_festival]
+other = "Le Festival"
+
+[the_association]
+other = "L'Association"
+
+[where_it_comes_together]
+other = "Où tout se réunit"
+
+[read_more]
+other = "En savoir plus ›"
+
+[upcoming_next]
+other = "À venir"
+
+[upcoming_subtitle]
+other = "Vous trouverez ici tous les événements et dates à venir en un coup d'œil."
+
+[learn_more]
+other = "En savoir plus"
+
+[markets_teaser_title]
+other = "Découvrez nos marchés"
+
+[markets_teaser_text]
+other = "Découvrez ce qui se cache derrière notre Marché de Pâques et notre Marché de Noël."
+
+[to_markets]
+other = "Aux marchés"
+
+[get_involved_title]
+other = "S'engager"
+
+[get_involved_subtitle]
+other = "Vous aimeriez faire partie de notre travail et nous soutenir ? Voici comment."
+
+[dance_along]
+other = "Dansez avec nous"
+
+[get_engaged]
+other = "Engagez-vous"
+
+[donate]
+other = "Faire un don"
+
+[shop_title]
+other = "Visitez notre boutique en ligne"
+
+[shop_text]
+other = "Chaque achat soutient notre festival et notre travail pour la compréhension internationale."
+
+[contact_title]
+other = "Nous contacter"
+
+[contact_greeting]
+other = "Nous serions ravis de vous entendre !"
+
+[contact_text]
+other = "Pour toute question, intérêt pour une collaboration, ou si vous souhaitez nous soutenir, n'hésitez pas à nous contacter. Ensemble, nous pouvons faire la différence !"
+
+[first_name]
+other = "Prénom"
+
+[last_name]
+other = "Nom"
+
+[email]
+other = "E-mail"
+
+[write_message]
+other = "Message"
+
+[submit]
+other = "Envoyer"
+
+[next_dates]
+other = "Prochaines dates"
+
+[group_participation]
+other = "Participation de groupes"
+
+[group_participation_text]
+other = "Si vous souhaitez que votre groupe fasse partie de la Semaine européenne de la jeunesse, nous serions ravis d'apprendre à vous connaître. Veuillez d'abord consulter nos conditions de participation, puis nous contacter."
+
+[conditions]
+other = "Conditions"
+
+[contact]
+other = "Contact"
+
+[contact_participation]
+other = "Contact & Participation"
+
+[market_contact_text]
+other = "Que ce soit en tant que visiteur ou exposant – nous nous réjouissons de votre intérêt pour nos marchés. Pour toute question ou inscription, veuillez contacter directement l'équipe de direction du marché."
+
+[download_form]
+other = "Télécharger le formulaire d'inscription"
+
+[contact_market_team]
+other = "Contacter l'équipe du marché"
+
+[bank_details]
+other = "Coordonnées bancaires"
+
+[become_member]
+other = "Devenir membre"
+
+[become_member_text]
+other = "Souhaitez-vous soutenir à long terme la Semaine européenne de la jeunesse et devenir membre de notre association ? En tant que membre, vous contribuez activement à pérenniser notre travail et l'idée de compréhension internationale."
+
+[membership_form]
+other = "Formulaire d'adhésion (PDF)"
+
+[contact_board]
+other = "Contacter le conseil d'administration"
+
+[our_board]
+other = "Notre conseil"
+
+[extended_board]
+other = "Conseil élargi"
+
+[honorary_chair]
+other = "Président d'honneur"
+
+[general_contact]
+other = "Demandes générales"
+
+[contact_form_title]
+other = "Écrivez-nous"
+
+[archive]
+other = "Archive"
+
+[archive_intro]
+other = "Tous les groupes invités depuis 1953"
+
+[search_placeholder]
+other = "Rechercher par pays, ville ou groupe..."
+
+[eurowoche_nr]
+other = "N°"
+
+[year]
+other = "Année"
+
+[country]
+other = "Pays"
+
+[city]
+other = "Ville"
+
+[dance_group]
+other = "Groupe de danse"
+
+[impressum]
+other = "Mentions légales"
+
+[disclaimer]
+other = "Clause de non-responsabilité"
+
+[view_programme]
+other = "Voir le programme"
+
+[more_to_festival]
+other = "En savoir plus sur le festival"
+
+[menu]
+other = "Menu"
+
+[close]
+other = "Fermer"
+
+[back]
+other = "Retour"
+
+[next]
+other = "Suivant"
+
+[celebrate_with]
+other = "Célèbre avec"
+
+[to_festival]
+other = "Au festival"
+
+[soon]
+other = "Bientôt"
+
+[by]
+other = "par"
+
+[map_participations]
+other = "participations"
+
+[map_click_details]
+other = "Cliquer pour les détails"
+
+[map_panel_placeholder]
+other = "Cliquer sur un cercle\npour les détails"

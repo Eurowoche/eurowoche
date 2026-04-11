@@ -1,0 +1,72 @@
+{{ define "main" }}
+<article class="page-content festival-page">
+
+    <!-- Zentrierte Intro-Sektion (wie WIX) -->
+    <div class="page-intro">
+        <h1>{{ .Title }}</h1>
+        <p class="page-intro-lead">{{ .Params.intro }}</p>
+        <a href="{{ if eq .Lang "de" }}/veranstaltungen/{{ else }}/en/events/{{ end }}" class="btn btn-primary">{{ i18n "view_programme" }}</a>
+    </div>
+
+    <!-- Hauptfoto (groß, volle Breite) -->
+    <div class="festival-photo-hero">
+        <img src="/img/festival/festival-1.jpg" alt="Europäische Jugendwoche – Tanzgruppen" loading="lazy">
+    </div>
+
+    <!-- 4-Bild Fotogitter: 2×2 -->
+    <div class="festival-photo-grid">
+        <div class="festival-grid-item">
+            <img src="/img/festival/festival-2.jpg" alt="Burg Ludwigstein mit Bändern" loading="lazy">
+        </div>
+        <div class="festival-grid-item">
+            <img src="/img/festival/festival-3.jpg" alt="Jugendliche beim Basteln" loading="lazy">
+        </div>
+        <div class="festival-grid-item">
+            <img src="/img/festival/festival-4.jpg" alt="Sportgruppe" loading="lazy">
+        </div>
+        <div class="festival-grid-item">
+            <img src="/img/festival/festival-5.jpg" alt="Europäische Jugendwoche Banner" loading="lazy">
+        </div>
+    </div>
+
+    <!-- Text-Inhalt: Geschichte, Was passiert, Spirit -->
+    <div class="page-body">
+        {{ .Content }}
+    </div>
+
+    <!-- Burg Ludwigstein: Bild links, Text rechts -->
+    <div class="burg-split-section">
+        <div class="burg-split-image">
+            <img src="/img/festival/festival-6.jpg" alt="Burg Ludwigstein mit EU-Flagge" loading="lazy">
+        </div>
+        <div class="burg-split-text">
+            <h2>Burg Ludwigstein: Ein historischer Ort für neue Geschichten</h2>
+            <p>Der Schauplatz unserer Begegnungen ist so symbolträchtig wie die Woche selbst. Die Burg Ludwigstein liegt unmittelbar an der ehemaligen innerdeutschen Grenze und war schon immer ein Zentrum der Jugendbewegung. Wo früher Trennung herrschte, schaffen wir heute einen Raum für Begegnung.</p>
+            <p>Die Europäische Jugendwoche strahlt dabei weit über die Burgmauern hinaus. Durch Auftritte in der Region und traditionelle Eröffnungen auf den Marktplätzen der Umgebung laden wir die Öffentlichkeit ein, Teil dieses europäischen Spirits zu werden.</p>
+        </div>
+    </div>
+
+    <!-- Nächste Termine -->
+    <div class="termine-section">
+        <div class="termine-inner">
+            <h2>{{ i18n "next_dates" }}</h2>
+            <div class="termine-list">
+                <div class="termine-row"><span>65. Europäische Jugendwoche</span><span>01.08.26 - 09.08.26</span></div>
+                <div class="termine-row"><span>66. Europäische Jugendwoche</span><span>31.07.27 - 08.08.27</span></div>
+                <div class="termine-row"><span>67. Europäische Jugendwoche</span><span>29.07.28 - 06.08.28</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teilnahme für Gruppen -->
+    <div class="teilnahme-section">
+        <h2>{{ i18n "group_participation" }}</h2>
+        <p>{{ i18n "group_participation_text" }}</p>
+        <div class="button-row">
+            <a href="{{ if eq .Lang "de" }}/downloads/{{ else }}/en/downloads/{{ end }}" class="btn btn-primary">{{ i18n "conditions" }}</a>
+            <a href="{{ if eq .Lang "de" }}/kontakt/{{ else }}/en/contact/{{ end }}" class="btn btn-outline">{{ i18n "contact" }}</a>
+        </div>
+    </div>
+
+</article>
+{{ end }}
