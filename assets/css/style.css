@@ -3024,14 +3024,14 @@ section.team-section.bg-cream {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
-    padding-left: max(2rem, calc(50vw - 1125px));
+    padding-left: max(2rem, calc(50vw - 900px));   /* rechter Rand der Karte ≈ Seitenmitte */
     padding-right: 2rem;
     box-sizing: border-box;
     width: 100%;
 }
 
 .archiv-left-col {
-    width: min(1125px, calc(50vw - 1rem));   /* 1.25 × 900px Foto-Breite; rechter Rand ≈ Seitenmitte */
+    width: min(900px, calc(50vw - 1rem));   /* gleiche Breite wie Foto; rechter Rand ≈ Seitenmitte */
     flex-shrink: 0;
     min-width: 0;
 }

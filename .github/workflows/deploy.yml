@@ -33,20 +33,50 @@ jobs:
           SFTP_HOST: ${{ secrets.SFTP_HOST }}
           SFTP_DIR: ${{ secrets.SFTP_DIR }}
         run: |
-          sudo apt-get install -y lftp sshpass
+          pip install paramiko --quiet
 
-          # Passwort in URL einbetten → verhindert GetPass()-Fehler (kein Terminal in CI)
-          # connect-program mit sshpass → System-SSH nutzt SSHPASS-env für Auth
-          # Wichtig: Script-Datei VOR lftp-Start schreiben → set-Befehle gelten vor open
-          printf '%s\n' \
-            "set sftp:connect-program \"sshpass -e ssh -a -x -oStrictHostKeyChecking=no -oPasswordAuthentication=yes\"" \
-            "set sftp:auto-confirm yes" \
-            "set net:max-retries 2" \
-            "set net:timeout 30" \
-            "open sftp://${SFTP_USER}:${SFTP_PASS}@${SFTP_HOST}:22" \
-            "mirror --reverse --delete public/ ${SFTP_DIR}/" \
-            "bye" \
-            > /tmp/lftp_deploy
+          python3 << 'PYEOF'
+          import paramiko, os, sys
+          from pathlib import Path
 
-          SSHPASS="$SFTP_PASS" lftp -f /tmp/lftp_deploy
-          rm -f /tmp/lftp_deploy
+          host     = os.environ['SFTP_HOST']
+          user     = os.environ['SFTP_USER']
+          password = os.environ['SFTP_PASS']
+          remote   = os.environ['SFTP_DIR']
+          local    = Path('public')
+
+          print(f"Connecting to {host} as {user} ...")
+
+          transport = paramiko.Transport((host, 22))
+          transport.connect()
+          transport.auth_password(user, password)
+          sftp = paramiko.SFTPClient.from_transport(transport)
+
+          def mkdir_p(sftp, path):
+              """Erstellt Verzeichnis-Pfad rekursiv (ignoriert Fehler wenn schon vorhanden)."""
+              parts = path.replace('\\', '/').split('/')
+              current = ''
+              for part in parts:
+                  if not part:
+                      continue
+                  current = current + '/' + part if current else part
+                  try:
+                      sftp.mkdir(current)
+                  except OSError:
+                      pass  # existiert bereits
+
+          # Alle lokalen Dateien hochladen
+          uploaded = 0
+          for item in sorted(local.rglob('*')):
+              if item.is_file():
+                  rel        = item.relative_to(local)
+                  remote_path = (remote.rstrip('/') + '/' + str(rel).replace('\\', '/')).replace('//', '/')
+                  remote_dir  = '/'.join(remote_path.split('/')[:-1])
+                  mkdir_p(sftp, remote_dir)
+                  sftp.put(str(item), remote_path)
+                  uploaded += 1
+
+          sftp.close()
+          transport.close()
+          print(f"Deploy abgeschlossen: {uploaded} Dateien hochgeladen.")
+          PYEOF
