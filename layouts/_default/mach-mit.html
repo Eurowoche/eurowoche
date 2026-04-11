@@ -52,19 +52,17 @@
                     </button>
                 </div>
                 <div class="spende-panel" id="spende-panel-bank">
-                    <div class="spende-bank-layout">
-                        <div class="spende-qr-block">
-                            <img src="/img/spende-qr.png" alt="QR-Code Banküberweisung" width="140" height="140">
-                            <p class="spende-qr-hint">{{ if eq .Lang "de" }}Mit Banking-App scannen{{ else if eq .Lang "en" }}Scan with banking app{{ else if eq .Lang "fr" }}Scanner avec votre app bancaire{{ end }}</p>
-                        </div>
-                        <div class="spende-bank-details">
-                            <p><strong>Arbeitskreis Europäische Jugendwoche</strong></p>
-                            <p>Sparkasse Werra-Meißner</p>
-                            <p>IBAN:&nbsp;<code>DE23&nbsp;5225&nbsp;0030&nbsp;0050&nbsp;0056&nbsp;69</code></p>
-                            <p>BIC:&nbsp;<code>HELADEF1ESW</code></p>
-                            <p class="spende-amount">{{ if eq .Lang "de" }}Betrag: 20 € (oder nach Wunsch){{ else if eq .Lang "en" }}Amount: €20 (or as you wish){{ else if eq .Lang "fr" }}Montant : 20 € (ou selon vos souhaits){{ end }}</p>
-                            <p class="spende-purpose">{{ if eq .Lang "de" }}Verwendungszweck: <em>Spende Eurowoche</em>{{ else if eq .Lang "en" }}Reference: <em>Spende Eurowoche</em>{{ else if eq .Lang "fr" }}Référence : <em>Spende Eurowoche</em>{{ end }}</p>
-                        </div>
+                    <div class="spende-qr-top">
+                        <img src="/img/spende-qr.png" alt="QR-Code Banküberweisung" width="120" height="120">
+                        <p class="spende-qr-hint">{{ if eq .Lang "de" }}In Banking-App öffnen{{ else if eq .Lang "en" }}Open in banking app{{ else if eq .Lang "fr" }}Ouvrir dans votre app bancaire{{ end }}</p>
+                    </div>
+                    <div class="spende-bank-details">
+                        <p><strong>Arbeitskreis Europäische Jugendwoche</strong></p>
+                        <p>Sparkasse Werra-Meißner</p>
+                        <p>IBAN:&nbsp;<code>DE23&nbsp;5225&nbsp;0030&nbsp;0050&nbsp;0056&nbsp;69</code></p>
+                        <p>BIC:&nbsp;<code>HELADEF1ESW</code></p>
+                        <p class="spende-amount">{{ if eq .Lang "de" }}Betrag: 20 € (oder nach Wunsch){{ else if eq .Lang "en" }}Amount: €20 (or as you wish){{ else if eq .Lang "fr" }}Montant : 20 € (ou selon vos souhaits){{ end }}</p>
+                        <p class="spende-purpose">{{ if eq .Lang "de" }}Verwendungszweck: <em>Spende Eurowoche</em>{{ else if eq .Lang "en" }}Reference: <em>Spende Eurowoche</em>{{ else if eq .Lang "fr" }}Référence : <em>Spende Eurowoche</em>{{ end }}</p>
                     </div>
                 </div>
                 <div class="spende-panel" id="spende-panel-paypal" style="display:none">

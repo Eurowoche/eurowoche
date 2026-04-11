@@ -3907,7 +3907,6 @@ section.team-section.bg-cream {
     overflow: hidden;
     margin-top: 0.5rem;
     background: #fff;
-    width: 100%;
 }
 
 .spende-tabs {
@@ -3967,30 +3966,30 @@ section.team-section.bg-cream {
     padding: 1.1rem 1.3rem;
 }
 
-.spende-bank-layout {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-}
-
-.spende-qr-block {
-    flex-shrink: 0;
+.spende-qr-top {
     text-align: center;
+    padding-bottom: 0.9rem;
+    margin-bottom: 0.9rem;
+    border-bottom: 1px solid rgba(139,83,77,0.12);
 }
 
-.spende-qr-block img {
-    width: 110px;
-    height: 110px;
+.spende-qr-top img {
+    width: 120px;
+    height: 120px;
     border-radius: 4px;
     display: block;
+    margin: 0 auto 0.4rem;
 }
 
 .spende-qr-hint {
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     color: #999;
-    margin-top: 0.35rem;
-    margin-bottom: 0;
+    margin: 0;
     line-height: 1.3;
+}
+
+.spende-bank-details {
+    text-align: center;
 }
 
 .spende-bank-details p {
@@ -4011,7 +4010,7 @@ section.team-section.bg-cream {
 }
 
 .spende-amount {
-    margin-top: 0.6rem !important;
+    margin-top: 0.5rem !important;
     padding-top: 0.5rem;
     border-top: 1px solid rgba(139,83,77,0.12);
 }
@@ -4021,15 +4020,6 @@ section.team-section.bg-cream {
     color: var(--primary);
 }
 
-@media (max-width: 500px) {
-    .spende-bank-layout {
-        flex-direction: column;
-        align-items: center;
-    }
-    .spende-bank-details {
-        width: 100%;
-    }
-}
 
 /* Mitglied werden */
 .mitglied-section {
