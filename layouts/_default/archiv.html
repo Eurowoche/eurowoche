@@ -273,6 +273,11 @@
             scrollToArchivRow(year, gruppe);
           });
 
+          // Normalisiert einen Gruppenname: Anführungszeichen entfernen, Whitespace reduzieren
+          function normGruppe(s) {
+            return (s || '').replace(/["""''`]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
+          }
+
           function scrollToArchivRow(year, gruppe) {
             // 1. Jahrzehnt-Filter aktivieren
             var decade = String(Math.floor(year / 10) * 10);
@@ -283,20 +288,22 @@
             var inp = document.getElementById('archiv-search');
             if (inp && inp.value) { inp.value = ''; inp.dispatchEvent(new Event('input')); }
 
-            // 3. Zeilen finden: erste Zeile des Jahres (mit archiv-jahr-Zelle) + Zielzeile
+            // 3. Zeilen finden: erste Zeile des Jahres + Zielzeile
             var table = document.getElementById('archiv-table');
             var allRows = table.querySelectorAll('tbody tr');
-            var firstOfYear = null;  // erste Zeile dieses Jahres (hat die Jahres-td mit rowspan)
-            var target = null;       // Zeile mit der gesuchten Tanzgruppe
+            var firstOfYear = null;
+            var target = null;
+            var gruppeNorm = normGruppe(gruppe);
 
             allRows.forEach(function(tr) {
               if (parseInt(tr.dataset.jahr, 10) !== year) return;
-              if (!firstOfYear) firstOfYear = tr;  // erste Zeile des Jahres
+              if (!firstOfYear) firstOfYear = tr;
               if (!target) {
                 if (gruppe) {
                   var tds = tr.querySelectorAll('td');
                   var lastTd = tds[tds.length - 1];
-                  if (lastTd && lastTd.textContent.trim() === gruppe) target = tr;
+                  // Normalisierter Vergleich: Anführungszeichen und Groß/Klein ignorieren
+                  if (lastTd && normGruppe(lastTd.textContent) === gruppeNorm) target = tr;
                 } else {
                   target = tr;
                 }
@@ -328,6 +335,36 @@
           // Länder außerhalb des europäischen Kartenausschnitts → Inset-Box
           var overseasISOs = { 'US': true, 'MX': true, 'NP': true, 'IL': true };
 
+          // Marker-Referenzen für Rückwärts-Lookup (Listenklick → Karte)
+          var markerByISO = {};
+          var activeMapMarker = null; // aktuell hervorgehobener Marker
+
+          function resetActiveMarker() {
+            if (!activeMapMarker) return;
+            activeMapMarker.marker.setStyle({
+              fillColor: PRIMARY,
+              fillOpacity: activeMapMarker.baseOpacity,
+              radius: activeMapMarker.baseRadius,
+              color: '#fff', weight: 1.5
+            });
+            activeMapMarker = null;
+          }
+
+          function highlightMarker(iso) {
+            resetActiveMarker();
+            var entry = markerByISO[iso];
+            if (!entry) return;
+            entry.marker.setStyle({
+              fillColor: '#7a2e28',
+              fillOpacity: 1,
+              radius: entry.baseRadius + 7,
+              color: '#fff', weight: 2.5
+            });
+            entry.marker.bringToFront();
+            archivMap.panTo([entry.c.lat, entry.c.lng], { animate: true, duration: 0.5 });
+            activeMapMarker = entry;
+          }
+
           mapCountries.forEach(function(c) {
             if (overseasISOs[c.iso]) return; // Außereuropa → Inset, nicht Karte
 
@@ -337,6 +374,9 @@
             var marker = L.circleMarker([c.lat, c.lng], {
               radius: r, fillColor: PRIMARY, color: '#fff', weight: 1.5, opacity: 1, fillOpacity: opacity
             }).addTo(archivMap);
+
+            // Marker-Referenz speichern
+            markerByISO[c.iso] = { marker: marker, c: c, baseRadius: r, baseOpacity: opacity };
 
             // Kleines Tooltip beim Hover: Name + Flagge + Anzahl + Hinweis
             var tipHTML = '<div class="archiv-tip-name">' + c.name + ' <span class="archiv-tip-flag">' + isoToFlag(c.iso) + '</span></div>'
@@ -350,17 +390,69 @@
             });
 
             marker.on('mouseover', function() {
+              if (activeMapMarker && activeMapMarker.marker === marker) return;
               marker.setStyle({ weight: 2.5, color: PRIMARY });
             });
 
             marker.on('mouseout', function() {
+              if (activeMapMarker && activeMapMarker.marker === marker) return;
               marker.setStyle({ weight: 1.5, color: '#fff' });
             });
 
-            // Klick füllt das Detail-Panel rechts
+            // Klick füllt das Detail-Panel rechts + hebt Marker hervor
             marker.on('click', function() {
+              highlightMarker(c.iso);
               showCountryPanel(c);
             });
+          });
+
+          // ── Listenklick → Marker auf Karte hervorheben ──────────────────
+          // ISO-Code aus Jahres+Gruppen-Daten zurückermitteln
+          function findISOfromEntry(year, gruppeNorm) {
+            var found = null;
+            Object.keys(mapDetails).forEach(function(iso) {
+              if (found) return;
+              mapDetails[iso].forEach(function(entry) {
+                if (found) return;
+                if (entry[0] === year && normGruppe(entry[1]) === gruppeNorm) found = iso;
+              });
+            });
+            return found;
+          }
+
+          document.getElementById('archiv-table').querySelector('tbody').addEventListener('click', function(e) {
+            var tr = e.target.closest('tr');
+            if (!tr) return;
+            var year = parseInt(tr.dataset.jahr, 10);
+            if (!year) return;
+            var tds = tr.querySelectorAll('td');
+            var gruppe = tds[tds.length - 1].textContent.trim();
+            var gruppeNorm = normGruppe(gruppe);
+
+            // Tabellenzeile hervorheben (wie Panel-Klick)
+            document.getElementById('archiv-table').querySelectorAll('.archiv-row-highlight').forEach(function(r) {
+              r.classList.remove('archiv-row-highlight');
+            });
+            tr.classList.add('archiv-row-highlight');
+
+            // ISO ermitteln → Marker + Panel
+            var iso = findISOfromEntry(year, gruppeNorm);
+            if (iso) {
+              highlightMarker(iso);
+              // Panel befüllen
+              var country = mapCountries.find(function(c) { return c.iso === iso; });
+              if (country) showCountryPanel(country);
+              // Aktiven Panel-Eintrag setzen
+              setTimeout(function() {
+                panelListEl.querySelectorAll('.archiv-panel-row').forEach(function(row) {
+                  if (parseInt(row.dataset.year, 10) === year &&
+                      normGruppe(row.dataset.gruppe) === gruppeNorm) {
+                    panelListEl.querySelectorAll('.archiv-panel-row.active').forEach(function(r) { r.classList.remove('active'); });
+                    row.classList.add('active');
+                  }
+                });
+              }, 50);
+            }
           });
 
           // Overseas-Inset: feste L.Control-Box oben links
