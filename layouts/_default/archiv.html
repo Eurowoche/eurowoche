@@ -205,7 +205,7 @@
                     {{ if hasPrefix $landKey "denmark" }}{{ $landKey = "denmark" }}{{ end }}
                     {{ if hasPrefix $landKey "ireland" }}{{ $landKey = "ireland" }}{{ end }}
                     {{ $flag := index $flags $landKey | default "🏳️" }}
-                    <tr data-nummer="{{ $nummer }}" data-jahr="{{ $jahr }}">
+                    <tr data-nummer="{{ $nummer }}" data-jahr="{{ $jahr }}"{{ if eq $idx 0 }} class="archiv-year-first-row"{{ end }}>
                         {{ if eq $idx 0 }}
                         <td class="archiv-jahr" rowspan="{{ len $gruppen }}">{{ $jahr }}</td>
                         {{ end }}
@@ -295,6 +295,64 @@
           var mapDetails={};
           _raw.forEach(function(e){var iso=e.i;if(!mapDetails[iso])mapDetails[iso]=[];mapDetails[iso].push([e.y,e.g,e.c]);});
 
+          // ── Stadtkoordinaten für Stecknadel-Positionierung ───────────────
+          var cityCoords = {
+            "Aighion":[38.25,22.08],"Arantzazu":[43.02,-2.41],
+            "Banja Luka":[44.77,17.19],"Bielsko Biala":[49.82,19.06],
+            "Chrast":[49.89,15.95],"Chrást":[49.89,15.95],
+            "Cluj":[46.77,23.62],"Csongrád":[46.71,20.14],
+            "Dalarna":[60.50,15.00],
+            "Donostia":[43.32,-1.98],"Donostia (San Sebastian)":[43.32,-1.98],"Donotia":[43.32,-1.98],
+            "Dorndorf":[51.32,9.88],"Edinburgh":[55.95,-3.19],"Erbach":[49.66,8.99],
+            "Granada":[37.18,-3.60],"Havlíčkův-Brod":[49.61,15.58],
+            "Helmhurst":[41.90,-87.94],"Iisalmi":[63.56,27.19],
+            "Instanbul":[41.01,28.98],"Istanbul":[41.01,28.98],
+            "Jakobstad":[63.67,22.70],"Joensuu":[62.60,29.76],
+            "Kilcullen":[53.14,-6.74],"Komsomolsk":[50.55,137.00],
+            "Kopenhagen":[55.68,12.57],"Koscierzyna":[54.12,17.98],"Kościerzyna":[54.12,17.98],
+            "Krakau":[50.06,19.94],"L'Union (Toulouse)":[43.65,1.52],
+            "Leon":[42.60,-5.57],"Lugoj":[45.69,21.90],"Merzifon":[40.87,35.47],
+            "Minsk":[53.90,27.56],"Naso / Messina":[38.12,14.79],
+            "Nijmegen":[51.84,5.84],"Odense":[55.40,10.40],"Ohrid":[41.12,20.80],
+            "Perm":[58.01,56.25],"Porto":[41.16,-8.63],"Prešov":[49.00,21.24],
+            "Puebla, Pue Mexico":[19.04,-98.21],"Rousse":[43.85,25.95],
+            "Schlitz":[50.67,9.57],"Schoten":[51.25,4.50],"Sevlievo":[43.00,25.11],
+            "Sewastianou/Pirichios":[40.64,22.94],"Sigulda":[57.15,24.86],
+            "Snina":[48.99,22.16],"Solin":[43.54,16.49],"Split":[43.51,16.44],
+            "Staré Mesto":[49.07,17.44],"Tallinn":[59.44,24.75],"Tbilisi":[41.69,44.80],
+            "Telč":[49.18,15.45],"Thessaloniki":[40.64,22.94],"Toulouse":[43.60,1.44],
+            "Trabia":[38.00,13.65],"Valjevo":[44.27,19.89],
+            "Walbrzych":[50.77,16.28],"Wałbrzych":[50.77,16.28],
+            "Werischwar":[47.62,18.90],"Witzenhausen":[51.36,9.85],
+            "Zagreb":[45.82,15.98],"Zemun / Belgrad":[44.84,20.39]
+          };
+          function lookupCityCoords(city) {
+            return city ? (cityCoords[city.trim()] || null) : null;
+          }
+
+          // ── Pin an beliebige Koordinaten setzen ──────────────────────────
+          function placePinAt(lat, lng) {
+            if (activePin) { activePin.remove(); activePin = null; }
+            activePin = L.marker([lat, lng], {
+              icon: PIN_ICON, zIndexOffset: 1000, interactive: false
+            }).addTo(archivMap);
+            archivMap.panTo([lat, lng], { animate: true, duration: 0.5 });
+          }
+
+          // ── Alle Marker dimmen / wiederherstellen ────────────────────────
+          function dimAllMarkers(exceptISO) {
+            Object.keys(markerByISO).forEach(function(iso) {
+              if (iso === exceptISO) return;
+              markerByISO[iso].marker.setStyle({ fillOpacity: 0.07, opacity: 0.25, weight: 0 });
+            });
+          }
+          function restoreAllMarkers() {
+            Object.keys(markerByISO).forEach(function(iso) {
+              var e = markerByISO[iso];
+              e.marker.setStyle({ fillOpacity: e.baseOpacity, opacity: 1, weight: 1.5, color: '#fff' });
+            });
+          }
+
           // ISO-2-Buchstaben → Flaggen-Emoji (Unicode Regional Indicator)
           function isoToFlag(iso) {
             if (!iso || iso.length !== 2) return '';
@@ -315,7 +373,8 @@
                                   : '<span class="archiv-panel-group"></span>';
               var cityHTML = city ? '<span class="archiv-panel-city">' + city + '</span>' : '';
               listHTML += '<div class="archiv-panel-row" data-year="' + yr
-                + '" data-gruppe="' + gr.replace(/"/g,'&quot;') + '" title="In der Tabelle anzeigen ↓">'
+                + '" data-gruppe="' + gr.replace(/"/g,'&quot;')
+                + '" data-city="' + city.replace(/"/g,'&quot;') + '" title="In der Tabelle anzeigen ↓">'
                 + '<span class="archiv-panel-year">' + yr + '</span>'
                 + grHTML + cityHTML + '</div>';
             });
@@ -327,18 +386,21 @@
             panelContent.style.display = 'block';
           }
 
-          // Klick auf Panel-Zeile → Tabellenzeile anzeigen, Panel-Zeile aktiv markieren
+          // Klick auf Panel-Zeile → Tabellenzeile anzeigen, Pin auf Stadt
           panelListEl.addEventListener('click', function(e) {
             var row = e.target.closest('.archiv-panel-row');
             if (!row) return;
-            // Panel-Zeile aktiv markieren
             panelListEl.querySelectorAll('.archiv-panel-row.active').forEach(function(r) {
               r.classList.remove('active');
             });
             row.classList.add('active');
             var year   = parseInt(row.dataset.year, 10);
             var gruppe = row.dataset.gruppe || '';
+            var city   = row.dataset.city   || '';
             scrollToArchivRow(year, gruppe);
+            // Pin auf Stadt verschieben (falls Koordinaten bekannt)
+            var coords = lookupCityCoords(city);
+            if (coords) placePinAt(coords[0], coords[1]);
           });
 
           // Normalisiert einen Gruppenname: Anführungszeichen entfernen, Whitespace reduzieren
@@ -425,6 +487,7 @@
             });
             activeMapMarker = null;
             if (activePin) { activePin.remove(); activePin = null; }
+            restoreAllMarkers();
           }
           window._resetActiveMarker = resetActiveMarker;
 
@@ -433,20 +496,13 @@
             var entry = markerByISO[iso];
             if (!entry) return;
             entry.marker.setStyle({
-              fillColor: '#7a2e28',
-              fillOpacity: 1,
-              radius: entry.baseRadius + 7,
-              color: '#fff', weight: 2.5
+              fillColor: '#7a2e28', fillOpacity: 1,
+              radius: entry.baseRadius + 7, color: '#fff', weight: 2.5
             });
             entry.marker.bringToFront();
-            archivMap.panTo([entry.c.lat, entry.c.lng], { animate: true, duration: 0.5 });
             activeMapMarker = entry;
-            // 3D-Stecknadel exakt über dem Marker platzieren
-            activePin = L.marker([entry.c.lat, entry.c.lng], {
-              icon: PIN_ICON,
-              zIndexOffset: 1000,
-              interactive: false
-            }).addTo(archivMap);
+            dimAllMarkers(iso);  // andere Kreise fast transparent
+            placePinAt(entry.c.lat, entry.c.lng); // Nadel auf Ländermittelpunkt
           }
 
           mapCountries.forEach(function(c) {
@@ -519,23 +575,26 @@
             });
             tr.classList.add('archiv-row-highlight');
 
-            // ISO ermitteln → Marker + Panel
+            // ISO ermitteln → Marker + Panel + Pin
             var iso = findISOfromEntry(year, gruppeNorm);
             if (iso) {
               highlightMarker(iso);
-              // Panel befüllen
               var country = mapCountries.find(function(c) { return c.iso === iso; });
               if (country) showCountryPanel(country);
-              // Aktiven Panel-Eintrag setzen
+              // Aktiven Panel-Eintrag setzen + Pin auf Stadt
               setTimeout(function() {
+                var cityForPin = '';
                 panelListEl.querySelectorAll('.archiv-panel-row').forEach(function(row) {
                   if (parseInt(row.dataset.year, 10) === year &&
                       normGruppe(row.dataset.gruppe) === gruppeNorm) {
                     panelListEl.querySelectorAll('.archiv-panel-row.active').forEach(function(r) { r.classList.remove('active'); });
                     row.classList.add('active');
+                    cityForPin = row.dataset.city || '';
                   }
                 });
-              }, 50);
+                var coords = lookupCityCoords(cityForPin);
+                if (coords) placePinAt(coords[0], coords[1]);
+              }, 80);
             }
           });
 

@@ -1,1227 +1,1165 @@
 - nummer: 64
   jahr: 2025
   gruppen:
-    - land: "Latvia"
-      stadt: "Sigulda"
-      tanzgruppe: "Vizbulite"
-    - land: "Czech Republic"
-      stadt: "Staré Mesto"
-      tanzgruppe: "Dolina"
-    - land: "Bosnia and Herzegovina"
-      stadt: "Banja Luka"
-      tanzgruppe: "VESELIN MASLEŠA"
-    - land: "Germany"
-      stadt: "Witzenhausen"
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Latvia
+    stadt: Sigulda
+    tanzgruppe: Vizbulite
+  - land: Czech Republic
+    stadt: Staré Mesto
+    tanzgruppe: Dolina
+  - land: Bosnia and Herzegovina
+    stadt: Banja Luka
+    tanzgruppe: VESELIN MASLEŠA
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 63
   jahr: 2024
   gruppen:
-    - land: "Kroatien"
-      stadt: "Zagreb"
-      tanzgruppe: "Ivan Goran Kovačić"
-    - land: "Baskenland"
-      stadt: "Donotia"
-      tanzgruppe: "Gero Axular Dantza Taldea"
-    - land: "USA"
-      stadt: "Helmhurst"
-      tanzgruppe: "Irish-Folk Ensemble \"Trinity"
-    - land: "Romania"
-      stadt: "Cluj"
-      tanzgruppe: "Somesul Napoca Ensemble"
-    - land: "Germany"
-      stadt: "Witzenhausen"
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Kroatien
+    stadt: Zagreb
+    tanzgruppe: Ivan Goran Kovačić
+  - land: Baskenland
+    stadt: Donotia
+    tanzgruppe: Gero Axular Dantza Taldea
+  - land: USA
+    stadt: Helmhurst
+    tanzgruppe: Irish-Folk Ensemble "Trinity
+  - land: Romania
+    stadt: Cluj
+    tanzgruppe: Somesul Napoca Ensemble
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 62
   jahr: 2023
   gruppen:
-    - land: "Finland"
-      stadt: "Joensuu"
-      tanzgruppe: "Motora"
-    - land: "France"
-      stadt: "Toulouse"
-      tanzgruppe: "Le Quadrille Occitan/"
-    - land: "North Macedonia"
-      stadt: "Ohrid"
-      tanzgruppe: "KUD Oteks Folk"
-    - land: "Poland"
-      stadt: "Krakau"
-      tanzgruppe: "Slowianki"
-    - land: "Germany"
-      stadt: "Witzenhausen"
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Finland
+    stadt: Joensuu
+    tanzgruppe: Motora
+  - land: France
+    stadt: Toulouse
+    tanzgruppe: Le Quadrille Occitan/
+  - land: North Macedonia
+    stadt: Ohrid
+    tanzgruppe: KUD Oteks Folk
+  - land: Poland
+    stadt: Krakau
+    tanzgruppe: Slowianki
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 61
   jahr: 2019
   gruppen:
-    - land: "Belgium"
-      stadt: "Schoten"
-      tanzgruppe: "Folklore Ensemble \"Gelmel"
-    - land: "Croatia"
-      stadt: "Solin"
-      tanzgruppe: "Folklore Ensemble KUD \"Salona"
-    - land: "USA"
-      stadt: "Helmhurst"
-      tanzgruppe: "Irish-Folk Ensemble \"Trinity"
-    - land: "France"
-      stadt: "Toulouse"
-      tanzgruppe: "Le Quadrille Occitan\" TOULOUSE"
-    - land: "Germany"
-      stadt: "Witzenhausen"
-      tanzgruppe: "Folklore-Kooperationsgruppe \"Ludwigsteiner\" and \"Hessische Volkstanzfreunde"
-
+  - land: Belgium
+    stadt: Schoten
+    tanzgruppe: Folklore Ensemble "Gelmel
+  - land: Croatia
+    stadt: Solin
+    tanzgruppe: Folklore Ensemble KUD "Salona
+  - land: USA
+    stadt: Helmhurst
+    tanzgruppe: Irish-Folk Ensemble "Trinity
+  - land: France
+    stadt: Toulouse
+    tanzgruppe: Le Quadrille Occitan" TOULOUSE
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Folklore-Kooperationsgruppe "Ludwigsteiner" and "Hessische Volkstanzfreunde
 - nummer: 60
   jahr: 2018
   gruppen:
-    - land: "Estonia"
-      stadt: "Tallinn"
-      tanzgruppe: "TLÜ rahvatantsuansamble SOLVEDAJA"
-    - land: "Poland"
-      stadt: "Koscierzyna"
-      tanzgruppe: "Kaszubskie Nuty\" KOSCIERZYNA"
-    - land: "Belarus"
-      stadt: "Minsk"
-      tanzgruppe: "Folk group VALACHOBNIKI of the Belarusian State University of Culture and Arts"
-    - land: "Scotland"
-      stadt: "Edinburgh"
-      tanzgruppe: "Edinburgh University New Scotland Country Dance Society"
-    - land: "Germany"
-      stadt: "Witzenhausen"
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Estonia
+    stadt: Tallinn
+    tanzgruppe: TLÜ rahvatantsuansamble SOLVEDAJA
+  - land: Poland
+    stadt: Koscierzyna
+    tanzgruppe: Kaszubskie Nuty" KOSCIERZYNA
+  - land: Belarus
+    stadt: Minsk
+    tanzgruppe: Folk group VALACHOBNIKI of the Belarusian State University of Culture
+      and Arts
+  - land: Scotland
+    stadt: Edinburgh
+    tanzgruppe: Edinburgh University New Scotland Country Dance Society
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 59
   jahr: 2017
   gruppen:
-    - land: "Hungary"
-      stadt: "Werischwar"
-      tanzgruppe: "Donauschwäbisches Volkstanzensemble"
-    - land: "Turkey"
-      stadt: "Merzifon"
-      tanzgruppe: "Merzifon Belediyesi Halkoyunlari Toplulugu"
-    - land: "Latvia"
-      stadt: "Sigulda"
-      tanzgruppe: "Volkstanzensemble JDK \"Vizbulite"
-    - land: "Netherlands"
-      stadt: "Nijmegen"
-      tanzgruppe: "Volkstanzgruppe \"Kansemble"
-    - land: "Germany"
-      stadt: "Witzenhausen"
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Hungary
+    stadt: Werischwar
+    tanzgruppe: Donauschwäbisches Volkstanzensemble
+  - land: Turkey
+    stadt: Merzifon
+    tanzgruppe: Merzifon Belediyesi Halkoyunlari Toplulugu
+  - land: Latvia
+    stadt: Sigulda
+    tanzgruppe: Volkstanzensemble JDK "Vizbulite
+  - land: Netherlands
+    stadt: Nijmegen
+    tanzgruppe: Volkstanzgruppe "Kansemble
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 58
   jahr: 2016
   gruppen:
-    - land: "Georgia"
-      stadt: "Tbilisi"
-      tanzgruppe: "Folkloreensemble \"Marula"
-    - land: "Italy"
-      stadt: "Trabia"
-      tanzgruppe: "Centro Culturale TERRAZZANI"
-    - land: "Tschech Republic"
-      stadt: "Chrast"
-      tanzgruppe: "Lidova muzika z Chrástu"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Georgia
+    stadt: Tbilisi
+    tanzgruppe: Folkloreensemble "Marula
+  - land: Italy
+    stadt: Trabia
+    tanzgruppe: Centro Culturale TERRAZZANI
+  - land: Tschech Republic
+    stadt: Chrast
+    tanzgruppe: Lidova muzika z Chrástu
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 57
   jahr: 2015
   gruppen:
-    - land: "Spain (Basque)"
-      stadt: "Donostia (San Sebastian)"
-      tanzgruppe: "Gero Axular Dantza Taldea"
-    - land: "Macedonia"
-      stadt: "Ohrid"
-      tanzgruppe: "Oteks Folk"
-    - land: "Bulgaria"
-      stadt: "Sevlievo"
-      tanzgruppe: "The Children of Sevlievo"
-    - land: "Germany"
-      stadt: "Schlitz"
-      tanzgruppe: "Jugendgruppe des \"Schlitzerländer Trachten- und Volkstanzkreises"
-
+  - land: Spain (Basque)
+    stadt: Donostia (San Sebastian)
+    tanzgruppe: Gero Axular Dantza Taldea
+  - land: Macedonia
+    stadt: Ohrid
+    tanzgruppe: Oteks Folk
+  - land: Bulgaria
+    stadt: Sevlievo
+    tanzgruppe: The Children of Sevlievo
+  - land: Germany
+    stadt: Schlitz
+    tanzgruppe: Jugendgruppe des "Schlitzerländer Trachten- und Volkstanzkreises
 - nummer: 56
   jahr: 2013
   gruppen:
-    - land: "France"
-      stadt: "L'Union (Toulouse)"
-      tanzgruppe: "Le Quadrille Occitan"
-    - land: "Finland"
-      stadt: "Jakobstad"
-      tanzgruppe: "Finlands Svenska Folkdansring/Dansglädje"
-    - land: "Hungary"
-      stadt: "Csongrád"
-      tanzgruppe: "Nagyabaracska Folkdance Group"
-    - land: "Czech Republic"
-      stadt: "Chrást"
-      tanzgruppe: "Lidová muzika z Chrástu"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: France
+    stadt: L'Union (Toulouse)
+    tanzgruppe: Le Quadrille Occitan
+  - land: Finland
+    stadt: Jakobstad
+    tanzgruppe: Finlands Svenska Folkdansring/Dansglädje
+  - land: Hungary
+    stadt: Csongrád
+    tanzgruppe: Nagyabaracska Folkdance Group
+  - land: Czech Republic
+    stadt: Chrást
+    tanzgruppe: Lidová muzika z Chrástu
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 55
   jahr: 2012
   gruppen:
-    - land: "Romania"
-      stadt: "Lugoj"
-      tanzgruppe: "Lugojana"
-    - land: "Latvia"
-      stadt: "Sigulda"
-      tanzgruppe: "Ex-Vizbulite"
-    - land: "Croatia"
-      stadt: "Zagreb"
-      tanzgruppe: "Ivan Goran Kovačić"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Romania
+    stadt: Lugoj
+    tanzgruppe: Lugojana
+  - land: Latvia
+    stadt: Sigulda
+    tanzgruppe: Ex-Vizbulite
+  - land: Croatia
+    stadt: Zagreb
+    tanzgruppe: Ivan Goran Kovačić
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 54
   jahr: 2010
   gruppen:
-    - land: "Georgia"
-      stadt: "Tbilisi"
-      tanzgruppe: "Nartebi"
-    - land: "Poland"
-      stadt: "Bielsko Biala"
-      tanzgruppe: "Folcloristic Dance Ensemble \"Bielsko"
-    - land: "The Netherlands"
-      stadt: "Nijmegen"
-      tanzgruppe: "Holland Express"
-    - land: "Serbia"
-      stadt: "Valjevo"
-      tanzgruppe: "Gradac"
-    - land: "Spain"
-      stadt: "Leon"
-      tanzgruppe: "Fran Allegre (Einzelteilnehmer)"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Georgia
+    stadt: Tbilisi
+    tanzgruppe: Nartebi
+  - land: Poland
+    stadt: Bielsko Biala
+    tanzgruppe: Folcloristic Dance Ensemble "Bielsko
+  - land: The Netherlands
+    stadt: Nijmegen
+    tanzgruppe: Holland Express
+  - land: Serbia
+    stadt: Valjevo
+    tanzgruppe: Gradac
+  - land: Spain
+    stadt: Leon
+    tanzgruppe: Fran Allegre (Einzelteilnehmer)
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 53
   jahr: 2009
   gruppen:
-    - land: "Spain (Basque"
-      stadt: "Donostia (San Sebastian)"
-      tanzgruppe: "Gero axular dantza taldea"
-    - land: "Israel"
-      stadt: "Prešov"
-      tanzgruppe: "Shalom Israel"
-    - land: "Slovak Republic"
-      stadt: "Sevlievo"
-      tanzgruppe: "Rozmarija"
-    - land: "Bulgaria"
-      stadt: ""
-      tanzgruppe: "The Children of Sevlievo"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Spain (Basque
+    stadt: Donostia (San Sebastian)
+    tanzgruppe: Gero axular dantza taldea
+  - land: Israel
+    stadt: Prešov
+    tanzgruppe: Shalom Israel
+  - land: Slovak Republic
+    stadt: Sevlievo
+    tanzgruppe: Rozmarija
+  - land: Bulgaria
+    stadt: Sevlievo
+    tanzgruppe: The Children of Sevlievo
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 52
   jahr: 2008
   gruppen:
-    - land: "Latvia"
-      stadt: "Sigulda"
-      tanzgruppe: "Ex-Vizbulite"
-    - land: "Mexico"
-      stadt: "Puebla, Pue Mexico"
-      tanzgruppe: "Folkloreensemble \"Tsasnà"
-    - land: "Greece"
-      stadt: "Thessaloniki"
-      tanzgruppe: "Cultural Association of Lagadas"
-    - land: "Bulgaria"
-      stadt: "Rousse"
-      tanzgruppe: "Rouschoukleeche"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Latvia
+    stadt: Sigulda
+    tanzgruppe: Ex-Vizbulite
+  - land: Mexico
+    stadt: Puebla, Pue Mexico
+    tanzgruppe: Folkloreensemble "Tsasnà
+  - land: Greece
+    stadt: Thessaloniki
+    tanzgruppe: Cultural Association of Lagadas
+  - land: Bulgaria
+    stadt: Rousse
+    tanzgruppe: Rouschoukleeche
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 51
   jahr: 2007
   gruppen:
-    - land: "Netherlands"
-      stadt: "Nijmegen"
-      tanzgruppe: "Holland Express"
-    - land: "Slovakia"
-      stadt: "Snina"
-      tanzgruppe: "Vihorlat"
-    - land: "Macedonia"
-      stadt: "Ohrid"
-      tanzgruppe: "Kud Oteks"
-
+  - land: Netherlands
+    stadt: Nijmegen
+    tanzgruppe: Holland Express
+  - land: Slovakia
+    stadt: Snina
+    tanzgruppe: Vihorlat
+  - land: Macedonia
+    stadt: Ohrid
+    tanzgruppe: Kud Oteks
 - nummer: 50
   jahr: 2006
   gruppen:
-    - land: "Spain"
-      stadt: "Granada"
-      tanzgruppe: "Grupo Municipal de Bailes Regionales de Granada"
-    - land: "France"
-      stadt: "Toulouse"
-      tanzgruppe: "Le Quadrille Occitan"
-    - land: "Scotland"
-      stadt: "Edinburgh"
-      tanzgruppe: "Edinburgh University New Scotland"
-    - land: "Latvia"
-      stadt: "Sigulda"
-      tanzgruppe: "Ex-Vizbulite"
-    - land: "Denmark"
-      stadt: "Kopenhagen"
-      tanzgruppe: "Dancing Danes\" \"Dancing Danes\"-Video"
-    - land: "Poland"
-      stadt: "Koscierzyna"
-      tanzgruppe: "Kaszubskie Nuty"
-    - land: "Czech Republic"
-      stadt: "Telč"
-      tanzgruppe: "Podjavořičan"
-
+  - land: Spain
+    stadt: Granada
+    tanzgruppe: Grupo Municipal de Bailes Regionales de Granada
+  - land: France
+    stadt: Toulouse
+    tanzgruppe: Le Quadrille Occitan
+  - land: Scotland
+    stadt: Edinburgh
+    tanzgruppe: Edinburgh University New Scotland
+  - land: Latvia
+    stadt: Sigulda
+    tanzgruppe: Ex-Vizbulite
+  - land: Denmark
+    stadt: Kopenhagen
+    tanzgruppe: Dancing Danes" "Dancing Danes"-Video
+  - land: Poland
+    stadt: Koscierzyna
+    tanzgruppe: Kaszubskie Nuty
+  - land: Czech Republic
+    stadt: Telč
+    tanzgruppe: Podjavořičan
 - nummer: 49
   jahr: 2005
   gruppen:
-    - land: "Russia"
-      stadt: "Perm"
-      tanzgruppe: "Russian Group Tziganes \"Romen"
-    - land: "Croatia"
-      stadt: "Split"
-      tanzgruppe: "Kud Jedinstvo"
-    - land: "Turkey"
-      stadt: "Instanbul"
-      tanzgruppe: "Sisli Culture and Tourism Association"
-    - land: "Germany"
-      stadt: "Dorndorf"
-      tanzgruppe: "Tanzkreis Werrataler"
-
+  - land: Russia
+    stadt: Perm
+    tanzgruppe: Russian Group Tziganes "Romen
+  - land: Croatia
+    stadt: Split
+    tanzgruppe: Kud Jedinstvo
+  - land: Turkey
+    stadt: Instanbul
+    tanzgruppe: Sisli Culture and Tourism Association
+  - land: Germany
+    stadt: Dorndorf
+    tanzgruppe: Tanzkreis Werrataler
 - nummer: 48
   jahr: 2004
   gruppen:
-    - land: "Italy"
-      stadt: "Naso / Messina"
-      tanzgruppe: "I Timetos"
-    - land: "Denmark"
-      stadt: "Kopenhagen"
-      tanzgruppe: "Dancing Danes\" \"Dancing Danes\"-Video"
-    - land: "Romania"
-      stadt: "Lugoj"
-      tanzgruppe: "Lugojana"
-    - land: "Serbia"
-      stadt: "Zemun / Belgrad"
-      tanzgruppe: "Folklor Group Teleoptik"
-
+  - land: Italy
+    stadt: Naso / Messina
+    tanzgruppe: I Timetos
+  - land: Denmark
+    stadt: Kopenhagen
+    tanzgruppe: Dancing Danes" "Dancing Danes"-Video
+  - land: Romania
+    stadt: Lugoj
+    tanzgruppe: Lugojana
+  - land: Serbia
+    stadt: Zemun / Belgrad
+    tanzgruppe: Folklor Group Teleoptik
 - nummer: 47
   jahr: 2003
   gruppen:
-    - land: "Bulgaria"
-      stadt: "Rousse"
-      tanzgruppe: "Rouschoukleeche"
-    - land: "Sweden"
-      stadt: "Dalarna"
-      tanzgruppe: "Dalarnas Ungdomsdanslag"
-    - land: "Spain (Basque)"
-      stadt: "Arantzazu"
-      tanzgruppe: "Arantzarte Dantza Taldea"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Bulgaria
+    stadt: Rousse
+    tanzgruppe: Rouschoukleeche
+  - land: Sweden
+    stadt: Dalarna
+    tanzgruppe: Dalarnas Ungdomsdanslag
+  - land: Spain (Basque)
+    stadt: Arantzazu
+    tanzgruppe: Arantzarte Dantza Taldea
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 46
   jahr: 2002
   gruppen:
-    - land: "Latvia"
-      stadt: "Sigulda"
-      tanzgruppe: "Vizbulite"
-    - land: "Poland"
-      stadt: "Walbrzych"
-      tanzgruppe: "Tanzensemble von Walbrzych"
-    - land: "Ukraine"
-      stadt: "Komsomolsk"
-      tanzgruppe: "Veselka"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Latvia
+    stadt: Sigulda
+    tanzgruppe: Vizbulite
+  - land: Poland
+    stadt: Walbrzych
+    tanzgruppe: Tanzensemble von Walbrzych
+  - land: Ukraine
+    stadt: Komsomolsk
+    tanzgruppe: Veselka
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 45
   jahr: 2001
   gruppen:
-    - land: "France"
-      stadt: "Toulouse"
-      tanzgruppe: "Le Quadrille Occitan"
-    - land: "Poland"
-      stadt: "Kościerzyna"
-      tanzgruppe: "Kaszubskie Nuty"
-    - land: "Macedonia"
-      stadt: "Ohrid"
-      tanzgruppe: "Oteks"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: France
+    stadt: Toulouse
+    tanzgruppe: Le Quadrille Occitan
+  - land: Poland
+    stadt: Kościerzyna
+    tanzgruppe: Kaszubskie Nuty
+  - land: Macedonia
+    stadt: Ohrid
+    tanzgruppe: Oteks
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 44
   jahr: 2000
   gruppen:
-    - land: "Ireland"
-      stadt: "Kilcullen"
-      tanzgruppe: "Geraldine Clifford Folk Group"
-    - land: "Greece"
-      stadt: "Sewastianou/Pirichios"
-      tanzgruppe: "Poutiakos Siligos"
-    - land: "Portugal"
-      stadt: "Porto"
-      tanzgruppe: "Academia de Dancas e Cantares do Norte de Portugal"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Ireland
+    stadt: Kilcullen
+    tanzgruppe: Geraldine Clifford Folk Group
+  - land: Greece
+    stadt: Sewastianou/Pirichios
+    tanzgruppe: Poutiakos Siligos
+  - land: Portugal
+    stadt: Porto
+    tanzgruppe: Academia de Dancas e Cantares do Norte de Portugal
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 43
   jahr: 1999
   gruppen:
-    - land: "Spain"
-      stadt: "Granada"
-      tanzgruppe: "Grupo Municipal de Bailes Regionales de Granada"
-    - land: "Latvia"
-      stadt: "Sigulda"
-      tanzgruppe: "Vizbulite"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Spain
+    stadt: Granada
+    tanzgruppe: Grupo Municipal de Bailes Regionales de Granada
+  - land: Latvia
+    stadt: Sigulda
+    tanzgruppe: Vizbulite
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 42
   jahr: 1998
   gruppen:
-    - land: "Greeke"
-      stadt: "Aighion"
-      tanzgruppe: "Horeftikos"
-    - land: "Czech Republic"
-      stadt: "Havlíčkův-Brod"
-      tanzgruppe: "Kalamajka"
-    - land: "Scotland"
-      stadt: "Edinburgh"
-      tanzgruppe: "Edinburgh University New Scotland Country Dance Society"
-    - land: "Germany"
-      stadt: "Erbach"
-      tanzgruppe: "Hans-von-der-Au"
-
+  - land: Greeke
+    stadt: Aighion
+    tanzgruppe: Horeftikos
+  - land: Czech Republic
+    stadt: Havlíčkův-Brod
+    tanzgruppe: Kalamajka
+  - land: Scotland
+    stadt: Edinburgh
+    tanzgruppe: Edinburgh University New Scotland Country Dance Society
+  - land: Germany
+    stadt: Erbach
+    tanzgruppe: Hans-von-der-Au
 - nummer: 41
   jahr: 1997
   gruppen:
-    - land: "Czech Republic"
-      stadt: "Telč"
-      tanzgruppe: "Podjavořičan"
-    - land: "Finland"
-      stadt: "Iisalmi"
-      tanzgruppe: "Vinksin Vonksin"
-    - land: "Belorussia"
-      stadt: "Minsk"
-      tanzgruppe: "Krupizkije Musyki"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Czech Republic
+    stadt: Telč
+    tanzgruppe: Podjavořičan
+  - land: Finland
+    stadt: Iisalmi
+    tanzgruppe: Vinksin Vonksin
+  - land: Belorussia
+    stadt: Minsk
+    tanzgruppe: Krupizkije Musyki
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 40
   jahr: 1996
   gruppen:
-    - land: "Denmark (Fyn)"
-      stadt: "Odense"
-      tanzgruppe: "The Junior Dance Team"
-    - land: "France"
-      stadt: "Toulouse"
-      tanzgruppe: "Le Quadrille Occitan"
-    - land: "Scotland"
-      stadt: "Edinburgh"
-      tanzgruppe: "Edinburgh University New Scotland Country Dance Society"
-    - land: "Poland"
-      stadt: ""
-      tanzgruppe: "Slowianki"
-    - land: "Germany"
-      stadt: "Krakau"
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Denmark (Fyn)
+    stadt: Odense
+    tanzgruppe: The Junior Dance Team
+  - land: France
+    stadt: Toulouse
+    tanzgruppe: Le Quadrille Occitan
+  - land: Scotland
+    stadt: Edinburgh
+    tanzgruppe: Edinburgh University New Scotland Country Dance Society
+  - land: Poland
+    stadt: Krakau
+    tanzgruppe: Slowianki
+  - land: Germany
+    stadt: Krakau
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 39
   jahr: 1995
   gruppen:
-    - land: "Hungary"
-      stadt: "Gyöngyös"
-      tanzgruppe: "Vidroczici"
-    - land: "Spain"
-      stadt: "Burgos"
-      tanzgruppe: "Asociacion Ballet \"Elena Munguia"
-    - land: "Greece"
-      stadt: "Alexandria"
-      tanzgruppe: "Musical Dancing Club of Alexandria"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Hungary
+    stadt: Gyöngyös
+    tanzgruppe: Vidroczici
+  - land: Spain
+    stadt: Burgos
+    tanzgruppe: Asociacion Ballet "Elena Munguia
+  - land: Greece
+    stadt: Alexandria
+    tanzgruppe: Musical Dancing Club of Alexandria
+  - land: Germany
+    stadt: ''
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 38
   jahr: 1994
   gruppen:
-    - land: "Belgium"
-      stadt: "Westerlo"
-      tanzgruppe: "Sint Sebastiansgilde"
-    - land: "Belorussia"
-      stadt: "Minsk"
-      tanzgruppe: "Folkloreorchester"
-    - land: "Macedonia"
-      stadt: "Ohrid"
-      tanzgruppe: "Oteks"
-    - land: "Latvia"
-      stadt: "Sigulda"
-      tanzgruppe: "Vizbulite"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Belgium
+    stadt: Westerlo
+    tanzgruppe: Sint Sebastiansgilde
+  - land: Belorussia
+    stadt: Minsk
+    tanzgruppe: Folkloreorchester
+  - land: Macedonia
+    stadt: Ohrid
+    tanzgruppe: Oteks
+  - land: Latvia
+    stadt: Sigulda
+    tanzgruppe: Vizbulite
+  - land: Germany
+    stadt: ''
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 37
   jahr: 1993
   gruppen:
-    - land: "Denmark"
-      stadt: "Odense (Fünen)"
-      tanzgruppe: "The Junior Dance Team + Rundt pa gulvet"
-    - land: "Czech Republic"
-      stadt: "Prag"
-      tanzgruppe: "Jaro"
-    - land: "Ukraine"
-      stadt: "Lviv (Lemberg)"
-      tanzgruppe: "Horitsvit"
-    - land: "Latvia"
-      stadt: "Riga"
-      tanzgruppe: "Die Schlingel"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Denmark
+    stadt: Odense (Fünen)
+    tanzgruppe: The Junior Dance Team + Rundt pa gulvet
+  - land: Czech Republic
+    stadt: Prag
+    tanzgruppe: Jaro
+  - land: Ukraine
+    stadt: Lviv (Lemberg)
+    tanzgruppe: Horitsvit
+  - land: Latvia
+    stadt: Riga
+    tanzgruppe: Die Schlingel
+  - land: Germany
+    stadt: ''
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 36
   jahr: 1992
   gruppen:
-    - land: "Macedonia"
-      stadt: "Ohrid"
-      tanzgruppe: "Oteks"
-    - land: "Belorussia"
-      stadt: "Minsk"
-      tanzgruppe: "Praleski"
-    - land: "Latvia"
-      stadt: "Sigulda"
-      tanzgruppe: "Vizbulite"
-    - land: "France"
-      stadt: "Toulouse"
-      tanzgruppe: "Le Quadrille Occitan"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Macedonia
+    stadt: Ohrid
+    tanzgruppe: Oteks
+  - land: Belorussia
+    stadt: Minsk
+    tanzgruppe: Praleski
+  - land: Latvia
+    stadt: Sigulda
+    tanzgruppe: Vizbulite
+  - land: France
+    stadt: Toulouse
+    tanzgruppe: Le Quadrille Occitan
+  - land: Germany
+    stadt: ''
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 35
   jahr: 1991
   gruppen:
-    - land: "Belorussia"
-      stadt: "Minsk"
-      tanzgruppe: "Krupizkije Musyki"
-    - land: "Finland"
-      stadt: "Parkano"
-      tanzgruppe: ""
-    - land: "Poland"
-      stadt: "Koscierzyna"
-      tanzgruppe: "Mädchenchor"
-    - land: "Portugal"
-      stadt: "Regua"
-      tanzgruppe: "Rancho Folclorico da Casa de Povo de Godim"
-    - land: "Germany"
-      stadt: "Dorndorf"
-      tanzgruppe: "Tanzkreis Werrataler"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Die Ludwigsteiner"
-
+  - land: Belorussia
+    stadt: Minsk
+    tanzgruppe: Krupizkije Musyki
+  - land: Finland
+    stadt: Parkano
+    tanzgruppe: ''
+  - land: Poland
+    stadt: Koscierzyna
+    tanzgruppe: Mädchenchor
+  - land: Portugal
+    stadt: Regua
+    tanzgruppe: Rancho Folclorico da Casa de Povo de Godim
+  - land: Germany
+    stadt: Dorndorf
+    tanzgruppe: Tanzkreis Werrataler
+  - land: Germany
+    stadt: ''
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 34
   jahr: 1990
   gruppen:
-    - land: "Czech Republic"
-      stadt: "Jicin"
-      tanzgruppe: "Cesky Raj"
-    - land: "USSR"
-      stadt: "Minsk"
-      tanzgruppe: "Krupizkije Musyki"
-    - land: "Italy"
-      stadt: "Susa"
-      tanzgruppe: "Associazione pro Susa"
-    - land: "Germany"
-      stadt: "Oberdorla"
-      tanzgruppe: "Vogteier Trachtengruppe"
-    - land: "Germany"
-      stadt: "Kassel"
-      tanzgruppe: "Ballett-Studio Fischer"
-
+  - land: Czech Republic
+    stadt: Jicin
+    tanzgruppe: Cesky Raj
+  - land: USSR
+    stadt: Minsk
+    tanzgruppe: Krupizkije Musyki
+  - land: Italy
+    stadt: Susa
+    tanzgruppe: Associazione pro Susa
+  - land: Germany
+    stadt: Oberdorla
+    tanzgruppe: Vogteier Trachtengruppe
+  - land: Germany
+    stadt: Kassel
+    tanzgruppe: Ballett-Studio Fischer
 - nummer: 33
   jahr: 1989
   gruppen:
-    - land: "Yugoslavia"
-      stadt: "Velica Gorica"
-      tanzgruppe: "Ivan Mladen"
-    - land: "Spain (Basque)"
-      stadt: "San Sebastian"
-      tanzgruppe: "Goizaldi"
-    - land: "Portugal"
-      stadt: "Arcozelo"
-      tanzgruppe: "As Lavradeiros de Santa Maria Adelaide"
-    - land: "Germany"
-      stadt: "Erbach"
-      tanzgruppe: "Hans-von-der-Au"
-
+  - land: Yugoslavia
+    stadt: Velica Gorica
+    tanzgruppe: Ivan Mladen
+  - land: Spain (Basque)
+    stadt: San Sebastian
+    tanzgruppe: Goizaldi
+  - land: Portugal
+    stadt: Arcozelo
+    tanzgruppe: As Lavradeiros de Santa Maria Adelaide
+  - land: Germany
+    stadt: Erbach
+    tanzgruppe: Hans-von-der-Au
 - nummer: 32
   jahr: 1988
   gruppen:
-    - land: "Bulgaria"
-      stadt: "Burgas"
-      tanzgruppe: "Neftohimik"
-    - land: "France"
-      stadt: "Toulouse"
-      tanzgruppe: "Le Quadrille Occitan"
-    - land: "CSSR"
-      stadt: "Dubnica"
-      tanzgruppe: "Vrsatec"
-    - land: "Germany"
-      stadt: "Cölbe"
-      tanzgruppe: "Fröhlicher Kreis"
-
+  - land: Bulgaria
+    stadt: Burgas
+    tanzgruppe: Neftohimik
+  - land: France
+    stadt: Toulouse
+    tanzgruppe: Le Quadrille Occitan
+  - land: CSSR
+    stadt: Dubnica
+    tanzgruppe: Vrsatec
+  - land: Germany
+    stadt: Cölbe
+    tanzgruppe: Fröhlicher Kreis
 - nummer: 31
   jahr: 1987
   gruppen:
-    - land: "Poland"
-      stadt: "Koscierzyna"
-      tanzgruppe: ""
-    - land: "Greece"
-      stadt: "Thessaloniki"
-      tanzgruppe: "Georgios K. Fotiadis"
-    - land: "Hungary"
-      stadt: "Szigetujfalu"
-      tanzgruppe: "Ungarndeutsche Tanzgruppe"
-    - land: "CSSR"
-      stadt: "Bojkovice"
-      tanzgruppe: "Svetlovan"
-    - land: "Germany"
-      stadt: "Cölbe"
-      tanzgruppe: "Fröhlicher Kreis"
-
+  - land: Poland
+    stadt: Koscierzyna
+    tanzgruppe: ''
+  - land: Greece
+    stadt: Thessaloniki
+    tanzgruppe: Georgios K. Fotiadis
+  - land: Hungary
+    stadt: Szigetujfalu
+    tanzgruppe: Ungarndeutsche Tanzgruppe
+  - land: CSSR
+    stadt: Bojkovice
+    tanzgruppe: Svetlovan
+  - land: Germany
+    stadt: Cölbe
+    tanzgruppe: Fröhlicher Kreis
 - nummer: 30
   jahr: 1986
   gruppen:
-    - land: "Hungaria"
-      stadt: "Werischwar"
-      tanzgruppe: "Ungarndeutsche Tanzgruppe"
-    - land: "France"
-      stadt: "Toulouse"
-      tanzgruppe: "Le Quadrille Occitan"
-    - land: "Poland"
-      stadt: "Rzeszow"
-      tanzgruppe: "Wislok"
-    - land: "Norway"
-      stadt: "Larvik"
-      tanzgruppe: "Haugtussa Leikarring"
-    - land: "Germany"
-      stadt: "Marburg"
-      tanzgruppe: "Die Hessen"
-    - land: "Germany"
-      stadt: "Fürstenhagen"
-      tanzgruppe: "Die Naturfreunde"
-
+  - land: Hungaria
+    stadt: Werischwar
+    tanzgruppe: Ungarndeutsche Tanzgruppe
+  - land: France
+    stadt: Toulouse
+    tanzgruppe: Le Quadrille Occitan
+  - land: Poland
+    stadt: Rzeszow
+    tanzgruppe: Wislok
+  - land: Norway
+    stadt: Larvik
+    tanzgruppe: Haugtussa Leikarring
+  - land: Germany
+    stadt: Marburg
+    tanzgruppe: Die Hessen
+  - land: Germany
+    stadt: Fürstenhagen
+    tanzgruppe: Die Naturfreunde
 - nummer: 29
   jahr: 1985
   gruppen:
-    - land: "Poland"
-      stadt: "Bielsko-Biala"
-      tanzgruppe: "Beskid"
-    - land: "CSSR"
-      stadt: "Jicin"
-      tanzgruppe: "Cesky Raj"
-    - land: "Norway"
-      stadt: "Larvik"
-      tanzgruppe: "Haugtussa Leikarring"
-    - land: "Germany"
-      stadt: "Erbach"
-      tanzgruppe: "Hans-von-der-Au"
-
+  - land: Poland
+    stadt: Bielsko-Biala
+    tanzgruppe: Beskid
+  - land: CSSR
+    stadt: Jicin
+    tanzgruppe: Cesky Raj
+  - land: Norway
+    stadt: Larvik
+    tanzgruppe: Haugtussa Leikarring
+  - land: Germany
+    stadt: Erbach
+    tanzgruppe: Hans-von-der-Au
 - nummer: 28
   jahr: 1984
   gruppen:
-    - land: "Poland"
-      stadt: "Rzeszów"
-      tanzgruppe: "Wislok"
-    - land: "Hungary"
-      stadt: "Werischwar"
-      tanzgruppe: "Ungarndeutsche Tanzgruppe"
-    - land: "France"
-      stadt: "Toulouse"
-      tanzgruppe: "Le Quadrille Occitan"
-    - land: "Germany"
-      stadt: "Oberrosphe"
-      tanzgruppe: "Die Burgwaldskälwer"
-
+  - land: Poland
+    stadt: Rzeszów
+    tanzgruppe: Wislok
+  - land: Hungary
+    stadt: Werischwar
+    tanzgruppe: Ungarndeutsche Tanzgruppe
+  - land: France
+    stadt: Toulouse
+    tanzgruppe: Le Quadrille Occitan
+  - land: Germany
+    stadt: Oberrosphe
+    tanzgruppe: Die Burgwaldskälwer
 - nummer: 27
   jahr: 1983
   gruppen:
-    - land: "Portugal"
-      stadt: "Arcozelo"
-      tanzgruppe: ""
-    - land: "Greece"
-      stadt: "Xyanthy"
-      tanzgruppe: "Volkstanzgruppe des Lyceums"
-    - land: "France"
-      stadt: "Marseille"
-      tanzgruppe: "La Couqueto"
-    - land: "Poland"
-      stadt: "Rzeszów"
-      tanzgruppe: "Wislok"
-    - land: "Germany"
-      stadt: "Cölbe"
-      tanzgruppe: "Fröhlicher Kreis"
-
+  - land: Portugal
+    stadt: Arcozelo
+    tanzgruppe: ''
+  - land: Greece
+    stadt: Xyanthy
+    tanzgruppe: Volkstanzgruppe des Lyceums
+  - land: France
+    stadt: Marseille
+    tanzgruppe: La Couqueto
+  - land: Poland
+    stadt: Rzeszów
+    tanzgruppe: Wislok
+  - land: Germany
+    stadt: Cölbe
+    tanzgruppe: Fröhlicher Kreis
 - nummer: 26
   jahr: 1982
   gruppen:
-    - land: "Spain(Mallorca)"
-      stadt: "Son Servera"
-      tanzgruppe: ""
-    - land: "France"
-      stadt: "Toulouse"
-      tanzgruppe: "Le Quadrille Occitan"
-    - land: "Hungary"
-      stadt: "Werischwar"
-      tanzgruppe: "Ungarndeutsche Tanzgruppe"
-    - land: "Germany"
-      stadt: "Erbach"
-      tanzgruppe: "Hans-von-der-Au"
-    - land: "Germany"
-      stadt: "Marburg"
-      tanzgruppe: "Die Hessen"
-
+  - land: Spain(Mallorca)
+    stadt: Son Servera
+    tanzgruppe: ''
+  - land: France
+    stadt: Toulouse
+    tanzgruppe: Le Quadrille Occitan
+  - land: Hungary
+    stadt: Werischwar
+    tanzgruppe: Ungarndeutsche Tanzgruppe
+  - land: Germany
+    stadt: Erbach
+    tanzgruppe: Hans-von-der-Au
+  - land: Germany
+    stadt: Marburg
+    tanzgruppe: Die Hessen
 - nummer: 25
   jahr: 1980
   gruppen:
-    - land: "Yugoslavia"
-      stadt: "Skopje"
-      tanzgruppe: "AKUD \"Mirce Acev"
-    - land: "Belgium"
-      stadt: "Hasselt"
-      tanzgruppe: "De Langeman"
-    - land: "France"
-      stadt: "Toulouse"
-      tanzgruppe: "Le Quadrille Occitan"
-    - land: "Poland"
-      stadt: "Lublin"
-      tanzgruppe: "Landwirtschaftliche Hochschule"
-    - land: "Italy"
-      stadt: "Bergamo"
-      tanzgruppe: "Naturfreunde Fürstenhagen"
-    - land: "Germany"
-      stadt: "Hess.Lichtenau"
-      tanzgruppe: ""
-
+  - land: Yugoslavia
+    stadt: Skopje
+    tanzgruppe: AKUD "Mirce Acev
+  - land: Belgium
+    stadt: Hasselt
+    tanzgruppe: De Langeman
+  - land: France
+    stadt: Toulouse
+    tanzgruppe: Le Quadrille Occitan
+  - land: Poland
+    stadt: Lublin
+    tanzgruppe: Landwirtschaftliche Hochschule
+  - land: Italy
+    stadt: Bergamo
+    tanzgruppe: Naturfreunde Fürstenhagen
+  - land: Germany
+    stadt: Hess.Lichtenau
+    tanzgruppe: ''
 - nummer: 24
   jahr: 1979
   gruppen:
-    - land: "Belgium"
-      stadt: "Skopje"
-      tanzgruppe: "AKUD \"Mirce Acev"
-    - land: "France"
-      stadt: "Genk"
-      tanzgruppe: "De Landouwe"
-    - land: "Great Britain"
-      stadt: "Marseille"
-      tanzgruppe: "La Couqueto"
-    - land: "Yugoslavia"
-      stadt: "Birmingham"
-      tanzgruppe: "The Wayfarers Folk Dance Club"
-    - land: "Germany"
-      stadt: "Hess. Lichtenau"
-      tanzgruppe: "Naturfreunde Fürstenhagen"
-
+  - land: Belgium
+    stadt: Skopje
+    tanzgruppe: AKUD "Mirce Acev
+  - land: France
+    stadt: Genk
+    tanzgruppe: De Landouwe
+  - land: Great Britain
+    stadt: Marseille
+    tanzgruppe: La Couqueto
+  - land: Yugoslavia
+    stadt: Birmingham
+    tanzgruppe: The Wayfarers Folk Dance Club
+  - land: Germany
+    stadt: Hess. Lichtenau
+    tanzgruppe: Naturfreunde Fürstenhagen
 - nummer: 23
   jahr: 1978
   gruppen:
-    - land: "Ireland"
-      stadt: "Dublin"
-      tanzgruppe: ""
-    - land: "France"
-      stadt: "Toulouse"
-      tanzgruppe: "Le Quadrille Occitan"
-    - land: "Poland"
-      stadt: "Lublin"
-      tanzgruppe: "Landwirtschaftliche Hochschule"
-    - land: "Finland"
-      stadt: "Varkaus"
-      tanzgruppe: "Varkauden Tanhuujat"
-    - land: "Germany"
-      stadt: "Cölbe"
-      tanzgruppe: "Fröhlicher Kreis"
-
+  - land: Ireland
+    stadt: Dublin
+    tanzgruppe: ''
+  - land: France
+    stadt: Toulouse
+    tanzgruppe: Le Quadrille Occitan
+  - land: Poland
+    stadt: Lublin
+    tanzgruppe: Landwirtschaftliche Hochschule
+  - land: Finland
+    stadt: Varkaus
+    tanzgruppe: Varkauden Tanhuujat
+  - land: Germany
+    stadt: Cölbe
+    tanzgruppe: Fröhlicher Kreis
 - nummer: 22
   jahr: 1976
   gruppen:
-    - land: "France"
-      stadt: "Marseille"
-      tanzgruppe: "La Couqueto"
-    - land: "Yugoslavia"
-      stadt: "Zagreb"
-      tanzgruppe: "Koleda"
-    - land: "Austria"
-      stadt: "Steiermark"
-      tanzgruppe: "Sporthochschule"
-    - land: "Poland"
-      stadt: "Krakau"
-      tanzgruppe: "Sing- und Spielkreis"
-    - land: "Germany"
-      stadt: "Heidelberg"
-      tanzgruppe: "Ballettgruppe"
-    - land: "Germany"
-      stadt: "Wolfhagen"
-      tanzgruppe: ""
-
+  - land: France
+    stadt: Marseille
+    tanzgruppe: La Couqueto
+  - land: Yugoslavia
+    stadt: Zagreb
+    tanzgruppe: Koleda
+  - land: Austria
+    stadt: Steiermark
+    tanzgruppe: Sporthochschule
+  - land: Poland
+    stadt: Krakau
+    tanzgruppe: Sing- und Spielkreis
+  - land: Germany
+    stadt: Heidelberg
+    tanzgruppe: Ballettgruppe
+  - land: Germany
+    stadt: Wolfhagen
+    tanzgruppe: ''
 - nummer: 21
   jahr: 1974
   gruppen:
-    - land: "Sweden"
-      stadt: "Fagersta"
-      tanzgruppe: ""
-    - land: "Nepal"
-      stadt: "Katmandu"
-      tanzgruppe: "Bairab Dance Ensemble"
-    - land: "Romania"
-      stadt: "Bukarest"
-      tanzgruppe: "Aro-Edelweiß"
-    - land: "Poland"
-      stadt: "Krakau"
-      tanzgruppe: "Slowianki"
-    - land: "Germany"
-      stadt: "Kirchheim"
-      tanzgruppe: "Aulataler Volkstumsgruppe"
-    - land: "Germany"
-      stadt: "Neustadt"
-      tanzgruppe: "Neustädter Volkstanzkreis"
-
+  - land: Sweden
+    stadt: Fagersta
+    tanzgruppe: ''
+  - land: Nepal
+    stadt: Katmandu
+    tanzgruppe: Bairab Dance Ensemble
+  - land: Romania
+    stadt: Bukarest
+    tanzgruppe: Aro-Edelweiß
+  - land: Poland
+    stadt: Krakau
+    tanzgruppe: Slowianki
+  - land: Germany
+    stadt: Kirchheim
+    tanzgruppe: Aulataler Volkstumsgruppe
+  - land: Germany
+    stadt: Neustadt
+    tanzgruppe: Neustädter Volkstanzkreis
 - nummer: 20
   jahr: 1973
   gruppen:
-    - land: "Poland"
-      stadt: "Krakau"
-      tanzgruppe: "Slowianki"
-    - land: "Great Britain"
-      stadt: "Birmingharn"
-      tanzgruppe: "The Wayfarers Folk Dance Club"
-    - land: "France"
-      stadt: "Marseille"
-      tanzgruppe: "La Couqueto"
-    - land: "Austria"
-      stadt: "Steiermark"
-      tanzgruppe: ""
-    - land: "Germany"
-      stadt: "Kirchhain-Betziesdorf"
-      tanzgruppe: "Landjugendgruppe"
-
+  - land: Poland
+    stadt: Krakau
+    tanzgruppe: Slowianki
+  - land: Great Britain
+    stadt: Birmingharn
+    tanzgruppe: The Wayfarers Folk Dance Club
+  - land: France
+    stadt: Marseille
+    tanzgruppe: La Couqueto
+  - land: Austria
+    stadt: Steiermark
+    tanzgruppe: ''
+  - land: Germany
+    stadt: Kirchhain-Betziesdorf
+    tanzgruppe: Landjugendgruppe
 - nummer: 19
   jahr: 1972
   gruppen:
-    - land: "Belgium"
-      stadt: "Nederokkerzeel"
-      tanzgruppe: "De Vliier"
-    - land: "Poland"
-      stadt: "Krakau"
-      tanzgruppe: "Slowianki"
-    - land: "Romania"
-      stadt: "Bukarest"
-      tanzgruppe: "Aro-Edelweiß"
-    - land: "Sweden"
-      stadt: "Gällivare"
-      tanzgruppe: ""
-    - land: "Germany"
-      stadt: "Erbach"
-      tanzgruppe: "Hans-von-der-Au"
-
+  - land: Belgium
+    stadt: Nederokkerzeel
+    tanzgruppe: De Vliier
+  - land: Poland
+    stadt: Krakau
+    tanzgruppe: Slowianki
+  - land: Romania
+    stadt: Bukarest
+    tanzgruppe: Aro-Edelweiß
+  - land: Sweden
+    stadt: Gällivare
+    tanzgruppe: ''
+  - land: Germany
+    stadt: Erbach
+    tanzgruppe: Hans-von-der-Au
 - nummer: 18
   jahr: 1971
   gruppen:
-    - land: "France"
-      stadt: "Toulouse"
-      tanzgruppe: "Lou Ramelet Moundi"
-    - land: "Finland"
-      stadt: "Varkaus"
-      tanzgruppe: "Varkauden Tanhuujat"
-    - land: "Great Britain"
-      stadt: "Birmingham"
-      tanzgruppe: "The Wayfarers Folk Dance Club"
-    - land: "Yugoslavia"
-      stadt: "Zagreb"
-      tanzgruppe: "Adria"
-    - land: "Poland"
-      stadt: "Lublin"
-      tanzgruppe: "Marie Curie-Sklodowska Universität"
-    - land: "Hungary"
-      stadt: "Budapest"
-      tanzgruppe: "Banyaipari Dolgozok Szakzervezete"
-
+  - land: France
+    stadt: Toulouse
+    tanzgruppe: Lou Ramelet Moundi
+  - land: Finland
+    stadt: Varkaus
+    tanzgruppe: Varkauden Tanhuujat
+  - land: Great Britain
+    stadt: Birmingham
+    tanzgruppe: The Wayfarers Folk Dance Club
+  - land: Yugoslavia
+    stadt: Zagreb
+    tanzgruppe: Adria
+  - land: Poland
+    stadt: Lublin
+    tanzgruppe: Marie Curie-Sklodowska Universität
+  - land: Hungary
+    stadt: Budapest
+    tanzgruppe: Banyaipari Dolgozok Szakzervezete
 - nummer: 17
   jahr: 1970
   gruppen:
-    - land: "Yugoslavia"
-      stadt: "Zagreb"
-      tanzgruppe: "Adria"
-    - land: "France"
-      stadt: "Marseille"
-      tanzgruppe: "La Couqueto"
-    - land: "Poland"
-      stadt: "Lublin"
-      tanzgruppe: "Landwirtschaftliche Hochschule"
-    - land: "Finland"
-      stadt: "Varkaus"
-      tanzgruppe: "Varkauden Tanhuujat"
-    - land: "Great Britain"
-      stadt: "Birmingham"
-      tanzgruppe: "The Wayfarers Folk Dance Club"
-    - land: "Germany"
-      stadt: "Kirchhain-Betziesdorf"
-      tanzgruppe: "Landjugendgruppe"
-
+  - land: Yugoslavia
+    stadt: Zagreb
+    tanzgruppe: Adria
+  - land: France
+    stadt: Marseille
+    tanzgruppe: La Couqueto
+  - land: Poland
+    stadt: Lublin
+    tanzgruppe: Landwirtschaftliche Hochschule
+  - land: Finland
+    stadt: Varkaus
+    tanzgruppe: Varkauden Tanhuujat
+  - land: Great Britain
+    stadt: Birmingham
+    tanzgruppe: The Wayfarers Folk Dance Club
+  - land: Germany
+    stadt: Kirchhain-Betziesdorf
+    tanzgruppe: Landjugendgruppe
 - nummer: 16
   jahr: 1969
   gruppen:
-    - land: "CSSR"
-      stadt: "Breclav"
-      tanzgruppe: "Podluzan"
-    - land: "France"
-      stadt: "Marseille"
-      tanzgruppe: "La Couqueto"
-    - land: "Yugoslavia"
-      stadt: "Zagreb"
-      tanzgruppe: "Adria"
-    - land: "Belgium"
-      stadt: "Nederokkerzeel"
-      tanzgruppe: "De Vliier"
-    - land: "Latin America"
-      stadt: ""
-      tanzgruppe: "15 Sozialarbeiterinnen"
-    - land: "Great Britain"
-      stadt: "Birmingham"
-      tanzgruppe: "The Wayfarers Folk Dance Club"
-    - land: "Germany"
-      stadt: "Kirchhain-Betziesdorf"
-      tanzgruppe: "Landjugendgruppe"
-
+  - land: CSSR
+    stadt: Breclav
+    tanzgruppe: Podluzan
+  - land: France
+    stadt: Marseille
+    tanzgruppe: La Couqueto
+  - land: Yugoslavia
+    stadt: Zagreb
+    tanzgruppe: Adria
+  - land: Belgium
+    stadt: Nederokkerzeel
+    tanzgruppe: De Vliier
+  - land: Latin America
+    stadt: ''
+    tanzgruppe: 15 Sozialarbeiterinnen
+  - land: Great Britain
+    stadt: Birmingham
+    tanzgruppe: The Wayfarers Folk Dance Club
+  - land: Germany
+    stadt: Kirchhain-Betziesdorf
+    tanzgruppe: Landjugendgruppe
 - nummer: 15
   jahr: 1968
   gruppen:
-    - land: "Sweden"
-      stadt: "Fagersta"
-      tanzgruppe: ""
-    - land: "CSSR"
-      stadt: "Melnik"
-      tanzgruppe: ""
-    - land: "France"
-      stadt: "St. Nazaire"
-      tanzgruppe: ""
-    - land: "Portugal"
-      stadt: "Afife"
-      tanzgruppe: ""
-    - land: "Great Britain"
-      stadt: "Birmingham"
-      tanzgruppe: "The Wayfarers Folk Dance Club"
-    - land: "Hungary"
-      stadt: "Varpoalota"
-      tanzgruppe: ""
-    - land: "Germany"
-      stadt: "Besse"
-      tanzgruppe: ""
-
+  - land: Sweden
+    stadt: Fagersta
+    tanzgruppe: ''
+  - land: CSSR
+    stadt: Melnik
+    tanzgruppe: ''
+  - land: France
+    stadt: St. Nazaire
+    tanzgruppe: ''
+  - land: Portugal
+    stadt: Afife
+    tanzgruppe: ''
+  - land: Great Britain
+    stadt: Birmingham
+    tanzgruppe: The Wayfarers Folk Dance Club
+  - land: Hungary
+    stadt: Varpoalota
+    tanzgruppe: ''
+  - land: Germany
+    stadt: Besse
+    tanzgruppe: ''
 - nummer: 14
   jahr: 1967
   gruppen:
-    - land: "Belgium"
-      stadt: "Hasselt"
-      tanzgruppe: "De Langman"
-    - land: "France"
-      stadt: "Bayonne"
-      tanzgruppe: "Groupe d'Art Basque \"Crai Bat"
-    - land: "Yugoslavia"
-      stadt: "Zagreb"
-      tanzgruppe: "Koleda"
-    - land: "CSSR"
-      stadt: "Brünn"
-      tanzgruppe: ""
-    - land: "Great Britain"
-      stadt: "Birmingham"
-      tanzgruppe: "The Wayfarers Folk Dance Club"
-    - land: "Finland"
-      stadt: "Varkaus"
-      tanzgruppe: "Varkauden Tanhuujat"
-    - land: "Germany"
-      stadt: "Schenklengsfeld"
-      tanzgruppe: ""
-
+  - land: Belgium
+    stadt: Hasselt
+    tanzgruppe: De Langman
+  - land: France
+    stadt: Bayonne
+    tanzgruppe: Groupe d'Art Basque "Crai Bat
+  - land: Yugoslavia
+    stadt: Zagreb
+    tanzgruppe: Koleda
+  - land: CSSR
+    stadt: Brünn
+    tanzgruppe: ''
+  - land: Great Britain
+    stadt: Birmingham
+    tanzgruppe: The Wayfarers Folk Dance Club
+  - land: Finland
+    stadt: Varkaus
+    tanzgruppe: Varkauden Tanhuujat
+  - land: Germany
+    stadt: Schenklengsfeld
+    tanzgruppe: ''
 - nummer: 13
   jahr: 1966
   gruppen:
-    - land: "Sweden"
-      stadt: "Torps Gille"
-      tanzgruppe: "Svenska ungdomringen för bygdkultur"
-    - land: "Yugoslavia"
-      stadt: "Zagreb"
-      tanzgruppe: "Koleda"
-    - land: "France"
-      stadt: "Toulouse"
-      tanzgruppe: "Lou Ramelet Moundi"
-    - land: "France"
-      stadt: "Lisieux"
-      tanzgruppe: "Assemblée du Vieux"
-    - land: "Belgium"
-      stadt: "Genk"
-      tanzgruppe: "De Landouwe"
-    - land: "Great Britain"
-      stadt: "Birmingham"
-      tanzgruppe: "The Wayfarers Folk Dance Club"
-    - land: "Finland"
-      stadt: "Varkaus"
-      tanzgruppe: "Varkauden Tanhuujat"
-    - land: "CSSR"
-      stadt: "Horni Bri"
-      tanzgruppe: "USMEV"
-    - land: "Germany"
-      stadt: "Borken / Witzenhausen"
-      tanzgruppe: ""
-
+  - land: Sweden
+    stadt: Torps Gille
+    tanzgruppe: Svenska ungdomringen för bygdkultur
+  - land: Yugoslavia
+    stadt: Zagreb
+    tanzgruppe: Koleda
+  - land: France
+    stadt: Toulouse
+    tanzgruppe: Lou Ramelet Moundi
+  - land: France
+    stadt: Lisieux
+    tanzgruppe: Assemblée du Vieux
+  - land: Belgium
+    stadt: Genk
+    tanzgruppe: De Landouwe
+  - land: Great Britain
+    stadt: Birmingham
+    tanzgruppe: The Wayfarers Folk Dance Club
+  - land: Finland
+    stadt: Varkaus
+    tanzgruppe: Varkauden Tanhuujat
+  - land: CSSR
+    stadt: Horni Bri
+    tanzgruppe: USMEV
+  - land: Germany
+    stadt: Borken / Witzenhausen
+    tanzgruppe: ''
 - nummer: 12
   jahr: 1965
   gruppen:
-    - land: "Finland"
-      stadt: "Varkaus"
-      tanzgruppe: "Einzelteilnehmer"
-    - land: "Great Britain"
-      stadt: "Birmingham"
-      tanzgruppe: "The Wayfarers Folk Dance Club"
-    - land: "Sweden"
-      stadt: "Darlarna"
-      tanzgruppe: ""
-    - land: "Austria"
-      stadt: "Steiermark"
-      tanzgruppe: ""
-    - land: "Belgium"
-      stadt: ""
-      tanzgruppe: "Vereinigte ukrainische Jugend"
-    - land: "Germany"
-      stadt: "Witzenhausen"
-      tanzgruppe: ""
-
+  - land: Finland
+    stadt: Varkaus
+    tanzgruppe: Einzelteilnehmer
+  - land: Great Britain
+    stadt: Birmingham
+    tanzgruppe: The Wayfarers Folk Dance Club
+  - land: Sweden
+    stadt: Darlarna
+    tanzgruppe: ''
+  - land: Austria
+    stadt: Steiermark
+    tanzgruppe: ''
+  - land: Belgium
+    stadt: ''
+    tanzgruppe: Vereinigte ukrainische Jugend
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: ''
 - nummer: 11
   jahr: 1964
   gruppen:
-    - land: "Finland"
-      stadt: "Varkaus"
-      tanzgruppe: "Varkauden Tanhuujat"
-    - land: "Belgium"
-      stadt: "Antwerpen"
-      tanzgruppe: "Lange Wapper"
-    - land: "France"
-      stadt: "Marseille"
-      tanzgruppe: "La Couqueto"
-    - land: "Netherlands"
-      stadt: "Rotterdam"
-      tanzgruppe: "Volksdans Centrum"
-    - land: "Austria"
-      stadt: "Steiermark"
-      tanzgruppe: ""
-    - land: "Yugoslavia"
-      stadt: "Ljubljana"
-      tanzgruppe: ""
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Wandervogel"
-
+  - land: Finland
+    stadt: Varkaus
+    tanzgruppe: Varkauden Tanhuujat
+  - land: Belgium
+    stadt: Antwerpen
+    tanzgruppe: Lange Wapper
+  - land: France
+    stadt: Marseille
+    tanzgruppe: La Couqueto
+  - land: Netherlands
+    stadt: Rotterdam
+    tanzgruppe: Volksdans Centrum
+  - land: Austria
+    stadt: Steiermark
+    tanzgruppe: ''
+  - land: Yugoslavia
+    stadt: Ljubljana
+    tanzgruppe: ''
+  - land: Germany
+    stadt: ''
+    tanzgruppe: Wandervogel
 - nummer: 10
   jahr: 1963
   gruppen:
-    - land: "Belgium"
-      stadt: "Hasselt"
-      tanzgruppe: ""
-    - land: "Great Britain"
-      stadt: "Ailesbury"
-      tanzgruppe: ""
-    - land: "Belgium"
-      stadt: "Antwerpen"
-      tanzgruppe: "Lange Wapper"
-    - land: "France"
-      stadt: "Nimes"
-      tanzgruppe: "Ferandoleur cheminots"
-    - land: "France"
-      stadt: "Toulouse"
-      tanzgruppe: "Lou Ramelet Moundi"
-    - land: "Finland"
-      stadt: "Varkaus"
-      tanzgruppe: "Varkauden Tanhuujat"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Deutscher Wanderbund"
-
+  - land: Belgium
+    stadt: Hasselt
+    tanzgruppe: ''
+  - land: Great Britain
+    stadt: Ailesbury
+    tanzgruppe: ''
+  - land: Belgium
+    stadt: Antwerpen
+    tanzgruppe: Lange Wapper
+  - land: France
+    stadt: Nimes
+    tanzgruppe: Ferandoleur cheminots
+  - land: France
+    stadt: Toulouse
+    tanzgruppe: Lou Ramelet Moundi
+  - land: Finland
+    stadt: Varkaus
+    tanzgruppe: Varkauden Tanhuujat
+  - land: Germany
+    stadt: ''
+    tanzgruppe: Deutscher Wanderbund
 - nummer: 9
   jahr: 1962
   gruppen:
-    - land: "Belgium"
-      stadt: "Hasselt"
-      tanzgruppe: "Volkskulturele Gemeenschap"
-    - land: "Netherlands"
-      stadt: "Rotterdam"
-      tanzgruppe: "Volksdans Centrum"
-    - land: "France"
-      stadt: "Bastia (Korsika)"
-      tanzgruppe: "I Macchiaghioli"
-    - land: "Austria"
-      stadt: "Steiermark"
-      tanzgruppe: ""
-    - land: "Finland"
-      stadt: "Varkaus"
-      tanzgruppe: "Varkauden Tanhuujat"
-    - land: "Yugoslavia"
-      stadt: "Zagreb"
-      tanzgruppe: ""
-    - land: "Portugal"
-      stadt: "Riachos"
-      tanzgruppe: ""
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Deutsche Jugend des Ostens"
-
+  - land: Belgium
+    stadt: Hasselt
+    tanzgruppe: Volkskulturele Gemeenschap
+  - land: Netherlands
+    stadt: Rotterdam
+    tanzgruppe: Volksdans Centrum
+  - land: France
+    stadt: Bastia (Korsika)
+    tanzgruppe: I Macchiaghioli
+  - land: Austria
+    stadt: Steiermark
+    tanzgruppe: ''
+  - land: Finland
+    stadt: Varkaus
+    tanzgruppe: Varkauden Tanhuujat
+  - land: Yugoslavia
+    stadt: Zagreb
+    tanzgruppe: ''
+  - land: Portugal
+    stadt: Riachos
+    tanzgruppe: ''
+  - land: Germany
+    stadt: ''
+    tanzgruppe: Deutsche Jugend des Ostens
 - nummer: 8
   jahr: 1961
   gruppen:
-    - land: "France"
-      stadt: "Marseille"
-      tanzgruppe: "La Couqueto"
-    - land: "Austria"
-      stadt: "Steiermark"
-      tanzgruppe: ""
-    - land: "France"
-      stadt: "Dijon"
-      tanzgruppe: ""
-    - land: "Netherlands"
-      stadt: "Rotterdam"
-      tanzgruppe: "Volksdans Centrum"
-    - land: "Sweden"
-      stadt: "Nyköping"
-      tanzgruppe: ""
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Deutscher Wanderbund"
-
+  - land: France
+    stadt: Marseille
+    tanzgruppe: La Couqueto
+  - land: Austria
+    stadt: Steiermark
+    tanzgruppe: ''
+  - land: France
+    stadt: Dijon
+    tanzgruppe: ''
+  - land: Netherlands
+    stadt: Rotterdam
+    tanzgruppe: Volksdans Centrum
+  - land: Sweden
+    stadt: Nyköping
+    tanzgruppe: ''
+  - land: Germany
+    stadt: ''
+    tanzgruppe: Deutscher Wanderbund
 - nummer: 7
   jahr: 1959
   gruppen:
-    - land: "France"
-      stadt: "Nîmes"
-      tanzgruppe: "Tarandoleur Cheminots"
-    - land: "France"
-      stadt: "Marseille"
-      tanzgruppe: "Rodelet Félibréen de Casten-Gomber"
-    - land: "Great Britain"
-      stadt: "Durham"
-      tanzgruppe: ""
-    - land: "Austria"
-      stadt: "Steiermark"
-      tanzgruppe: ""
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Deutscher Wanderbund"
-
+  - land: France
+    stadt: Nîmes
+    tanzgruppe: Tarandoleur Cheminots
+  - land: France
+    stadt: Marseille
+    tanzgruppe: Rodelet Félibréen de Casten-Gomber
+  - land: Great Britain
+    stadt: Durham
+    tanzgruppe: ''
+  - land: Austria
+    stadt: Steiermark
+    tanzgruppe: ''
+  - land: Germany
+    stadt: ''
+    tanzgruppe: Deutscher Wanderbund
 - nummer: 6
   jahr: 1958
   gruppen:
-    - land: "Great Britain"
-      stadt: "Halesowen"
-      tanzgruppe: ""
-    - land: "Sweden"
-      stadt: "Göteborg"
-      tanzgruppe: ""
-    - land: "Austria"
-      stadt: "Steiermark"
-      tanzgruppe: ""
-    - land: "France"
-      stadt: "Nizza"
-      tanzgruppe: "La Ciamada"
-    - land: "Germany"
-      stadt: "Kassel"
-      tanzgruppe: ""
-    - land: "Germany"
-      stadt: "Schwarzerden"
-      tanzgruppe: ""
-
+  - land: Great Britain
+    stadt: Halesowen
+    tanzgruppe: ''
+  - land: Sweden
+    stadt: Göteborg
+    tanzgruppe: ''
+  - land: Austria
+    stadt: Steiermark
+    tanzgruppe: ''
+  - land: France
+    stadt: Nizza
+    tanzgruppe: La Ciamada
+  - land: Germany
+    stadt: Kassel
+    tanzgruppe: ''
+  - land: Germany
+    stadt: Schwarzerden
+    tanzgruppe: ''
 - nummer: 5
   jahr: 1957
   gruppen:
-    - land: "Great Britain"
-      stadt: "London"
-      tanzgruppe: ""
-    - land: "Austria"
-      stadt: "Klagenfurt"
-      tanzgruppe: ""
-    - land: "France"
-      stadt: "Dôle"
-      tanzgruppe: "Individual participants"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Wandervogel"
-
+  - land: Great Britain
+    stadt: London
+    tanzgruppe: ''
+  - land: Austria
+    stadt: Klagenfurt
+    tanzgruppe: ''
+  - land: France
+    stadt: Dôle
+    tanzgruppe: Individual participants
+  - land: Germany
+    stadt: ''
+    tanzgruppe: Wandervogel
 - nummer: 4
   jahr: 1956
   gruppen:
-    - land: "Great Britain"
-      stadt: "Newcastle"
-      tanzgruppe: ""
-    - land: "France"
-      stadt: "Vichy"
-      tanzgruppe: ""
-    - land: "Austria"
-      stadt: "Steiermark"
-      tanzgruppe: ""
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Deutsche Turnerjugend"
-
+  - land: Great Britain
+    stadt: Newcastle
+    tanzgruppe: ''
+  - land: France
+    stadt: Vichy
+    tanzgruppe: ''
+  - land: Austria
+    stadt: Steiermark
+    tanzgruppe: ''
+  - land: Germany
+    stadt: ''
+    tanzgruppe: Deutsche Turnerjugend
 - nummer: 3
   jahr: 1955
   gruppen:
-    - land: "Austria"
-      stadt: "Steiermark"
-      tanzgruppe: ""
-    - land: "Sweden"
-      stadt: "Hälsingborg"
-      tanzgruppe: ""
-    - land: "France"
-      stadt: "Chambery (Savoie)"
-      tanzgruppe: ""
-    - land: "Germany"
-      stadt: "Eschwege"
-      tanzgruppe: ""
-
+  - land: Austria
+    stadt: Steiermark
+    tanzgruppe: ''
+  - land: Sweden
+    stadt: Hälsingborg
+    tanzgruppe: ''
+  - land: France
+    stadt: Chambery (Savoie)
+    tanzgruppe: ''
+  - land: Germany
+    stadt: Eschwege
+    tanzgruppe: ''
 - nummer: 2
   jahr: 1954
   gruppen:
-    - land: "France"
-      stadt: "Caen"
-      tanzgruppe: ""
-    - land: "Austria"
-      stadt: "Innsbruck"
-      tanzgruppe: ""
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Individual participants"
-
+  - land: France
+    stadt: Caen
+    tanzgruppe: ''
+  - land: Austria
+    stadt: Innsbruck
+    tanzgruppe: ''
+  - land: Germany
+    stadt: ''
+    tanzgruppe: Individual participants
 - nummer: 1
   jahr: 1953
   gruppen:
-    - land: "Austria"
-      stadt: "Linz"
-      tanzgruppe: ""
-    - land: "Danmark"
-      stadt: ""
-      tanzgruppe: "Individual participants"
-    - land: "Sweden"
-      stadt: ""
-      tanzgruppe: "Individual participants"
-    - land: "Switzerland"
-      stadt: ""
-      tanzgruppe: "Individual participants"
-    - land: "Germany"
-      stadt: ""
-      tanzgruppe: "Individual participants"
+  - land: Austria
+    stadt: Linz
+    tanzgruppe: ''
+  - land: Danmark
+    stadt: ''
+    tanzgruppe: Individual participants
+  - land: Sweden
+    stadt: ''
+    tanzgruppe: Individual participants
+  - land: Switzerland
+    stadt: ''
+    tanzgruppe: Individual participants
+  - land: Germany
+    stadt: ''
+    tanzgruppe: Individual participants

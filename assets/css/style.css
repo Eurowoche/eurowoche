@@ -3792,6 +3792,11 @@ section.team-section.bg-cream {
     font-size: 0.62rem;
     letter-spacing: 0.01em;
     background: rgba(245, 240, 232, 0.5);
+    vertical-align: middle;  /* Jahr mittig über alle Gruppenzeilen */
+}
+/* Deutlicher Trennstrich zwischen zwei Eurowoche-Jahrgängen */
+.archiv-table .archiv-year-first-row td {
+    border-top: 2px solid rgba(139, 83, 77, 0.28) !important;
 }
 
 .archiv-table tbody tr:hover td {
