@@ -1079,7 +1079,7 @@ body.menu-open .leaflet-container {
     font-family: var(--font-body);
     font-size: var(--fs-base);
     line-height: 1.8;
-    text-align: center;
+    text-align: justify;
     max-width: 400px;
     margin-bottom: 1.8rem;
 }
@@ -3905,8 +3905,9 @@ section.team-section.bg-cream {
     border: 1px solid rgba(139,83,77,0.22);
     border-radius: 10px;
     overflow: hidden;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     background: #fff;
+    width: 100%;
 }
 
 .spende-tabs {
@@ -3963,7 +3964,7 @@ section.team-section.bg-cream {
 }
 
 .spende-panel {
-    padding: 1rem 1.2rem;
+    padding: 1.1rem 1.3rem;
 }
 
 .spende-bank-layout {
@@ -3978,8 +3979,8 @@ section.team-section.bg-cream {
 }
 
 .spende-qr-block img {
-    width: 90px;
-    height: 90px;
+    width: 110px;
+    height: 110px;
     border-radius: 4px;
     display: block;
 }
