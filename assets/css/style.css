@@ -3036,7 +3036,7 @@ section.team-section.bg-cream {
 }
 
 .archiv-list-col {
-    flex: 0 0 340px;
+    flex: 0 0 300px;
     min-width: 0;
 }
 
@@ -3057,9 +3057,17 @@ section.team-section.bg-cream {
     overflow-y: auto;
 }
 
-/* Tabelle kompakter für schmale Spalte */
+/* Tabelle kompakter für schmale Spalte – table-layout:fixed verhindert horizontal scroll */
 .archiv-list-col .archiv-table {
     font-size: 0.78rem;
+    table-layout: fixed;
+    width: 100%;
+}
+/* Gastgruppe-Spalte: lange Namen abschneiden statt Overflow */
+.archiv-list-col .archiv-table td:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .archiv-list-col .archiv-table th,
 .archiv-list-col .archiv-table td {
@@ -3388,9 +3396,9 @@ section.team-section.bg-cream {
 }
 
 .archiv-panel-row {
-    display: flex;
-    align-items: baseline;
-    gap: 0.4rem;
+    display: grid;
+    grid-template-columns: 2.8rem 1fr;
+    gap: 0 0.4rem;
     padding: 0.28rem 0.4rem;
     border-bottom: 1px solid #f5eeec;
     font-size: var(--fs-sm);
@@ -3427,18 +3435,32 @@ section.team-section.bg-cream {
 .archiv-panel-year {
     font-weight: 700;
     color: var(--primary);
-    flex: 0 0 2.8rem;   /* feste Breite → Jahre immer linksbündig ausgerichtet */
+    grid-column: 1;
+    grid-row: 1;
     text-align: left;
+    padding-top: 1px;
 }
 
 .archiv-panel-group {
     color: #555;
-    flex: 1;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .archiv-panel-group:not(:empty)::before {
     content: '· ';
     color: #ccc;
+}
+
+/* Stadtname im Panel – klein und kursiv unter dem Gruppenname */
+.archiv-panel-city {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 0.7rem;
+    color: #999;
+    font-style: italic;
+    line-height: 1.3;
+    padding-bottom: 2px;
 }
 
 /* Kleines Hover-Tooltip über Karten-Kreis */
@@ -3649,7 +3671,7 @@ section.team-section.bg-cream {
 .archiv-search-bar {
     position: relative;
     margin: 0;
-    flex: 0 0 340px;
+    flex: 0 0 300px;
 }
 
 .archiv-search-bar input {
@@ -3748,7 +3770,7 @@ section.team-section.bg-cream {
 .archiv-col-jahr { width: 65px; }
 .archiv-col-flag { width: 36px; text-align: center; font-size: 1.2rem; }
 .archiv-flag { text-align: center; font-size: 1.15rem; }
-.archiv-col-land { width: 105px; }
+.archiv-col-land { width: 85px; }
 .archiv-col-stadt { width: 160px; }
 
 .archiv-no-results {

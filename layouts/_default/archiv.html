@@ -82,6 +82,71 @@
   "schweiz" "🇨🇭"
 }}
 
+{{/* ── Land → ISO für mapDetails-Generierung aus YAML ── */}}
+{{ $landToISO := dict
+  "germany" "DE"  "deutschland" "DE"
+  "france" "FR"   "frankreich" "FR"
+  "poland" "PL"   "polen" "PL"
+  "great britain" "GB"  "scotland" "GB"  "england" "GB"
+  "czech republic" "CZ"  "tschech republic" "CZ"  "cssr" "CZ"  "czechoslovakia" "CZ"
+  "austria" "AT"  "österreich" "AT"
+  "finland" "FI"  "finnland" "FI"
+  "serbia" "RS"   "yugoslavia" "RS"  "jugoslawien" "RS"
+  "belgium" "BE"  "belgien" "BE"
+  "latvia" "LV"   "lettland" "LV"
+  "spain" "ES"    "spanien" "ES"  "baskenland" "ES"
+  "sweden" "SE"   "schweden" "SE"
+  "hungary" "HU"  "hungaria" "HU"  "ungarn" "HU"
+  "north macedonia" "MK"  "macedonia" "MK"
+  "netherlands" "NL"  "the netherlands" "NL"  "niederlande" "NL"
+  "greece" "GR"   "greeke" "GR"  "griechenland" "GR"
+  "portugal" "PT"
+  "romania" "RO"  "rumänien" "RO"
+  "belarus" "BY"  "belorussia" "BY"  "weißrussland" "BY"
+  "bulgaria" "BG" "bulgarien" "BG"
+  "denmark" "DK"  "danmark" "DK"  "dänemark" "DK"
+  "croatia" "HR"  "kroatien" "HR"
+  "italy" "IT"    "italien" "IT"
+  "turkey" "TR"   "türkei" "TR"
+  "georgia" "GE"  "georgien" "GE"
+  "slovakia" "SK" "slovak republic" "SK"  "slowakei" "SK"
+  "russia" "RU"   "ussr" "RU"
+  "ukraine" "UA"
+  "ireland" "IE"  "irland" "IE"
+  "norway" "NO"   "norwegen" "NO"
+  "usa" "US"
+  "mexico" "MX"   "mexiko" "MX"
+  "bosnia and herzegovina" "BA"  "bosnien" "BA"
+  "estonia" "EE"  "estland" "EE"
+  "israel" "IL"
+  "nepal" "NP"
+  "switzerland" "CH"  "schweiz" "CH"
+}}
+
+{{/* ── mapDetails aus YAML aufbauen: { ISO: [[jahr, gruppe, stadt], ...] } ── */}}
+{{ $sc := newScratch }}
+{{ range .Site.Data.archiv }}
+  {{ $j := .jahr }}
+  {{ range .gruppen }}
+    {{ $lk := .land | lower }}
+    {{ if hasPrefix $lk "spain" }}{{ $lk = "spain" }}{{ end }}
+    {{ if hasPrefix $lk "denmark" }}{{ $lk = "denmark" }}{{ end }}
+    {{ if hasPrefix $lk "ireland" }}{{ $lk = "ireland" }}{{ end }}
+    {{ $iso := index $landToISO $lk | default "" }}
+    {{ if $iso }}
+      {{ $existing := $sc.Get $iso | default (slice) }}
+      {{ $entry := slice $j (.tanzgruppe | default "") (.stadt | default "") }}
+      {{ $sc.Set $iso ($existing | append $entry) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $isos := slice "DE" "FR" "PL" "GB" "CZ" "AT" "FI" "RS" "BE" "LV" "ES" "SE" "HU" "MK" "NL" "GR" "PT" "RO" "BY" "BG" "DK" "HR" "IT" "TR" "GE" "SK" "RU" "UA" "IE" "NO" "US" "MX" "BA" "EE" "IL" "NP" "CH" }}
+{{ $md := dict }}
+{{ range $isos }}
+  {{ $data := $sc.Get . }}
+  {{ if $data }}{{ $md = merge $md (dict . $data) }}{{ end }}
+{{ end }}
+
 <article class="page-content archiv-page">
 
     <!-- Überschrift -->
@@ -233,7 +298,7 @@
             {iso:"NP",lat:28.394,lng:84.124,name:"Nepal",count:1,years:"1974"},
             {iso:"CH",lat:46.818,lng:8.228,name:"Schweiz",count:1,years:"1953"}
           ];
-          var mapDetails={"LV":[[1992,"Vizbulite"],[1993,"Die Schlingel"],[1994,"Vizbulite"],[1999,"Vizbulite"],[2002,"Vizbulite"],[2006,"Ex-Vizbulite"],[2008,"Ex-Vizbulite"],[2012,"Ex-Vizbulite"],[2017,"Volkstanzensemble JDK 'Vizbulite"],[2025,"Vizbulite"]],"CZ":[[1966,"USMEV"],[1967,""],[1968,""],[1969,"Podluzan"],[1985,"Cesky Raj"],[1987,"Svetlovan"],[1988,"Vrsatec"],[1990,"Cesky Raj"],[1993,"Jaro"],[1997,"Podjavořičan"],[1998,"Kalamajka"],[2006,"Podjavořičan"],[2013,"Lidová muzika z Chrástu"],[2016,"Lidova muzika z Chrástu"],[2025,"Dolina"]],"BA":[[2025,"VESELIN MASLEŠA"]],"DE":[[1953,"Individual participants"],[1954,"Individual participants"],[1955,""],[1956,"Deutsche Turnerjugend"],[1957,"Wandervogel"],[1958,""],[1958,""],[1959,"Deutscher Wanderbund"],[1961,"Deutscher Wanderbund"],[1962,"Deutsche Jugend des Ostens"],[1963,"Deutscher Wanderbund"],[1964,"Wandervogel"],[1965,""],[1966,""],[1967,""],[1968,""],[1969,"Landjugendgruppe"],[1970,"Landjugendgruppe"],[1972,"Hans-von-der-Au"],[1973,"Landjugendgruppe"],[1974,"Aulataler Volkstumsgruppe"],[1974,"Neustädter Volkstanzkreis"],[1976,""],[1976,"Ballettgruppe"],[1978,"Fröhlicher Kreis"],[1979,"Naturfreunde Fürstenhagen"],[1980,""],[1982,"Die Hessen"],[1982,"Hans-von-der-Au"],[1983,"Fröhlicher Kreis"],[1984,"Die Burgwaldskälwer"],[1985,"Hans-von-der-Au"],[1986,"Die Hessen"],[1986,"Die Naturfreunde"],[1987,"Fröhlicher Kreis"],[1988,"Fröhlicher Kreis"],[1989,"Hans-von-der-Au"],[1990,"Ballett-Studio Fischer"],[1990,"Vogteier Trachtengruppe"],[1991,"Die Ludwigsteiner"],[1991,"Tanzkreis Werrataler"],[1992,"Die Ludwigsteiner"],[1993,"Die Ludwigsteiner"],[1994,"Die Ludwigsteiner"],[1995,"Die Ludwigsteiner"],[1996,"Die Ludwigsteiner"],[1997,"Die Ludwigsteiner"],[1998,"Hans-von-der-Au"],[1999,"Die Ludwigsteiner"],[2000,"Die Ludwigsteiner"],[2001,"Die Ludwigsteiner"],[2002,"Die Ludwigsteiner"],[2003,"Die Ludwigsteiner"],[2005,"Tanzkreis Werrataler"],[2008,"Die Ludwigsteiner"],[2009,"Die Ludwigsteiner"],[2010,"Die Ludwigsteiner"],[2012,"Die Ludwigsteiner"],[2013,"Die Ludwigsteiner"],[2015,"Jugendgruppe Schlitzerländer"],[2016,"Die Ludwigsteiner"],[2017,"Die Ludwigsteiner"],[2018,"Die Ludwigsteiner"],[2019,"Folklore-Kooperationsgruppe Ludwigsteiner"],[2023,"Die Ludwigsteiner"],[2024,"Die Ludwigsteiner"],[2025,"Die Ludwigsteiner"]],"HR":[[2005,"Kud Jedinstvo"],[2012,"Ivan Goran Kovačić"],[2019,"KUD Salona"],[2024,"Ivan Goran Kovačić"]],"ES":[[1982,""],[1989,"Goizaldi"],[1995,"Ballet Elena Munguia"],[1999,"Grupo Granada"],[2003,"Arantzarte Dantza Taldea"],[2006,"Grupo Granada"],[2009,"Gero Axular Dantza Taldea"],[2010,"Fran Allegre"],[2015,"Gero Axular Dantza Taldea"],[2024,"Gero Axular Dantza Taldea"]],"US":[[2019,"Irish-Folk Ensemble Trinity"],[2024,"Irish-Folk Ensemble Trinity"]],"RO":[[1972,"Aro-Edelweiß"],[1974,"Aro-Edelweiß"],[2004,"Lugojana"],[2012,"Lugojana"],[2024,"Somesul Napoca Ensemble"]],"FI":[[1962,"Varkauden Tanhuujat"],[1963,"Varkauden Tanhuujat"],[1964,"Varkauden Tanhuujat"],[1965,"Einzelteilnehmer"],[1966,"Varkauden Tanhuujat"],[1967,"Varkauden Tanhuujat"],[1970,"Varkauden Tanhuujat"],[1971,"Varkauden Tanhuujat"],[1978,"Varkauden Tanhuujat"],[1991,""],[1997,"Vinksin Vonksin"],[2013,"Finlands Svenska Folkdansring"],[2023,"Motora"]],"FR":[[1954,""],[1955,""],[1956,""],[1957,"Individual participants"],[1958,"La Ciamada"],[1959,"Rodelet Félibréen"],[1959,"Tarandoleur Cheminots"],[1961,"La Couqueto"],[1962,"I Macchiaghioli"],[1963,"Ferandoleur cheminots"],[1963,"Lou Ramelet Moundi"],[1964,"La Couqueto"],[1966,"Assemblée du Vieux"],[1966,"Lou Ramelet Moundi"],[1967,"Groupe d'Art Basque Crai Bat"],[1968,""],[1969,"La Couqueto"],[1970,"La Couqueto"],[1971,"Lou Ramelet Moundi"],[1973,"La Couqueto"],[1976,"La Couqueto"],[1978,"Le Quadrille Occitan"],[1979,"De Landouwe"],[1980,"Le Quadrille Occitan"],[1982,"Le Quadrille Occitan"],[1983,"La Couqueto"],[1984,"Le Quadrille Occitan"],[1986,"Le Quadrille Occitan"],[1988,"Le Quadrille Occitan"],[1992,"Le Quadrille Occitan"],[1996,"Le Quadrille Occitan"],[2001,"Le Quadrille Occitan"],[2006,"Le Quadrille Occitan"],[2013,"Le Quadrille Occitan"],[2019,"Le Quadrille Occitan Toulouse"],[2023,"Le Quadrille Occitan"]],"MK":[[1992,"Oteks"],[1994,"Oteks"],[2001,"Oteks"],[2007,"Kud Oteks"],[2015,"Oteks Folk"],[2023,"KUD Oteks Folk"]],"PL":[[1970,"Landwirtschaftliche Hochschule"],[1971,"Marie Curie-Sklodowska Universität"],[1972,"Slowianki"],[1973,"Slowianki"],[1974,"Slowianki"],[1976,"Sing- und Spielkreis"],[1978,"Landwirtschaftliche Hochschule"],[1980,"Landwirtschaftliche Hochschule"],[1983,"Wislok"],[1984,"Wislok"],[1985,"Beskid"],[1986,"Wislok"],[1987,""],[1991,"Mädchenchor"],[1996,"Slowianki"],[2001,"Kaszubskie Nuty"],[2002,"Tanzensemble Walbrzych"],[2006,"Kaszubskie Nuty"],[2010,"Bielsko Folklore Dance Ensemble"],[2018,"Kaszubskie Nuty Koscierzyna"],[2023,"Slowianki"]],"BE":[[1962,"Volkskulturele Gemeenschap"],[1963,"Lange Wapper"],[1964,"Lange Wapper"],[1965,"Vereinigte ukrainische Jugend"],[1966,"De Landouwe"],[1967,"De Langman"],[1969,"De Vliier"],[1972,"De Vliier"],[1979,"AKUD Mirce Acev"],[1980,"De Langeman"],[1994,"Sint Sebastiansgilde"],[2019,"Folklore Ensemble Gelmel"]],"EE":[[2018,"TLÜ SOLVEDAJA"]],"BY":[[1991,"Krupizkije Musyki"],[1992,"Praleski"],[1994,"Folkloreorchester"],[1997,"Krupizkije Musyki"],[2018,"Folk group VALACHOBNIKI"]],"GB":[[1956,""],[1957,""],[1958,""],[1959,""],[1963,""],[1965,"The Wayfarers Folk Dance Club"],[1966,"The Wayfarers Folk Dance Club"],[1967,"The Wayfarers Folk Dance Club"],[1968,"The Wayfarers Folk Dance Club"],[1969,"The Wayfarers Folk Dance Club"],[1970,"The Wayfarers Folk Dance Club"],[1971,"The Wayfarers Folk Dance Club"],[1973,"The Wayfarers Folk Dance Club"],[1979,"La Couqueto"],[1996,"Edinburgh Uni. Country Dance Society"],[1998,"Edinburgh Uni. Country Dance Society"],[2006,"Edinburgh Uni. Country Dance Society"],[2018,"Edinburgh Uni. Country Dance Society"]],"HU":[[1968,""],[1971,"Banyaipari Dolgozok"],[1982,"Ungarndeutsche Tanzgruppe"],[1984,"Ungarndeutsche Tanzgruppe"],[1986,"Ungarndeutsche Tanzgruppe"],[1987,"Ungarndeutsche Tanzgruppe"],[1995,"Vidroczici"],[2013,"Nagyabaracska Folkdance Group"],[2017,"Donauschwäbisches Volkstanzensemble"]],"TR":[[2005,"Sisli Culture and Tourism Association"],[2017,"Merzifon Belediyesi Halkoyunlari"]],"NL":[[1961,"Volksdans Centrum"],[1962,"Volksdans Centrum"],[1964,"Volksdans Centrum"],[2007,"Holland Express"],[2010,"Holland Express"],[2017,"Kansemble"]],"GE":[[2010,"Nartebi"],[2016,"Folkloreensemble Marula"]],"IT":[[1980,"Naturfreunde Fürstenhagen"],[1990,"Associazione pro Susa"],[2004,"I Timetos"],[2016,"Centro Culturale Terrazzani"]],"BG":[[1988,"Neftohimik"],[2003,"Rouschoukleeche"],[2008,"Rouschoukleeche"],[2009,"The Children of Sevlievo"],[2015,"The Children of Sevlievo"]],"RS":[[1962,""],[1964,""],[1966,"Koleda"],[1967,"Koleda"],[1969,"Adria"],[1970,"Adria"],[1971,"Adria"],[1976,"Koleda"],[1979,"The Wayfarers Folk Dance Club"],[1980,"AKUD Mirce Acev"],[1989,"Ivan Mladen"],[2004,"Folklor Group Teleoptik"],[2010,"Gradac"]],"IL":[[2009,"Shalom Israel"]],"SK":[[2007,"Vihorlat"],[2009,"Rozmarija"]],"MX":[[1969,"15 Sozialarbeiterinnen"],[2008,"Folkloreensemble Tsasnà"]],"GR":[[1983,"Volkstanzgruppe des Lyceums"],[1987,"Georgios K. Fotiadis"],[1995,"Musical Dancing Club of Alexandria"],[1998,"Horeftikos"],[2000,"Poutiakos Siligos"],[2008,"Cultural Association of Lagadas"]],"DK":[[1953,"Individual participants"],[1993,"The Junior Dance Team"],[1996,"The Junior Dance Team"],[2004,"Dancing Danes"],[2006,"Dancing Danes"]],"RU":[[1990,"Krupizkije Musyki"],[2005,"Russian Group Tziganes Romen"]],"SE":[[1953,"Individual participants"],[1955,""],[1958,""],[1961,""],[1965,""],[1966,"Svenska ungdomringen"],[1968,""],[1972,""],[1974,""],[2003,"Dalarnas Ungdomsdanslag"]],"UA":[[1993,"Horitsvit"],[2002,"Veselka"]],"IE":[[1978,""],[2000,"Geraldine Clifford Folk Group"]],"PT":[[1962,""],[1968,""],[1983,""],[1989,"As Lavradeiros"],[1991,"Rancho Folclorico de Godim"],[2000,"Academia de Dancas do Norte"]],"NO":[[1985,"Haugtussa Leikarring"],[1986,"Haugtussa Leikarring"]],"AT":[[1953,""],[1954,""],[1955,""],[1956,""],[1957,""],[1958,""],[1959,""],[1961,""],[1962,""],[1964,""],[1965,""],[1973,""],[1976,"Sporthochschule"]],"NP":[[1974,"Bairab Dance Ensemble"]],"CH":[[1953,"Individual participants"]]};
+          var mapDetails={{ $md | jsonify }};
 
           // ISO-2-Buchstaben → Flaggen-Emoji (Unicode Regional Indicator)
           function isoToFlag(iso) {
@@ -248,13 +313,16 @@
             var details = mapDetails[c.iso] || [];
             var listHTML = '';
             details.forEach(function(d) {
-              var yr = d[0];
-              var gr = d[1] || '';
-              var grHTML = gr ? '<span class="archiv-panel-group">' + gr + '</span>' : '';
+              var yr   = d[0];
+              var gr   = d[1] || '';
+              var city = d[2] || '';
+              var grHTML   = gr   ? '<span class="archiv-panel-group">' + gr + '</span>'
+                                  : '<span class="archiv-panel-group"></span>';
+              var cityHTML = city ? '<span class="archiv-panel-city">' + city + '</span>' : '';
               listHTML += '<div class="archiv-panel-row" data-year="' + yr
                 + '" data-gruppe="' + gr.replace(/"/g,'&quot;') + '" title="In der Tabelle anzeigen ↓">'
                 + '<span class="archiv-panel-year">' + yr + '</span>'
-                + grHTML + '</div>';
+                + grHTML + cityHTML + '</div>';
             });
             panelCountryEl.textContent = c.name;
             panelFlagEl.textContent   = flag;
