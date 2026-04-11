@@ -1033,21 +1033,21 @@ body.menu-open .leaflet-container {
 .mach-mit-section-2 { background: #E8E4DC; }
 .mach-mit-section-3 { background: #E8E4DC; }
 
-/* Section 3 (Spende): 3-Spalten-Layout – Foto | Text | Widget */
+/* Section 3 (Spende): 3-Spalten-Layout 1/3 Foto | 1/3 Text | 1/3 Widget */
 .mach-mit-section-3 {
     height: auto;
-    min-height: 500px;
+    min-height: 520px;
     align-items: stretch;
 }
 .mach-mit-section-3 .mach-mit-photo-side {
-    flex: 0 0 22%;
+    flex: 0 0 33.333%;
 }
 .mach-mit-section-3 .mach-mit-photo-side img {
-    object-position: center top;
+    object-position: center;
 }
 .spende-text-col {
-    flex: 1;
-    padding: 2.5rem 2.5rem;
+    flex: 0 0 33.333%;
+    padding: 2.5rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1069,10 +1069,11 @@ body.menu-open .leaflet-container {
     margin: 0;
 }
 .spende-widget-col {
-    flex: 0 0 290px;
-    padding: 1.8rem 1.8rem 1.8rem 0;
+    flex: 0 0 33.333%;
+    padding: 2rem 2rem;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .mach-mit-photo-side {
@@ -3938,10 +3939,42 @@ section.team-section.bg-cream {
     overflow: hidden;
     background: #fff;
     width: 100%;
+    max-width: 360px;
+}
+
+.spende-tabs {
+    display: flex;
+    background: rgba(139,83,77,0.05);
+    border-bottom: 1px solid rgba(139,83,77,0.18);
+}
+
+.spende-tab {
+    flex: 1;
+    padding: 0.75rem 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+}
+
+.spende-tab.active {
+    background: #fff;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+.spende-tab-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .spende-soon-badge {
-    font-size: 0.62rem;
+    font-size: 0.6rem;
     background: #bbb;
     color: #fff;
     padding: 0.1rem 0.38rem;
@@ -3952,30 +3985,14 @@ section.team-section.bg-cream {
     line-height: 1.4;
 }
 
-.spende-paypal-row {
-    padding: 0.7rem 1rem;
-    border-top: 1px solid rgba(139,83,77,0.12);
-    text-align: center;
-}
-
-.spende-paypal-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.45rem 1.2rem;
-    background: none;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    color: #aaa;
-    font-size: 0.82rem;
-    font-family: inherit;
-    cursor: not-allowed;
-    opacity: 0.55;
+.spende-panel {
+    padding: 1.1rem 1.2rem;
 }
 
 .spende-qr-top {
     text-align: center;
-    padding: 1rem 1rem 0.8rem;
+    padding-bottom: 0.9rem;
+    margin-bottom: 0.9rem;
     border-bottom: 1px solid rgba(139,83,77,0.12);
 }
 
@@ -3996,7 +4013,6 @@ section.team-section.bg-cream {
 
 .spende-bank-details {
     text-align: center;
-    padding: 0.8rem 1rem;
 }
 
 .spende-bank-details p {
