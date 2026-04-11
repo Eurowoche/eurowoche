@@ -195,17 +195,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{ range .Site.Data.archiv }}
-                    {{ $nummer := .nummer }}
-                    {{ $jahr := .jahr }}
-                    {{ $gruppen := .gruppen }}
+                    {{ range $outerIdx, $entry := .Site.Data.archiv }}
+                    {{ $nummer := $entry.nummer }}
+                    {{ $jahr := $entry.jahr }}
+                    {{ $gruppen := $entry.gruppen }}
+                    {{ $yearShade := cond (eq (mod $outerIdx 2) 0) "archiv-year-shade-a" "archiv-year-shade-b" }}
                     {{ range $idx, $g := $gruppen }}
                     {{ $landKey := $g.land | lower }}
                     {{ if hasPrefix $landKey "spain" }}{{ $landKey = "spain" }}{{ end }}
                     {{ if hasPrefix $landKey "denmark" }}{{ $landKey = "denmark" }}{{ end }}
                     {{ if hasPrefix $landKey "ireland" }}{{ $landKey = "ireland" }}{{ end }}
                     {{ $flag := index $flags $landKey | default "🏳️" }}
-                    <tr data-nummer="{{ $nummer }}" data-jahr="{{ $jahr }}"{{ if eq $idx 0 }} class="archiv-year-first-row"{{ end }}>
+                    <tr data-nummer="{{ $nummer }}" data-jahr="{{ $jahr }}" class="{{ $yearShade }}{{ if eq $idx 0 }} archiv-year-first-row{{ end }}">
                         {{ if eq $idx 0 }}
                         <td class="archiv-jahr" rowspan="{{ len $gruppen }}">{{ $jahr }}</td>
                         {{ end }}
@@ -237,6 +238,13 @@
           window._archivMap = archivMap; // für Alle-Button und menu:closed
           // Karte nach Menü-Schließen neu rendern
           document.addEventListener('menu:closed', function() { archivMap.invalidateSize(); });
+          // Pin automatisch entfernen beim manuellen Herauszoomen
+          archivMap.on('zoomend', function() {
+            if (archivMap.getZoom() < 6 && activePin) {
+              activePin.remove();
+              activePin = null;
+            }
+          });
           var infoPanel = document.getElementById('archiv-info-panel');
           var panelContent = infoPanel.querySelector('.archiv-panel-content');
           var panelPlaceholder = infoPanel.querySelector('.archiv-panel-placeholder');
@@ -513,7 +521,8 @@
             entry.marker.bringToFront();
             activeMapMarker = entry;
             dimAllMarkers(iso);  // andere Kreise fast transparent
-            placePinAt(entry.c.lat, entry.c.lng, null, 5); // Zoom auf Land, noch kein Label
+            // Sanft auf Land zoomen – kein Pin am Ländermittelpunkt
+            archivMap.flyTo([entry.c.lat, entry.c.lng], 5, { animate: true, duration: 0.75 });
           }
 
           mapCountries.forEach(function(c) {

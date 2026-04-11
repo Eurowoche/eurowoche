@@ -3819,6 +3819,19 @@ section.team-section.bg-cream {
     border-top: 2px solid rgba(139, 83, 77, 0.28) !important;
 }
 
+/* Abwechselnde Jahres-Schattierung: ein Jahr etwas dunkler, eines heller */
+.archiv-table .archiv-year-shade-a td {
+    background-color: rgba(139, 83, 77, 0.055);
+}
+.archiv-table .archiv-year-shade-b td {
+    background-color: rgba(139, 83, 77, 0.015);
+}
+/* Jahr-Zelle behält eigenen Hintergrund */
+.archiv-table .archiv-year-shade-a .archiv-jahr,
+.archiv-table .archiv-year-shade-b .archiv-jahr {
+    background: rgba(245, 240, 232, 0.5);
+}
+
 .archiv-table tbody tr:hover td {
     background: rgba(232, 216, 208, 0.3);
 }
