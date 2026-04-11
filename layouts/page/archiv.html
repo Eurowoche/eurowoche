@@ -123,6 +123,53 @@
   "switzerland" "CH"  "schweiz" "CH"
 }}
 
+{{/* ── ISO → Landesname in Seitensprache ── */}}
+{{ $isoToLand := dict
+  "AT" "Österreich"    "BA" "Bosnien"        "BE" "Belgien"
+  "BG" "Bulgarien"     "BY" "Belarus"         "CH" "Schweiz"
+  "CZ" "Tschechien"    "DE" "Deutschland"     "DK" "Dänemark"
+  "EE" "Estland"       "ES" "Spanien"          "FI" "Finnland"
+  "FR" "Frankreich"    "GB" "Großbritannien"  "GE" "Georgien"
+  "GR" "Griechenland"  "HR" "Kroatien"        "HU" "Ungarn"
+  "IE" "Irland"        "IL" "Israel"           "IT" "Italien"
+  "LV" "Lettland"      "MK" "Nordmazedonien"  "MX" "Mexiko"
+  "NL" "Niederlande"   "NO" "Norwegen"         "NP" "Nepal"
+  "PL" "Polen"         "PT" "Portugal"         "RO" "Rumänien"
+  "RS" "Serbien"       "RU" "Russland"          "SE" "Schweden"
+  "SK" "Slowakei"      "TR" "Türkei"            "UA" "Ukraine"
+  "US" "USA"
+}}
+{{ if eq $.Site.Language.Lang "en" }}{{ $isoToLand = dict
+  "AT" "Austria"       "BA" "Bosnia"           "BE" "Belgium"
+  "BG" "Bulgaria"      "BY" "Belarus"           "CH" "Switzerland"
+  "CZ" "Czech Republic" "DE" "Germany"         "DK" "Denmark"
+  "EE" "Estonia"       "ES" "Spain"             "FI" "Finland"
+  "FR" "France"        "GB" "Great Britain"     "GE" "Georgia"
+  "GR" "Greece"        "HR" "Croatia"           "HU" "Hungary"
+  "IE" "Ireland"       "IL" "Israel"            "IT" "Italy"
+  "LV" "Latvia"        "MK" "North Macedonia"   "MX" "Mexico"
+  "NL" "Netherlands"   "NO" "Norway"             "NP" "Nepal"
+  "PL" "Poland"        "PT" "Portugal"           "RO" "Romania"
+  "RS" "Serbia"        "RU" "Russia"             "SE" "Sweden"
+  "SK" "Slovakia"      "TR" "Turkey"             "UA" "Ukraine"
+  "US" "USA"
+}}{{ end }}
+{{ if eq $.Site.Language.Lang "fr" }}{{ $isoToLand = dict
+  "AT" "Autriche"      "BA" "Bosnie"            "BE" "Belgique"
+  "BG" "Bulgarie"      "BY" "Biélorussie"        "CH" "Suisse"
+  "CZ" "Tchéquie"      "DE" "Allemagne"          "DK" "Danemark"
+  "EE" "Estonie"       "ES" "Espagne"             "FI" "Finlande"
+  "FR" "France"        "GB" "Grande-Bretagne"    "GE" "Géorgie"
+  "GR" "Grèce"         "HR" "Croatie"            "HU" "Hongrie"
+  "IE" "Irlande"       "IL" "Israël"              "IT" "Italie"
+  "LV" "Lettonie"      "MK" "Macédoine du Nord"  "MX" "Mexique"
+  "NL" "Pays-Bas"      "NO" "Norvège"             "NP" "Népal"
+  "PL" "Pologne"       "PT" "Portugal"            "RO" "Roumanie"
+  "RS" "Serbie"        "RU" "Russie"               "SE" "Suède"
+  "SK" "Slovaquie"     "TR" "Turquie"              "UA" "Ukraine"
+  "US" "États-Unis"
+}}{{ end }}
+
 {{/* ── Einträge als Dict-Slice sammeln; wird via jsonify|safeJS ins JS geschrieben ── */}}
 {{- $entries := slice -}}
 {{- range .Site.Data.archiv -}}
@@ -141,19 +188,14 @@
 
 <article class="page-content archiv-page">
 
-    <!-- Überschrift -->
-    <div class="page-intro">
-        <h1>{{ .Title }}</h1>
+    <!-- Überschrift (kombiniert, über dem Foto) -->
+    <div class="archiv-page-heading">
+        <h1>{{ i18n "archive_intro" }}</h1>
     </div>
 
     <!-- Archiv-Foto -->
     <div class="geschichte-wide-photo archiv-hero-photo">
         <img src="/img/archiv/archiv-hero.jpg" alt="Europäische Jugendwoche – Gruppenfoto" loading="lazy">
-    </div>
-
-    <!-- Überschrift zentriert über volle Seitenbreite (AUSSERHALB des Grids) -->
-    <div class="archiv-map-intro">
-        <h2 class="archiv-map-heading">{{ i18n "archive_intro" }}</h2>
     </div>
 
     <!-- Steuerleiste: Suche links | Jahrzehntfilter rechts -->
@@ -206,11 +248,13 @@
                     {{ if hasPrefix $landKey "denmark" }}{{ $landKey = "denmark" }}{{ end }}
                     {{ if hasPrefix $landKey "ireland" }}{{ $landKey = "ireland" }}{{ end }}
                     {{ $flag := index $flags $landKey | default "🏳️" }}
+                    {{ $iso := index $landToISO $landKey | default "" }}
+                    {{ $displayLand := index $isoToLand $iso | default $g.land }}
                     <tr data-nummer="{{ $nummer }}" data-jahr="{{ $jahr }}" class="{{ $yearShade }}{{ if eq $idx 0 }} archiv-year-first-row{{ end }}">
                         {{ if eq $idx 0 }}
                         <td class="archiv-jahr" rowspan="{{ len $gruppen }}">{{ $jahr }}</td>
                         {{ end }}
-                        <td>{{ $g.land }}</td>
+                        <td>{{ $displayLand }}</td>
                         <td class="archiv-flag">{{ $flag }}</td>
                         <td>{{ $g.tanzgruppe }}</td>
                     </tr>

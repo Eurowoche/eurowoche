@@ -149,7 +149,7 @@ other = "Write to us"
 other = "Archive"
 
 [archive_intro]
-other = "All guest groups since 1953"
+other = "Archive of Guest Groups since 1953"
 
 [search_placeholder]
 other = "Search by country, city or group..."
