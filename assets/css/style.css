@@ -3036,7 +3036,7 @@ section.team-section.bg-cream {
 }
 
 .archiv-list-col {
-    flex: 0 0 300px;
+    flex: 0 0 330px;
     min-width: 0;
 }
 
@@ -3052,8 +3052,8 @@ section.team-section.bg-cream {
 
 /* Tabelle in der Liste: exakt gleich hoch wie Karte */
 .archiv-list-col .archiv-table-wrap {
-    height: 540px;
-    max-height: 540px;
+    height: 530px;
+    max-height: 530px;
     overflow-y: auto;
 }
 
@@ -3085,7 +3085,7 @@ section.team-section.bg-cream {
 .archiv-info-panel {
     position: sticky;
     top: 1rem;
-    min-height: 540px;
+    min-height: 530px;
     /* Panel wächst so lang wie nötig, scrollt aber intern ab Viewport-Höhe */
     max-height: calc(100vh - 2rem);
     background: #fff;
@@ -3671,7 +3671,7 @@ section.team-section.bg-cream {
 .archiv-search-bar {
     position: relative;
     margin: 0;
-    flex: 0 0 300px;
+    flex: 0 0 330px;
 }
 
 .archiv-search-bar input {
@@ -3767,10 +3767,10 @@ section.team-section.bg-cream {
 }
 
 .archiv-col-nr { width: 55px; }
-.archiv-col-jahr { width: 65px; }
-.archiv-col-flag { width: 36px; text-align: center; font-size: 1.2rem; }
-.archiv-flag { text-align: center; font-size: 1.15rem; }
-.archiv-col-land { width: 85px; }
+.archiv-col-jahr { width: 34px; }
+.archiv-col-flag { width: 28px; text-align: center; font-size: 1.1rem; }
+.archiv-flag { text-align: center; font-size: 1.1rem; }
+.archiv-col-land { width: 72px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .archiv-col-stadt { width: 160px; }
 
 .archiv-no-results {

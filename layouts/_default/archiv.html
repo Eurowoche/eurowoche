@@ -123,29 +123,21 @@
   "switzerland" "CH"  "schweiz" "CH"
 }}
 
-{{/* ── mapDetails aus YAML aufbauen: { ISO: [[jahr, gruppe, stadt], ...] } ── */}}
-{{ $sc := newScratch }}
-{{ range .Site.Data.archiv }}
-  {{ $j := .jahr }}
-  {{ range .gruppen }}
-    {{ $lk := .land | lower }}
-    {{ if hasPrefix $lk "spain" }}{{ $lk = "spain" }}{{ end }}
-    {{ if hasPrefix $lk "denmark" }}{{ $lk = "denmark" }}{{ end }}
-    {{ if hasPrefix $lk "ireland" }}{{ $lk = "ireland" }}{{ end }}
-    {{ $iso := index $landToISO $lk | default "" }}
-    {{ if $iso }}
-      {{ $existing := $sc.Get $iso | default (slice) }}
-      {{ $entry := slice $j (.tanzgruppe | default "") (.stadt | default "") }}
-      {{ $sc.Set $iso ($existing | append $entry) }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-{{ $isos := slice "DE" "FR" "PL" "GB" "CZ" "AT" "FI" "RS" "BE" "LV" "ES" "SE" "HU" "MK" "NL" "GR" "PT" "RO" "BY" "BG" "DK" "HR" "IT" "TR" "GE" "SK" "RU" "UA" "IE" "NO" "US" "MX" "BA" "EE" "IL" "NP" "CH" }}
-{{ $md := dict }}
-{{ range $isos }}
-  {{ $data := $sc.Get . }}
-  {{ if $data }}{{ $md = merge $md (dict . $data) }}{{ end }}
-{{ end }}
+{{/* ── Einträge als Dict-Slice sammeln; wird via jsonify|safeJS ins JS geschrieben ── */}}
+{{- $entries := slice -}}
+{{- range .Site.Data.archiv -}}
+  {{- $j := .jahr -}}
+  {{- range .gruppen -}}
+    {{- $lk := .land | lower -}}
+    {{- if hasPrefix $lk "spain" }}{{- $lk = "spain" -}}{{ end -}}
+    {{- if hasPrefix $lk "denmark" }}{{- $lk = "denmark" -}}{{ end -}}
+    {{- if hasPrefix $lk "ireland" }}{{- $lk = "ireland" -}}{{ end -}}
+    {{- $iso := index $landToISO $lk | default "" -}}
+    {{- if $iso -}}
+      {{- $entries = $entries | append (dict "y" $j "i" $iso "g" (.tanzgruppe | default "") "c" (.stadt | default "")) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 
 <article class="page-content archiv-page">
 
@@ -235,7 +227,7 @@
         <!-- Europa-Karte -->
         <div class="archiv-map-section">
             <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-            <div id="archiv-map" style="height:540px; border-radius:10px; border:1px solid #ddd; box-shadow:0 2px 12px rgba(0,0,0,0.08);"></div>
+            <div id="archiv-map" style="height:530px; border-radius:10px; border:1px solid #ddd; box-shadow:0 2px 12px rgba(0,0,0,0.08);"></div>
         </div>
 
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -298,7 +290,10 @@
             {iso:"NP",lat:28.394,lng:84.124,name:"Nepal",count:1,years:"1974"},
             {iso:"CH",lat:46.818,lng:8.228,name:"Schweiz",count:1,years:"1953"}
           ];
-          var mapDetails={{ $md | jsonify }};
+          // mapDetails: aus YAML-Dict-Array per JS gruppieren
+          var _raw={{ $entries | jsonify | safeJS }};
+          var mapDetails={};
+          _raw.forEach(function(e){var iso=e.i;if(!mapDetails[iso])mapDetails[iso]=[];mapDetails[iso].push([e.y,e.g,e.c]);});
 
           // ISO-2-Buchstaben → Flaggen-Emoji (Unicode Regional Indicator)
           function isoToFlag(iso) {
