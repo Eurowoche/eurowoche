@@ -195,10 +195,10 @@
     stadt: Donostia (San Sebastian)
     tanzgruppe: Gero axular dantza taldea
   - land: Israel
-    stadt: Prešov
+    stadt: Haifa
     tanzgruppe: Shalom Israel
   - land: Slovak Republic
-    stadt: Sevlievo
+    stadt: Prešov
     tanzgruppe: Rozmarija
   - land: Bulgaria
     stadt: Sevlievo
@@ -408,7 +408,7 @@
     stadt: Krakau
     tanzgruppe: Slowianki
   - land: Germany
-    stadt: Krakau
+    stadt: Witzenhausen
     tanzgruppe: Die Ludwigsteiner
 - nummer: 39
   jahr: 1995
@@ -677,16 +677,16 @@
 - nummer: 24
   jahr: 1979
   gruppen:
-  - land: Belgium
+  - land: Yugoslavia
     stadt: Skopje
     tanzgruppe: AKUD "Mirce Acev
-  - land: France
+  - land: Belgium
     stadt: Genk
     tanzgruppe: De Landouwe
-  - land: Great Britain
+  - land: France
     stadt: Marseille
     tanzgruppe: La Couqueto
-  - land: Yugoslavia
+  - land: Great Britain
     stadt: Birmingham
     tanzgruppe: The Wayfarers Folk Dance Club
   - land: Germany
