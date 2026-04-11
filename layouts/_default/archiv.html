@@ -559,6 +559,30 @@
       this.classList.add('active');
       decadeFilter = this.dataset.decade;
       applyFilters();
+
+      // Bei "Alle": alle Hervorhebungen zurücksetzen + Karte auf Original
+      if (decadeFilter === 'all') {
+        // Tabellenzeilen-Highlight entfernen
+        document.querySelectorAll('#archiv-table .archiv-row-highlight').forEach(function(r) {
+          r.classList.remove('archiv-row-highlight');
+        });
+        // Panel-Zeile aktiv entfernen + Placeholder zeigen
+        if (typeof panelListEl !== 'undefined') {
+          panelListEl.querySelectorAll('.archiv-panel-row.active').forEach(function(r) {
+            r.classList.remove('active');
+          });
+        }
+        if (typeof panelContent !== 'undefined' && typeof panelPlaceholder !== 'undefined') {
+          panelContent.style.display = 'none';
+          panelPlaceholder.style.display = '';
+        }
+        // Karten-Marker zurücksetzen
+        if (typeof resetActiveMarker === 'function') resetActiveMarker();
+        // Karte auf Ursprungsposition zurücksetzen
+        if (typeof archivMap !== 'undefined') {
+          archivMap.setView([52, 10], 4, { animate: true, duration: 0.6 });
+        }
+      }
     });
   });
 
