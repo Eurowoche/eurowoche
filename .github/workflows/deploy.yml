@@ -35,17 +35,18 @@ jobs:
         run: |
           sudo apt-get install -y lftp sshpass
 
-          # Fix: Passwort an BEIDE Ebenen übergeben:
-          # 1) -u user,pass → lftp kennt das Passwort → kein GetPass()-Fehler
-          # 2) SSHPASS env  → sshpass leitet Passwort an den system-ssh weiter
-          # sftp:connect-program → System-SSH statt lftp-eigener Client (behebt 502)
-          SSHPASS="$SFTP_PASS" lftp \
-            -u "$SFTP_USER","$SFTP_PASS" \
-            sftp://$SFTP_HOST \
-            -e "
-              set sftp:connect-program 'sshpass -e ssh -a -x -oStrictHostKeyChecking=no -oPasswordAuthentication=yes';
-              set net:max-retries 3;
-              set net:timeout 60;
-              mirror --reverse --delete public/ $SFTP_DIR/;
-              bye
-            "
+          # Passwort in URL einbetten → verhindert GetPass()-Fehler (kein Terminal in CI)
+          # connect-program mit sshpass → System-SSH nutzt SSHPASS-env für Auth
+          # Wichtig: Script-Datei VOR lftp-Start schreiben → set-Befehle gelten vor open
+          printf '%s\n' \
+            "set sftp:connect-program \"sshpass -e ssh -a -x -oStrictHostKeyChecking=no -oPasswordAuthentication=yes\"" \
+            "set sftp:auto-confirm yes" \
+            "set net:max-retries 2" \
+            "set net:timeout 30" \
+            "open sftp://${SFTP_USER}:${SFTP_PASS}@${SFTP_HOST}:22" \
+            "mirror --reverse --delete public/ ${SFTP_DIR}/" \
+            "bye" \
+            > /tmp/lftp_deploy
+
+          SSHPASS="$SFTP_PASS" lftp -f /tmp/lftp_deploy
+          rm -f /tmp/lftp_deploy
