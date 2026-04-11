@@ -405,6 +405,15 @@
           // Marker-Referenzen für Rückwärts-Lookup (Listenklick → Karte)
           var markerByISO = {};
           var activeMapMarker = null; // aktuell hervorgehobener Marker
+          var activePin = null;       // 3D-Stecknadel über aktivem Marker
+
+          var PIN_ICON = L.divIcon({
+            className: 'archiv-map-pin',
+            html: '<div class="archiv-pin-body"><div class="archiv-pin-shine"></div></div>'
+                + '<div class="archiv-pin-shadow"></div>',
+            iconSize:   [24, 32],
+            iconAnchor: [12, 32]   // Spitze = untere Mitte
+          });
 
           function resetActiveMarker() {
             if (!activeMapMarker) return;
@@ -415,6 +424,7 @@
               color: '#fff', weight: 1.5
             });
             activeMapMarker = null;
+            if (activePin) { activePin.remove(); activePin = null; }
           }
           window._resetActiveMarker = resetActiveMarker;
 
@@ -431,6 +441,12 @@
             entry.marker.bringToFront();
             archivMap.panTo([entry.c.lat, entry.c.lng], { animate: true, duration: 0.5 });
             activeMapMarker = entry;
+            // 3D-Stecknadel exakt über dem Marker platzieren
+            activePin = L.marker([entry.c.lat, entry.c.lng], {
+              icon: PIN_ICON,
+              zIndexOffset: 1000,
+              interactive: false
+            }).addTo(archivMap);
           }
 
           mapCountries.forEach(function(c) {
