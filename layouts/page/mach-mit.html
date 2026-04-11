@@ -53,19 +53,26 @@
                         <span class="spende-soon-badge">{{ if eq .Lang "de" }}demnächst{{ else if eq .Lang "en" }}soon{{ else if eq .Lang "fr" }}bientôt{{ end }}</span>
                     </div>
                 </div>
-                <!-- Panel: QR-Code + Kontoverbindung -->
+                <!-- Panel: Konto → QR → Betrag -->
                 <div class="spende-panel">
-                    <div class="spende-qr-top">
-                        <img src="/img/spende-qr.png" alt="QR-Code Banküberweisung" width="130" height="130">
-                        <p class="spende-qr-hint">{{ if eq .Lang "de" }}In Banking-App öffnen{{ else if eq .Lang "en" }}Open in banking app{{ else if eq .Lang "fr" }}Ouvrir dans votre app bancaire{{ end }}</p>
-                    </div>
-                    <div class="spende-bank-details">
+                    <!-- 1. Kontoverbindung -->
+                    <div class="spende-block spende-block-konto">
                         <p><strong>Arbeitskreis Europäische Jugendwoche</strong></p>
                         <p>Sparkasse Werra-Meißner</p>
                         <p>IBAN:&nbsp;<code>DE23&nbsp;5225&nbsp;0030&nbsp;0050&nbsp;0056&nbsp;69</code></p>
                         <p>BIC:&nbsp;<code>HELADEF1ESW</code></p>
-                        <p class="spende-amount">{{ if eq .Lang "de" }}Betrag: 20 € (oder nach Wunsch){{ else if eq .Lang "en" }}Amount: €20 (or as you wish){{ else if eq .Lang "fr" }}Montant : 20 € (ou selon vos souhaits){{ end }}</p>
-                        <p class="spende-purpose">{{ if eq .Lang "de" }}Verwendungszweck: <em>Spende Eurowoche</em>{{ else if eq .Lang "en" }}Reference: <em>Spende Eurowoche</em>{{ else if eq .Lang "fr" }}Référence : <em>Spende Eurowoche</em>{{ end }}</p>
+                    </div>
+                    <hr class="spende-divider">
+                    <!-- 2. QR-Code -->
+                    <div class="spende-block spende-block-qr">
+                        <img src="/img/spende-qr.png" alt="QR-Code Banküberweisung" width="130" height="130">
+                        <p class="spende-qr-hint">{{ if eq .Lang "de" }}Scannen in Banking-App{{ else if eq .Lang "en" }}Scan in banking app{{ else if eq .Lang "fr" }}Scanner dans l'app bancaire{{ end }}</p>
+                    </div>
+                    <hr class="spende-divider">
+                    <!-- 3. Betrag + Verwendungszweck -->
+                    <div class="spende-block spende-block-betrag">
+                        <p>{{ if eq .Lang "de" }}Betrag: 20 € (oder nach Wunsch){{ else if eq .Lang "en" }}Amount: €20 (or as you wish){{ else if eq .Lang "fr" }}Montant : 20 € (ou selon vos souhaits){{ end }}</p>
+                        <p>{{ if eq .Lang "de" }}Verwendungszweck: <em>Spende Eurowoche</em>{{ else if eq .Lang "en" }}Reference: <em>Spende Eurowoche</em>{{ else if eq .Lang "fr" }}Référence : <em>Spende Eurowoche</em>{{ end }}</p>
                     </div>
                 </div>
             </div>

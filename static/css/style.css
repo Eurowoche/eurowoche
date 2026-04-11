@@ -3989,14 +3989,33 @@ section.team-section.bg-cream {
     padding: 1.1rem 1.2rem;
 }
 
-.spende-qr-top {
+.spende-block {
     text-align: center;
-    padding-bottom: 0.9rem;
-    margin-bottom: 0.9rem;
-    border-bottom: 1px solid rgba(139,83,77,0.12);
 }
 
-.spende-qr-top img {
+.spende-block p {
+    margin: 0.22rem 0;
+    font-size: 0.86rem;
+    line-height: 1.55;
+    color: #333;
+}
+
+.spende-block code {
+    font-family: 'Courier New', Courier, monospace;
+    background: rgba(139,83,77,0.09);
+    padding: 0.08rem 0.32rem;
+    border-radius: 3px;
+    font-size: 0.83em;
+    color: var(--primary);
+    white-space: nowrap;
+}
+
+.spende-block em {
+    font-style: italic;
+    color: var(--primary);
+}
+
+.spende-block-qr img {
     width: 130px;
     height: 130px;
     border-radius: 4px;
@@ -4007,40 +4026,15 @@ section.team-section.bg-cream {
 .spende-qr-hint {
     font-size: 0.72rem;
     color: #999;
-    margin: 0;
+    margin: 0 !important;
     line-height: 1.3;
 }
 
-.spende-bank-details {
-    text-align: center;
-}
-
-.spende-bank-details p {
-    margin: 0.22rem 0;
-    font-size: 0.86rem;
-    line-height: 1.55;
-    color: #333;
-}
-
-.spende-bank-details code {
-    font-family: 'Courier New', Courier, monospace;
-    background: rgba(139,83,77,0.09);
-    padding: 0.08rem 0.32rem;
-    border-radius: 3px;
-    font-size: 0.83em;
-    color: var(--primary);
-    white-space: nowrap;
-}
-
-.spende-amount {
-    margin-top: 0.5rem !important;
-    padding-top: 0.5rem;
-    border-top: 1px solid rgba(139,83,77,0.12);
-}
-
-.spende-purpose em {
-    font-style: italic;
-    color: var(--primary);
+.spende-divider {
+    border: 0;
+    height: 1px;
+    background: rgba(139,83,77,0.14);
+    margin: 0.9rem 0;
 }
 
 
