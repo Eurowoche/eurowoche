@@ -2166,7 +2166,8 @@ h3 {
 
 .maerkte-image-with-overlay {
     height: 100%;
-    min-height: 600px;
+    min-height: 420px;
+    max-height: 500px;
 }
 
 /* Adventsmarkt: Text schmal links, Bild groß rechts */
@@ -2188,7 +2189,8 @@ h3 {
 .maerkte-image-with-overlay img {
     width: 100%;
     height: 100%;
-    min-height: 600px;
+    min-height: 420px;
+    max-height: 500px;
     object-fit: cover;
     display: block;
     transition: transform 0.4s;
@@ -3030,6 +3032,7 @@ section.team-section.bg-cream {
 .archiv-list-col {
     flex: 1;
     min-width: 0;
+    margin-top: -20px;
 }
 
 .archiv-map-col {
@@ -3068,6 +3071,7 @@ section.team-section.bg-cream {
 .archiv-info-panel {
     position: sticky;
     top: 1rem;
+    min-height: 540px;
     /* Panel wächst so lang wie nötig, scrollt aber intern ab Viewport-Höhe */
     max-height: calc(100vh - 2rem);
     background: #fff;
@@ -4278,7 +4282,7 @@ section.team-section.bg-cream {
 
 /* Archiv-Photo: zentriert, mit mehr Abstand nach unten zur Überschrift */
 .archiv-hero-photo {
-    max-width: 900px;
+    max-width: 1080px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3rem;   /* a) Abstand Foto → Überschrift */
