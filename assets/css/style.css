@@ -3584,19 +3584,18 @@ section.team-section.bg-cream {
     padding: 0;
 }
 
-/* Steuerleiste über allen drei Spalten */
+/* Steuerleiste — gleicher Gap und Padding wie .archiv-layout darunter */
 .archiv-controls-row {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    padding: 0.75rem 2rem;
+    gap: 0.6rem;           /* = gap in .archiv-layout */
+    padding: 0.6rem 2rem;  /* horizontales Padding = .archiv-layout */
     background: #faf8f5;
     border-radius: 8px;
-    margin: 0 2rem 0.75rem;
-    flex-wrap: wrap;
+    margin: 0 0 0.75rem;   /* kein horizontaler Margin → bündig mit Spalten */
 }
 
-/* Jahrzehnt-Filter — nimmt restlichen Platz rechts */
+/* Jahrzehnt-Filter — über Karte+Panel zentriert */
 .archiv-decade-filter {
     display: flex;
     flex-wrap: wrap;
@@ -3604,7 +3603,7 @@ section.team-section.bg-cream {
     gap: 0.4rem;
     flex: 1;
     margin: 0;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .archiv-decade-label {
