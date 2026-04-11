@@ -259,17 +259,22 @@
             panelContent.style.display = 'block';
           }
 
-          // Klick auf Panel-Zeile → passende Tabellenzeile anzeigen und anspringen
+          // Klick auf Panel-Zeile → Tabellenzeile anzeigen, Panel-Zeile aktiv markieren
           panelListEl.addEventListener('click', function(e) {
             var row = e.target.closest('.archiv-panel-row');
             if (!row) return;
-            var year    = parseInt(row.dataset.year, 10);
-            var gruppe  = row.dataset.gruppe || '';
+            // Panel-Zeile aktiv markieren
+            panelListEl.querySelectorAll('.archiv-panel-row.active').forEach(function(r) {
+              r.classList.remove('active');
+            });
+            row.classList.add('active');
+            var year   = parseInt(row.dataset.year, 10);
+            var gruppe = row.dataset.gruppe || '';
             scrollToArchivRow(year, gruppe);
           });
 
           function scrollToArchivRow(year, gruppe) {
-            // 1. Jahrzehnt-Filter aktivieren (nutzt den bestehenden Button-Handler)
+            // 1. Jahrzehnt-Filter aktivieren
             var decade = String(Math.floor(year / 10) * 10);
             var btn = document.querySelector('.archiv-decade-btn[data-decade="' + decade + '"]');
             if (btn) btn.click();
@@ -278,33 +283,46 @@
             var inp = document.getElementById('archiv-search');
             if (inp && inp.value) { inp.value = ''; inp.dispatchEvent(new Event('input')); }
 
-            // 3. Passende Tabellenzeile finden
-            var table    = document.getElementById('archiv-table');
-            var yearRows = table.querySelectorAll('tbody tr[data-jahr="' + year + '"]');
-            var target   = null;
+            // 3. Zeilen finden: erste Zeile des Jahres (mit archiv-jahr-Zelle) + Zielzeile
+            var table = document.getElementById('archiv-table');
+            var allRows = table.querySelectorAll('tbody tr');
+            var firstOfYear = null;  // erste Zeile dieses Jahres (hat die Jahres-td mit rowspan)
+            var target = null;       // Zeile mit der gesuchten Tanzgruppe
 
-            if (gruppe) {
-              yearRows.forEach(function(tr) {
-                if (target) return;
-                var tds = tr.querySelectorAll('td');
-                var lastTd = tds[tds.length - 1];
-                if (lastTd && lastTd.textContent.trim() === gruppe) target = tr;
-              });
-            }
-            if (!target && yearRows.length) target = yearRows[0];
+            allRows.forEach(function(tr) {
+              if (parseInt(tr.dataset.jahr, 10) !== year) return;
+              if (!firstOfYear) firstOfYear = tr;  // erste Zeile des Jahres
+              if (!target) {
+                if (gruppe) {
+                  var tds = tr.querySelectorAll('td');
+                  var lastTd = tds[tds.length - 1];
+                  if (lastTd && lastTd.textContent.trim() === gruppe) target = tr;
+                } else {
+                  target = tr;
+                }
+              }
+            });
+
+            if (!target && firstOfYear) target = firstOfYear;
             if (!target) return;
 
-            // 4. Seite zur Tabelle scrollen, dann innerhalb des Wrappers anspringen
+            // 4. Vorherige Highlights entfernen
+            table.querySelectorAll('.archiv-row-highlight').forEach(function(r) {
+              r.classList.remove('archiv-row-highlight');
+            });
+
+            // 5. Scroll: erste Zeile des Jahres ganz nach oben (Jahreszahl sichtbar)
             var wrap = document.querySelector('.archiv-table-wrap');
-            wrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             setTimeout(function() {
-              var wrapRect = wrap.getBoundingClientRect();
-              var rowRect  = target.getBoundingClientRect();
-              wrap.scrollTop += rowRect.top - wrapRect.top - 56; // 56px = thead-Höhe
-              // 5. Zeile kurz aufleuchten lassen
+              var thead      = table.querySelector('thead');
+              var theadH     = thead ? thead.offsetHeight : 0;
+              var wrapTop    = wrap.getBoundingClientRect().top;
+              var anchorTop  = firstOfYear.getBoundingClientRect().top;
+              wrap.scrollTop += anchorTop - wrapTop - theadH;
+
+              // 6. Zielzeile dauerhaft hervorheben (bleibt bis zum nächsten Klick)
               target.classList.add('archiv-row-highlight');
-              setTimeout(function() { target.classList.remove('archiv-row-highlight'); }, 1800);
-            }, 320);
+            }, 350);
           }
 
           // Länder außerhalb des europäischen Kartenausschnitts → Inset-Box

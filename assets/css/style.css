@@ -3403,14 +3403,19 @@ section.team-section.bg-cream {
     background: rgba(139, 83, 77, 0.09);
 }
 
-/* Tabellenzeile aufleuchten lassen nach Klick aus Panel */
-@keyframes archiv-flash {
-    0%   { background: rgba(139, 83, 77, 0.28); }
-    100% { background: transparent; }
+/* Tabellenzeile dauerhaft hervorheben (bleibt bis zum nächsten Klick) */
+.archiv-row-highlight td {
+    background: rgba(139, 83, 77, 0.13);
+    border-bottom: 2px solid rgba(139, 83, 77, 0.45);
+    transition: background 0.3s;
 }
 
-.archiv-row-highlight td {
-    animation: archiv-flash 1.8s ease-out forwards;
+/* Aktiver Eintrag im Panel */
+.archiv-panel-row.active {
+    background: rgba(139, 83, 77, 0.12);
+    border-left: 3px solid var(--primary);
+    padding-left: calc(0.4rem - 3px);
+    font-weight: 600;
 }
 
 .archiv-panel-year {
