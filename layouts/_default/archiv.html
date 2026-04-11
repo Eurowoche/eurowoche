@@ -387,13 +387,12 @@
             });
 
             // 5. Scroll: erste Zeile des Jahres ganz nach oben (Jahreszahl sichtbar)
+            // offsetTop = absolute Position im Container (unabhängig vom aktuellen Scroll-Zustand)
             var wrap = document.querySelector('.archiv-table-wrap');
             setTimeout(function() {
-              var thead      = table.querySelector('thead');
-              var theadH     = thead ? thead.offsetHeight : 0;
-              var wrapTop    = wrap.getBoundingClientRect().top;
-              var anchorTop  = firstOfYear.getBoundingClientRect().top;
-              wrap.scrollTop += anchorTop - wrapTop - theadH;
+              var thead  = table.querySelector('thead');
+              var theadH = thead ? thead.offsetHeight : 0;
+              wrap.scrollTop = firstOfYear.offsetTop - theadH;
 
               // 6. Zielzeile dauerhaft hervorheben (bleibt bis zum nächsten Klick)
               target.classList.add('archiv-row-highlight');
