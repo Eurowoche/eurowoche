@@ -1033,9 +1033,12 @@ body.menu-open .leaflet-container {
 .mach-mit-section-2 { background: #E8E4DC; }
 .mach-mit-section-3 { background: #E8E4DC; }
 
-/* Section 3 (Spende): schmaleres Foto damit Turm sichtbar bleibt + mehr Platz für Widget */
+/* Section 3 (Spende): schmaleres Foto, längerer Abschnitt, mehr Platz für Widget */
+.mach-mit-section-3 {
+    height: 580px;
+}
 .mach-mit-section-3 .mach-mit-photo-side {
-    flex: 0 0 38%;
+    flex: 0 0 28%;
 }
 .mach-mit-section-3 .mach-mit-photo-side img {
     object-position: center top;
@@ -3975,9 +3978,9 @@ section.team-section.bg-cream {
 }
 
 .spende-qr-block img {
-    width: 120px;
-    height: 120px;
-    border-radius: 6px;
+    width: 90px;
+    height: 90px;
+    border-radius: 4px;
     display: block;
 }
 
