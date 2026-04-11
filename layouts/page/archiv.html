@@ -250,7 +250,7 @@
                     {{ $flag := index $flags $landKey | default "🏳️" }}
                     {{ $iso := index $landToISO $landKey | default "" }}
                     {{ $displayLand := index $isoToLand $iso | default $g.land }}
-                    <tr data-nummer="{{ $nummer }}" data-jahr="{{ $jahr }}" class="{{ $yearShade }}{{ if eq $idx 0 }} archiv-year-first-row{{ end }}">
+                    <tr data-nummer="{{ $nummer }}" data-jahr="{{ $jahr }}" data-iso="{{ $iso }}" data-city="{{ $g.stadt | default "" }}" class="{{ $yearShade }}{{ if eq $idx 0 }} archiv-year-first-row{{ end }}">
                         {{ if eq $idx 0 }}
                         <td class="archiv-jahr" rowspan="{{ len $gruppen }}">{{ $jahr }}</td>
                         {{ end }}
@@ -527,6 +527,8 @@
             panelContent.style.display = 'block';
           }
 
+          window._archivShowCountryPanel = showCountryPanel;
+
           // Klick auf Panel-Zeile → Tabellenzeile anzeigen, Pin auf Stadt
           panelListEl.addEventListener('click', function(e) {
             var row = e.target.closest('.archiv-panel-row');
@@ -625,6 +627,7 @@
             restoreAllMarkers();
           }
           window._resetActiveMarker = resetActiveMarker;
+          window._archivMapCountries = mapCountries;  // für Suche
 
           function highlightMarker(iso) {
             resetActiveMarker();
@@ -641,6 +644,7 @@
             // Sanft auf Land zoomen – kein Pin am Ländermittelpunkt
             archivMap.flyTo([entry.c.lat, entry.c.lng], 5, { animate: true, duration: 0.75 });
           }
+          window._archivHighlightMarker  = highlightMarker;
 
           mapCountries.forEach(function(c) {
             if (overseasISOs[c.iso]) return; // Außereuropa → Inset, nicht Karte
@@ -814,16 +818,39 @@
   function applyFilters() {
     var rows = table.querySelectorAll('tbody tr');
     rows.forEach(function(tr) {
-      var jahr = parseInt(tr.dataset.jahr, 10);
+      var jahr    = parseInt(tr.dataset.jahr, 10);
       var decadeOk = (decadeFilter === 'all') || (Math.floor(jahr / 10) * 10 === parseInt(decadeFilter, 10));
-      var text = tr.textContent.toLowerCase();
-      var textOk = (textFilter === '') || text.includes(textFilter);
+      var text    = tr.textContent.toLowerCase();
+      var city    = (tr.dataset.city || '').toLowerCase();
+      var textOk  = (textFilter === '') || text.includes(textFilter) || city.includes(textFilter);
       if (decadeOk && textOk) {
         tr.classList.remove('archiv-hidden');
       } else {
         tr.classList.add('archiv-hidden');
       }
     });
+
+    // Bei Suche ≥ 2 Zeichen: wenn alle sichtbaren Zeilen dasselbe Land haben → Karte zoomen
+    if (textFilter.length >= 2) {
+      var visibleISOs = {};
+      rows.forEach(function(tr) {
+        if (!tr.classList.contains('archiv-hidden') && tr.dataset.iso) {
+          visibleISOs[tr.dataset.iso] = true;
+        }
+      });
+      var isoKeys = Object.keys(visibleISOs);
+      if (isoKeys.length === 1) {
+        var iso = isoKeys[0];
+        if (window._archivMapCountries && window._archivHighlightMarker && window._archivShowCountryPanel) {
+          var country = null;
+          window._archivMapCountries.forEach(function(c) { if (c.iso === iso) country = c; });
+          if (country) {
+            window._archivHighlightMarker(iso);
+            window._archivShowCountryPanel(country);
+          }
+        }
+      }
+    }
   }
 
   // Textsuche
