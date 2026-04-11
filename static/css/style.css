@@ -1025,7 +1025,8 @@ body.menu-open .leaflet-container {
     align-items: stretch;
     padding: 0;
     background: var(--bg-cream);
-    min-height: 400px;
+    height: 480px;      /* feste Höhe – alle drei Abschnitte gleich groß */
+    overflow: hidden;
 }
 
 .mach-mit-section-1 { background: #E8E4DC; }
@@ -4243,9 +4244,9 @@ section.team-section.bg-cream {
     display: block;
 }
 
-/* Tänzer-Foto: oberen Bereich zeigen (Köpfe + Oberkörper) */
+/* Tänzer-Foto: ganz oben zeigen (Banner + Köpfe + Oberkörper) */
 .verein-split-image img.img-dancers {
-    object-position: center 20%;
+    object-position: center top;
 }
 
 /* Musiker-Foto: Mitte zeigen */
@@ -5090,7 +5091,7 @@ section.team-section.bg-cream {
 
     /* Bildausschnitt auf Mobile beibehalten */
     .verein-split-image img.img-dancers {
-        object-position: center 20%;
+        object-position: center top;
     }
 
     .verein-split-image img.img-musicians {
@@ -5230,7 +5231,7 @@ section.team-section.bg-cream {
 
     .mach-mit-section {
         flex-direction: column;
-        min-height: auto;
+        height: auto;
     }
 
     .mach-mit-photo-side {
