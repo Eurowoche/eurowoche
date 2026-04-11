@@ -3,34 +3,29 @@ name: Build & Deploy to Strato
 on:
   push:
     branches:
-      - main          # Jeder Push auf main löst automatisch Deploy aus
-  workflow_dispatch:  # Manueller Start jederzeit möglich (GitHub → Actions → Run)
+      - main
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Code auschecken
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: true
           fetch-depth: 0
 
-      # 2. Hugo installieren
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.147.0'
           extended: true
 
-      # 3. Hugo bauen → erzeugt public/ Ordner
       - name: Build
         run: hugo --minify
 
-      # 4. Per SFTP zu Strato hochladen
-      #    Fix: lftp benutzt jetzt den System-SSH (sshpass) statt eigenen SFTP-Client
       - name: Deploy via SFTP to Strato
         env:
           SFTP_USER: ${{ secrets.SFTP_USER }}
@@ -40,15 +35,17 @@ jobs:
         run: |
           sudo apt-get install -y lftp sshpass
 
-          # lftp-Script in Datei (verhindert Quoting-Probleme mit Sonderzeichen im Passwort)
-          cat > /tmp/deploy.lftp << LFTPEOF
-          set sftp:connect-program "sshpass -e ssh -a -x -oStrictHostKeyChecking=no -oPasswordAuthentication=yes"
-          set net:max-retries 3
-          set net:timeout 60
-          open sftp://${SFTP_USER}@${SFTP_HOST}
-          mirror --reverse --delete --verbose public/ ${SFTP_DIR}/
-          bye
-          LFTPEOF
-
-          # SSHPASS env-Variable → sshpass liest Passwort von dort (nicht im Prozess-Log sichtbar)
-          SSHPASS="$SFTP_PASS" lftp -f /tmp/deploy.lftp
+          # Fix: Passwort an BEIDE Ebenen übergeben:
+          # 1) -u user,pass → lftp kennt das Passwort → kein GetPass()-Fehler
+          # 2) SSHPASS env  → sshpass leitet Passwort an den system-ssh weiter
+          # sftp:connect-program → System-SSH statt lftp-eigener Client (behebt 502)
+          SSHPASS="$SFTP_PASS" lftp \
+            -u "$SFTP_USER","$SFTP_PASS" \
+            sftp://$SFTP_HOST \
+            -e "
+              set sftp:connect-program 'sshpass -e ssh -a -x -oStrictHostKeyChecking=no -oPasswordAuthentication=yes';
+              set net:max-retries 3;
+              set net:timeout 60;
+              mirror --reverse --delete public/ $SFTP_DIR/;
+              bye
+            "

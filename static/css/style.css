@@ -3011,18 +3011,18 @@ section.team-section.bg-cream {
     padding: 0;
 }
 
-/* Karte + Info-Panel nebeneinander */
-/* Zweispaltiges Layout: 2/3 links (Karte + Tabelle), 1/3 rechts (Panel) */
-/* Überschrift ist ERSTE GRID-ZEILE (grid-column: 1/-1) → Panel startet exakt auf Kartenhöhe */
+/* Karte + Info-Panel nebeneinander
+   Formel: linker Rand = 1/6 Seite, Karte = 1/3 Seite → rechter Rand Karte = Seitenmitte
+   Grid 2fr 3fr: Karte nimmt 2/5 der inneren Breite ≈ 1/3 der Seitenbreite */
 .archiv-layout {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 3fr;
     grid-template-rows: auto auto;
-    column-gap: 1.5rem;
+    column-gap: 2rem;
     row-gap: 0;
-    padding: 0 3rem;
+    padding-left: 16.67vw;   /* = 1/6 der Viewport-Breite */
+    padding-right: 2rem;
     box-sizing: border-box;
-    max-width: 1400px;
     width: 100%;
     align-items: start;
 }
@@ -3033,6 +3033,7 @@ section.team-section.bg-cream {
     grid-row: 1;
     margin-bottom: 0.8rem;
     text-align: center;
+    padding-right: 16.67vw;  /* zentriert über Karte+Panel */
 }
 
 .archiv-left-col {
@@ -4022,12 +4023,12 @@ section.team-section.bg-cream {
     object-position: center 25%;
 }
 
-/* Archiv-Photo: größere Höhe und volle Breite */
+/* Archiv-Photo: gleiche Breite und gleicher linker Rand wie die Karte */
 .archiv-hero-photo {
-    max-width: 900px;
-    margin-left: auto;
+    margin-left: 16.67vw;    /* = 1/6 Viewport → gleich wie grid padding-left */
     margin-right: auto;
-    padding: 0 2rem;
+    max-width: calc(100vw / 3);  /* = 1/3 Viewport → gleich wie Kartenbreite */
+    padding: 0 1rem;
 }
 .archiv-hero-photo img {
     height: 500px;
