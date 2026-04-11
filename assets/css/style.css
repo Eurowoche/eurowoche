@@ -422,6 +422,12 @@ h3 {
     visibility: visible;
 }
 
+/* Leaflet-Karten beim offenen Menü komplett ausblenden */
+body.menu-open .leaflet-container {
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
 .nav-overlay-header {
     display: flex;
     justify-content: space-between;

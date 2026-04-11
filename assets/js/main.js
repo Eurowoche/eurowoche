@@ -7,11 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (menuToggle && navOverlay) {
         menuToggle.addEventListener('click', function() {
             navOverlay.classList.add('active');
+            document.body.classList.add('menu-open');
             document.body.style.overflow = 'hidden';
         });
-        
+
         function closeMenu() {
             navOverlay.classList.remove('active');
+            document.body.classList.remove('menu-open');
             document.body.style.overflow = '';
             // Leaflet-Karten neu berechnen (invalidateSize) nach Menü-Schließen
             setTimeout(function() {
