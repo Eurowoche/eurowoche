@@ -177,9 +177,14 @@
         <script>
           document.addEventListener('DOMContentLoaded', function() {
           var archivMap = L.map('archiv-map', { center: [52, 10], zoom: 4, scrollWheelZoom: false });
+          window._archivMap = archivMap; // für Alle-Button und menu:closed
+          // Karte nach Menü-Schließen neu rendern
+          document.addEventListener('menu:closed', function() { archivMap.invalidateSize(); });
           var infoPanel = document.getElementById('archiv-info-panel');
           var panelContent = infoPanel.querySelector('.archiv-panel-content');
           var panelPlaceholder = infoPanel.querySelector('.archiv-panel-placeholder');
+          window._archivPanelContent = panelContent;
+          window._archivPanelPlaceholder = panelPlaceholder;
           var panelCountryEl = document.getElementById('archiv-panel-country');
           var panelFlagEl   = document.getElementById('archiv-panel-flag');
           var panelCountEl  = document.getElementById('archiv-panel-count');
@@ -349,6 +354,7 @@
             });
             activeMapMarker = null;
           }
+          window._resetActiveMarker = resetActiveMarker;
 
           function highlightMarker(iso) {
             resetActiveMarker();
@@ -567,21 +573,14 @@
           r.classList.remove('archiv-row-highlight');
         });
         // Panel-Zeile aktiv entfernen + Placeholder zeigen
-        if (typeof panelListEl !== 'undefined') {
-          panelListEl.querySelectorAll('.archiv-panel-row.active').forEach(function(r) {
-            r.classList.remove('active');
-          });
-        }
-        if (typeof panelContent !== 'undefined' && typeof panelPlaceholder !== 'undefined') {
-          panelContent.style.display = 'none';
-          panelPlaceholder.style.display = '';
-        }
+        var _pList = document.getElementById('archiv-panel-list');
+        if (_pList) _pList.querySelectorAll('.archiv-panel-row.active').forEach(function(r) { r.classList.remove('active'); });
+        if (window._archivPanelContent)     window._archivPanelContent.style.display = 'none';
+        if (window._archivPanelPlaceholder) window._archivPanelPlaceholder.style.display = '';
         // Karten-Marker zurücksetzen
-        if (typeof resetActiveMarker === 'function') resetActiveMarker();
+        if (window._resetActiveMarker) window._resetActiveMarker();
         // Karte auf Ursprungsposition zurücksetzen
-        if (typeof archivMap !== 'undefined') {
-          archivMap.setView([52, 10], 4, { animate: true, duration: 0.6 });
-        }
+        if (window._archivMap) window._archivMap.setView([52, 10], 4, { animate: true, duration: 0.6 });
       }
     });
   });

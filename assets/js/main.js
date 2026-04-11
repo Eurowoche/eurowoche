@@ -10,26 +10,28 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = 'hidden';
         });
         
-        if (navClose) {
-            navClose.addEventListener('click', function() {
-                navOverlay.classList.remove('active');
-                document.body.style.overflow = '';
-            });
+        function closeMenu() {
+            navOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+            // Leaflet-Karten neu berechnen (invalidateSize) nach Menü-Schließen
+            setTimeout(function() {
+                document.dispatchEvent(new CustomEvent('menu:closed'));
+            }, 320); // nach CSS-Transition
         }
-        
+
+        if (navClose) {
+            navClose.addEventListener('click', closeMenu);
+        }
+
         // Close on link click
         navOverlay.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                navOverlay.classList.remove('active');
-                document.body.style.overflow = '';
-            });
+            link.addEventListener('click', closeMenu);
         });
-        
+
         // Close on Escape
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && navOverlay.classList.contains('active')) {
-                navOverlay.classList.remove('active');
-                document.body.style.overflow = '';
+                closeMenu();
             }
         });
     }
