@@ -3032,7 +3032,6 @@ section.team-section.bg-cream {
 .archiv-list-col {
     flex: 1;
     min-width: 0;
-    margin-top: -20px;
 }
 
 .archiv-map-col {
@@ -3581,7 +3580,19 @@ section.team-section.bg-cream {
 }
 
 .archiv-container {
-    padding: 0 0 3rem;
+    padding: 0;
+}
+
+/* Steuerleiste über allen drei Spalten */
+.archiv-controls-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.75rem 2rem;
+    background: #faf8f5;
+    border-radius: 8px;
+    margin: 0 2rem 0.75rem;
+    flex-wrap: wrap;
 }
 
 /* Jahrzehnt-Filter */
@@ -3590,8 +3601,8 @@ section.team-section.bg-cream {
     flex-wrap: wrap;
     align-items: center;
     gap: 0.4rem;
-    margin-bottom: 1rem;
-    margin-top: 3rem;
+    flex: 1;
+    margin: 0;
 }
 
 .archiv-decade-label {
@@ -3625,8 +3636,8 @@ section.team-section.bg-cream {
 
 .archiv-search-bar {
     position: relative;
-    margin-bottom: 1.5rem;
-    margin-top: 1rem;
+    margin: 0;
+    flex: 0 0 220px;
 }
 
 .archiv-search-bar input {

@@ -100,14 +100,8 @@
         <h2 class="archiv-map-heading">Gastgruppen aus Europa und der Welt</h2>
     </div>
 
-    <!-- Dreispaltiges Layout: 1/4 Liste | 2/4 Karte | 1/4 Panel -->
-    <div class="archiv-layout">
-
-      <!-- LINKE SPALTE (1/4): Länderliste + Filter -->
-      <div class="archiv-list-col">
-        <div class="archiv-container">
-
-        <!-- Jahrzehnt-Filter -->
+    <!-- Steuerleiste: Jahrzehntfilter + Suche über alle drei Spalten -->
+    <div class="archiv-controls-row">
         <div class="archiv-decade-filter">
             <span class="archiv-decade-label">Jahrzehnt:</span>
             <button class="archiv-decade-btn active" data-decade="all">Alle</button>
@@ -120,12 +114,18 @@
             <button class="archiv-decade-btn" data-decade="2010">2010er</button>
             <button class="archiv-decade-btn" data-decade="2020">2020er</button>
         </div>
-
-        <!-- Suchmaske -->
         <div class="archiv-search-bar">
             <input type="text" id="archiv-search" placeholder="{{ i18n "search_placeholder" }}" autocomplete="off">
             <span class="archiv-search-icon">🔍</span>
         </div>
+    </div>
+
+    <!-- Dreispaltiges Layout: 1/4 Liste | 2/4 Karte | 1/4 Panel -->
+    <div class="archiv-layout">
+
+      <!-- LINKE SPALTE (1/4): Länderliste -->
+      <div class="archiv-list-col">
+        <div class="archiv-container">
 
         <!-- Scrollbare Tabelle -->
         <div class="archiv-table-wrap">
@@ -177,7 +177,7 @@
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
         <script>
           document.addEventListener('DOMContentLoaded', function() {
-          var archivMap = L.map('archiv-map', { center: [52, 16], zoom: 4, scrollWheelZoom: false });
+          var archivMap = L.map('archiv-map', { center: [52, 22], zoom: 4, scrollWheelZoom: false });
           var infoPanel = document.getElementById('archiv-info-panel');
           var panelContent = infoPanel.querySelector('.archiv-panel-content');
           var panelPlaceholder = infoPanel.querySelector('.archiv-panel-placeholder');
