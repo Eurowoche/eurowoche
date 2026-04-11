@@ -3465,10 +3465,14 @@ section.team-section.bg-cream {
 
 /* ── 3D-Stecknadel bei aktiver Gruppenauswahl ── */
 .archiv-map-pin {
-    filter: drop-shadow(0 4px 5px rgba(0,0,0,0.38));
     overflow: visible !important;
     background: none !important;
     border: none !important;
+}
+.archiv-pin-wrapper {
+    position: relative;
+    display: inline-block;
+    filter: drop-shadow(0 4px 5px rgba(0,0,0,0.38));
 }
 .archiv-pin-body {
     width: 22px;
@@ -3495,6 +3499,22 @@ section.team-section.bg-cream {
     border-radius: 50%;
     margin: 1px auto 0;
     transform: scaleX(1.1);
+}
+/* Stadtname-Label neben der Nadel */
+.archiv-pin-label {
+    position: absolute;
+    left: 26px;
+    top: -5px;
+    white-space: nowrap;
+    background: rgba(255,255,255,0.93);
+    color: #7a2e28;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 2px 7px 2px 6px;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.18);
+    pointer-events: none;
+    letter-spacing: 0.01em;
 }
 
 /* Kleines Hover-Tooltip über Karten-Kreis */

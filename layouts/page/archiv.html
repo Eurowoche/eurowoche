@@ -330,13 +330,29 @@
             return city ? (cityCoords[city.trim()] || null) : null;
           }
 
-          // ── Pin an beliebige Koordinaten setzen ──────────────────────────
-          function placePinAt(lat, lng) {
+          // ── Pin an Koordinaten setzen – mit optionalem Stadtname-Label + Zoom ──
+          function placePinAt(lat, lng, label, zoom) {
             if (activePin) { activePin.remove(); activePin = null; }
+            var labelHTML = label
+              ? '<div class="archiv-pin-label">' + label + '</div>'
+              : '';
+            var icon = L.divIcon({
+              className: 'archiv-map-pin',
+              html: '<div class="archiv-pin-wrapper">'
+                  + '<div class="archiv-pin-body"><div class="archiv-pin-shine"></div></div>'
+                  + '<div class="archiv-pin-shadow"></div>'
+                  + labelHTML + '</div>',
+              iconSize:   [24, 36],
+              iconAnchor: [12, 36]
+            });
             activePin = L.marker([lat, lng], {
-              icon: PIN_ICON, zIndexOffset: 1000, interactive: false
+              icon: icon, zIndexOffset: 1000, interactive: false
             }).addTo(archivMap);
-            archivMap.panTo([lat, lng], { animate: true, duration: 0.5 });
+            if (zoom) {
+              archivMap.flyTo([lat, lng], zoom, { animate: true, duration: 0.75 });
+            } else {
+              archivMap.panTo([lat, lng], { animate: true, duration: 0.5 });
+            }
           }
 
           // ── Alle Marker dimmen / wiederherstellen ────────────────────────
@@ -398,9 +414,9 @@
             var gruppe = row.dataset.gruppe || '';
             var city   = row.dataset.city   || '';
             scrollToArchivRow(year, gruppe);
-            // Pin auf Stadt verschieben (falls Koordinaten bekannt)
+            // Pin auf Stadt mit Zoom + Stadtname-Label
             var coords = lookupCityCoords(city);
-            if (coords) placePinAt(coords[0], coords[1]);
+            if (coords) placePinAt(coords[0], coords[1], city, 7);
           });
 
           // Normalisiert einen Gruppenname: Anführungszeichen entfernen, Whitespace reduzieren
@@ -469,13 +485,7 @@
           var activeMapMarker = null; // aktuell hervorgehobener Marker
           var activePin = null;       // 3D-Stecknadel über aktivem Marker
 
-          var PIN_ICON = L.divIcon({
-            className: 'archiv-map-pin',
-            html: '<div class="archiv-pin-body"><div class="archiv-pin-shine"></div></div>'
-                + '<div class="archiv-pin-shadow"></div>',
-            iconSize:   [24, 32],
-            iconAnchor: [12, 32]   // Spitze = untere Mitte
-          });
+          // PIN_ICON wird dynamisch in placePinAt() erstellt (mit optionalem Stadtname)
 
           function resetActiveMarker() {
             if (!activeMapMarker) return;
@@ -495,14 +505,15 @@
             resetActiveMarker();
             var entry = markerByISO[iso];
             if (!entry) return;
+            // Aktiven Kreis leicht dimmen (sichtbar, aber Nadel ist Hauptfokus)
             entry.marker.setStyle({
-              fillColor: '#7a2e28', fillOpacity: 1,
-              radius: entry.baseRadius + 7, color: '#fff', weight: 2.5
+              fillColor: '#7a2e28', fillOpacity: 0.42,
+              radius: entry.baseRadius + 5, color: '#fff', weight: 2
             });
             entry.marker.bringToFront();
             activeMapMarker = entry;
             dimAllMarkers(iso);  // andere Kreise fast transparent
-            placePinAt(entry.c.lat, entry.c.lng); // Nadel auf Ländermittelpunkt
+            placePinAt(entry.c.lat, entry.c.lng, null, 5); // Zoom auf Land, noch kein Label
           }
 
           mapCountries.forEach(function(c) {
@@ -593,7 +604,7 @@
                   }
                 });
                 var coords = lookupCityCoords(cityForPin);
-                if (coords) placePinAt(coords[0], coords[1]);
+                if (coords) placePinAt(coords[0], coords[1], cityForPin, 7);
               }, 80);
             }
           });
