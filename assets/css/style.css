@@ -3819,17 +3819,12 @@ section.team-section.bg-cream {
     border-top: 2px solid rgba(139, 83, 77, 0.28) !important;
 }
 
-/* Abwechselnde Jahres-Schattierung: ein Jahr etwas dunkler, eines heller */
-.archiv-table .archiv-year-shade-a td {
-    background-color: rgba(139, 83, 77, 0.055);
+/* Abwechselnde Schattierung nur in der Jahreszahl-Zelle */
+.archiv-table .archiv-year-shade-a .archiv-jahr {
+    background-color: rgba(139, 83, 77, 0.12);
 }
-.archiv-table .archiv-year-shade-b td {
-    background-color: rgba(139, 83, 77, 0.015);
-}
-/* Jahr-Zelle behält eigenen Hintergrund */
-.archiv-table .archiv-year-shade-a .archiv-jahr,
 .archiv-table .archiv-year-shade-b .archiv-jahr {
-    background: rgba(245, 240, 232, 0.5);
+    background-color: rgba(139, 83, 77, 0.03);
 }
 
 .archiv-table tbody tr:hover td {
