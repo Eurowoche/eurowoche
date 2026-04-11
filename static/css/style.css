@@ -3011,39 +3011,36 @@ section.team-section.bg-cream {
     padding: 0;
 }
 
-/* Karte + Info-Panel nebeneinander
-   3fr 1fr: Karte breit, Panel schmal (ca. halb so breit wie vorher) */
-.archiv-layout {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: auto auto;
-    column-gap: 2rem;
-    row-gap: 0;
-    padding: 0 2rem;
-    box-sizing: border-box;
-    width: 100%;
-    align-items: start;
+/* Überschrift: zentriert, Abstand nach oben und unten */
+.archiv-map-intro {
+    text-align: center;
+    margin-bottom: 2.5rem;   /* b) Abstand Überschrift → Karte */
 }
 
-/* Überschrift: volle Breite über beide Spalten, schwarz, zentriert */
-.archiv-map-intro {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    margin-bottom: 0.8rem;
-    text-align: center;
+/* Karte + Info-Panel: Flexbox
+   c) Karte = 1.25 × Foto-Breite (900px) = 1125px
+      Linker Rand = max(2rem, 50vw - 1125px) → rechter Rand Karte ≈ Seitenmitte */
+.archiv-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding-left: max(2rem, calc(50vw - 1125px));
+    padding-right: 2rem;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .archiv-left-col {
-    grid-column: 1;
-    grid-row: 2;
+    width: min(1125px, calc(50vw - 1rem));   /* 1.25 × 900px Foto-Breite; rechter Rand ≈ Seitenmitte */
+    flex-shrink: 0;
     min-width: 0;
-    width: 100%;
 }
 
 .archiv-right-col {
-    grid-column: 2;
-    grid-row: 2;
-    min-width: 0;
+    width: 380px;
+    flex-shrink: 0;
+    min-width: 200px;
+    max-width: 380px;
 }
 
 .archiv-info-panel {
@@ -4020,11 +4017,12 @@ section.team-section.bg-cream {
     object-position: center 25%;
 }
 
-/* Archiv-Photo: zentriert wie die Überschrift */
+/* Archiv-Photo: zentriert, mit mehr Abstand nach unten zur Überschrift */
 .archiv-hero-photo {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 3rem;   /* a) Abstand Foto → Überschrift */
     padding: 0 2rem;
 }
 .archiv-hero-photo img {
@@ -5032,24 +5030,18 @@ section.team-section.bg-cream {
     }
 
     /* Archiv: auf Mobile alles untereinander stapeln */
-    .archiv-map-intro {
-        grid-column: 1;  /* nur 1 Spalte auf Mobile */
-    }
-
     .archiv-layout {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         padding: 0 1.5rem;
     }
 
     .archiv-left-col {
-        grid-column: 1;
-        grid-row: 2;
+        width: 100%;
     }
 
     .archiv-right-col {
-        grid-column: 1;
-        grid-row: 3;
         width: 100%;
+        max-width: 100%;
     }
 
     .archiv-info-panel {

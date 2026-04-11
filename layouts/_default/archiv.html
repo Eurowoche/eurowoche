@@ -95,13 +95,12 @@
         <img src="/img/archiv/archiv-hero.jpg" alt="Europäische Jugendwoche – Gruppenfoto" loading="lazy">
     </div>
 
-    <!-- Überschrift + Subtext: volle Breite, AUSSERHALB des Grids → Panel bündig mit Karte -->
+    <!-- Überschrift zentriert über volle Seitenbreite (AUSSERHALB des Grids) -->
     <div class="archiv-map-intro">
         <h2 class="archiv-map-heading">Gastgruppen aus Europa und der Welt</h2>
-        <p class="archiv-map-sub">Kreise zeigen, wie oft ein Land an der Eurowoche teilgenommen hat – je größer, desto mehr Besuche.</p>
     </div>
 
-    <!-- Zweispaltiges Layout: 2/3 Karte+Tabelle, 1/3 Panel -->
+    <!-- Zweispaltiges Layout: Karte links, Panel rechts -->
     <div class="archiv-layout">
 
       <!-- LINKE SPALTE -->
@@ -116,7 +115,7 @@
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
         <script>
           document.addEventListener('DOMContentLoaded', function() {
-          var archivMap = L.map('archiv-map', { center: [51, 22], zoom: 4, scrollWheelZoom: false });
+          var archivMap = L.map('archiv-map', { center: [52, 2], zoom: 4, scrollWheelZoom: false });
           var infoPanel = document.getElementById('archiv-info-panel');
           var panelContent = infoPanel.querySelector('.archiv-panel-content');
           var panelPlaceholder = infoPanel.querySelector('.archiv-panel-placeholder');
