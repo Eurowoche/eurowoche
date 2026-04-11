@@ -3017,31 +3017,52 @@ section.team-section.bg-cream {
     margin-bottom: 2.5rem;   /* b) Abstand Überschrift → Karte */
 }
 
-/* Karte + Info-Panel: Flexbox
-   Karte = 1035px (900px × 1,15), Panel = 437px (380px × 1,15)
-   Karte um 67px nach rechts verschoben (halbe Extrabreite 135px/2)
-   → padding-left = 50vw - 968px (= 50vw - 1035px + 67px) */
+/* Dreispaltiges Layout: 1/4 Liste | 2/4 Karte | 1/4 Panel */
 .archiv-layout {
     display: flex;
     align-items: flex-start;
-    gap: 2rem;
-    padding-left: max(2rem, calc(50vw - 968px));
-    padding-right: 2rem;
+    gap: 1.5rem;
+    padding: 0 2rem;
     box-sizing: border-box;
     width: 100%;
 }
 
-.archiv-left-col {
-    width: 1035px;
-    flex-shrink: 0;
+.archiv-list-col {
+    flex: 1;
     min-width: 0;
 }
 
+.archiv-map-col {
+    flex: 2;
+    min-width: 0;
+}
+
+.archiv-panel-col {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Tabelle in der Liste: scrollbar, gleiche Höhe wie Karte */
+.archiv-list-col .archiv-table-wrap {
+    max-height: 490px;
+    overflow-y: auto;
+}
+
+/* Tabelle kompakter für schmale Spalte */
+.archiv-list-col .archiv-table {
+    font-size: 0.78rem;
+}
+.archiv-list-col .archiv-table th,
+.archiv-list-col .archiv-table td {
+    padding: 3px 5px;
+}
+
+/* Ältere Selektoren bleiben für Kompatibilität */
+.archiv-left-col {
+    min-width: 0;
+}
 .archiv-right-col {
-    width: 437px;
-    flex-shrink: 0;
-    min-width: 200px;
-    max-width: 437px;
+    min-width: 0;
 }
 
 .archiv-info-panel {
@@ -5262,15 +5283,16 @@ section.team-section.bg-cream {
     /* Archiv: auf Mobile alles untereinander stapeln */
     .archiv-layout {
         flex-direction: column;
-        padding: 0 1.5rem;
+        padding: 0 1rem;
     }
 
-    .archiv-left-col {
-        width: 100%;
-    }
-
+    .archiv-list-col,
+    .archiv-map-col,
+    .archiv-panel-col,
+    .archiv-left-col,
     .archiv-right-col {
         width: 100%;
+        flex: none;
         max-width: 100%;
     }
 

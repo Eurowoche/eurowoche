@@ -100,11 +100,73 @@
         <h2 class="archiv-map-heading">Gastgruppen aus Europa und der Welt</h2>
     </div>
 
-    <!-- Zweispaltiges Layout: Karte links, Panel rechts -->
+    <!-- Dreispaltiges Layout: 1/4 Liste | 2/4 Karte | 1/4 Panel -->
     <div class="archiv-layout">
 
-      <!-- LINKE SPALTE -->
-      <div class="archiv-left-col">
+      <!-- LINKE SPALTE (1/4): Länderliste + Filter -->
+      <div class="archiv-list-col">
+        <div class="archiv-container">
+
+        <!-- Jahrzehnt-Filter -->
+        <div class="archiv-decade-filter">
+            <span class="archiv-decade-label">Jahrzehnt:</span>
+            <button class="archiv-decade-btn active" data-decade="all">Alle</button>
+            <button class="archiv-decade-btn" data-decade="1950">1950er</button>
+            <button class="archiv-decade-btn" data-decade="1960">1960er</button>
+            <button class="archiv-decade-btn" data-decade="1970">1970er</button>
+            <button class="archiv-decade-btn" data-decade="1980">1980er</button>
+            <button class="archiv-decade-btn" data-decade="1990">1990er</button>
+            <button class="archiv-decade-btn" data-decade="2000">2000er</button>
+            <button class="archiv-decade-btn" data-decade="2010">2010er</button>
+            <button class="archiv-decade-btn" data-decade="2020">2020er</button>
+        </div>
+
+        <!-- Suchmaske -->
+        <div class="archiv-search-bar">
+            <input type="text" id="archiv-search" placeholder="{{ i18n "search_placeholder" }}" autocomplete="off">
+            <span class="archiv-search-icon">🔍</span>
+        </div>
+
+        <!-- Scrollbare Tabelle -->
+        <div class="archiv-table-wrap">
+            <table class="archiv-table" id="archiv-table">
+                <thead>
+                    <tr>
+                        <th class="archiv-col-jahr">{{ i18n "year" }}</th>
+                        <th class="archiv-col-land">{{ i18n "country" }}</th>
+                        <th class="archiv-col-flag"></th>
+                        <th class="archiv-col-gruppe">{{ i18n "dance_group" }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ range .Site.Data.archiv }}
+                    {{ $nummer := .nummer }}
+                    {{ $jahr := .jahr }}
+                    {{ $gruppen := .gruppen }}
+                    {{ range $idx, $g := $gruppen }}
+                    {{ $landKey := $g.land | lower }}
+                    {{ if hasPrefix $landKey "spain" }}{{ $landKey = "spain" }}{{ end }}
+                    {{ if hasPrefix $landKey "denmark" }}{{ $landKey = "denmark" }}{{ end }}
+                    {{ if hasPrefix $landKey "ireland" }}{{ $landKey = "ireland" }}{{ end }}
+                    {{ $flag := index $flags $landKey | default "🏳️" }}
+                    <tr data-nummer="{{ $nummer }}" data-jahr="{{ $jahr }}">
+                        {{ if eq $idx 0 }}
+                        <td class="archiv-jahr" rowspan="{{ len $gruppen }}">{{ $jahr }}</td>
+                        {{ end }}
+                        <td>{{ $g.land }}</td>
+                        <td class="archiv-flag">{{ $flag }}</td>
+                        <td>{{ $g.tanzgruppe }}</td>
+                    </tr>
+                    {{ end }}
+                    {{ end }}
+                </tbody>
+            </table>
+        </div>
+        </div><!-- /archiv-container -->
+      </div><!-- /archiv-list-col -->
+
+      <!-- MITTLERE SPALTE (2/4): Karte -->
+      <div class="archiv-map-col">
 
         <!-- Europa-Karte -->
         <div class="archiv-map-section">
@@ -324,74 +386,10 @@
           }); // end DOMContentLoaded
         </script>
 
-        <!-- Filter + Suche + Tabelle in linker Spalte -->
-        <div class="archiv-container">
+      </div><!-- /archiv-map-col -->
 
-        <!-- Jahrzehnt-Filter -->
-        <div class="archiv-decade-filter">
-            <span class="archiv-decade-label">Jahrzehnt:</span>
-            <button class="archiv-decade-btn active" data-decade="all">Alle</button>
-            <button class="archiv-decade-btn" data-decade="1950">1950er</button>
-            <button class="archiv-decade-btn" data-decade="1960">1960er</button>
-            <button class="archiv-decade-btn" data-decade="1970">1970er</button>
-            <button class="archiv-decade-btn" data-decade="1980">1980er</button>
-            <button class="archiv-decade-btn" data-decade="1990">1990er</button>
-            <button class="archiv-decade-btn" data-decade="2000">2000er</button>
-            <button class="archiv-decade-btn" data-decade="2010">2010er</button>
-            <button class="archiv-decade-btn" data-decade="2020">2020er</button>
-        </div>
-
-        <!-- Suchmaske -->
-        <div class="archiv-search-bar">
-            <input type="text" id="archiv-search" placeholder="{{ i18n "search_placeholder" }}" autocomplete="off">
-            <span class="archiv-search-icon">🔍</span>
-        </div>
-
-        <!-- Scrollbare Tabelle -->
-        <div class="archiv-table-wrap">
-            <table class="archiv-table" id="archiv-table">
-                <thead>
-                    <tr>
-                        <th class="archiv-col-nr">{{ i18n "eurowoche_nr" }}</th>
-                        <th class="archiv-col-jahr">{{ i18n "year" }}</th>
-                        <th class="archiv-col-land">{{ i18n "country" }}</th>
-                        <th class="archiv-col-flag"></th>
-                        <th class="archiv-col-stadt">{{ i18n "city" }}</th>
-                        <th class="archiv-col-gruppe">{{ i18n "dance_group" }}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {{ range .Site.Data.archiv }}
-                    {{ $nummer := .nummer }}
-                    {{ $jahr := .jahr }}
-                    {{ $gruppen := .gruppen }}
-                    {{ range $idx, $g := $gruppen }}
-                    {{ $landKey := $g.land | lower }}
-                    {{/* Partial matches für Länder mit Zusatz wie "Spain (Basque)" */}}
-                    {{ if hasPrefix $landKey "spain" }}{{ $landKey = "spain" }}{{ end }}
-                    {{ if hasPrefix $landKey "denmark" }}{{ $landKey = "denmark" }}{{ end }}
-                    {{ if hasPrefix $landKey "ireland" }}{{ $landKey = "ireland" }}{{ end }}
-                    {{ $flag := index $flags $landKey | default "🏳️" }}
-                    <tr data-nummer="{{ $nummer }}" data-jahr="{{ $jahr }}">
-                        {{ if eq $idx 0 }}
-                        <td class="archiv-nr" rowspan="{{ len $gruppen }}">{{ $nummer }}.</td>
-                        <td class="archiv-jahr" rowspan="{{ len $gruppen }}">{{ $jahr }}</td>
-                        {{ end }}
-                        <td>{{ $g.land }}</td>
-                        <td class="archiv-flag">{{ $flag }}</td>
-                        <td>{{ $g.stadt }}</td>
-                        <td>{{ $g.tanzgruppe }}</td>
-                    </tr>
-                    {{ end }}
-                    {{ end }}
-                </tbody>
-            </table>
-        </div>
-        </div><!-- /archiv-container -->
-      </div><!-- /archiv-left-col -->
-
-      <!-- RECHTE SPALTE: Panel sticky neben Karte + Tabelle -->
-      <div class="archiv-right-col">
+      <!-- RECHTE SPALTE (1/4): Info-Panel -->
+      <div class="archiv-panel-col">
         <div id="archiv-info-panel" class="archiv-info-panel">
             <div class="archiv-panel-placeholder">
                 <span class="archiv-panel-icon">🗺</span>
@@ -406,113 +404,12 @@
                 <div id="archiv-panel-list" class="archiv-panel-list"></div>
             </div>
         </div>
-      </div><!-- /archiv-right-col -->
+      </div><!-- /archiv-panel-col -->
 
     </div><!-- /archiv-layout -->
 
+    <!-- (Layout-Vergleich entfernt — Alternative 2 ist das finale Layout) -->
 
-    <!-- ═══════════════════════════════════════════════════════════════
-         LAYOUT-VERGLEICH — zum Ausprobieren, welches Layout gefällt
-         ═══════════════════════════════════════════════════════════════ -->
-
-    <!-- ── Alternative 1 (deine): Karte = Fotobreite · Panel breiter ── -->
-    <div class="archiv-alt-divider">
-      <div class="archiv-alt-line"></div>
-      <span class="archiv-alt-label">Alternative 1 — Karte = Fotobreite · Panel breiter rechts</span>
-      <div class="archiv-alt-line"></div>
-    </div>
-    <div class="archiv-demo archiv-demo-1">
-      <div class="archiv-demo-left">
-        <div class="archiv-demo-map">🗺 Karte<br><small>900 × 540 px</small></div>
-        <div class="archiv-demo-list">📋 Länderliste (scrollbar, gleiche Breite wie Karte)</div>
-      </div>
-      <div class="archiv-demo-panel archiv-demo-panel-wide">
-        🗂 Info-Panel<br><small>500 px · breiter</small>
-      </div>
-    </div>
-
-    <!-- ── Alternative 2 (deine): Dreispaltig — Liste | Karte | Panel ── -->
-    <div class="archiv-alt-divider">
-      <div class="archiv-alt-line"></div>
-      <span class="archiv-alt-label">Alternative 2 — Dreispaltig: Länderliste | Karte | Info-Panel</span>
-      <div class="archiv-alt-line"></div>
-    </div>
-    <div class="archiv-demo archiv-demo-2">
-      <div class="archiv-demo-slim-list">
-        📋<br>Länder-<br>liste<br><small>(slim,<br>scroll-<br>bar)</small>
-      </div>
-      <div class="archiv-demo-map archiv-demo-map-center">
-        🗺 Karte<br><small>800 × 540 px</small>
-      </div>
-      <div class="archiv-demo-panel archiv-demo-panel-normal">
-        🗂 Info-Panel<br><small>380 px</small>
-      </div>
-    </div>
-
-    <!-- ── Alternative 3 (deine): Karte oben quer · Panel + Liste darunter ── -->
-    <div class="archiv-alt-divider">
-      <div class="archiv-alt-line"></div>
-      <span class="archiv-alt-label">Alternative 3 — Karte oben (quer) · Panel + Liste darunter</span>
-      <div class="archiv-alt-line"></div>
-    </div>
-    <div class="archiv-demo archiv-demo-3">
-      <div class="archiv-demo-map archiv-demo-map-full">
-        🗺 Karte — volle Breite<br><small>~1200 px × 400 px</small>
-      </div>
-      <div class="archiv-demo-row">
-        <div class="archiv-demo-panel archiv-demo-panel-normal">
-          🗂 Info-Panel<br><small>380 px</small>
-        </div>
-        <div class="archiv-demo-list archiv-demo-list-grow">
-          📋 Länderliste — füllt den Rest der Breite
-        </div>
-      </div>
-    </div>
-
-    <!-- ── Alternative A (mein Vorschlag): Panel & Karte gleichhoch · Liste quer darunter ── -->
-    <div class="archiv-alt-divider">
-      <div class="archiv-alt-line"></div>
-      <span class="archiv-alt-label">Mein Vorschlag A — Karte & Panel gleichhoch · Länderliste als breite Tabelle darunter</span>
-      <div class="archiv-alt-line"></div>
-    </div>
-    <div class="archiv-demo archiv-demo-a">
-      <div class="archiv-demo-left">
-        <div class="archiv-demo-map archiv-demo-map-fixed">
-          🗺 Karte<br><small>1035 × 540 px</small>
-        </div>
-      </div>
-      <div class="archiv-demo-panel archiv-demo-panel-tall">
-        🗂 Info-Panel<br><small>437 px<br>gleiche Höhe wie Karte<br>kein internes Scrollen</small>
-      </div>
-    </div>
-    <div class="archiv-demo-full-list">
-      📋 Länderliste — volle Breite unter Karte + Panel (z.B. 2–3 Spalten nebeneinander)
-    </div>
-
-    <!-- ── Alternative B (mein Vorschlag): Karte groß · Panel als Overlay auf Karte ── -->
-    <div class="archiv-alt-divider">
-      <div class="archiv-alt-line"></div>
-      <span class="archiv-alt-label">Mein Vorschlag B — Karte sehr groß · Info-Panel als Overlay auf der Karte</span>
-      <div class="archiv-alt-line"></div>
-    </div>
-    <div class="archiv-demo archiv-demo-b">
-      <div class="archiv-demo-map-relative">
-        🗺 Karte — sehr groß (~1400 px breit)<br><small>Klick auf Land → Panel erscheint oben rechts auf der Karte</small>
-        <div class="archiv-demo-panel-overlay">
-          🗂 Info-Panel<br><small>als Overlay</small>
-        </div>
-      </div>
-    </div>
-    <div class="archiv-demo-full-list archiv-demo-full-list-b">
-      📋 Länderliste — volle Breite darunter
-    </div>
-
-    <!-- Abschlusslinie -->
-    <div class="archiv-alt-divider" style="margin-top:3rem; margin-bottom:2rem;">
-      <div class="archiv-alt-line"></div>
-      <span class="archiv-alt-label" style="color:#999; font-weight:400;">Ende Layout-Vergleich</span>
-      <div class="archiv-alt-line"></div>
-    </div>
 
 </article>
 
