@@ -3020,7 +3020,7 @@ section.team-section.bg-cream {
     grid-template-rows: auto auto;
     column-gap: 1.5rem;
     row-gap: 0;
-    padding: 0 1.5rem;
+    padding: 0 3rem;
     box-sizing: border-box;
     max-width: 1400px;
     width: 100%;
@@ -5040,7 +5040,7 @@ section.team-section.bg-cream {
 
     .archiv-layout {
         grid-template-columns: 1fr;
-        padding: 0 1rem;
+        padding: 0 1.5rem;
     }
 
     .archiv-left-col {
