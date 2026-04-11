@@ -3987,20 +3987,22 @@ section.team-section.bg-cream {
 
 .spende-panel {
     padding: 1.1rem 1.2rem;
-}
-
-.spende-block {
     text-align: center;
 }
 
-.spende-block p {
+.spende-panel .spende-block {
+    text-align: center;
+}
+
+.spende-panel .spende-block p {
     margin: 0.22rem 0;
     font-size: 0.86rem;
     line-height: 1.55;
     color: #333;
+    text-align: center;
 }
 
-.spende-block code {
+.spende-panel code {
     font-family: 'Courier New', Courier, monospace;
     background: rgba(139,83,77,0.09);
     padding: 0.08rem 0.32rem;
@@ -4010,31 +4012,35 @@ section.team-section.bg-cream {
     white-space: nowrap;
 }
 
-.spende-block em {
+.spende-panel em {
     font-style: italic;
     color: var(--primary);
 }
 
-.spende-block-qr img {
-    width: 130px;
-    height: 130px;
+.spende-panel .spende-block-qr img {
+    width: 130px !important;
+    height: 130px !important;
     border-radius: 4px;
-    display: block;
-    margin: 0 auto 0.4rem;
+    display: block !important;
+    margin: 0 auto 0.4rem auto !important;
 }
 
-.spende-qr-hint {
+.spende-panel .spende-qr-hint {
     font-size: 0.72rem;
     color: #999;
     margin: 0 !important;
     line-height: 1.3;
+    text-align: center;
 }
 
-.spende-divider {
-    border: 0;
-    height: 1px;
-    background: rgba(139,83,77,0.14);
-    margin: 0.9rem 0;
+.spende-panel hr.spende-divider {
+    border: 0 !important;
+    height: 1px !important;
+    background: rgba(139,83,77,0.18) !important;
+    margin: 0.9rem 0 !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
 }
 
 
