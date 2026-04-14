@@ -1842,7 +1842,7 @@ body.menu-open .leaflet-container {
     padding: 4rem 0;
     max-width: none;
     margin: 0;
-    align-items: center;
+    align-items: stretch;
 }
 
 .burg-split-image {
@@ -1853,8 +1853,7 @@ body.menu-open .leaflet-container {
 
 .burg-split-image img {
     width: 100%;
-    height: auto;
-    min-height: 400px;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
