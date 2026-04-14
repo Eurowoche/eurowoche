@@ -2314,7 +2314,7 @@ body.menu-open .leaflet-container {
 
 /* Kontakt und Teilnahme - volle Breite */
 .maerkte-kontakt-section {
-    background: var(--bg-mauve);
+    background: #E3D1D1;
     padding: 4rem 2rem;
     text-align: center;
     width: 100vw;
