@@ -1846,7 +1846,7 @@ body.menu-open .leaflet-container {
 }
 
 .burg-split-image {
-    flex: 0 0 30%;
+    flex: 0 0 45%;
     overflow: hidden;
     border-radius: 0;
 }
@@ -1854,7 +1854,7 @@ body.menu-open .leaflet-container {
 .burg-split-image img {
     width: 100%;
     height: auto;
-    min-height: 600px;
+    min-height: 400px;
     object-fit: cover;
     display: block;
 }
