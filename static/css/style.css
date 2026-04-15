@@ -1047,7 +1047,7 @@ body.menu-open .leaflet-container {
 }
 .spende-text-col {
     flex: 0 0 27%;
-    padding: 2.5rem 1.6rem;
+    padding: 2.5rem 1.6rem 2.5rem 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1065,7 +1065,7 @@ body.menu-open .leaflet-container {
     font-family: var(--font-body);
     font-size: var(--fs-base);
     line-height: 1.8;
-    text-align: center;
+    text-align: justify;
     margin: 0;
 }
 .spende-widget-col {
