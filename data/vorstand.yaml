@@ -38,7 +38,6 @@ erweiterter_vorstand:
 ehrenvorsitzender:
   name: "Hartmut Reiße"
   foto: "/img/kontakt/Hartmut_Reisse.jpg"
-  adresse: "Goßfeldener Weg 8, 35091 Cölbe"
   telefon: "+49 64 21 82 432 (p) / +49 64 21 40 538 (d)"
   mobil: "+49 170 45 39 945"
   email: "reisseh@marburg-biedenkopf.de"
@@ -50,7 +49,6 @@ teams:
       - "Anne Nöthling"
       - "Marlene Krüger"
       - "Sonja Alter"
-    adresse: "Brauhausstr. 2, 99986 Oberdorla"
     email: "marktleitung@eurowoche.org"
   - name: "Tanzleitung"
     name_en: "Dance Direction"
