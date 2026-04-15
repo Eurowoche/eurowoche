@@ -1,4 +1,4 @@
-baseURL = "https://aktuell.eurowoche.org/"
+baseURL = "https://eurowoche.org/"
 title = "Europäische Jugendwoche"
 defaultContentLanguage = "de"
 defaultContentLanguageInSubdir = false
