@@ -1065,7 +1065,7 @@ body.menu-open .leaflet-container {
     font-family: var(--font-body);
     font-size: var(--fs-base);
     line-height: 1.8;
-    text-align: justify;
+    text-align: center;
     margin: 0;
 }
 .spende-widget-col {
