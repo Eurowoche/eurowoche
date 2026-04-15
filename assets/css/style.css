@@ -1846,7 +1846,7 @@ body.menu-open .leaflet-container {
 }
 
 .burg-split-image {
-    flex: 0 0 45%;
+    flex: 0 0 35%;
     overflow: hidden;
     border-radius: 0;
     position: relative;
