@@ -27,8 +27,8 @@
   dateien:
     - name: "Bedingungen für die Teilnahme von Gruppen"
       name_en: "Conditions for group participation"
-      url: "/downloads/teilnahme-bedingungen.docx"
-      format: "DOCX"
+      url: "/downloads/teilnahme-bedingungen.pdf"
+      format: "PDF"
     - name: "Bewerbungsformular für Aussteller zu Märkten"
       name_en: "Application form for exhibitors at markets"
       url: "/downloads/aussteller-formular.pdf"

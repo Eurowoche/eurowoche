@@ -63,7 +63,7 @@
         <h2>{{ i18n "group_participation" }}</h2>
         <p>{{ i18n "group_participation_text" }}</p>
         <div class="button-row">
-            <a href="{{ if eq .Lang "de" }}/downloads/{{ else }}/en/downloads/{{ end }}" class="btn btn-primary">{{ i18n "conditions" }}</a>
+            <a href="/downloads/teilnahme-bedingungen.pdf" class="btn btn-primary" target="_blank">{{ i18n "conditions" }}</a>
             <a href="{{ if eq .Lang "de" }}/kontakt/{{ else }}/en/contact/{{ end }}" class="btn btn-outline">{{ i18n "contact" }}</a>
         </div>
     </div>
