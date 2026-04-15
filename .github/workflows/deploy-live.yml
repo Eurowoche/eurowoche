@@ -1,0 +1,34 @@
+name: Deploy LIVE to eurowoche.org
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-live:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.147.0'
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy via SFTP to Strato (eurowoche.org)
+        env:
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_PASS: ${{ secrets.SFTP_PASSWORD }}
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_DIR: ${{ secrets.SFTP_DIR_LIVE }}
+        run: |
+          pip install paramiko --quiet
+          python3 scripts/deploy_sftp.py
