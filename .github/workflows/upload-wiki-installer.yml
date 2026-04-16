@@ -1,23 +1,26 @@
-name: Upload Wiki Installer to Strato
+name: Upload Wiki Installer
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'wiki-installer/**'
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "wiki-installer/**"
 
 jobs:
   upload:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Upload install-dokuwiki.php to /wiki/
+      - name: Install paramiko
+        run: pip install paramiko --quiet
+
+      - name: Upload to Strato
         env:
           SFTP_USER: ${{ secrets.SFTP_USER }}
           SFTP_PASS: ${{ secrets.SFTP_PASSWORD }}
           SFTP_HOST: ${{ secrets.SFTP_HOST }}
-        run: |
-          pip install paramiko --quiet
-          python3 wiki-installer/upload.py
+        run: python3 wiki-installer/upload.py
