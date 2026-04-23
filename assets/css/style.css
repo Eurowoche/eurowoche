@@ -5212,12 +5212,12 @@ section.team-section.bg-cream {
 
     .verein-split-image img {
         width: 100%;
-        height: 220px;
+        height: 380px;
     }
 
-    /* Bildausschnitt auf Mobile beibehalten */
+    /* Bildausschnitt auf Mobile */
     .verein-split-image img.img-dancers {
-        object-position: center top;
+        object-position: center center;
     }
 
     .verein-split-image img.img-musicians {
