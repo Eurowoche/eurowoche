@@ -4167,6 +4167,11 @@ section.team-section.bg-cream {
     transform: scale(1.05);
 }
 
+/* Galerie-Bild 3: hochkantes Foto → oben beginnen damit Gesichter sichtbar */
+.verein-galerie-item:nth-child(3) img {
+    object-position: center top;
+}
+
 /* --- Verein: H1 auf einer Zeile, Untertitel kleiner darunter --- */
 .verein-page .page-intro h1 {
     white-space: nowrap;
