@@ -5208,6 +5208,7 @@ section.team-section.bg-cream {
 
     .verein-split-image {
         flex: none;
+        aspect-ratio: auto;
     }
 
     .verein-split-image img {
