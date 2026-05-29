@@ -3879,7 +3879,8 @@ section.team-section.bg-cream {
 .archiv-col-jahr { width: 34px; }
 .archiv-col-flag { width: 28px; text-align: center; font-size: 1.1rem; }
 .archiv-flag { text-align: center; font-size: 1.1rem; }
-.archiv-col-land { width: 72px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.archiv-col-land { width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.archiv-table td:nth-child(2) { white-space: nowrap; }
 .archiv-col-stadt { width: 160px; }
 
 .archiv-no-results {
