@@ -1971,6 +1971,11 @@ body.menu-open .leaflet-container {
     text-align: left;
 }
 
+.teilnahme-hinweis-item.geschlossen {
+    background: rgba(180, 50, 40, 0.08);
+    border-left: 4px solid #b43228;
+}
+
 .teilnahme-hinweis-label {
     font-family: var(--font-body);
     font-weight: 700;
