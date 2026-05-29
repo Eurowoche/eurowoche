@@ -1998,6 +1998,103 @@ body.menu-open .leaflet-container {
     opacity: 0.25;
 }
 
+/* === EUROWOCHE PROGRAMM KARTEN === */
+.ew-program {
+    margin: 2.5rem 0 1rem;
+}
+
+.ew-program-title {
+    font-size: var(--fs-h2);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.ew-program-group {
+    margin-bottom: 2rem;
+}
+
+.ew-program-group-label {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1.5px solid var(--primary);
+    opacity: 0.7;
+}
+
+.ew-program-free .ew-program-group-label {
+    color: #4a7a4a;
+    border-color: #4a7a4a;
+}
+
+.ew-event-card {
+    background: #fff;
+    border: 0.5px solid #d9ccbe;
+    border-radius: 4px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ew-program-free .ew-event-card {
+    background: #f4f9f4;
+    border-color: #c5dcc5;
+}
+
+.ew-event-name {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 400;
+    color: #3a2820;
+}
+
+.ew-event-desc {
+    font-size: 0.85rem;
+    color: #7a6055;
+    line-height: 1.5;
+}
+
+.ew-event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.2rem;
+    margin-top: 0.2rem;
+}
+
+.ew-meta-item {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: #5a4a42;
+    white-space: nowrap;
+}
+
+.ew-meta-item a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.ew-meta-item a:hover {
+    opacity: 0.75;
+}
+
+@media (max-width: 600px) {
+    .ew-event-meta {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    .ew-meta-item {
+        white-space: normal;
+    }
+}
+
 /* === BOTSCHAFT FOTOS === */
 .botschaft-photo-hero {
     width: 100%;

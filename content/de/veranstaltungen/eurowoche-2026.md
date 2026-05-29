@@ -10,27 +10,100 @@ Die Europäische Jugendwoche ist ein einzigartiges Jugend- und Folklorefestival.
 
 Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, junge Menschen aus Europa und der Welt zusammenzuführen, damit sie sich und ihre Kultur gegenseitig kennen und verstehen lernen. Damit soll ein Beitrag zur Verständigung der Völker und zum Frieden in der Welt geleistet werden. Organisiert wird die Jugendbegegnung vom gemeinnützigen „Arbeitskreis Europäische Jugendwochen Burg Ludwigstein e.V.".
 
-## Programm & Termine
+<div class="ew-program">
 
-**Sa., 01. Aug. – Eröffnungsveranstaltung Witzenhausen**
-Feierliche Eröffnung der 65. Europäischen Jugendwoche auf dem Marktplatz Witzenhausen, ca. 20:00 Uhr.
+<h2 class="ew-program-title">Programm &amp; Termine</h2>
 
-**So., 02. Aug. – Bad Soden-Allendorf**
-Folkloredarbietungen in Bad Soden-Allendorf, ca. 18:00 Uhr (Dauer: mind. 2 Stunden).
+<div class="ew-program-group">
+  <h3 class="ew-program-group-label">Öffentliche Veranstaltungen</h3>
 
-**Mo., 03. – Fr., 07. Aug. – Nationentage auf der Burg**
-Jeden Abend präsentiert eine der Gastgruppen beim Galaauftritt ihre Folklore live auf der Burg Ludwigstein (ca. 2 Stunden), mit anschließendem offenen Tanzen für alle Interessierten.
+  <div class="ew-event-card">
+    <div class="ew-event-main">
+      <div class="ew-event-name">Eröffnungsveranstaltung</div>
+      <div class="ew-event-desc">Feierliche Eröffnung der 65. Europäischen Jugendwoche.</div>
+    </div>
+    <div class="ew-event-meta">
+      <span class="ew-meta-item">📅 Sa., 01. August 2026</span>
+      <span class="ew-meta-item">🕗 20:00 Uhr</span>
+      <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Marktplatz+Witzenhausen+37213" target="_blank">Marktplatz Witzenhausen</a></span>
+    </div>
+  </div>
 
-**Sa., 08. Aug. – Große Eurokirmes**
-Abschluss- und Höhepunkt der Woche: Auftritte aller Gruppen auf der Burg, Vorstellung der Workshobergebnisse, nachmittags, ca. 4 Stunden.
+  <div class="ew-event-card">
+    <div class="ew-event-main">
+      <div class="ew-event-name">Folkloredarbietung</div>
+      <div class="ew-event-desc">Auftritt der Gastgruppen mit traditioneller Folklore.</div>
+    </div>
+    <div class="ew-event-meta">
+      <span class="ew-meta-item">📅 So., 02. August 2026</span>
+      <span class="ew-meta-item">🕕 18:00–20:00 Uhr</span>
+      <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Werratal+Kultur+und+Kongresszentrum+Bad+Sooden-Allendorf" target="_blank">Werratal Kultur- und Kongresszentrum, Bad Sooden-Allendorf</a></span>
+    </div>
+  </div>
 
-## Kostenlose Angebote für externe Besucher
+  <div class="ew-event-card">
+    <div class="ew-event-main">
+      <div class="ew-event-name">Nationentage – Galaauftritt &amp; offenes Tanzen</div>
+      <div class="ew-event-desc">Jeden Abend präsentiert eine Gastgruppe ihre Folklore beim Galaauftritt (ca. 2 Stunden), anschließend offenes Tanzen für alle.</div>
+    </div>
+    <div class="ew-event-meta">
+      <span class="ew-meta-item">📅 Mo.–Fr., 03.–07. August 2026</span>
+      <span class="ew-meta-item">🕗 Abends</span>
+      <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
+    </div>
+  </div>
 
-**So., 02. Aug., 10:00–12:00 Uhr – Burgrally**
-Vorstellung der Workshops und des Ablaufs der Europäischen Jugendwoche. Eintritt frei.
+  <div class="ew-event-card">
+    <div class="ew-event-main">
+      <div class="ew-event-name">Große Eurokirmes</div>
+      <div class="ew-event-desc">Abschluss-Highlight der Woche: Auftritte aller Gruppen und Präsentation der Workshopergebnisse (ca. 4 Stunden).</div>
+    </div>
+    <div class="ew-event-meta">
+      <span class="ew-meta-item">📅 Sa., 08. August 2026</span>
+      <span class="ew-meta-item">🕑 Nachmittags</span>
+      <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
+    </div>
+  </div>
+</div>
 
-**Mo.–Fr., 09:30–10:30 Uhr – Offenes Singen**
-Gemeinsames Singen mit Vorstellung der Gruppe des jeweiligen Nationentages. Eintritt frei.
+<div class="ew-program-group ew-program-free">
+  <h3 class="ew-program-group-label">Kostenlose Angebote für externe Besucher</h3>
 
-**Mo.–Fr., 10:30–12:30 Uhr – Workshops**
-Mitmach-Workshops in Tanz, Gesang und weiteren Bereichen. Teilnahme kostenlos.
+  <div class="ew-event-card">
+    <div class="ew-event-main">
+      <div class="ew-event-name">Burgrally &amp; Programmvorstellung</div>
+      <div class="ew-event-desc">Vorstellung der Workshops und des Ablaufs der Europäischen Jugendwoche. Eintritt frei.</div>
+    </div>
+    <div class="ew-event-meta">
+      <span class="ew-meta-item">📅 So., 02. August 2026</span>
+      <span class="ew-meta-item">🕙 10:00–12:00 Uhr</span>
+      <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
+    </div>
+  </div>
+
+  <div class="ew-event-card">
+    <div class="ew-event-main">
+      <div class="ew-event-name">Offenes Singen</div>
+      <div class="ew-event-desc">Gemeinsames Singen mit Vorstellung der Gruppe des jeweiligen Nationentages. Eintritt frei.</div>
+    </div>
+    <div class="ew-event-meta">
+      <span class="ew-meta-item">📅 Mo.–Fr., 03.–07. August 2026</span>
+      <span class="ew-meta-item">🕤 09:30–10:30 Uhr</span>
+      <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
+    </div>
+  </div>
+
+  <div class="ew-event-card">
+    <div class="ew-event-main">
+      <div class="ew-event-name">Workshops</div>
+      <div class="ew-event-desc">Mitmach-Workshops in Tanz, Gesang und weiteren Bereichen. Teilnahme kostenlos.</div>
+    </div>
+    <div class="ew-event-meta">
+      <span class="ew-meta-item">📅 Mo.–Fr., 03.–07. August 2026</span>
+      <span class="ew-meta-item">🕥 10:30–12:30 Uhr</span>
+      <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
+    </div>
+  </div>
+</div>
+
+</div>
