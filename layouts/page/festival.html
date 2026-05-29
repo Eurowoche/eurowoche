@@ -62,6 +62,20 @@
     <div class="teilnahme-section">
         <h2>{{ i18n "group_participation" }}</h2>
         <p>{{ i18n "group_participation_text" }}</p>
+
+        <!-- Bewerbungsfristen Hinweis -->
+        <div class="teilnahme-hinweis">
+            <div class="teilnahme-hinweis-item">
+                <span class="teilnahme-hinweis-label">EW 2026</span>
+                <span class="teilnahme-hinweis-text">Teilnahmeschluss für interessierte Gruppen ist abgelaufen.</span>
+            </div>
+            <div class="teilnahme-hinweis-divider"></div>
+            <div class="teilnahme-hinweis-item">
+                <span class="teilnahme-hinweis-label">EW 2027</span>
+                <span class="teilnahme-hinweis-text">Bewerbungen werden ab 01.09.2026 angenommen.</span>
+            </div>
+        </div>
+
         <div class="button-row">
             <a href="/downloads/teilnahme-bedingungen.pdf" class="btn btn-primary" target="_blank">{{ i18n "conditions" }}</a>
             <a href="{{ if eq .Lang "de" }}/kontakt/{{ else }}/en/contact/{{ end }}" class="btn btn-outline">{{ i18n "contact" }}</a>
