@@ -173,6 +173,11 @@ defaultContentLanguageInSubdir = false
     url = "/fr/telechargements/"
     weight = 12
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
   email = "pr@eurowoche.org"
   address = "Burg Ludwigstein, 37214 Witzenhausen, Germany"
