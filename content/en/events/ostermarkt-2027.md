@@ -1,8 +1,8 @@
 ---
 title: "Easter Market 2027"
-date_start: "2027-03-20"
-date_end: "2027-03-21"
-date_display: "Sat., 20 Mar. – Sun., 21 Mar. 2027"
+date_start: "2027-03-06"
+date_end: "2027-03-07"
+date_display: "Sat., 6 Mar. – Sun., 7 Mar. 2027"
 location: "Burg Ludwigstein, Witzenhausen"
 image: "/img/events/ostermarkt-2027.jpg"
 ---
