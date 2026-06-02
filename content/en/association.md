@@ -34,7 +34,7 @@ The group showcases various German traditions, which they dance into stories. Th
 
 The Lusiker (a wordplay combining Ludwigsteiner Musiker) are the association's own music group. The 7-member team, together with the Ludwigsteiner dance group, represents Germany at the European Youth Week.
 
-**Key facts:** Current leadership: Maciej Derra. Instruments: flute, accordion, bass, guitar, horn, vocals.
+**Key facts:** Current leadership: Maciej Derra. Instruments: flute, accordion, bass, guitar, tenor horn (or baritone), vocals.
 
 ## Member of CIOFF®
 
