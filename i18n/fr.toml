@@ -291,3 +291,54 @@ other = "Notre adhésion souligne notre ambition internationale et notre engagem
 
 [verein_cioff_link]
 other = "En savoir plus sur le CIOFF®"
+
+[maerkte_intro]
+other = "Les membres de l'Arbeitskreis Europäische Jugendwochen organisent chaque année deux marchés artisanaux uniques avec beaucoup de passion. <strong>Les bénéfices financent la Semaine européenne de la jeunesse</strong> et créent des lieux de rencontre pour les visiteurs, les exposants et les bénévoles."
+
+[ostermarkt_title]
+other = "Marché de Pâques"
+
+[ostermarkt_subtitle]
+other = "Artisanat, traditions pascales et rencontres"
+
+[ostermarkt_p1]
+other = "Le Marché de Pâques est un marché artisanal et de producteurs, organisé bénévolement par les membres de l'Arbeitskreis Europäische Jugendwochen. L'objectif est d'utiliser les bénéfices pour financer la Semaine européenne de la jeunesse en été."
+
+[ostermarkt_p2]
+other = "Des exposants de différentes régions d'Allemagne présentent des traditions pascales et des produits faits main. L'artisanat autour des oeufs est particulièrement apprécié, avec des créations allant des oeufs d'autruche aux oeufs de perruche."
+
+[ostermarkt_p3]
+other = "Le Marché de Pâques se tient dans les salles accessibles aux personnes à mobilité réduite de l'ancien monastère et invite à une promenade détendue. Dans la cour, les stands, les décorations printanières ainsi que les arômes de bratwurst et de crêpes créent une atmosphère animée."
+
+[ostermarkt_p4]
+other = "La cafétéria propose du café et des gâteaux faits maison, tandis que l'atelier de bricolage de Pâques invite les visiteurs de tous âges à participer. Une tombola avec des prix artisanaux complète l'offre."
+
+[ostermarkt_p5]
+other = "De nombreux exposants et membres de l'association séjournent à Burg Ludwigstein. Le dîner commun du samedi soir est l'occasion de rencontres, de nouveaux contacts et d'amitiés durables."
+
+[ostermarkt_details]
+other = "Tous les détails sur le prochain Marché de Pâques :"
+
+[adventsmarkt_title]
+other = "Marché de Noël"
+
+[adventsmarkt_subtitle]
+other = "Lumière, musique et atmosphère hivernale"
+
+[adventsmarkt_p1]
+other = "Le deuxième dimanche de l'Avent, Burg Ludwigstein se transforme en un marché de Noël magnifiquement décoré. Dans les salles historiques, les exposants présentent leurs créations artisanales et partagent des techniques de fabrication traditionnelles."
+
+[adventsmarkt_p2]
+other = "Un temps fort particulier est l'exposition de Noël et de crèches avec des pièces du monde entier. La fanfare de l'association et d'autres groupes accompagnent musicalement le marché."
+
+[adventsmarkt_p3]
+other = "Dans la cour du château, une crèche vivante, du vin chaud, des crêpes et des bratwursts invitent à s'attarder. La cafétéria propose des gâteaux faits maison par les membres de l'association."
+
+[adventsmarkt_p4]
+other = "L'atelier de bricolage de Noël est ouvert les deux jours et invite les visiteurs de tous âges à créer. Sinterklaas, venu des Pays-Bas, visite le marché et apporte des cadeaux aux enfants."
+
+[adventsmarkt_p5]
+other = "Comme le Marché de Pâques, le Marché de Noël est entièrement organisé bénévolement et contribue de manière significative au financement de la Semaine européenne de la jeunesse."
+
+[adventsmarkt_details]
+other = "Tous les détails sur le prochain Marché de Noël :"

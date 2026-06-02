@@ -264,3 +264,54 @@ other = "Our membership underlines our international commitment and our dedicati
 
 [verein_cioff_link]
 other = "More about CIOFF®"
+
+[maerkte_intro]
+other = "The members of the Arbeitskreis Europäische Jugendwochen organise two special arts and crafts markets each year with great dedication. <strong>The proceeds secure the funding of the European Youth Week</strong> and create places of encounter for visitors, exhibitors and volunteers alike."
+
+[ostermarkt_title]
+other = "Easter Market"
+
+[ostermarkt_subtitle]
+other = "Arts &amp; crafts, spring traditions and community"
+
+[ostermarkt_p1]
+other = "The Easter Market is an arts, crafts and producers market organised entirely on a voluntary basis by members of the Arbeitskreis Europäische Jugendwochen. Its purpose is to use the proceeds to fund the European Youth Week in the summer."
+
+[ostermarkt_p2]
+other = "Exhibitors from various regions of Germany present Easter customs and handmade products. Particularly popular is the intricate egg craft, which produces small works of art ranging from ostrich to budgerigar eggs."
+
+[ostermarkt_p3]
+other = "The Easter Market takes place in the wheelchair-accessible rooms of the old monastery and invites visitors to browse at a leisurely pace. In the courtyard, market stalls, spring decorations and the aroma of bratwurst and crêpes create a lively atmosphere."
+
+[ostermarkt_p4]
+other = "The cafeteria offers coffee and home-baked cakes, while the Easter crafts room invites visitors of all ages to get creative. A tombola with handmade prizes rounds off the programme."
+
+[ostermarkt_p5]
+other = "Many exhibitors and association members stay overnight at Burg Ludwigstein. The shared dinner on Saturday brings people together, forging new contacts and lasting friendships."
+
+[ostermarkt_details]
+other = "All details on the upcoming Easter Market:"
+
+[adventsmarkt_title]
+other = "Christmas Market"
+
+[adventsmarkt_subtitle]
+other = "Light, music and a wintry atmosphere"
+
+[adventsmarkt_p1]
+other = "On the second Sunday of Advent, Burg Ludwigstein is transformed into a beautifully decorated Christmas market. In the historic rooms, exhibitors present their handcrafted works and offer insights into traditional production techniques."
+
+[adventsmarkt_p2]
+other = "A special highlight is the Christmas and nativity exhibition featuring exhibits from around the world. The association's ensemble and other groups provide musical accompaniment throughout the market."
+
+[adventsmarkt_p3]
+other = "In the castle courtyard, a living nativity scene, mulled wine, crêpes and bratwurst invite visitors to linger. The cafeteria offers home-baked cakes made by association members."
+
+[adventsmarkt_p4]
+other = "The Christmas crafts room is open on both days and invites visitors of all ages to get creative. Sinterklaas from the Netherlands visits the market and brings gifts for the children."
+
+[adventsmarkt_p5]
+other = "Like the Easter Market, the Christmas Market is organised entirely on a voluntary basis and makes a significant contribution to funding the European Youth Week."
+
+[adventsmarkt_details]
+other = "All details on the upcoming Christmas Market:"
