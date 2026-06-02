@@ -1,5 +1,6 @@
 ---
-title: "The Association – Arbeitskreis Europäische Jugendwochen Burg Ludwigstein e.V."
+title: "The Association"
+subtitle: "Arbeitskreis Europäische Jugendwochen Burg Ludwigstein e.V."
 layout: "verein"
 translationKey: "verein"
 ---
