@@ -1,5 +1,6 @@
 ---
 title: "Mach mit"
+translationKey: "mach-mit"
 layout: "mach-mit"
 ---
 Durch die Menschen, die Teil von ihr sind, wird die Eurowoche erst möglich! Ob als Tänzer\*in, als Freiwillige\*r oder als Unterstützer des Vereins – du bist herzlich willkommen.

@@ -1,5 +1,6 @@
 ---
 title: "Impressum"
+translationKey: "impressum"
 ---
 Verantwortlich für alle Inhalte dieser Website ist:
 

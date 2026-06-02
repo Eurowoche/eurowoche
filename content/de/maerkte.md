@@ -1,5 +1,6 @@
 ---
 title: "Unsere Märkte"
+translationKey: "maerkte"
 layout: "maerkte"
 ---
 Mit viel Herzblut organisieren die Mitglieder des Arbeitskreises Europäische Jugendwochen zwei besondere Kunsthandwerksmärkte im Jahr. Die Erlöse sichern die Finanzierung der Europäischen Jugendwoche und schaffen gleichzeitig Orte der Begegnung für Gäste, Aussteller und Ehrenamtliche.

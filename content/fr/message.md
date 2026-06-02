@@ -1,5 +1,6 @@
 ---
 title: "Notre message – Compréhension internationale"
+translationKey: "botschaft"
 layout: "botschaft"
 intro: "Que se passe-t-il lorsque jeunes gens de tout le continent se réunissent pendant une semaine ? Des moments naissent qu'on ne trouve pas dans les manuels scolaires. La Semaine européenne de la jeunesse est bien plus qu'un festival culturel ou une simple rencontre. Elle est une preuve vivante que nos différences ne nous divisent pas, mais nous enrichissent. Dans un monde qui semble souvent compliqué, nous créons ici un espace pour l'essentiel : une véritable connaissance mutuelle, un rire partagé et un échange au-delà des frontières."
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Das Festival – Die Europäische Jugendwoche auf Burg Ludwigstein"
+translationKey: "festival"
 layout: "festival"
 intro: "Die Europäische Jugendwoche (kurz Eurowoche) bringt seit Jahrzehnten junge Menschen aus ganz Europa zusammen. Eine Woche voller Begegnung, Musik, Tanz und gemeinsamer Erlebnisse – getragen vom Geist der Freundschaft und Verständigung."
 ---

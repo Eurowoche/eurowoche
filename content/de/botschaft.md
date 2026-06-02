@@ -1,5 +1,6 @@
 ---
 title: "Unsere Botschaft – Internationale Verständigung"
+translationKey: "botschaft"
 layout: "botschaft"
 intro: "Was passiert, wenn sich junge Menschen aus dem ganzen Kontinent für eine Woche treffen? Es entstehen Momente, die man nicht im Lehrbuch findet. Die Europäische Jugendwoche ist weit mehr als ein kulturelles Festival oder eine bloße Begegnung. Sie ist ein lebendiger Beweis dafür, dass unsere Unterschiede uns nicht trennen, sondern bereichern. In einer Welt, die oft kompliziert wirkt, schaffen wir hier einen Raum für das Wesentliche: echtes Kennenlernen, gemeinsames Lachen und den Austausch über Grenzen hinweg."
 ---

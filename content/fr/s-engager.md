@@ -1,5 +1,6 @@
 ---
 title: "S'engager – Comment devenir part de la Semaine européenne de la jeunesse"
+translationKey: "mach-mit"
 layout: "mach-mit"
 ---
 

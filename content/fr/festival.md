@@ -1,5 +1,6 @@
 ---
 title: "Le Festival – La Semaine européenne de la jeunesse à Burg Ludwigstein"
+translationKey: "festival"
 layout: "festival"
 intro: "La Semaine européenne de la jeunesse (Eurowoche en abrégé) réunit depuis des décennies les jeunes de toute l'Europe. Une semaine remplie de rencontres, de musique, de danse et d'expériences communes – portée par l'esprit d'amitié et de compréhension."
 ---
