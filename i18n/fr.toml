@@ -342,3 +342,15 @@ other = "Comme le Marché de Pâques, le Marché de Noël est entièrement organ
 
 [adventsmarkt_details]
 other = "Tous les détails sur le prochain Marché de Noël :"
+
+[team_marktleitung]
+other = "Direction des marchés"
+
+[team_tanzleitung]
+other = "Direction de la danse"
+
+[team_musikleitung]
+other = "Direction musicale"
+
+[team_oeffentlichkeitsarbeit]
+other = "Relations publiques"

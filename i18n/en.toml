@@ -315,3 +315,15 @@ other = "Like the Easter Market, the Christmas Market is organised entirely on a
 
 [adventsmarkt_details]
 other = "All details on the upcoming Christmas Market:"
+
+[team_marktleitung]
+other = "Market Management"
+
+[team_tanzleitung]
+other = "Dance Leadership"
+
+[team_musikleitung]
+other = "Music Leadership"
+
+[team_oeffentlichkeitsarbeit]
+other = "Public Relations"

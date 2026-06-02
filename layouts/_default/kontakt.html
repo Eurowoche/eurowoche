@@ -66,7 +66,12 @@
 
     <!-- TEAMS -->
     {{ range .Site.Data.vorstand.teams }}
-    <h2 class="kontakt-section-heading" id="{{ .name | urlize }}">{{ .name }}</h2>
+    {{ $teamKey := "" }}
+    {{ if eq .name "Marktleitung" }}{{ $teamKey = "team_marktleitung" }}{{ end }}
+    {{ if eq .name "Tanzleitung" }}{{ $teamKey = "team_tanzleitung" }}{{ end }}
+    {{ if eq .name "Musikleitung" }}{{ $teamKey = "team_musikleitung" }}{{ end }}
+    {{ if eq .name "Öffentlichkeitsarbeit" }}{{ $teamKey = "team_oeffentlichkeitsarbeit" }}{{ end }}
+    <h2 class="kontakt-section-heading" id="{{ .name | urlize }}">{{ if $teamKey }}{{ i18n $teamKey }}{{ else }}{{ .name }}{{ end }}</h2>
     <section class="team-section bg-cream">
         <div class="team-block">
             <div class="team-members">

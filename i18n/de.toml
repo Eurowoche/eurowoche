@@ -342,3 +342,15 @@ other = "Wie der Ostermarkt wird auch der Adventsmarkt vollständig ehrenamtlich
 
 [adventsmarkt_details]
 other = "Alle Details zum kommenden Adventsmarkt:"
+
+[team_marktleitung]
+other = "Marktleitung"
+
+[team_tanzleitung]
+other = "Tanzleitung"
+
+[team_musikleitung]
+other = "Musikleitung"
+
+[team_oeffentlichkeitsarbeit]
+other = "Öffentlichkeitsarbeit"
