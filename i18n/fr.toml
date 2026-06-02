@@ -213,3 +213,81 @@ other = "Cliquer pour les détails"
 
 [map_panel_placeholder]
 other = "Cliquer sur un cercle\npour les détails"
+
+[verein_about_title]
+other = "À propos de nous"
+
+[verein_about_text]
+other = "Notre association porte le nom d'Arbeitskreis Europäische Jugendwochen Burg Ludwigstein e.V. Elle est basée à Witzenhausen et enregistrée au registre des associations du tribunal d'instance d'Eschwege. L'association poursuit des objectifs exclusivement et directement caritatifs."
+
+[verein_comm_title]
+other = "Plus que de la danse et de la musique : une communication d'égal à égal"
+
+[verein_comm_text]
+other = "Chez nous, la culture prend vie. Nous croyons que chanter, faire de la musique et danser ensemble sont les meilleurs moyens de surmonter les barrières linguistiques et d'avoir de véritables échanges. Si les premières rencontres étaient avant tout marquées par la danse folklorique, la musique chorale et instrumentale est aujourd'hui aussi devenue un pilier de notre travail commun."
+
+[verein_purpose_title]
+other = "Objet de l'association"
+
+[verein_purpose_intro]
+other = "L'association poursuit des objectifs exclusivement caritatifs, réalisés notamment par :"
+
+[verein_purpose_1]
+other = "<strong>L'organisation et la mise en œuvre</strong> des Semaines européennes de la jeunesse à Burg Ludwigstein."
+
+[verein_purpose_2]
+other = "<strong>La promotion de l'idée européenne</strong> et des échanges interculturels entre jeunes de différents pays."
+
+[verein_purpose_3]
+other = "<strong>Le soutien des groupes participants</strong> dans leur travail culturel, créatif et social."
+
+[verein_purpose_4]
+other = "<strong>L'entretien de la coopération avec les organisations partenaires européennes</strong> et les anciens participants."
+
+[verein_purpose_5]
+other = "<strong>Le renforcement de la compréhension, de l'amitié et de la solidarité</strong> par-delà les frontières nationales, ethniques et religieuses."
+
+[verein_dancers_title]
+other = "Die Ludwigsteiner"
+
+[verein_dancers_p1]
+other = "Die Ludwigsteiner est le groupe de danse propre à l'association Arbeitskreis Europäische Jugendwochen."
+
+[verein_dancers_p2]
+other = "Les danseurs et danseuses viennent de toute l'Allemagne. C'est pourquoi ils ne se réunissent que quelques fois par an, mais répètent alors très intensément et avec une grande passion."
+
+[verein_dancers_p3]
+other = "Le groupe représente diverses traditions allemandes qu'il met en scène à travers des histoires dansées. Il utilise d'anciennes danses folkloriques et différents costumes traditionnels, intégrés dans de nouvelles chorégraphies. Le groupe est toujours accompagné en direct par le groupe de musique « die Lusiker »."
+
+[verein_dancers_p4]
+other = "Le groupe présente ces histoires chaque année lors de la Semaine européenne de la jeunesse, ainsi qu'à l'occasion de diverses représentations en Allemagne et à l'étranger."
+
+[verein_dancers_facts_label]
+other = "Chiffres clés :"
+
+[verein_dancers_facts]
+other = "Fondé en 1990 par Fritz Lenz<br>Depuis 1991 représentant permanent de l'Allemagne à la Semaine européenne de la jeunesse<br>Représentations internationales dans plus de 10 pays<br>Direction actuelle : Annika Meyer &amp; Johanna Klauer"
+
+[verein_musicians_title]
+other = "Die Ludwigsteiner Musiker"
+
+[verein_musicians_p1]
+other = "Les Lusiker (jeu de mots combinant Ludwigsteiner Musiker) sont le groupe de musique propre à l'association. L'équipe de 7 membres représente l'Allemagne à la Semaine européenne de la jeunesse aux côtés du groupe de danse Ludwigsteiner."
+
+[verein_musicians_p2]
+other = "Le groupe est composé de membres venant de différentes régions d'Allemagne, d'Autriche, du Danemark, de Pologne et de Lettonie. Outre divers morceaux folkloriques allemands traditionnels, le groupe joue également des pièces plus contemporaines et des compositions originales."
+
+[verein_musicians_p3]
+other = "Direction actuelle : Maciej Derra.<br>Instruments : flûte traversière, accordéon, basse, guitare, bugle ténor (ou baryton), chant."
+
+[verein_cioff_title]
+other = "Membre du CIOFF®"
+
+[verein_cioff_p1]
+other = "L'Arbeitskreis Europäische Jugendwochen Burg Ludwigstein e.V. est membre du CIOFF® (Conseil International des Organisations de Festivals de Folklore et d'Arts Traditionnels), une organisation partenaire internationale de l'UNESCO dans le domaine de la culture traditionnelle et du folklore."
+
+[verein_cioff_p2]
+other = "Notre adhésion souligne notre ambition internationale et notre engagement en faveur des échanges culturels et de la compréhension mutuelle entre les peuples."
+
+[verein_cioff_link]
+other = "En savoir plus sur le CIOFF®"

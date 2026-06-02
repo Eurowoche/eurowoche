@@ -213,3 +213,81 @@ other = "Klicken für Details"
 
 [map_panel_placeholder]
 other = "Kreis anklicken\nfür Details"
+
+[verein_about_title]
+other = "Über uns"
+
+[verein_about_text]
+other = "Unser Verein trägt den Namen Arbeitskreis Europäische Jugendwochen Burg Ludwigstein e.V. Er hat seinen Sitz in Witzenhausen und ist im Vereinsregister des Amtsgerichts Eschwege eingetragen. Der Verein dient ausschließlich und unmittelbar gemeinnützigen Zwecken im Sinne des Abschnitts über steuerbegünstigte Zwecke der Abgabenordnung."
+
+[verein_comm_title]
+other = "Mehr als nur Tanz und Musik: Kommunikation auf Augenhöhe"
+
+[verein_comm_text]
+other = "Bei uns wird Kultur lebendig. Wir glauben daran, dass gemeinsames Singen, Musizieren und Tanzen die besten Wege sind, um Sprachbarrieren zu überwinden und echte Gespräche zu führen. Während die ersten Treffen vor allem durch den Volkstanz geprägt waren, bilden heute auch Chor- und Instrumentalmusik die tragenden Säulen unserer gemeinsamen Arbeit."
+
+[verein_purpose_title]
+other = "Zweck des Vereins"
+
+[verein_purpose_intro]
+other = "Der Verein verfolgt ausschließlich gemeinnützige Zwecke. Er verwirklicht seine Ziele insbesondere durch:"
+
+[verein_purpose_1]
+other = "<strong>Organisation und Durchführung</strong> der Europäischen Jugendwochen auf Burg Ludwigstein."
+
+[verein_purpose_2]
+other = "<strong>Förderung des europäischen Gedankens</strong> und des interkulturellen Austauschs junger Menschen aus verschiedenen Ländern."
+
+[verein_purpose_3]
+other = "<strong>Unterstützung der teilnehmenden Gruppen</strong> in ihrer kulturellen, kreativen und sozialen Arbeit."
+
+[verein_purpose_4]
+other = "<strong>Pflege der Zusammenarbeit mit europäischen Partnerorganisationen</strong> und ehemaligen Teilnehmenden."
+
+[verein_purpose_5]
+other = "<strong>Stärkung von Verständigung, Freundschaft und Solidarität</strong> über nationale, ethnische und religiöse Grenzen hinweg."
+
+[verein_dancers_title]
+other = "Die Ludwigsteiner"
+
+[verein_dancers_p1]
+other = "Die Ludwigsteiner sind die vereinseigene Tanzgruppe des Arbeitskreises Europäische Jugendwochen."
+
+[verein_dancers_p2]
+other = "Die Tänzerinnen und Tänzer kommen aus ganz Deutschland zusammen. Aus diesem Grund treffen sich sie nur wenige Male im Jahr. Dafür proben sie dann sehr intensiv und mit einer großen Leidenschaft."
+
+[verein_dancers_p3]
+other = "Die Gruppe zeigt verschiedene deutsche Traditionen, welche sie in Geschichten vertanzen. Dazu nutzen sie alte Volkstänze sowie verschiedene Trachten und verarbeiten sie in neuen Choreographien. Dabei werden sie stets von der Musikgruppe „die Lusiker" live begleitet."
+
+[verein_dancers_p4]
+other = "Diese Geschichten präsentiert die Gruppe jährlich auf der Europäischen Jugendwoche, sowie bei verschiedenen Auftritten innerhalb und außerhalb Deutschlands."
+
+[verein_dancers_facts_label]
+other = "Eckdaten:"
+
+[verein_dancers_facts]
+other = "Gegründet 1990 von Fritz Lenz<br>Seit 1991 feste deutsche Vertretung bei der Europäischen Jugendwoche<br>Internationale Auftritte in über 10 Ländern weltweit<br>Aktuelle Leitung: Annika Meyer &amp; Johanna Klauer"
+
+[verein_musicians_title]
+other = "Die Ludwigsteiner Musiker"
+
+[verein_musicians_p1]
+other = "Die Lusiker (Wortspiel aus Ludwigsteiner Musiker) sind die vereinseigene Musikgruppe des Arbeitskreises Europäische Jugendwoche. Sie besteht aus einem 7-köpfigen Team, welches zusammen mit der Ludwigsteiner Tanzgruppe die deutsche Vertretung bei der Europäischen Jugendwoche übernimmt."
+
+[verein_musicians_p2]
+other = "Die Gruppe kommt aus verschiedenen Teilen Deutschlands, Österreichs, Dänemarks, Polens und Lettlands. Neben verschiedenen traditionellen deutschen Musikstücken spielt die Gruppe auch modernere Stücke sowie eigene Kompositionen."
+
+[verein_musicians_p3]
+other = "Aktuelle Leitung: Maciej Derra.<br>Instrumente: Querflöte, Akkordeon, Bass, Gitarre, Tenorhorn (oder Bariton), Gesang."
+
+[verein_cioff_title]
+other = "Mitglied bei CIOFF®"
+
+[verein_cioff_p1]
+other = "Der Arbeitskreis Europäische Jugendwochen Burg Ludwigstein e.V. ist Mitglied bei CIOFF® (Conseil International des Organisations de Festivals de Folklore et d'Arts Traditionnels), einer internationalen Partnerorganisation der UNESCO im Bereich der traditionellen Kultur und Folklore."
+
+[verein_cioff_p2]
+other = "Die Mitgliedschaft unterstreicht unseren internationalen Anspruch und unser Engagement für kulturellen Austausch und Völkerverständigung."
+
+[verein_cioff_link]
+other = "Mehr Infos zu CIOFF®"

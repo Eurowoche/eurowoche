@@ -186,3 +186,81 @@ other = "Click a circle\nfor details"
 
 [menu]
 other = "Menu"
+
+[verein_about_title]
+other = "About us"
+
+[verein_about_text]
+other = "Our association bears the name Arbeitskreis Europäische Jugendwochen Burg Ludwigstein e.V. It is based in Witzenhausen and registered in the association register of the Eschwege district court. The association serves exclusively and directly charitable purposes."
+
+[verein_comm_title]
+other = "More than just dance and music: Communication at eye level"
+
+[verein_comm_text]
+other = "Culture comes alive with us. We believe that singing, making music and dancing together are the best ways to overcome language barriers and have genuine conversations. While the early meetings were primarily shaped by folk dance, choral and instrumental music have also become pillars of our shared work today."
+
+[verein_purpose_title]
+other = "Purpose of the Association"
+
+[verein_purpose_intro]
+other = "The association pursues exclusively charitable purposes, realized in particular through:"
+
+[verein_purpose_1]
+other = "<strong>Organisation and implementation</strong> of the European Youth Weeks at Burg Ludwigstein."
+
+[verein_purpose_2]
+other = "<strong>Promotion of the European idea</strong> and intercultural exchange among young people from different countries."
+
+[verein_purpose_3]
+other = "<strong>Support of participating groups</strong> in their cultural, creative and social work."
+
+[verein_purpose_4]
+other = "<strong>Nurturing cooperation with European partner organisations</strong> and former participants."
+
+[verein_purpose_5]
+other = "<strong>Strengthening understanding, friendship and solidarity</strong> across national, ethnic and religious borders."
+
+[verein_dancers_title]
+other = "Die Ludwigsteiner"
+
+[verein_dancers_p1]
+other = "Die Ludwigsteiner are the association's own dance group of the Arbeitskreis Europäische Jugendwochen."
+
+[verein_dancers_p2]
+other = "The dancers come together from all over Germany. For this reason, they only meet a few times a year, but then rehearse very intensively and with great passion."
+
+[verein_dancers_p3]
+other = "The group showcases various German traditions, which they dance into stories. They use old folk dances and various traditional costumes, working them into new choreographies. They are always accompanied live by the music group \"die Lusiker\"."
+
+[verein_dancers_p4]
+other = "The group presents these stories each year at the European Youth Week, as well as at various performances inside and outside Germany."
+
+[verein_dancers_facts_label]
+other = "Key facts:"
+
+[verein_dancers_facts]
+other = "Founded 1990 by Fritz Lenz<br>Since 1991 the permanent German representation at the European Youth Week<br>International performances in over 10 countries worldwide<br>Current leadership: Annika Meyer &amp; Johanna Klauer"
+
+[verein_musicians_title]
+other = "Die Ludwigsteiner Musiker"
+
+[verein_musicians_p1]
+other = "The Lusiker (a wordplay combining Ludwigsteiner Musiker) are the association's own music group. The 7-member team, together with the Ludwigsteiner dance group, represents Germany at the European Youth Week."
+
+[verein_musicians_p2]
+other = "The group comes from various parts of Germany, Austria, Denmark, Poland and Latvia. In addition to traditional German pieces, the group also plays more contemporary music and original compositions."
+
+[verein_musicians_p3]
+other = "Current leadership: Maciej Derra.<br>Instruments: flute, accordion, bass, guitar, tenor horn (or baritone), vocals."
+
+[verein_cioff_title]
+other = "Member of CIOFF®"
+
+[verein_cioff_p1]
+other = "The Arbeitskreis Europäische Jugendwochen Burg Ludwigstein e.V. is a member of CIOFF® (Conseil International des Organisations de Festivals de Folklore et d'Arts Traditionnels), an international partner organisation of UNESCO in the field of traditional culture and folklore."
+
+[verein_cioff_p2]
+other = "Our membership underlines our international commitment and our dedication to cultural exchange and mutual understanding between peoples."
+
+[verein_cioff_link]
+other = "More about CIOFF®"
