@@ -26,6 +26,9 @@ jobs:
       - name: Build
         run: hugo --minify
 
+      - name: Inject reCAPTCHA secret
+        run: sed -i "s|%%RECAPTCHA_SECRET%%|${{ secrets.RECAPTCHA_SECRET }}|g" public/contact.php
+
       - name: Deploy via SFTP to Strato
         env:
           SFTP_USER: ${{ secrets.SFTP_USER }}

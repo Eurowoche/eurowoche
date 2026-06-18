@@ -69,7 +69,7 @@ file_put_contents($rate_file, json_encode(array_values($rate_data)));
 
 // reCAPTCHA v3 verifizieren
 $recaptcha_token  = trim($_POST['recaptcha-token'] ?? '');
-$recaptcha_secret = '6LfmRyYtAAAAAL-xHyn4fGPEDlOqw10m8LgncnQ-';
+$recaptcha_secret = '%%RECAPTCHA_SECRET%%';
 $recaptcha_ok     = false;
 
 if (!empty($recaptcha_token)) {
