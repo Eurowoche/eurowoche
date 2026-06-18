@@ -1,4 +1,17 @@
 {{ $lang := .Lang }}
+<script src="https://www.google.com/recaptcha/api.js?render=6LfmRyYtAAAAANwsnyAYYJ1O-5KWC2OD5QhTQ4gO"></script>
+<script>
+grecaptcha.ready(function() {
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = this;
+    grecaptcha.execute('6LfmRyYtAAAAANwsnyAYYJ1O-5KWC2OD5QhTQ4gO', {action: 'contact'}).then(function(token) {
+      document.getElementById('recaptcha-token').value = token;
+      form.submit();
+    });
+  });
+});
+</script>
 <form class="contact-form" action="/contact.php" method="POST" id="contact-form" novalidate>
     <input type="hidden" name="lang" value="{{ $lang }}">
 
@@ -36,6 +49,8 @@
     </div>
 
     <p class="form-required-hint">* Pflichtfelder</p>
+
+    <input type="hidden" id="recaptcha-token" name="recaptcha-token">
 
     <button type="submit" class="btn btn-primary btn-full">{{ i18n "submit" }}</button>
 </form>

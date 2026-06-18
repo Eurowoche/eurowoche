@@ -44,8 +44,50 @@ if (!$datenschutz) {
 
 // Honeypot-Schutz gegen Spam (leeres verstecktes Feld)
 if (!empty($_POST['website'])) {
-    // Stille Weiterleitung (Spam-Bot täuschen)
     header('Location: /danke/');
+    exit;
+}
+
+// Rate Limiting: max. 3 Anfragen pro IP pro Stunde
+$ip        = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+$rate_file = sys_get_temp_dir() . '/contact_rate_' . md5($ip) . '.json';
+$now       = time();
+$window    = 3600; // 1 Stunde
+$max       = 3;
+
+$rate_data = [];
+if (file_exists($rate_file)) {
+    $rate_data = json_decode(file_get_contents($rate_file), true) ?: [];
+}
+$rate_data = array_filter($rate_data, fn($t) => ($now - $t) < $window);
+if (count($rate_data) >= $max) {
+    header('Location: /kontakt/?fehler=Zu+viele+Anfragen.+Bitte+warte+eine+Stunde+und+versuche+es+erneut.');
+    exit;
+}
+$rate_data[] = $now;
+file_put_contents($rate_file, json_encode(array_values($rate_data)));
+
+// reCAPTCHA v3 verifizieren
+$recaptcha_token  = trim($_POST['recaptcha-token'] ?? '');
+$recaptcha_secret = '6LfmRyYtAAAAAL-xHyn4fGPEDlOqw10m8LgncnQ-';
+$recaptcha_ok     = false;
+
+if (!empty($recaptcha_token)) {
+    $verify = file_get_contents(
+        'https://www.google.com/recaptcha/api/siteverify?secret='
+        . urlencode($recaptcha_secret)
+        . '&response=' . urlencode($recaptcha_token)
+        . '&remoteip=' . urlencode($ip)
+    );
+    $result = json_decode($verify, true);
+    // Score >= 0.5 gilt als Mensch (0.0 = Bot, 1.0 = Mensch)
+    if (!empty($result['success']) && isset($result['score']) && $result['score'] >= 0.5) {
+        $recaptcha_ok = true;
+    }
+}
+
+if (!$recaptcha_ok) {
+    header('Location: /kontakt/?fehler=Sicherheitspr%C3%BCfung+fehlgeschlagen.+Bitte+versuche+es+erneut.');
     exit;
 }
 
