@@ -15,10 +15,15 @@ function clean($str) {
     return htmlspecialchars(trim(strip_tags($str)), ENT_QUOTES, 'UTF-8');
 }
 
-$vorname    = clean($_POST['first-name']  ?? '');
-$nachname   = clean($_POST['last-name']   ?? '');
-$email      = trim($_POST['email']        ?? '');
-$betreff    = clean($_POST['betreff']     ?? '');
+// Zeilenumbrüche aus Header-Feldern entfernen (verhindert Mail Header Injection)
+function clean_header($str) {
+    return preg_replace('/[\r\n]/', '', clean($str));
+}
+
+$vorname    = clean_header($_POST['first-name']  ?? '');
+$nachname   = clean_header($_POST['last-name']   ?? '');
+$email      = trim($_POST['email']               ?? '');
+$betreff    = clean_header($_POST['betreff']     ?? '');
 $nachricht  = clean($_POST['message']     ?? '');
 $datenschutz = isset($_POST['datenschutz']);
 $lang       = clean($_POST['lang']        ?? 'de');
