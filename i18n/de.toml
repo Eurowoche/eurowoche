@@ -354,3 +354,15 @@ other = "Musikleitung"
 
 [team_oeffentlichkeitsarbeit]
 other = "Öffentlichkeitsarbeit"
+
+[funktion_vorsitzender_1]
+other = "1. Vorsitzender"
+
+[funktion_vorsitzende_2]
+other = "2. Vorsitzende"
+
+[funktion_kassenwart]
+other = "Kassenwart"
+
+[funktion_schriftwart]
+other = "Schriftwartin"

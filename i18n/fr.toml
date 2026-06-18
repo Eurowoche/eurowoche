@@ -354,3 +354,15 @@ other = "Direction musicale"
 
 [team_oeffentlichkeitsarbeit]
 other = "Relations publiques"
+
+[funktion_vorsitzender_1]
+other = "1er Président"
+
+[funktion_vorsitzende_2]
+other = "2e Présidente"
+
+[funktion_kassenwart]
+other = "Trésorier"
+
+[funktion_schriftwart]
+other = "Secrétaire"

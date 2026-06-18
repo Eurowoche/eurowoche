@@ -327,3 +327,15 @@ other = "Music Leadership"
 
 [team_oeffentlichkeitsarbeit]
 other = "Public Relations"
+
+[funktion_vorsitzender_1]
+other = "1st Chairperson"
+
+[funktion_vorsitzende_2]
+other = "2nd Chairperson"
+
+[funktion_kassenwart]
+other = "Treasurer"
+
+[funktion_schriftwart]
+other = "Secretary"

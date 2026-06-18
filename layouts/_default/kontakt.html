@@ -21,7 +21,13 @@
                 </div>
                 <div class="vorstand-banner">
                     <h3>{{ .name }}</h3>
-                    <p class="funktion">{{ .funktion }}</p>
+                    <p class="funktion">
+                        {{ if eq .funktion "1. Vorsitzender" }}{{ i18n "funktion_vorsitzender_1" }}
+                        {{ else if eq .funktion "2. Vorsitzende" }}{{ i18n "funktion_vorsitzende_2" }}
+                        {{ else if eq .funktion "Kassenwart" }}{{ i18n "funktion_kassenwart" }}
+                        {{ else if eq .funktion "Schriftwartin" }}{{ i18n "funktion_schriftwart" }}
+                        {{ else }}{{ .funktion }}{{ end }}
+                    </p>
                 </div>
                 <div class="vorstand-kontakt">
                     {{ with .email }}<p class="email">{{ if eq $.Lang "de" }}Email{{ else if eq $.Lang "en" }}Email{{ else if eq $.Lang "fr" }}E-mail{{ end }}: <a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
