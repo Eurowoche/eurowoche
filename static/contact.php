@@ -103,6 +103,11 @@ $name_voll   = $vorname . ($nachname ? ' ' . $nachname : '');
 $to          = 'pr@eurowoche.org';
 $mail_subject = '=?UTF-8?B?' . base64_encode('Kontaktanfrage: ' . $betreff) . '?=';
 
+$score       = $result['score'] ?? 0;
+$score_label = $score >= 0.8 ? '✅ Wahrscheinlich Mensch'
+             : ($score >= 0.5 ? '⚠️  Unsicher – bitte prüfen'
+             : '🚨 Verdächtig (Bot?)');
+
 $mail_body  = "Neue Kontaktanfrage über eurowoche.org\n";
 $mail_body .= str_repeat('-', 40) . "\n\n";
 $mail_body .= "Name:       $name_voll\n";
@@ -110,7 +115,8 @@ $mail_body .= "E-Mail:     $email\n";
 $mail_body .= "Betreff:    $betreff\n\n";
 $mail_body .= "Nachricht:\n$nachricht\n\n";
 $mail_body .= str_repeat('-', 40) . "\n";
-$mail_body .= "Gesendet am: " . date('d.m.Y H:i') . "\n";
+$mail_body .= "Gesendet am:      " . date('d.m.Y H:i') . "\n";
+$mail_body .= "reCAPTCHA Score:  " . number_format($score, 2) . " / 1.00  →  $score_label\n";
 
 $headers  = "From: noreply@eurowoche.org\r\n";
 $headers .= "Reply-To: $name_voll <$email>\r\n";
