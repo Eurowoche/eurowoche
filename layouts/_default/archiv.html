@@ -205,16 +205,16 @@
             <span class="archiv-search-icon">🔍</span>
         </div>
         <div class="archiv-decade-filter">
-            <span class="archiv-decade-label">Jahrzehnt:</span>
-            <button class="archiv-decade-btn active" data-decade="all">Alle</button>
-            <button class="archiv-decade-btn" data-decade="1950">1950er</button>
-            <button class="archiv-decade-btn" data-decade="1960">1960er</button>
-            <button class="archiv-decade-btn" data-decade="1970">1970er</button>
-            <button class="archiv-decade-btn" data-decade="1980">1980er</button>
-            <button class="archiv-decade-btn" data-decade="1990">1990er</button>
-            <button class="archiv-decade-btn" data-decade="2000">2000er</button>
-            <button class="archiv-decade-btn" data-decade="2010">2010er</button>
-            <button class="archiv-decade-btn" data-decade="2020">2020er</button>
+            <span class="archiv-decade-label">{{ i18n "decade_label" }}:</span>
+            <button class="archiv-decade-btn active" data-decade="all">{{ i18n "decade_all" }}</button>
+            <button class="archiv-decade-btn" data-decade="1950">1950{{ i18n "decade_suffix" }}</button>
+            <button class="archiv-decade-btn" data-decade="1960">1960{{ i18n "decade_suffix" }}</button>
+            <button class="archiv-decade-btn" data-decade="1970">1970{{ i18n "decade_suffix" }}</button>
+            <button class="archiv-decade-btn" data-decade="1980">1980{{ i18n "decade_suffix" }}</button>
+            <button class="archiv-decade-btn" data-decade="1990">1990{{ i18n "decade_suffix" }}</button>
+            <button class="archiv-decade-btn" data-decade="2000">2000{{ i18n "decade_suffix" }}</button>
+            <button class="archiv-decade-btn" data-decade="2010">2010{{ i18n "decade_suffix" }}</button>
+            <button class="archiv-decade-btn" data-decade="2020">2020{{ i18n "decade_suffix" }}</button>
         </div>
     </div>
 
@@ -342,6 +342,16 @@
             {iso:"NP",lat:28.394,lng:84.124,name:"Nepal",count:1,years:"1974"},
             {iso:"CH",lat:46.818,lng:8.228,name:"Schweiz",count:1,years:"1953"}
           ];
+          // Übersetzte Ländernamen aus Hugo i18n (überschreiben c.name in der Karte)
+          var isoNames = {
+            {{- range $iso, $name := $isoToLand }}
+            "{{ $iso }}": {{ $name | jsonify }},
+            {{- end }}
+            "CZ": {{ i18n "map_cz_name" | jsonify }},
+            "RS": {{ i18n "map_rs_name" | jsonify }},
+            "RU": {{ i18n "map_ru_name" | jsonify }},
+            "BA": {{ i18n "map_ba_name" | jsonify }}
+          };
           // mapDetails: aus YAML-Dict-Array per JS gruppieren
           var _raw={{ $entries | jsonify | safeJS }};
           var mapDetails={};
@@ -519,7 +529,7 @@
                 + '<span class="archiv-panel-year">' + yr + '</span>'
                 + grHTML + cityHTML + '</div>';
             });
-            panelCountryEl.textContent = c.name;
+            panelCountryEl.textContent = isoNames[c.iso] || c.name;
             panelFlagEl.textContent   = flag;
             panelCountEl.textContent  = '(' + c.count + '×)';
             panelListEl.innerHTML = listHTML;
@@ -660,7 +670,7 @@
             markerByISO[c.iso] = { marker: marker, c: c, baseRadius: r, baseOpacity: opacity };
 
             // Kleines Tooltip beim Hover: Name + Flagge + Anzahl + Hinweis
-            var tipHTML = '<div class="archiv-tip-name">' + c.name + ' <span class="archiv-tip-flag">' + isoToFlag(c.iso) + '</span></div>'
+            var tipHTML = '<div class="archiv-tip-name">' + (isoNames[c.iso] || c.name) + ' <span class="archiv-tip-flag">' + isoToFlag(c.iso) + '</span></div>'
               + '<div class="archiv-tip-count">' + c.count + ' {{ i18n "map_participations" }}</div>'
               + '<div class="archiv-tip-hint">↗ {{ i18n "map_click_details" }}</div>';
             marker.bindTooltip(tipHTML, {
@@ -749,7 +759,7 @@
               L.DomEvent.disableScrollPropagation(box);
 
               var ttl = L.DomUtil.create('div', 'archiv-overseas-title', box);
-              ttl.textContent = 'Außer Europa';
+              ttl.textContent = {{ i18n "outside_europe" | jsonify }};
 
               mapCountries
                 .filter(function(c) { return overseasISOs[c.iso]; })
@@ -764,7 +774,7 @@
                     + '<circle cx="' + (sz/2) + '" cy="' + (sz/2) + '" r="' + r + '" '
                     + 'fill="' + PRIMARY + '" fill-opacity="' + op + '" '
                     + 'stroke="#fff" stroke-width="1.5"/></svg>'
-                    + '<span class="archiv-overseas-label">' + c.name + '</span>';
+                    + '<span class="archiv-overseas-label">' + (isoNames[c.iso] || c.name) + '</span>';
 
                   // Hover zeigt Tooltip
                   item.title = c.name + ' ' + isoToFlag(c.iso) + ' · ' + c.count + '× · Klicken für Details';

@@ -366,3 +366,27 @@ other = "Trésorier"
 
 [funktion_schriftwart]
 other = "Secrétaire"
+
+[map_cz_name]
+other = "Tchéquie / ČSSR"
+
+[map_rs_name]
+other = "Serbie / Yougoslavie"
+
+[map_ru_name]
+other = "Russie / Union soviétique"
+
+[map_ba_name]
+other = "Bosnie-Herzégovine"
+
+[outside_europe]
+other = "Hors d'Europe"
+
+[decade_label]
+other = "Décennie"
+
+[decade_all]
+other = "Toutes"
+
+[decade_suffix]
+other = "s"

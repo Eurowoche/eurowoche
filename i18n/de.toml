@@ -366,3 +366,27 @@ other = "Kassenwart"
 
 [funktion_schriftwart]
 other = "Schriftwartin"
+
+[map_cz_name]
+other = "Tschechien / ČSSR"
+
+[map_rs_name]
+other = "Serbien / Jugoslawien"
+
+[map_ru_name]
+other = "Russland / Sowjetunion"
+
+[map_ba_name]
+other = "Bosnien-Herzegowina"
+
+[outside_europe]
+other = "Außer Europa"
+
+[decade_label]
+other = "Jahrzehnt"
+
+[decade_all]
+other = "Alle"
+
+[decade_suffix]
+other = "er"

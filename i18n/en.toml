@@ -339,3 +339,27 @@ other = "Treasurer"
 
 [funktion_schriftwart]
 other = "Secretary"
+
+[map_cz_name]
+other = "Czech Rep. / ČSSR"
+
+[map_rs_name]
+other = "Serbia / Yugoslavia"
+
+[map_ru_name]
+other = "Russia / Soviet Union"
+
+[map_ba_name]
+other = "Bosnia-Herzegovina"
+
+[outside_europe]
+other = "Outside Europe"
+
+[decade_label]
+other = "Decade"
+
+[decade_all]
+other = "All"
+
+[decade_suffix]
+other = "s"
