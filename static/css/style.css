@@ -2506,6 +2506,15 @@ body.menu-open .leaflet-container {
     color: var(--primary);
 }
 
+/* Higher-specificity override: make detail-hint match surrounding paragraph text */
+.maerkte-text-block .maerkte-detail-hint {
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    font-weight: 300;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
 /* Kontakt und Teilnahme - volle Breite */
 .maerkte-kontakt-section {
     background: #E3D1D1;
@@ -5572,9 +5581,26 @@ section.team-section.bg-cream {
     }
 
     .maerkte-text-block p {
-        text-align: left;
+        text-align: justify;
         font-size: var(--fs-base);
         line-height: 1.7;
+    }
+
+    /* MÄRKTE: Adventsmarkt — Bild vor Text auf Mobile */
+    .maerkte-section-inner-reverse .maerkte-image-container { order: 1; }
+    .maerkte-section-inner-reverse .maerkte-text-container  { order: 2; }
+
+    /* MÄRKTE: Kontakt-Buttons gleiche Breite auf Mobile */
+    .maerkte-kontakt-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .maerkte-kontakt-buttons .btn,
+    .maerkte-kontakt-buttons .maerkte-kontakt-btn {
+        width: 100%;
+        max-width: 380px;
+        text-align: center;
+        box-sizing: border-box;
     }
 
     /* MÄRKTE SECTIONS: Mobile Padding */
