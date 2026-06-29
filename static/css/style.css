@@ -5769,10 +5769,13 @@ section.team-section.bg-cream {
     }
 
     /* Verein Titel: kein Nowrap erzwingen */
-    .verein-page .page-intro h1,
+    .verein-page .page-intro h1 {
+        white-space: normal;
+        font-size: var(--fs-h1);
+    }
+
     .verein-page-subtitle {
         white-space: normal;
-        font-size: var(--fs-h3);
     }
 }
 
