@@ -5792,6 +5792,10 @@ section.team-section.bg-cream {
    Weitere Fixes für Layouts auf kleinen Screens
    ========================================== */
 @media (max-width: 768px) {
+    .teilnahme-hinweis-item {
+        padding-right: 1.8rem;
+    }
+
     .verein-page .geschichte-wide-photo img {
         height: auto;
         object-fit: unset;
