@@ -4634,7 +4634,7 @@ section.team-section.bg-cream {
 
 .verein-zweck-list li {
     font-family: var(--font-body);
-    font-size: var(--fs-md);
+    font-size: var(--fs-base);
     line-height: 1.8;
     margin-bottom: 0.8rem;
     font-weight: 300;
