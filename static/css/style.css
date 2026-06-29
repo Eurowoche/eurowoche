@@ -5415,6 +5415,12 @@ section.team-section.bg-cream {
         object-fit: unset;
     }
 
+    /* Archiv: Hero-Foto in voller Höhe anzeigen, kein Zuschnitt */
+    .archiv-hero-photo img {
+        height: auto;
+        object-fit: unset;
+    }
+
     .geschichte-white-inner {
         flex-direction: column;
         align-items: center;
