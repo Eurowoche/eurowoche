@@ -513,14 +513,19 @@ body.menu-open .leaflet-container {
 }
 
 /* === ANNOUNCEMENT BANNER === */
+@keyframes banner-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(139, 83, 77, 0.4); }
+    50%       { box-shadow: 0 0 0 6px rgba(139, 83, 77, 0); }
+}
 .announcement-banner {
     background: #EFE1C8;
     color: var(--primary);
     text-align: center;
-    padding: 20px 24px;
+    padding: 18px 24px 20px;
     font-size: 1rem;
     letter-spacing: 0.02em;
     margin-top: 105px;
+    border-top: 3px solid var(--primary);
     border-bottom: 1px solid rgba(139, 83, 77, 0.15);
 }
 .announcement-banner a {
@@ -533,21 +538,24 @@ body.menu-open .leaflet-container {
     justify-content: center;
 }
 .announcement-banner .banner-text {
-    font-weight: 420;
+    font-weight: 600;
     font-size: 1.05rem;
+    letter-spacing: 0.03em;
 }
 .announcement-banner .banner-cta {
     background: var(--primary);
     color: #fff;
     border-radius: 20px;
-    padding: 5px 18px;
+    padding: 7px 20px;
     font-size: 0.9rem;
     font-weight: 600;
     white-space: nowrap;
     transition: background 0.2s;
+    animation: banner-pulse 2s ease-in-out infinite;
 }
 .announcement-banner a:hover .banner-cta {
     background: var(--primary-dark);
+    animation: none;
 }
 
 /* === HERO SECTION === */
@@ -5655,8 +5663,8 @@ section.team-section.bg-cream {
     }
 
     .announcement-banner {
-        margin-top: 55px;
-        padding: 14px 16px;
+        margin-top: 62px;
+        padding: 18px 16px 20px;
     }
 
     .hero-text h1 {
