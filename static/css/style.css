@@ -526,7 +526,7 @@ body.menu-open .leaflet-container {
     letter-spacing: 0.02em;
     margin-top: 105px;
     border-top: 3px solid var(--primary);
-    border-bottom: 1px solid rgba(139, 83, 77, 0.15);
+    border-bottom: 3px solid var(--primary);
 }
 .announcement-banner a {
     color: var(--primary);
