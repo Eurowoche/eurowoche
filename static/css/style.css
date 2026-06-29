@@ -5792,6 +5792,11 @@ section.team-section.bg-cream {
    Weitere Fixes für Layouts auf kleinen Screens
    ========================================== */
 @media (max-width: 768px) {
+    .verein-page .geschichte-wide-photo img {
+        height: auto;
+        object-fit: unset;
+    }
+
     /* Inner page offset: mobile header is ~80px, not 66px */
     .page-content {
         margin-top: 80px;
