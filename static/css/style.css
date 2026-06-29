@@ -5656,6 +5656,16 @@ section.team-section.bg-cream {
         padding: 2rem 1.5rem;
     }
 
+    /* Spende: symmetrische Padding und zentrierter Text auf Mobile */
+    .spende-text-col {
+        padding: 2rem 1.5rem;
+        text-align: center;
+        align-items: center;
+    }
+    .spende-text-col p {
+        text-align: center;
+    }
+
     .section-rose {
         padding: 2rem 1.5rem;
     }
