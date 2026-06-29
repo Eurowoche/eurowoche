@@ -5060,6 +5060,35 @@ section.team-section.bg-cream {
    WIX-Original: Hero ist full-width Text,
    Bild darunter, Logo + Hamburger im Header
    ========================================== */
+
+@media (max-width: 768px) {
+    .burg-split-section {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+
+    .burg-split-image {
+        flex: none;
+        width: 100%;
+        height: 280px;
+        position: relative;
+    }
+
+    .burg-split-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .burg-split-text {
+        padding: 2.5rem 1.5rem;
+    }
+}
 @media (max-width: 768px) {
     /* --- HEADER MOBILE (wie WIX: Logo links, Hamburger rechts, kein Sprachumschalter) --- */
     .header-inner {
