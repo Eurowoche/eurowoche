@@ -512,10 +512,46 @@ body.menu-open .leaflet-container {
     font-size: var(--fs-base);
 }
 
+/* === ANNOUNCEMENT BANNER === */
+.announcement-banner {
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 11px 20px;
+    font-size: 0.92rem;
+    letter-spacing: 0.01em;
+    margin-top: 66px;
+}
+.announcement-banner a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.announcement-banner .banner-text {
+    font-weight: 500;
+}
+.announcement-banner .banner-cta {
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    padding: 3px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+.announcement-banner a:hover .banner-cta {
+    background: rgba(255,255,255,0.32);
+}
+
 /* === HERO SECTION === */
 /* Hero-Hintergrund = helles Mauve (cream 80% auf #8B534D) */
 .hero-section {
-    margin-top: 66px;
+    margin-top: 0;
     background: #DCCFCA;
     display: flex;
 }

@@ -1,5 +1,13 @@
 {{ define "main" }}
 
+<!-- Announcement Banner -->
+<div class="announcement-banner">
+    <a href="{{ if eq .Lang "de" }}/veranstaltungen/eurowoche-2026/{{ else if eq .Lang "en" }}/en/events/eurowoche-2026/{{ else if eq .Lang "fr" }}/fr/evenements/eurowoche-2026/{{ end }}">
+        <span class="banner-text">{{ i18n "banner_text" }}</span>
+        <span class="banner-cta">{{ i18n "banner_cta" }}</span>
+    </a>
+</div>
+
 <!-- Section 1: Hero -->
 <section class="hero-section">
     <div class="hero-inner">
