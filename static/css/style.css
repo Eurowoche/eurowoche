@@ -5405,7 +5405,8 @@ section.team-section.bg-cream {
     }
 
     .geschichte-wide-photo {
-        max-width: 90%;
+        max-width: 100%;
+        padding: 0 1rem;
     }
 
     /* Geschichte: Fotos in voller Höhe anzeigen, kein Zuschnitt */
