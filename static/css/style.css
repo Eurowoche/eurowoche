@@ -5797,6 +5797,16 @@ section.team-section.bg-cream {
         object-fit: unset;
     }
 
+    /* Festival grid: remove fixed row heights so full photos show */
+    .festival-photo-grid {
+        grid-template-rows: auto;
+    }
+
+    .festival-grid-item img {
+        height: auto;
+        object-fit: unset;
+    }
+
     /* Inner page offset: mobile header is ~80px, not 66px */
     .page-content {
         margin-top: 80px;
