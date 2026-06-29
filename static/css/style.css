@@ -1173,7 +1173,13 @@ body.menu-open .leaflet-container {
     font-size: var(--fs-md);
     line-height: 1.8;
     color: var(--text-dark);
-    margin-top: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+/* Mach Mit: Titel enger am Untertitel */
+.mach-mit-page .page-intro h1 {
+    margin-bottom: 0.3rem;
 }
 
 /* Homepage Mach-mit: Titel links, Cards rechts */
