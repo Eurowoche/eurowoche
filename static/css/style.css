@@ -5797,9 +5797,11 @@ section.team-section.bg-cream {
         object-fit: unset;
     }
 
-    /* Festival grid: remove fixed row heights so full photos show */
+    /* Festival grid: single column on mobile so full photos show cleanly */
     .festival-photo-grid {
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
+        padding: 0 1rem;
     }
 
     .festival-grid-item img {
