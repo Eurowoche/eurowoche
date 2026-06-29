@@ -10,17 +10,63 @@ Die Europäische Jugendwoche ist ein einzigartiges Jugend- und Folklorefestival.
 
 Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, junge Menschen aus Europa und der Welt zusammenzuführen, damit sie sich und ihre Kultur gegenseitig kennen und verstehen lernen. Damit soll ein Beitrag zur Verständigung der Völker und zum Frieden in der Welt geleistet werden. Organisiert wird die Jugendbegegnung vom gemeinnützigen „Arbeitskreis Europäische Jugendwochen Burg Ludwigstein e.V.".
 
+<p class="ew-preliminary-note">⚠️ Vorläufiges Programm – Änderungen vorbehalten.</p>
+
 <div class="ew-program">
 
-<h2 class="ew-program-title">Programm &amp; Termine</h2>
+<h2 class="ew-program-title">Programm</h2>
 
 <div class="ew-program-group">
-  <h3 class="ew-program-group-label">Öffentliche Veranstaltungen</h3>
+  <h3 class="ew-program-group-label">Gastgruppen 2026</h3>
+  <p class="ew-groups-intro">Beim 65. Jahrgang der Europäischen Jugendwoche werden voraussichtlich folgende Ensembles aus ganz Europa vertreten sein:</p>
+
+  <div class="ew-groups-grid">
+    <div class="ew-group-card">
+      <span class="ew-group-flag">🇩🇪</span>
+      <div class="ew-group-name">Die Ludwigsteiner</div>
+      <div class="ew-group-location">Deutschland · Gastgebergruppe</div>
+    </div>
+    <div class="ew-group-card">
+      <span class="ew-group-flag">🇮🇹</span>
+      <div class="ew-group-name">Centro Culturale Terrazzani</div>
+      <div class="ew-group-location">Palermo, Italien</div>
+    </div>
+    <div class="ew-group-card">
+      <span class="ew-group-flag">🇨🇿</span>
+      <div class="ew-group-name">Lidová muzika z Chrástu</div>
+      <div class="ew-group-location">Chrast, Tschechien</div>
+    </div>
+    <div class="ew-group-card">
+      <span class="ew-group-flag">🇨🇿</span>
+      <div class="ew-group-name">Dolina</div>
+      <div class="ew-group-location">Mělník, Tschechien</div>
+    </div>
+    <div class="ew-group-card">
+      <span class="ew-group-flag">🇪🇪</span>
+      <div class="ew-group-name">Leigarid</div>
+      <div class="ew-group-location">Tallinn, Estland</div>
+    </div>
+    <div class="ew-group-card">
+      <span class="ew-group-flag">🇫🇷</span>
+      <div class="ew-group-name">Le Quadrille Occitan</div>
+      <div class="ew-group-location">Toulouse, Frankreich</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="ew-program">
+
+<h2 class="ew-program-title">Termine</h2>
+
+<div class="ew-program-group">
+  <h3 class="ew-program-group-label">Öffentliche Abendveranstaltungen</h3>
 
   <div class="ew-event-card">
     <div class="ew-event-main">
       <div class="ew-event-name">Eröffnungsveranstaltung</div>
-      <div class="ew-event-desc">Feierliche Eröffnung der 65. Europäischen Jugendwoche.</div>
+      <div class="ew-event-desc">Feierliche Eröffnung der 65. Europäischen Jugendwoche mit allen Gastgruppen.</div>
     </div>
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Sa., 01. August 2026</span>
@@ -31,36 +77,84 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">Folkloredarbietung</div>
-      <div class="ew-event-desc">Auftritt der Gastgruppen mit traditioneller Folklore.</div>
+      <div class="ew-event-name">Folkloredarbietung mit allen Gruppen</div>
+      <div class="ew-event-desc">Auftritt aller Gastgruppen mit traditioneller Folklore.</div>
     </div>
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 So., 02. August 2026</span>
-      <span class="ew-meta-item">🕕 18:00–20:00 Uhr</span>
+      <span class="ew-meta-item">🕕 18:00 Uhr</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Werratal+Kultur+und+Kongresszentrum+Bad+Sooden-Allendorf" target="_blank">Werratal Kultur- und Kongresszentrum, Bad Sooden-Allendorf</a></span>
     </div>
   </div>
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">Nationentage – Galaauftritt &amp; offenes Tanzen</div>
-      <div class="ew-event-desc">Jeden Abend präsentiert eine Gastgruppe ihre Folklore beim Galaauftritt (ca. 2 Stunden), anschließend offenes Tanzen für alle.</div>
+      <div class="ew-event-name">🇩🇪 Deutscher Tag – Die Ludwigsteiner</div>
+      <div class="ew-event-desc">Galaauftritt der deutschen Gastgebergruppe, anschließend offenes Tanzen.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Mo.–Fr., 03.–07. August 2026</span>
-      <span class="ew-meta-item">🕗 Abends</span>
+      <span class="ew-meta-item">📅 Mo., 03. August 2026</span>
+      <span class="ew-meta-item">🕗 20:00 Uhr</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">Große Eurokirmes</div>
-      <div class="ew-event-desc">Abschluss-Highlight der Woche: Auftritte aller Gruppen und Präsentation der Workshopergebnisse (ca. 4 Stunden).</div>
+      <div class="ew-event-name">🇨🇿 Tschechischer Tag – Lidová muzika z Chrástu &amp; Dolina</div>
+      <div class="ew-event-desc">Galaauftritt der tschechischen Musik- und Tanzensembles, anschließend offenes Tanzen.</div>
+    </div>
+    <div class="ew-event-meta">
+      <span class="ew-meta-item">📅 Di., 04. August 2026</span>
+      <span class="ew-meta-item">🕗 20:00 Uhr</span>
+      <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
+    </div>
+  </div>
+
+  <div class="ew-event-card">
+    <div class="ew-event-main">
+      <div class="ew-event-name">🇮🇹 Italienischer Tag – Centro Culturale Terrazzani</div>
+      <div class="ew-event-desc">Galaauftritt des sizilianischen Ensembles aus Palermo, anschließend offenes Tanzen.</div>
+    </div>
+    <div class="ew-event-meta">
+      <span class="ew-meta-item">📅 Mi., 05. August 2026</span>
+      <span class="ew-meta-item">🕗 20:00 Uhr</span>
+      <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
+    </div>
+  </div>
+
+  <div class="ew-event-card">
+    <div class="ew-event-main">
+      <div class="ew-event-name">🇫🇷 Französischer Tag – Le Quadrille Occitan</div>
+      <div class="ew-event-desc">Galaauftritt des okzitanischen Ensembles aus Toulouse, anschließend offenes Tanzen.</div>
+    </div>
+    <div class="ew-event-meta">
+      <span class="ew-meta-item">📅 Do., 06. August 2026</span>
+      <span class="ew-meta-item">🕗 20:00 Uhr</span>
+      <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
+    </div>
+  </div>
+
+  <div class="ew-event-card">
+    <div class="ew-event-main">
+      <div class="ew-event-name">🇪🇪 Estnischer Tag – Leigarid</div>
+      <div class="ew-event-desc">Galaauftritt des estnischen Folklorensembles aus Tallinn, anschließend offenes Tanzen.</div>
+    </div>
+    <div class="ew-event-meta">
+      <span class="ew-meta-item">📅 Fr., 07. August 2026</span>
+      <span class="ew-meta-item">🕗 20:00 Uhr</span>
+      <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
+    </div>
+  </div>
+
+  <div class="ew-event-card">
+    <div class="ew-event-main">
+      <div class="ew-event-name">Große Eurokirmes – Alle Gruppen</div>
+      <div class="ew-event-desc">Abschluss-Highlight der Woche: Auftritte aller Gruppen und Präsentation der Workshopergebnisse.</div>
     </div>
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Sa., 08. August 2026</span>
-      <span class="ew-meta-item">🕑 Nachmittags</span>
+      <span class="ew-meta-item">🕑 15:00–18:00 Uhr</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>
@@ -76,7 +170,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     </div>
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 So., 02. August 2026</span>
-      <span class="ew-meta-item">🕙 10:00–12:00 Uhr</span>
+      <span class="ew-meta-item">🕤 09:30–12:30 Uhr</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>
@@ -96,11 +190,23 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
   <div class="ew-event-card">
     <div class="ew-event-main">
       <div class="ew-event-name">Workshops</div>
-      <div class="ew-event-desc">Mitmach-Workshops in Tanz, Gesang und weiteren Bereichen. Teilnahme kostenlos.</div>
+      <div class="ew-event-desc">Mitmach-Workshops in Tanz, Gesang und weiteren Bereichen. Eintritt frei.</div>
     </div>
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Mo.–Fr., 03.–07. August 2026</span>
       <span class="ew-meta-item">🕥 10:30–12:30 Uhr</span>
+      <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
+    </div>
+  </div>
+
+  <div class="ew-event-card">
+    <div class="ew-event-main">
+      <div class="ew-event-name">Gemeinsames Volkstanzen</div>
+      <div class="ew-event-desc">Volkstänze des jeweiligen Nationentages gemeinsam erlernen. Eintritt frei.</div>
+    </div>
+    <div class="ew-event-meta">
+      <span class="ew-meta-item">📅 Mo., Di. &amp; Fr., 03., 04. &amp; 07. August 2026</span>
+      <span class="ew-meta-item">🕔 17:30–18:30 Uhr</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>
