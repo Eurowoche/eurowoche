@@ -514,38 +514,40 @@ body.menu-open .leaflet-container {
 
 /* === ANNOUNCEMENT BANNER === */
 .announcement-banner {
-    background: var(--primary);
-    color: #fff;
+    background: #EFE1C8;
+    color: var(--primary);
     text-align: center;
-    padding: 11px 20px;
-    font-size: 0.92rem;
-    letter-spacing: 0.01em;
-    margin-top: 66px;
+    padding: 16px 24px;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    margin-top: 72px;
+    border-bottom: 1px solid rgba(139, 83, 77, 0.15);
 }
 .announcement-banner a {
-    color: #fff;
+    color: var(--primary);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 1.2rem;
+    gap: 1.4rem;
     flex-wrap: wrap;
     justify-content: center;
 }
 .announcement-banner .banner-text {
-    font-weight: 500;
+    font-weight: 420;
+    font-size: 1.05rem;
 }
 .announcement-banner .banner-cta {
-    background: rgba(255,255,255,0.18);
-    border: 1px solid rgba(255,255,255,0.5);
+    background: var(--primary);
+    color: #fff;
     border-radius: 20px;
-    padding: 3px 14px;
-    font-size: 0.85rem;
+    padding: 5px 18px;
+    font-size: 0.9rem;
     font-weight: 600;
     white-space: nowrap;
     transition: background 0.2s;
 }
 .announcement-banner a:hover .banner-cta {
-    background: rgba(255,255,255,0.32);
+    background: var(--primary-dark);
 }
 
 /* === HERO SECTION === */
