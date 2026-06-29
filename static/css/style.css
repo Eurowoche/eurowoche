@@ -3102,8 +3102,15 @@ section.team-section.bg-cream {
 
 /* Responsive Kontakt */
 @media (max-width: 768px) {
+    .kontakt-hero-container {
+        margin-top: 0;
+        padding: 0.5rem 1rem 0;
+    }
+
     .kontakt-hero-image {
-        width: 90%;
+        width: 100%;
+        height: auto;
+        object-fit: unset;
     }
 
     .honorary-wrapper {
