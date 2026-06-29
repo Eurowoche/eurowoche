@@ -5408,6 +5408,12 @@ section.team-section.bg-cream {
         max-width: 90%;
     }
 
+    /* Geschichte: Fotos in voller Höhe anzeigen, kein Zuschnitt */
+    .geschichte-page .geschichte-wide-photo img {
+        height: auto;
+        object-fit: unset;
+    }
+
     .geschichte-white-inner {
         flex-direction: column;
         align-items: center;
