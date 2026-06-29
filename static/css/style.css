@@ -5637,6 +5637,10 @@ section.team-section.bg-cream {
         height: auto;
     }
 
+    /* Helfe Mit: Foto vor Titel auf Mobile */
+    .mach-mit-section-2 .mach-mit-photo-side { order: 1; }
+    .mach-mit-section-2 .mach-mit-text-side  { order: 2; }
+
     .mach-mit-photo-side {
         flex: none;
         height: 280px;
