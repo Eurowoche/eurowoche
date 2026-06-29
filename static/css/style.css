@@ -4356,8 +4356,9 @@ section.team-section.bg-cream {
     transform: scale(1.05);
 }
 
-/* Galerie-Bild 3: hochkantes Foto → oben beginnen damit Gesichter sichtbar */
-.verein-galerie-item:nth-child(3) img {
+/* Galerie-Bild 3 + 6: hochkante Fotos → oben beginnen damit Gesichter sichtbar */
+.verein-galerie-item:nth-child(3) img,
+.verein-galerie-item:nth-child(6) img {
     object-position: center top;
 }
 
