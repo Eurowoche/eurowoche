@@ -5937,6 +5937,23 @@ section.team-section.bg-cream {
         height: 300px !important;
     }
 
+    /* Archiv controls: vertikal stapeln, Suche volle Breite */
+    .archiv-controls-row {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.5rem 1rem;
+        gap: 0.5rem;
+    }
+
+    .archiv-search-bar {
+        flex: none;
+        width: 100%;
+    }
+
+    .archiv-decade-filter {
+        justify-content: center;
+    }
+
     /* Archiv decade filter: kleinere Buttons */
     .archiv-decade-btn {
         font-size: var(--fs-xs);
