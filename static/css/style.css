@@ -4489,14 +4489,14 @@ section.team-section.bg-cream {
 
 .verein-zweck-text p {
     font-family: var(--font-body);
-    font-size: var(--fs-md);
+    font-size: var(--fs-base);
     line-height: 1.85;
     text-align: justify;
 }
 
 .verein-zweck-text li {
     font-family: var(--font-body);
-    font-size: var(--fs-md);
+    font-size: var(--fs-base);
     line-height: 1.85;
 }
 
@@ -4593,7 +4593,7 @@ section.team-section.bg-cream {
 
 .verein-split-text p {
     font-family: var(--font-body);
-    font-size: var(--fs-md);
+    font-size: var(--fs-base);
     line-height: 1.85;
     margin-bottom: 1rem;
     text-align: justify;
