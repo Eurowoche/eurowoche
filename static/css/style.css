@@ -5447,6 +5447,15 @@ section.team-section.bg-cream {
         flex-direction: column;
     }
 
+    /* Ludwigsteiner section: push photo after text on mobile */
+    .verein-split-section.bg-white .verein-split-image {
+        order: 2;
+    }
+
+    .verein-split-section.bg-white .verein-split-text {
+        order: 1;
+    }
+
     .verein-split-image {
         flex: none;
         aspect-ratio: auto;
