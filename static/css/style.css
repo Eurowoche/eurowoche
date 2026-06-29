@@ -5110,6 +5110,8 @@ section.team-section.bg-cream {
     /* --- HERO MOBILE: Nur Text, kein Bild (wie WIX) --- */
     .announcement-banner {
         margin-top: 75px;
+        border-top: 3px solid var(--primary);
+        border-bottom: 3px solid var(--primary);
     }
 
     .hero-section {
@@ -5665,6 +5667,8 @@ section.team-section.bg-cream {
     .announcement-banner {
         margin-top: 62px;
         padding: 18px 16px 20px;
+        border-top: 3px solid var(--primary);
+        border-bottom: 3px solid var(--primary);
     }
 
     .hero-text h1 {
