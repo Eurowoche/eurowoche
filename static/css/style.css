@@ -5523,6 +5523,13 @@ section.team-section.bg-cream {
         gap: 2rem;
     }
 
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
     .footer-divider {
         display: none;
     }
