@@ -5062,6 +5062,16 @@ section.team-section.bg-cream {
    ========================================== */
 
 @media (max-width: 768px) {
+    .festival-photo-hero {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+
+    .festival-photo-hero img {
+        height: auto;
+        object-fit: unset;
+    }
+
     .burg-split-section {
         flex-direction: column;
         gap: 0;
