@@ -5699,10 +5699,15 @@ section.team-section.bg-cream {
         gap: 2rem;
     }
 
-    /* Vorstand: Foto und Banner auf Spaltenbreite skalieren */
+    /* Vorstand: Foto kompakt wie Ehrenvorsitz-Foto */
     .vorstand-photo {
-        width: 100%;
-        height: 320px;
+        width: 150px;
+        height: auto;
+    }
+
+    .vorstand-photo img {
+        height: auto;
+        object-fit: unset;
     }
 
     .vorstand-banner {
