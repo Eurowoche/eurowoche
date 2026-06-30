@@ -11,8 +11,6 @@ La Semaine européenne de la jeunesse est un festival unique de jeunesse et folk
 
 L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir les jeunes d'Europe et du monde pour qu'ils se découvrent et apprennent à comprendre mutuellement leur culture. Cela vise à contribuer à la compréhension entre les peuples et à la paix dans le monde. Le rassemblement des jeunes est organisé par l'association à but non lucratif « Arbeitskreis Europäische Jugendwochen Burg Ludwigstein e.V. ».
 
-<p class="ew-preliminary-note">⚠️ Programme provisoire – sous réserve de modifications.</p>
-
 <div class="ew-program">
 
 <h2 class="ew-program-title">Programme</h2>

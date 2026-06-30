@@ -12,8 +12,6 @@ The European Youth Week is a unique youth and folklore festival. Every summer, n
 
 The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing together young people from Europe and the world so they can get to know each other and understand each other's cultures. It aims to contribute to understanding between peoples and to peace in the world. The gathering is organised by the non-profit association "Arbeitskreis Europäische Jugendwochen Burg Ludwigstein e.V.".
 
-<p class="ew-preliminary-note">⚠️ Preliminary programme – subject to change.</p>
-
 <div class="ew-program">
 
 <h2 class="ew-program-title">Programme</h2>

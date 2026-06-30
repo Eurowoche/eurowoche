@@ -10,8 +10,6 @@ Die Europäische Jugendwoche ist ein einzigartiges Jugend- und Folklorefestival.
 
 Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, junge Menschen aus Europa und der Welt zusammenzuführen, damit sie sich und ihre Kultur gegenseitig kennen und verstehen lernen. Damit soll ein Beitrag zur Verständigung der Völker und zum Frieden in der Welt geleistet werden. Organisiert wird die Jugendbegegnung vom gemeinnützigen „Arbeitskreis Europäische Jugendwochen Burg Ludwigstein e.V.".
 
-<p class="ew-preliminary-note">⚠️ Vorläufiges Programm – Änderungen vorbehalten.</p>
-
 <div class="ew-program">
 
 <h2 class="ew-program-title">Programm</h2>
