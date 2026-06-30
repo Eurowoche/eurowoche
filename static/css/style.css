@@ -2220,6 +2220,7 @@ body.menu-open .leaflet-container {
     width: 100%;
     height: 170px;
     object-fit: cover;
+    object-position: center top;
     display: block;
     flex-shrink: 0;
 }
@@ -6414,6 +6415,10 @@ section.team-section.bg-cream {
     }
     .maerkte-image-with-overlay img {
         height: 300px;
+    }
+    /* Adventsmarkt: Bild (mit Titeloverlay) über den Text — Reihenfolge umkehren */
+    .maerkte-section-inner-reverse .maerkte-image-container {
+        order: -1;
     }
     .maerkte-teaser-split {
         flex-direction: column;
