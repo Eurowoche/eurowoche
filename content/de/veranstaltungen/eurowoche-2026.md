@@ -90,12 +90,12 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
   <h3 class="ew-program-group-label">Öffentliche Veranstaltungen</h3>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Sa., 01. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Eröffnungsabend in Witzenhausen</div>
       <div class="ew-event-desc">Feierliche Eröffnung der 65. Europäischen Jugendwoche mit allen Gastgruppen.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Sa., 01. August 2026</span>
       <span class="ew-meta-item">🕗 20:00 Uhr</span>
       <span class="ew-meta-item">🎟 Eintritt frei</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Marktplatz+Witzenhausen+37213" target="_blank">Marktplatz Witzenhausen</a></span>
@@ -103,12 +103,12 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
   </div>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">So., 02. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Folkloreabend in Bad Sooden-Allendorf</div>
       <div class="ew-event-desc">Auftritt aller Gastgruppen mit traditioneller Folklore.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 So., 02. August 2026</span>
       <span class="ew-meta-item">🕕 18:00 Uhr</span>
       <span class="ew-meta-item">🎟 10 € Eintritt · 7 € ermäßigt</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Werratal+Kultur+und+Kongresszentrum+Bad+Sooden-Allendorf" target="_blank">Werratal Kultur- und Kongresszentrum, Bad Sooden-Allendorf</a></span>
@@ -116,12 +116,12 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
   </div>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Mo., 03. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇩🇪 Deutscher Abend auf Burg Ludwigstein – Die Ludwigsteiner</div>
       <div class="ew-event-desc">Galaauftritt der deutschen Gastgebergruppe, anschließend offenes Tanzen.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Mo., 03. August 2026</span>
       <span class="ew-meta-item">🕗 20:00 Uhr</span>
       <span class="ew-meta-item">🎟 Eintritt frei</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
@@ -129,12 +129,12 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
   </div>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Di., 04. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇨🇿 Tschechischer Abend auf Burg Ludwigstein</div>
       <div class="ew-event-desc">Galaauftritt von Lidová muzika z Chrástu &amp; Jarosovci Mělník, anschließend offenes Tanzen.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Di., 04. August 2026</span>
       <span class="ew-meta-item">🕗 20:00 Uhr</span>
       <span class="ew-meta-item">🎟 Eintritt frei</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
@@ -142,12 +142,12 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
   </div>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Mi., 05. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇮🇹 Italienischer Abend auf Burg Ludwigstein – Centro Culturale Terrazzani</div>
       <div class="ew-event-desc">Galaauftritt des sizilianischen Ensembles aus Trabia, anschließend offenes Tanzen.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Mi., 05. August 2026</span>
       <span class="ew-meta-item">🕗 20:00 Uhr</span>
       <span class="ew-meta-item">🎟 Eintritt frei</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
@@ -155,12 +155,12 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
   </div>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Do., 06. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇫🇷 Französischer Abend auf Burg Ludwigstein – Le Quadrille Occitan</div>
       <div class="ew-event-desc">Galaauftritt des okzitanischen Ensembles aus Toulouse, anschließend offenes Tanzen.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Do., 06. August 2026</span>
       <span class="ew-meta-item">🕗 20:00 Uhr</span>
       <span class="ew-meta-item">🎟 Eintritt frei</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
@@ -168,12 +168,12 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
   </div>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Fr., 07. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇪🇪 Estnischer Abend auf Burg Ludwigstein – Leigarid</div>
       <div class="ew-event-desc">Galaauftritt des estnischen Folklorensembles aus Tallinn, anschließend offenes Tanzen.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Fr., 07. August 2026</span>
       <span class="ew-meta-item">🕗 20:00 Uhr</span>
       <span class="ew-meta-item">🎟 Eintritt frei</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
@@ -181,12 +181,12 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
   </div>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Sa., 08. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Große Eurokirmes auf Burg Ludwigstein</div>
       <div class="ew-event-desc">Abschluss-Highlight der Woche: Auftritte aller Gruppen und Präsentation der Workshopergebnisse.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Sa., 08. August 2026</span>
       <span class="ew-meta-item">🕑 15:00–18:00 Uhr</span>
       <span class="ew-meta-item">🎟 10 € Eintritt · 7 € ermäßigt</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
@@ -198,12 +198,12 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
   <h3 class="ew-program-group-label">Kostenlose Angebote für externe Besucher</h3>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">So., 02. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Burgrally &amp; Programmvorstellung</div>
       <div class="ew-event-desc">Vorstellung der Workshops und des Ablaufs der Europäischen Jugendwoche.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 So., 02. August 2026</span>
       <span class="ew-meta-item">🕤 09:30–12:30 Uhr</span>
       <span class="ew-meta-item">🎟 Eintritt frei</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
@@ -211,6 +211,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
   </div>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Mo.–Fr., 03.–07. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Tägliche Angebote</div>
       <ul class="ew-event-list">
@@ -220,7 +221,6 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
       </ul>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Mo.–Fr., 03.–07. August 2026</span>
       <span class="ew-meta-item">🎟 Eintritt frei</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>

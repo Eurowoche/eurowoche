@@ -92,12 +92,12 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
   <h3 class="ew-program-group-label">Public Performances</h3>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Sat, 01 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Opening Evening in Witzenhausen</div>
       <div class="ew-event-desc">The festive opening of the 65th European Youth Week with all participating groups.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Sat, 01 August 2026</span>
       <span class="ew-meta-item">🕗 8:00 pm</span>
       <span class="ew-meta-item">🎟 Free admission</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Marktplatz+Witzenhausen+37213" target="_blank">Marktplatz Witzenhausen</a></span>
@@ -105,12 +105,12 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
   </div>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Sun, 02 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Folklore Evening in Bad Sooden-Allendorf</div>
       <div class="ew-event-desc">All participating groups perform traditional folklore from their home countries.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Sun, 02 August 2026</span>
       <span class="ew-meta-item">🕕 6:00 pm</span>
       <span class="ew-meta-item">🎟 €10 admission · €7 reduced</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Werratal+Kultur+und+Kongresszentrum+Bad+Sooden-Allendorf" target="_blank">Werratal Kultur- und Kongresszentrum, Bad Sooden-Allendorf</a></span>
@@ -118,12 +118,12 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
   </div>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Mon, 03 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇩🇪 German Evening at Burg Ludwigstein – Die Ludwigsteiner</div>
       <div class="ew-event-desc">Gala performance by the German host group, followed by open dancing.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Mon, 03 August 2026</span>
       <span class="ew-meta-item">🕗 8:00 pm</span>
       <span class="ew-meta-item">🎟 Free admission</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
@@ -131,12 +131,12 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
   </div>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Tue, 04 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇨🇿 Czech Evening at Burg Ludwigstein</div>
       <div class="ew-event-desc">Gala performance by Lidová muzika z Chrástu &amp; Jarosovci Mělník – music and dance, followed by open dancing.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Tue, 04 August 2026</span>
       <span class="ew-meta-item">🕗 8:00 pm</span>
       <span class="ew-meta-item">🎟 Free admission</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
@@ -144,12 +144,12 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
   </div>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Wed, 05 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇮🇹 Italian Evening at Burg Ludwigstein – Centro Culturale Terrazzani</div>
       <div class="ew-event-desc">Gala performance by the Sicilian ensemble from Trabia, followed by open dancing.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Wed, 05 August 2026</span>
       <span class="ew-meta-item">🕗 8:00 pm</span>
       <span class="ew-meta-item">🎟 Free admission</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
@@ -157,12 +157,12 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
   </div>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Thu, 06 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇫🇷 French Evening at Burg Ludwigstein – Le Quadrille Occitan</div>
       <div class="ew-event-desc">Gala performance by the Occitan ensemble from Toulouse, followed by open dancing.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Thu, 06 August 2026</span>
       <span class="ew-meta-item">🕗 8:00 pm</span>
       <span class="ew-meta-item">🎟 Free admission</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
@@ -170,12 +170,12 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
   </div>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Fri, 07 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇪🇪 Estonian Evening at Burg Ludwigstein – Leigarid</div>
       <div class="ew-event-desc">Gala performance by the Estonian folklore ensemble from Tallinn, followed by open dancing.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Fri, 07 August 2026</span>
       <span class="ew-meta-item">🕗 8:00 pm</span>
       <span class="ew-meta-item">🎟 Free admission</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
@@ -183,12 +183,12 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
   </div>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Sat, 08 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Grand Eurokirmes at Burg Ludwigstein</div>
       <div class="ew-event-desc">The highlight finale of the week: performances by all groups and presentation of workshop results.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Sat, 08 August 2026</span>
       <span class="ew-meta-item">🕑 3:00–6:00 pm</span>
       <span class="ew-meta-item">🎟 €10 admission · €7 reduced</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
@@ -200,12 +200,12 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
   <h3 class="ew-program-group-label">Free Activities for Visitors</h3>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Sun, 02 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Burgrally &amp; Programme Preview</div>
       <div class="ew-event-desc">Introduction to the workshops and the schedule of the European Youth Week.</div>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Sun, 02 August 2026</span>
       <span class="ew-meta-item">🕤 9:30 am–12:30 pm</span>
       <span class="ew-meta-item">🎟 Free admission</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
@@ -213,6 +213,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
   </div>
 
   <div class="ew-event-card">
+    <div class="ew-event-date">Mon–Fri, 03–07 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Daily Activities</div>
       <ul class="ew-event-list">
@@ -222,7 +223,6 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
       </ul>
     </div>
     <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Mon–Fri, 03–07 August 2026</span>
       <span class="ew-meta-item">🎟 Free admission</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
