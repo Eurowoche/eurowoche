@@ -87,11 +87,11 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 <h2 class="ew-program-title">Termine</h2>
 
 <div class="ew-program-group">
-  <h3 class="ew-program-group-label">Öffentliche Abendveranstaltungen</h3>
+  <h3 class="ew-program-group-label">Öffentliche Veranstaltungen</h3>
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">Eröffnungsveranstaltung</div>
+      <div class="ew-event-name">Eröffnungsabend in Witzenhausen</div>
       <div class="ew-event-desc">Feierliche Eröffnung der 65. Europäischen Jugendwoche mit allen Gastgruppen.</div>
     </div>
     <div class="ew-event-meta">
@@ -104,7 +104,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">Folkloredarbietung mit allen Gruppen</div>
+      <div class="ew-event-name">Folkloreabend in Bad Sooden-Allendorf</div>
       <div class="ew-event-desc">Auftritt aller Gastgruppen mit traditioneller Folklore.</div>
     </div>
     <div class="ew-event-meta">
@@ -117,7 +117,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">🇩🇪 Deutscher Tag – Die Ludwigsteiner</div>
+      <div class="ew-event-name">🇩🇪 Deutscher Abend auf Burg Ludwigstein – Die Ludwigsteiner</div>
       <div class="ew-event-desc">Galaauftritt der deutschen Gastgebergruppe, anschließend offenes Tanzen.</div>
     </div>
     <div class="ew-event-meta">
@@ -130,8 +130,8 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">🇨🇿 Tschechischer Tag – Lidová muzika z Chrástu &amp; Jarosovci Mělník</div>
-      <div class="ew-event-desc">Galaauftritt der tschechischen Musik- und Tanzensembles, anschließend offenes Tanzen.</div>
+      <div class="ew-event-name">🇨🇿 Tschechischer Abend auf Burg Ludwigstein</div>
+      <div class="ew-event-desc">Galaauftritt von Lidová muzika z Chrástu &amp; Jarosovci Mělník, anschließend offenes Tanzen.</div>
     </div>
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Di., 04. August 2026</span>
@@ -143,7 +143,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">🇮🇹 Italienischer Tag – Centro Culturale Terrazzani</div>
+      <div class="ew-event-name">🇮🇹 Italienischer Abend auf Burg Ludwigstein – Centro Culturale Terrazzani</div>
       <div class="ew-event-desc">Galaauftritt des sizilianischen Ensembles aus Trabia, anschließend offenes Tanzen.</div>
     </div>
     <div class="ew-event-meta">
@@ -156,7 +156,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">🇫🇷 Französischer Tag – Le Quadrille Occitan</div>
+      <div class="ew-event-name">🇫🇷 Französischer Abend auf Burg Ludwigstein – Le Quadrille Occitan</div>
       <div class="ew-event-desc">Galaauftritt des okzitanischen Ensembles aus Toulouse, anschließend offenes Tanzen.</div>
     </div>
     <div class="ew-event-meta">
@@ -169,7 +169,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">🇪🇪 Estnischer Tag – Leigarid</div>
+      <div class="ew-event-name">🇪🇪 Estnischer Abend auf Burg Ludwigstein – Leigarid</div>
       <div class="ew-event-desc">Galaauftritt des estnischen Folklorensembles aus Tallinn, anschließend offenes Tanzen.</div>
     </div>
     <div class="ew-event-meta">
@@ -182,7 +182,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">Große Eurokirmes – Alle Gruppen</div>
+      <div class="ew-event-name">Große Eurokirmes auf Burg Ludwigstein</div>
       <div class="ew-event-desc">Abschluss-Highlight der Woche: Auftritte aller Gruppen und Präsentation der Workshopergebnisse.</div>
     </div>
     <div class="ew-event-meta">

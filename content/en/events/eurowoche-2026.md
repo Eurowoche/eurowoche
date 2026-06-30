@@ -89,11 +89,11 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
 <h2 class="ew-program-title">Schedule</h2>
 
 <div class="ew-program-group">
-  <h3 class="ew-program-group-label">Public Evening Performances</h3>
+  <h3 class="ew-program-group-label">Public Performances</h3>
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">Opening Ceremony</div>
+      <div class="ew-event-name">Opening Evening in Witzenhausen</div>
       <div class="ew-event-desc">The festive opening of the 65th European Youth Week with all participating groups.</div>
     </div>
     <div class="ew-event-meta">
@@ -106,7 +106,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">Folklore Performance – All Groups</div>
+      <div class="ew-event-name">Folklore Evening in Bad Sooden-Allendorf</div>
       <div class="ew-event-desc">All participating groups perform traditional folklore from their home countries.</div>
     </div>
     <div class="ew-event-meta">
@@ -119,7 +119,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">🇩🇪 German Day – Die Ludwigsteiner</div>
+      <div class="ew-event-name">🇩🇪 German Evening at Burg Ludwigstein – Die Ludwigsteiner</div>
       <div class="ew-event-desc">Gala performance by the German host group, followed by open dancing.</div>
     </div>
     <div class="ew-event-meta">
@@ -132,8 +132,8 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">🇨🇿 Czech Day – Lidová muzika z Chrástu &amp; Jarosovci Mělník</div>
-      <div class="ew-event-desc">Gala performance by both Czech ensembles – music and dance, followed by open dancing.</div>
+      <div class="ew-event-name">🇨🇿 Czech Evening at Burg Ludwigstein</div>
+      <div class="ew-event-desc">Gala performance by Lidová muzika z Chrástu &amp; Jarosovci Mělník – music and dance, followed by open dancing.</div>
     </div>
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Tue, 04 August 2026</span>
@@ -145,7 +145,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">🇮🇹 Italian Day – Centro Culturale Terrazzani</div>
+      <div class="ew-event-name">🇮🇹 Italian Evening at Burg Ludwigstein – Centro Culturale Terrazzani</div>
       <div class="ew-event-desc">Gala performance by the Sicilian ensemble from Trabia, followed by open dancing.</div>
     </div>
     <div class="ew-event-meta">
@@ -158,7 +158,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">🇫🇷 French Day – Le Quadrille Occitan</div>
+      <div class="ew-event-name">🇫🇷 French Evening at Burg Ludwigstein – Le Quadrille Occitan</div>
       <div class="ew-event-desc">Gala performance by the Occitan ensemble from Toulouse, followed by open dancing.</div>
     </div>
     <div class="ew-event-meta">
@@ -171,7 +171,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">🇪🇪 Estonian Day – Leigarid</div>
+      <div class="ew-event-name">🇪🇪 Estonian Evening at Burg Ludwigstein – Leigarid</div>
       <div class="ew-event-desc">Gala performance by the Estonian folklore ensemble from Tallinn, followed by open dancing.</div>
     </div>
     <div class="ew-event-meta">
@@ -184,7 +184,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">Grand Eurokirmes – All Groups</div>
+      <div class="ew-event-name">Grand Eurokirmes at Burg Ludwigstein</div>
       <div class="ew-event-desc">The highlight finale of the week: performances by all groups and presentation of workshop results.</div>
     </div>
     <div class="ew-event-meta">
