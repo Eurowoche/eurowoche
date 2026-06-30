@@ -17,9 +17,10 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
 
 <div class="ew-program-group">
   <h3 class="ew-program-group-label">Groupes participants 2026</h3>
-  <p class="ew-groups-intro">Les ensembles suivants de toute l'Europe devraient participer à la 65e Semaine européenne de la jeunesse :</p>
+  <p class="ew-groups-intro">Les ensembles suivants de toute l'Europe participent à la 65e Semaine européenne de la jeunesse :</p>
 
   <div class="ew-groups-grid">
+<a href="#event-german" class="ew-group-link">
 <div class="ew-group-card">
   <img class="ew-group-photo" src="/img/groups/group-ludwigsteiner.jpg" alt="Die Ludwigsteiner" loading="lazy">
   <div class="ew-group-card-body">
@@ -27,8 +28,11 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     <div class="ew-group-name">Die Ludwigsteiner</div>
     <div class="ew-group-location">Allemagne · Groupe hôte</div>
     <div class="ew-group-desc">Comme chaque année, les Ludwigsteiner – le groupe propre de l'association – présentent des danses et traditions allemandes. Le groupe a été fondé en 1991 pour faire découvrir la culture et les traditions allemandes aux participants et aux visiteurs du festival.</div>
+    <div class="ew-group-link-hint">→ Voir la soirée</div>
   </div>
 </div>
+</a>
+<a href="#event-czech" class="ew-group-link ew-group-pair-link">
 <div class="ew-group-pair">
   <div class="ew-group-pair-label">Représentation commune · Mar., 04 août · 20h00</div>
   <div class="ew-group-pair-cards">
@@ -50,7 +54,10 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     </div>
   </div>
   <div class="ew-group-pair-desc">Deux groupes de République tchèque enrichissent le programme de cette année : Lidová muzika z Chrástu et Jarosovci Mělník apportent la riche tradition de la musique populaire bohémienne et morave à Ludwigstein – des mélodies entraînantes aux harmonies vocales délicates.</div>
+  <div class="ew-group-link-hint">→ Voir la soirée</div>
 </div>
+</a>
+<a href="#event-italian" class="ew-group-link">
 <div class="ew-group-card">
   <img class="ew-group-photo" src="/img/groups/group-terrazzani.jpg" alt="Centro Culturale Terrazzani" loading="lazy">
   <div class="ew-group-card-body">
@@ -58,8 +65,11 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     <div class="ew-group-name">Centro Culturale Terrazzani</div>
     <div class="ew-group-location">Trabia, Sicile</div>
     <div class="ew-group-desc">De la ville sicilienne de Trabia vient le Centro Culturale Terrazzani. Ils présentent la culture folklorique vivante du sud de l'Italie avec des danses et des chants expressifs qui reflètent la diversité du patrimoine méditerranéen et transportent le public vers le sud ensoleillé.</div>
+    <div class="ew-group-link-hint">→ Voir la soirée</div>
   </div>
 </div>
+</a>
+<a href="#event-french" class="ew-group-link">
 <div class="ew-group-card">
   <img class="ew-group-photo" src="/img/groups/group-quadrille-occitan.jpg" alt="Le Quadrille Occitan" loading="lazy">
   <div class="ew-group-card-body">
@@ -67,8 +77,11 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     <div class="ew-group-name">Le Quadrille Occitan</div>
     <div class="ew-group-location">Toulouse, France</div>
     <div class="ew-group-desc">Le Quadrille Occitan de Toulouse invite le public dans la région du sud de la France, l'Occitanie. Avec des danses de quadrille entraînantes et la tradition musicale occitane caractéristique, ils apportent une joie de vivre particulière et une atmosphère du sud de la France sur scène.</div>
+    <div class="ew-group-link-hint">→ Voir la soirée</div>
   </div>
 </div>
+</a>
+<a href="#event-estonian" class="ew-group-link">
 <div class="ew-group-card">
   <img class="ew-group-photo" src="/img/groups/group-leigarid.jpg" alt="Leigarid" loading="lazy">
   <div class="ew-group-card-body">
@@ -76,8 +89,10 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     <div class="ew-group-name">Leigarid</div>
     <div class="ew-group-location">Tallinn, Estonie</div>
     <div class="ew-group-desc">La Folklore Society Leigarid de Tallinn apporte la riche tradition folklorique de la région baltique au château. Avec des costumes hauts en couleur et des rythmes entraînants, ils offrent un aperçu vivant de la culture populaire estonienne et enchantent le public avec des danses et des chants pleins d'entrain.</div>
+    <div class="ew-group-link-hint">→ Voir la soirée</div>
   </div>
 </div>
+</a>
   </div>
 </div>
 
@@ -116,7 +131,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" id="event-german">
     <div class="ew-event-date">Lun., 03 août 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇩🇪 Soirée allemande à Burg Ludwigstein – Die Ludwigsteiner</div>
@@ -129,7 +144,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" id="event-czech">
     <div class="ew-event-date">Mar., 04 août 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇨🇿 Soirée tchèque à Burg Ludwigstein</div>
@@ -142,7 +157,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" id="event-italian">
     <div class="ew-event-date">Mer., 05 août 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇮🇹 Soirée italienne à Burg Ludwigstein – Centro Culturale Terrazzani</div>
@@ -155,7 +170,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" id="event-french">
     <div class="ew-event-date">Jeu., 06 août 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇫🇷 Soirée française à Burg Ludwigstein – Le Quadrille Occitan</div>
@@ -168,7 +183,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" id="event-estonian">
     <div class="ew-event-date">Ven., 07 août 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇪🇪 Soirée estonienne à Burg Ludwigstein – Leigarid</div>

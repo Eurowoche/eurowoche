@@ -18,9 +18,10 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
 
 <div class="ew-program-group">
   <h3 class="ew-program-group-label">Participating Groups 2026</h3>
-  <p class="ew-groups-intro">The following ensembles from across Europe are expected to participate in the 65th European Youth Week:</p>
+  <p class="ew-groups-intro">The following ensembles from across Europe are participating in the 65th European Youth Week:</p>
 
   <div class="ew-groups-grid">
+<a href="#event-german" class="ew-group-link">
 <div class="ew-group-card">
   <img class="ew-group-photo" src="/img/groups/group-ludwigsteiner.jpg" alt="Die Ludwigsteiner" loading="lazy">
   <div class="ew-group-card-body">
@@ -28,8 +29,11 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     <div class="ew-group-name">Die Ludwigsteiner</div>
     <div class="ew-group-location">Germany · Host Group</div>
     <div class="ew-group-desc">As every year, the Ludwigsteiner – the association's own group – present German dances and traditions. The group was founded in 1991 to bring German culture and traditions closer to participants and visitors of the festival.</div>
+    <div class="ew-group-link-hint">→ See evening performance</div>
   </div>
 </div>
+</a>
+<a href="#event-czech" class="ew-group-link ew-group-pair-link">
 <div class="ew-group-pair">
   <div class="ew-group-pair-label">Joint performance · Tue, 04 August · 8:00 pm</div>
   <div class="ew-group-pair-cards">
@@ -51,7 +55,10 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     </div>
   </div>
   <div class="ew-group-pair-desc">Two groups from the Czech Republic enrich this year's programme: Lidová muzika z Chrástu and Jarosovci Mělník bring the rich tradition of Bohemian and Moravian folk music to Ludwigstein – from lively melodies to delicate vocal harmonies.</div>
+  <div class="ew-group-link-hint">→ See evening performance</div>
 </div>
+</a>
+<a href="#event-italian" class="ew-group-link">
 <div class="ew-group-card">
   <img class="ew-group-photo" src="/img/groups/group-terrazzani.jpg" alt="Centro Culturale Terrazzani" loading="lazy">
   <div class="ew-group-card-body">
@@ -59,8 +66,11 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     <div class="ew-group-name">Centro Culturale Terrazzani</div>
     <div class="ew-group-location">Trabia, Sicily</div>
     <div class="ew-group-desc">From the Sicilian town of Trabia comes Centro Culturale Terrazzani. They present the vibrant folklore of southern Italy with spirited dances and songs that reflect the diversity of the Mediterranean heritage, transporting the audience to the sunny south.</div>
+    <div class="ew-group-link-hint">→ See evening performance</div>
   </div>
 </div>
+</a>
+<a href="#event-french" class="ew-group-link">
 <div class="ew-group-card">
   <img class="ew-group-photo" src="/img/groups/group-quadrille-occitan.jpg" alt="Le Quadrille Occitan" loading="lazy">
   <div class="ew-group-card-body">
@@ -68,8 +78,11 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     <div class="ew-group-name">Le Quadrille Occitan</div>
     <div class="ew-group-location">Toulouse, France</div>
     <div class="ew-group-desc">Le Quadrille Occitan from Toulouse invites the audience into the southern French region of Occitania. With lively quadrille dances and the distinctive Occitan musical tradition, they bring a special joie de vivre and southern French flair to the stage.</div>
+    <div class="ew-group-link-hint">→ See evening performance</div>
   </div>
 </div>
+</a>
+<a href="#event-estonian" class="ew-group-link">
 <div class="ew-group-card">
   <img class="ew-group-photo" src="/img/groups/group-leigarid.jpg" alt="Leigarid" loading="lazy">
   <div class="ew-group-card-body">
@@ -77,8 +90,10 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     <div class="ew-group-name">Leigarid</div>
     <div class="ew-group-location">Tallinn, Estonia</div>
     <div class="ew-group-desc">The Folklore Society Leigarid from Tallinn brings the rich folk tradition of the Baltic region to the castle. With colourful costumes and captivating rhythms, they offer a vivid glimpse into Estonian folk culture, enchanting audiences with spirited dance and song.</div>
+    <div class="ew-group-link-hint">→ See evening performance</div>
   </div>
 </div>
+</a>
   </div>
 </div>
 
@@ -117,7 +132,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" id="event-german">
     <div class="ew-event-date">Mon, 03 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇩🇪 German Evening at Burg Ludwigstein – Die Ludwigsteiner</div>
@@ -130,7 +145,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" id="event-czech">
     <div class="ew-event-date">Tue, 04 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇨🇿 Czech Evening at Burg Ludwigstein</div>
@@ -143,7 +158,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" id="event-italian">
     <div class="ew-event-date">Wed, 05 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇮🇹 Italian Evening at Burg Ludwigstein – Centro Culturale Terrazzani</div>
@@ -156,7 +171,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" id="event-french">
     <div class="ew-event-date">Thu, 06 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇫🇷 French Evening at Burg Ludwigstein – Le Quadrille Occitan</div>
@@ -169,7 +184,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" id="event-estonian">
     <div class="ew-event-date">Fri, 07 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇪🇪 Estonian Evening at Burg Ludwigstein – Leigarid</div>

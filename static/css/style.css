@@ -2268,6 +2268,43 @@ body.menu-open .leaflet-container {
     text-align: justify;
 }
 
+/* Group card link wrapper */
+.ew-group-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.ew-group-link.ew-group-pair-link {
+    grid-column: span 2;
+}
+.ew-group-link .ew-group-card {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.ew-group-link:hover .ew-group-card,
+.ew-group-link:active .ew-group-card {
+    border-color: var(--primary);
+    box-shadow: 0 4px 14px rgba(139, 83, 77, 0.15);
+}
+.ew-group-link.ew-group-pair-link:hover .ew-group-pair,
+.ew-group-link.ew-group-pair-link:active .ew-group-pair {
+    border-color: #7aafcc;
+    box-shadow: 0 4px 14px rgba(46, 90, 128, 0.15);
+}
+.ew-group-link-hint {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 0.6rem;
+    letter-spacing: 0.02em;
+}
+.ew-group-pair .ew-group-link-hint {
+    color: #2e5a80;
+}
+.ew-event-card[id] {
+    scroll-margin-top: 80px;
+}
+
 /* Czech paired group block */
 .ew-group-pair {
     grid-column: span 2;
@@ -2307,7 +2344,8 @@ body.menu-open .leaflet-container {
     .ew-groups-grid {
         grid-template-columns: 1fr;
     }
-    .ew-group-pair {
+    .ew-group-pair,
+    .ew-group-link.ew-group-pair-link {
         grid-column: span 1;
     }
     .ew-group-pair-cards {

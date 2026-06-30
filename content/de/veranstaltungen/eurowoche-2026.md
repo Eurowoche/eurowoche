@@ -16,9 +16,10 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 
 <div class="ew-program-group">
   <h3 class="ew-program-group-label">Gastgruppen 2026</h3>
-  <p class="ew-groups-intro">Beim 65. Jahrgang der Europäischen Jugendwoche werden voraussichtlich folgende Ensembles aus ganz Europa vertreten sein:</p>
+  <p class="ew-groups-intro">Beim 65. Jahrgang der Europäischen Jugendwoche sind folgende Ensembles aus ganz Europa vertreten:</p>
 
   <div class="ew-groups-grid">
+<a href="#event-german" class="ew-group-link">
 <div class="ew-group-card">
   <img class="ew-group-photo" src="/img/groups/group-ludwigsteiner.jpg" alt="Die Ludwigsteiner" loading="lazy">
   <div class="ew-group-card-body">
@@ -26,8 +27,11 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     <div class="ew-group-name">Die Ludwigsteiner</div>
     <div class="ew-group-location">Deutschland · Gastgebergruppe</div>
     <div class="ew-group-desc">Wie in jedem Jahr präsentieren auch die Ludwigsteiner – die vereinseigene Gruppe des Arbeitskreises – deutsche Tänze und Traditionen. Die Gruppe gründete sich 1991, um Teilnehmenden sowie Besucher*innen des Festivals deutsche Kultur und Traditionen näherzubringen.</div>
+    <div class="ew-group-link-hint">→ Zum Abend</div>
   </div>
 </div>
+</a>
+<a href="#event-czech" class="ew-group-link ew-group-pair-link">
 <div class="ew-group-pair">
   <div class="ew-group-pair-label">Gemeinsamer Auftritt · Di., 04. August · 20:00 Uhr</div>
   <div class="ew-group-pair-cards">
@@ -49,7 +53,10 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     </div>
   </div>
   <div class="ew-group-pair-desc">Gleich zwei Gruppen aus Tschechien bereichern das diesjährige Programm: Die Lidová muzika z Chrástu und Jarosovci Mělník bringen die klangvolle Tradition der böhmischen und mährischen Volksmusik mit auf den Ludwigstein – von schwungvollen Melodien bis hin zu feinen Gesangsharmonien.</div>
+  <div class="ew-group-link-hint">→ Zum Abend</div>
 </div>
+</a>
+<a href="#event-italian" class="ew-group-link">
 <div class="ew-group-card">
   <img class="ew-group-photo" src="/img/groups/group-terrazzani.jpg" alt="Centro Culturale Terrazzani" loading="lazy">
   <div class="ew-group-card-body">
@@ -57,8 +64,11 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     <div class="ew-group-name">Centro Culturale Terrazzani</div>
     <div class="ew-group-location">Trabia, Sizilien</div>
     <div class="ew-group-desc">Aus dem sizilianischen Trabia kommt die Gruppe Centro Culturale Terrazzani. Sie präsentieren die lebendige Folklorekultur Süditaliens mit temperamentvollen Tänzen und Gesängen, die die Vielfalt des mediterranen Erbes widerspiegeln und das Publikum in den sonnigen Süden entführen.</div>
+    <div class="ew-group-link-hint">→ Zum Abend</div>
   </div>
 </div>
+</a>
+<a href="#event-french" class="ew-group-link">
 <div class="ew-group-card">
   <img class="ew-group-photo" src="/img/groups/group-quadrille-occitan.jpg" alt="Le Quadrille Occitan" loading="lazy">
   <div class="ew-group-card-body">
@@ -66,8 +76,11 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     <div class="ew-group-name">Le Quadrille Occitan</div>
     <div class="ew-group-location">Toulouse, Frankreich</div>
     <div class="ew-group-desc">Le Quadrille Occitan aus Toulouse lädt das Publikum in die südfranzösische Region Okzitanien ein. Mit schwungvollen Quadrille-Tänzen und der charakteristischen okzitanischen Musiktradition bringen sie eine besondere Lebensfreude und südfranzösisches Flair auf die Bühne.</div>
+    <div class="ew-group-link-hint">→ Zum Abend</div>
   </div>
 </div>
+</a>
+<a href="#event-estonian" class="ew-group-link">
 <div class="ew-group-card">
   <img class="ew-group-photo" src="/img/groups/group-leigarid.jpg" alt="Leigarid" loading="lazy">
   <div class="ew-group-card-body">
@@ -75,8 +88,10 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     <div class="ew-group-name">Leigarid</div>
     <div class="ew-group-location">Tallinn, Estland</div>
     <div class="ew-group-desc">Die Folklore Society Leigarid aus Tallinn bringt die reiche Volkstradition des Baltikums auf die Burg. Mit farbenprächtigen Trachten und mitreißenden Rhythmen geben sie einen lebendigen Einblick in die estnische Volkskultur und begeistern ihr Publikum mit temperamentvollem Tanz und Gesang.</div>
+    <div class="ew-group-link-hint">→ Zum Abend</div>
   </div>
 </div>
+</a>
   </div>
 </div>
 
@@ -115,7 +130,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" id="event-german">
     <div class="ew-event-date">Mo., 03. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇩🇪 Deutscher Abend auf Burg Ludwigstein – Die Ludwigsteiner</div>
@@ -128,7 +143,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" id="event-czech">
     <div class="ew-event-date">Di., 04. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇨🇿 Tschechischer Abend auf Burg Ludwigstein</div>
@@ -141,7 +156,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" id="event-italian">
     <div class="ew-event-date">Mi., 05. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇮🇹 Italienischer Abend auf Burg Ludwigstein – Centro Culturale Terrazzani</div>
@@ -154,7 +169,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" id="event-french">
     <div class="ew-event-date">Do., 06. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇫🇷 Französischer Abend auf Burg Ludwigstein – Le Quadrille Occitan</div>
@@ -167,7 +182,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" id="event-estonian">
     <div class="ew-event-date">Fr., 07. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇪🇪 Estnischer Abend auf Burg Ludwigstein – Leigarid</div>
