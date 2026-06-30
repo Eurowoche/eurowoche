@@ -39,7 +39,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     </div>
     <div class="ew-group-card">
       <span class="ew-group-flag">🇨🇿</span>
-      <div class="ew-group-name">Dolina</div>
+      <div class="ew-group-name">Jarosovci Mělník</div>
       <div class="ew-group-location">Mělník, Tchéquie</div>
     </div>
     <div class="ew-group-card">
@@ -102,7 +102,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">🇨🇿 Journée tchèque – Lidová muzika z Chrástu &amp; Dolina</div>
+      <div class="ew-event-name">🇨🇿 Journée tchèque – Lidová muzika z Chrástu &amp; Jarosovci Mělník</div>
       <div class="ew-event-desc">Représentation de gala des deux ensembles tchèques – musique et danse, suivie de danses libres.</div>
     </div>
     <div class="ew-event-meta">

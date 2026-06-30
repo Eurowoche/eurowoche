@@ -38,7 +38,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     </div>
     <div class="ew-group-card">
       <span class="ew-group-flag">🇨🇿</span>
-      <div class="ew-group-name">Dolina</div>
+      <div class="ew-group-name">Jarosovci Mělník</div>
       <div class="ew-group-location">Mělník, Tschechien</div>
     </div>
     <div class="ew-group-card">
@@ -101,7 +101,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">🇨🇿 Tschechischer Tag – Lidová muzika z Chrástu &amp; Dolina</div>
+      <div class="ew-event-name">🇨🇿 Tschechischer Tag – Lidová muzika z Chrástu &amp; Jarosovci Mělník</div>
       <div class="ew-event-desc">Galaauftritt der tschechischen Musik- und Tanzensembles, anschließend offenes Tanzen.</div>
     </div>
     <div class="ew-event-meta">

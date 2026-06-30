@@ -40,7 +40,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     </div>
     <div class="ew-group-card">
       <span class="ew-group-flag">🇨🇿</span>
-      <div class="ew-group-name">Dolina</div>
+      <div class="ew-group-name">Jarosovci Mělník</div>
       <div class="ew-group-location">Mělník, Czech Republic</div>
     </div>
     <div class="ew-group-card">
@@ -103,7 +103,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">🇨🇿 Czech Day – Lidová muzika z Chrástu &amp; Dolina</div>
+      <div class="ew-event-name">🇨🇿 Czech Day – Lidová muzika z Chrástu &amp; Jarosovci Mělník</div>
       <div class="ew-event-desc">Gala performance by both Czech ensembles – music and dance, followed by open dancing.</div>
     </div>
     <div class="ew-event-meta">
