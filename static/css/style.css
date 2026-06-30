@@ -6342,13 +6342,16 @@ section.team-section.bg-cream {
         grid-template-columns: 1fr;
     }
 
-    /* --- EUROWOCHE GRUPPENRASTER: 2 Spalten --- */
+    /* --- EUROWOCHE GRUPPENRASTER: 1 Spalte wie Phone --- */
     .ew-groups-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
     .ew-group-pair,
     .ew-group-link.ew-group-pair-link {
-        grid-column: span 2;
+        grid-column: span 1;
+    }
+    .ew-group-pair-cards {
+        grid-template-columns: 1fr;
     }
 
     /* --- VORSTAND: 2 Spalten (passt auf Tablet) --- */
@@ -6467,6 +6470,13 @@ section.team-section.bg-cream {
     .verein-split-inner,
     .verein-split-inner.reverse {
         flex-direction: column;
+    }
+    /* Ludwigsteiner-Block: Foto nach dem Text anzeigen (wie Phone) */
+    .verein-split-section.bg-white .verein-split-image {
+        order: 2;
+    }
+    .verein-split-section.bg-white .verein-split-text {
+        order: 1;
     }
     .verein-galerie-grid {
         grid-template-columns: repeat(2, 1fr);
