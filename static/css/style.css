@@ -2226,6 +2226,7 @@ body.menu-open .leaflet-container {
     color: #5a4a42;
     line-height: 1.55;
     margin-top: 0.4rem;
+    text-align: justify;
 }
 
 .ew-group-pair-desc {
@@ -2233,6 +2234,7 @@ body.menu-open .leaflet-container {
     font-size: 0.78rem;
     color: #2e5a80;
     line-height: 1.55;
+    text-align: justify;
 }
 
 /* Czech paired group block */
