@@ -2220,6 +2220,21 @@ body.menu-open .leaflet-container {
     color: #7a6055;
 }
 
+.ew-group-desc {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    color: #5a4a42;
+    line-height: 1.55;
+    margin-top: 0.4rem;
+}
+
+.ew-group-pair-desc {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    color: #2e5a80;
+    line-height: 1.55;
+}
+
 /* Czech paired group block */
 .ew-group-pair {
     grid-column: span 2;

@@ -25,10 +25,12 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     <span class="ew-group-flag">🇩🇪</span>
     <div class="ew-group-name">Die Ludwigsteiner</div>
     <div class="ew-group-location">Deutschland · Gastgebergruppe</div>
+    <div class="ew-group-desc">Wie in jedem Jahr präsentieren auch die Ludwigsteiner – die vereinseigene Gruppe des Arbeitskreises – deutsche Tänze und Traditionen. Die Gruppe gründete sich 1991, um Teilnehmenden sowie Besucher*innen des Festivals deutsche Kultur und Traditionen näherzubringen.</div>
   </div>
 </div>
 <div class="ew-group-pair">
   <div class="ew-group-pair-label">Gemeinsamer Auftritt · Di., 04. August · 20:00 Uhr</div>
+  <div class="ew-group-pair-desc">Gleich zwei Gruppen aus Tschechien bereichern das diesjährige Programm: Die Lidová muzika z Chrástu und Jarosovci Mělník bringen die klangvolle Tradition der böhmischen und mährischen Volksmusik mit auf den Ludwigstein – von schwungvollen Melodien bis hin zu feinen Gesangsharmonien.</div>
   <div class="ew-group-pair-cards">
     <div class="ew-group-card">
       <img class="ew-group-photo" src="/img/groups/group-lidova-muzika.jpg" alt="Lidová muzika z Chrástu" loading="lazy">
@@ -53,7 +55,8 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
   <div class="ew-group-card-body">
     <span class="ew-group-flag">🇮🇹</span>
     <div class="ew-group-name">Centro Culturale Terrazzani</div>
-    <div class="ew-group-location">Palermo, Italien</div>
+    <div class="ew-group-location">Trabia, Sizilien</div>
+    <div class="ew-group-desc">Aus dem sizilianischen Trabia kommt die Gruppe Centro Culturale Terrazzani. Sie präsentieren die lebendige Folklorekultur Süditaliens mit temperamentvollen Tänzen und Gesängen, die die Vielfalt des mediterranen Erbes widerspiegeln und das Publikum in den sonnigen Süden entführen.</div>
   </div>
 </div>
 <div class="ew-group-card">
@@ -62,6 +65,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     <span class="ew-group-flag">🇫🇷</span>
     <div class="ew-group-name">Le Quadrille Occitan</div>
     <div class="ew-group-location">Toulouse, Frankreich</div>
+    <div class="ew-group-desc">Le Quadrille Occitan aus Toulouse lädt das Publikum in die südfranzösische Region Okzitanien ein. Mit schwungvollen Quadrille-Tänzen und der charakteristischen okzitanischen Musiktradition bringen sie eine besondere Lebensfreude und südfranzösisches Flair auf die Bühne.</div>
   </div>
 </div>
 <div class="ew-group-card">
@@ -70,6 +74,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     <span class="ew-group-flag">🇪🇪</span>
     <div class="ew-group-name">Leigarid</div>
     <div class="ew-group-location">Tallinn, Estland</div>
+    <div class="ew-group-desc">Die Folklore Society Leigarid aus Tallinn bringt die reiche Volkstradition des Baltikums auf die Burg. Mit farbenprächtigen Trachten und mitreißenden Rhythmen geben sie einen lebendigen Einblick in die estnische Volkskultur und begeistern ihr Publikum mit temperamentvollem Tanz und Gesang.</div>
   </div>
 </div>
   </div>
