@@ -25,7 +25,3 @@ The European Youth Week is not a consumption festival, but a space for participa
 ## Spirit / Values
 
 The Eurowoche stands for friendship, openness and lived understanding. It thrives on curiosity about other cultures, on listening and on shared experiences. Europe reveals itself here not as an idea on paper, but as a togetherness that keeps growing.
-
-## Burg Ludwigstein: A historic place for new stories
-
-The venue of our encounters is as symbolic as the week itself. Burg Ludwigstein is located directly on the former inner-German border and has always been a center of the youth movement. Where separation once reigned, we now create a space for encounter.

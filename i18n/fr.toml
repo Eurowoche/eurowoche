@@ -396,3 +396,24 @@ other = "Toutes"
 
 [decade_suffix]
 other = "s"
+
+[burg_title]
+other = "Burg Ludwigstein : Un lieu historique pour de nouvelles histoires"
+
+[burg_p1]
+other = "Le lieu de nos rencontres est aussi symbolique que la semaine elle-même. La Burg Ludwigstein est située directement sur l'ancienne frontière inter-allemande et a toujours été un centre du mouvement de jeunesse. Là où régnait autrefois la séparation, nous créons aujourd'hui un espace de rencontre."
+
+[burg_p2]
+other = "La Semaine européenne de la jeunesse rayonne bien au-delà des murs du château. Par des représentations dans la région et des ouvertures traditionnelles sur les places de marché des environs, nous invitons le public à faire partie de cet esprit européen."
+
+[european_youth_week]
+other = "Semaine européenne de la jeunesse"
+
+[registration_closed_ew2026]
+other = "La date limite de candidature pour les groupes intéressés est dépassée."
+
+[closed]
+other = "Fermé"
+
+[registration_open_ew2027]
+other = "Les candidatures seront acceptées à partir du 01.09.2026."
