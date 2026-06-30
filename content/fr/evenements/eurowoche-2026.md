@@ -22,36 +22,65 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
   <p class="ew-groups-intro">Les ensembles suivants de toute l'Europe devraient participer à la 65e Semaine européenne de la jeunesse :</p>
 
   <div class="ew-groups-grid">
+
     <div class="ew-group-card">
-      <span class="ew-group-flag">🇩🇪</span>
-      <div class="ew-group-name">Die Ludwigsteiner</div>
-      <div class="ew-group-location">Allemagne · Groupe hôte</div>
+      <img class="ew-group-photo" src="/img/groups/group-ludwigsteiner.jpg" alt="Die Ludwigsteiner" loading="lazy">
+      <div class="ew-group-card-body">
+        <span class="ew-group-flag">🇩🇪</span>
+        <div class="ew-group-name">Die Ludwigsteiner</div>
+        <div class="ew-group-location">Allemagne · Groupe hôte</div>
+      </div>
     </div>
+
+    <div class="ew-group-pair">
+      <div class="ew-group-pair-label">Représentation commune · Mar., 04 août · 20h00</div>
+      <div class="ew-group-pair-cards">
+        <div class="ew-group-card">
+          <img class="ew-group-photo" src="/img/groups/group-lidova-muzika.jpg" alt="Lidová muzika z Chrástu" loading="lazy">
+          <div class="ew-group-card-body">
+            <span class="ew-group-flag">🇨🇿</span>
+            <div class="ew-group-name">Lidová muzika z Chrástu</div>
+            <div class="ew-group-location">Chrast, Tchéquie</div>
+          </div>
+        </div>
+        <div class="ew-group-card">
+          <img class="ew-group-photo" src="/img/groups/group-jarosovci.jpg" alt="Jarosovci Mělník" loading="lazy">
+          <div class="ew-group-card-body">
+            <span class="ew-group-flag">🇨🇿</span>
+            <div class="ew-group-name">Jarosovci Mělník</div>
+            <div class="ew-group-location">Mělník, Tchéquie</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="ew-group-card">
-      <span class="ew-group-flag">🇮🇹</span>
-      <div class="ew-group-name">Centro Culturale Terrazzani</div>
-      <div class="ew-group-location">Palerme, Italie</div>
+      <img class="ew-group-photo" src="/img/groups/group-terrazzani.jpg" alt="Centro Culturale Terrazzani" loading="lazy">
+      <div class="ew-group-card-body">
+        <span class="ew-group-flag">🇮🇹</span>
+        <div class="ew-group-name">Centro Culturale Terrazzani</div>
+        <div class="ew-group-location">Palerme, Italie</div>
+      </div>
     </div>
+
     <div class="ew-group-card">
-      <span class="ew-group-flag">🇨🇿</span>
-      <div class="ew-group-name">Lidová muzika z Chrástu</div>
-      <div class="ew-group-location">Chrast, Tchéquie</div>
+      <img class="ew-group-photo" src="/img/groups/group-quadrille-occitan.jpg" alt="Le Quadrille Occitan" loading="lazy">
+      <div class="ew-group-card-body">
+        <span class="ew-group-flag">🇫🇷</span>
+        <div class="ew-group-name">Le Quadrille Occitan</div>
+        <div class="ew-group-location">Toulouse, France</div>
+      </div>
     </div>
+
     <div class="ew-group-card">
-      <span class="ew-group-flag">🇨🇿</span>
-      <div class="ew-group-name">Jarosovci Mělník</div>
-      <div class="ew-group-location">Mělník, Tchéquie</div>
+      <img class="ew-group-photo" src="/img/groups/group-leigarid.jpg" alt="Leigarid" loading="lazy">
+      <div class="ew-group-card-body">
+        <span class="ew-group-flag">🇪🇪</span>
+        <div class="ew-group-name">Leigarid</div>
+        <div class="ew-group-location">Tallinn, Estonie</div>
+      </div>
     </div>
-    <div class="ew-group-card">
-      <span class="ew-group-flag">🇪🇪</span>
-      <div class="ew-group-name">Leigarid</div>
-      <div class="ew-group-location">Tallinn, Estonie</div>
-    </div>
-    <div class="ew-group-card">
-      <span class="ew-group-flag">🇫🇷</span>
-      <div class="ew-group-name">Le Quadrille Occitan</div>
-      <div class="ew-group-location">Toulouse, France</div>
-    </div>
+
   </div>
 </div>
 
