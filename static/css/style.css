@@ -2220,7 +2220,6 @@ body.menu-open .leaflet-container {
     width: 100%;
     height: 170px;
     object-fit: cover;
-    object-position: center top;
     display: block;
     flex-shrink: 0;
 }
@@ -6343,9 +6342,12 @@ section.team-section.bg-cream {
         grid-template-columns: 1fr;
     }
 
-    /* --- EUROWOCHE GRUPPENRASTER: 1 Spalte wie Phone --- */
+    /* --- EUROWOCHE GRUPPENRASTER: 1 Spalte, zentriert + schmaler --- */
     .ew-groups-grid {
         grid-template-columns: 1fr;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .ew-group-pair,
     .ew-group-link.ew-group-pair-link {
