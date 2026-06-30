@@ -30,7 +30,6 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 </div>
 <div class="ew-group-pair">
   <div class="ew-group-pair-label">Gemeinsamer Auftritt · Di., 04. August · 20:00 Uhr</div>
-  <div class="ew-group-pair-desc">Gleich zwei Gruppen aus Tschechien bereichern das diesjährige Programm: Die Lidová muzika z Chrástu und Jarosovci Mělník bringen die klangvolle Tradition der böhmischen und mährischen Volksmusik mit auf den Ludwigstein – von schwungvollen Melodien bis hin zu feinen Gesangsharmonien.</div>
   <div class="ew-group-pair-cards">
     <div class="ew-group-card">
       <img class="ew-group-photo" src="/img/groups/group-lidova-muzika.jpg" alt="Lidová muzika z Chrástu" loading="lazy">
@@ -49,6 +48,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
       </div>
     </div>
   </div>
+  <div class="ew-group-pair-desc">Gleich zwei Gruppen aus Tschechien bereichern das diesjährige Programm: Die Lidová muzika z Chrástu und Jarosovci Mělník bringen die klangvolle Tradition der böhmischen und mährischen Volksmusik mit auf den Ludwigstein – von schwungvollen Melodien bis hin zu feinen Gesangsharmonien.</div>
 </div>
 <div class="ew-group-card">
   <img class="ew-group-photo" src="/img/groups/group-terrazzani.jpg" alt="Centro Culturale Terrazzani" loading="lazy">

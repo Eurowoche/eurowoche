@@ -31,7 +31,6 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
 </div>
 <div class="ew-group-pair">
   <div class="ew-group-pair-label">Représentation commune · Mar., 04 août · 20h00</div>
-  <div class="ew-group-pair-desc">Deux groupes de République tchèque enrichissent le programme de cette année : Lidová muzika z Chrástu et Jarosovci Mělník apportent la riche tradition de la musique populaire bohémienne et morave à Ludwigstein – des mélodies entraînantes aux harmonies vocales délicates.</div>
   <div class="ew-group-pair-cards">
     <div class="ew-group-card">
       <img class="ew-group-photo" src="/img/groups/group-lidova-muzika.jpg" alt="Lidová muzika z Chrástu" loading="lazy">
@@ -50,6 +49,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
       </div>
     </div>
   </div>
+  <div class="ew-group-pair-desc">Deux groupes de République tchèque enrichissent le programme de cette année : Lidová muzika z Chrástu et Jarosovci Mělník apportent la riche tradition de la musique populaire bohémienne et morave à Ludwigstein – des mélodies entraînantes aux harmonies vocales délicates.</div>
 </div>
 <div class="ew-group-card">
   <img class="ew-group-photo" src="/img/groups/group-terrazzani.jpg" alt="Centro Culturale Terrazzani" loading="lazy">

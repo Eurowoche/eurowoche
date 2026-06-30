@@ -32,7 +32,6 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
 </div>
 <div class="ew-group-pair">
   <div class="ew-group-pair-label">Joint performance · Tue, 04 August · 8:00 pm</div>
-  <div class="ew-group-pair-desc">Two groups from the Czech Republic enrich this year's programme: Lidová muzika z Chrástu and Jarosovci Mělník bring the rich tradition of Bohemian and Moravian folk music to Ludwigstein – from lively melodies to delicate vocal harmonies.</div>
   <div class="ew-group-pair-cards">
     <div class="ew-group-card">
       <img class="ew-group-photo" src="/img/groups/group-lidova-muzika.jpg" alt="Lidová muzika z Chrástu" loading="lazy">
@@ -51,6 +50,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
       </div>
     </div>
   </div>
+  <div class="ew-group-pair-desc">Two groups from the Czech Republic enrich this year's programme: Lidová muzika z Chrástu and Jarosovci Mělník bring the rich tradition of Bohemian and Moravian folk music to Ludwigstein – from lively melodies to delicate vocal harmonies.</div>
 </div>
 <div class="ew-group-card">
   <img class="ew-group-photo" src="/img/groups/group-terrazzani.jpg" alt="Centro Culturale Terrazzani" loading="lazy">

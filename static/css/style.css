@@ -2169,8 +2169,8 @@ body.menu-open .leaflet-container {
 
 .ew-groups-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
-    gap: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
     margin-bottom: 0.5rem;
 }
 
@@ -2187,7 +2187,7 @@ body.menu-open .leaflet-container {
 
 .ew-group-photo {
     width: 100%;
-    height: 130px;
+    height: 170px;
     object-fit: cover;
     display: block;
     flex-shrink: 0;
@@ -2241,10 +2241,10 @@ body.menu-open .leaflet-container {
     background: #eef3f8;
     border: 1.5px solid #b8cfe0;
     border-radius: 6px;
-    padding: 0.7rem;
+    padding: 0.9rem;
     display: flex;
     flex-direction: column;
-    gap: 0.55rem;
+    gap: 0.6rem;
 }
 
 .ew-group-pair-label {
@@ -2259,18 +2259,29 @@ body.menu-open .leaflet-container {
 .ew-group-pair-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.6rem;
+    gap: 0.8rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .ew-groups-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     .ew-group-pair {
         grid-column: span 2;
     }
+}
+@media (max-width: 480px) {
+    .ew-groups-grid {
+        grid-template-columns: 1fr;
+    }
+    .ew-group-pair {
+        grid-column: span 1;
+    }
+    .ew-group-pair-cards {
+        grid-template-columns: 1fr;
+    }
     .ew-group-photo {
-        height: 100px;
+        height: 180px;
     }
 }
 
