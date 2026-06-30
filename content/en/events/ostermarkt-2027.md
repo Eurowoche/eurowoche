@@ -5,6 +5,7 @@ date_end: "2027-03-07"
 date_display: "Sat., 6 Mar. – Sun., 7 Mar. 2027"
 location: "Burg Ludwigstein, Witzenhausen"
 image: "/img/events/ostermarkt-2027.jpg"
+translationKey: "ostermarkt-2027"
 ---
 The historic Burg Ludwigstein once again opens its gates for the 42nd Easter Market, inviting visitors to a wonderful weekend full of arts and crafts, culinary delights and discoveries. The market takes place on Saturday from 10am to 6pm and Sunday from 10am to 5pm, transforming the impressive castle grounds into a vibrant market bustle with plenty to offer for young and old alike.
 

@@ -5,6 +5,7 @@ date_end: "2026-12-06"
 date_display: "Sam., 05 déc. – Dim., 06 déc. 2026"
 location: "Burg Ludwigstein, Witzenhausen"
 image: "/img/events/adventsmarkt-2026.jpg"
+translationKey: "adventsmarkt-2026"
 ---
 
 Le deuxième week-end de l'Avent, la jeunesse Burg Ludwigstein ouvre à nouveau ses portes pour le marché de Noël atmosphérique à Burg Ludwigstein. Dans une ambiance historique, les visiteurs peuvent découvrir un marché artisanal spécial avec des stands magnifiquement décorés et une atmosphère de Noël.

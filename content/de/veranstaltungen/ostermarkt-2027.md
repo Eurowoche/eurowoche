@@ -5,6 +5,7 @@ date_end: "2027-03-07"
 date_display: "Sa., 06. Mär. – So., 07. Mär. 2027"
 location: "Burg Ludwigstein, Witzenhausen"
 image: "/img/events/ostermarkt-2027.jpg"
+translationKey: "ostermarkt-2027"
 ---
 Die historische Burg Ludwigstein öffnet erneut ihre Tore für den 42. Ostermarkt und lädt Besucherinnen und Besucher zu einem stimmungsvollen Wochenende voller Kunsthandwerk, Genuss und Entdeckungen ein. Der Markt findet am Samstag von 10 bis 18 Uhr sowie am Sonntag von 10 bis 17 Uhr statt und verwandelt die eindrucksvolle Burganlage in ein lebendiges Markttreiben, das für Groß und Klein gleichermaßen viel zu bieten hat.
 

@@ -5,6 +5,7 @@ date_end: "2027-03-07"
 date_display: "Sam., 06 mars – Dim., 07 mars 2027"
 location: "Burg Ludwigstein, Witzenhausen"
 image: "/img/events/ostermarkt-2027.jpg"
+translationKey: "ostermarkt-2027"
 ---
 
 Le château historique de Burg Ludwigstein ouvre à nouveau ses portes pour le 42e Marché de Pâques et invite les visiteurs à un week-end chaleureux plein d'artisanat, de plaisirs et de découvertes. Le marché se tient le samedi de 10h à 18h et le dimanche de 10h à 17h, transformant l'impressionnant site du château en un marché animé qui a beaucoup à offrir aux petits comme aux grands.

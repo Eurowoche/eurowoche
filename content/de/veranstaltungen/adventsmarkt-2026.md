@@ -5,6 +5,7 @@ date_end: "2026-12-06"
 date_display: "Sa., 05. Dez. – So., 06. Dez. 2026"
 location: "Burg Ludwigstein, Witzenhausen"
 image: "/img/events/adventsmarkt-2026.jpg"
+translationKey: "adventsmarkt-2026"
 ---
 Am zweiten Adventswochenende öffnet die Jugendburg Ludwigstein erneut ihre Tore für den stimmungsvollen Adventsmarkt auf Burg Ludwigstein. In historischem Ambiente erwartet die Besucherinnen und Besucher ein besonderer Kunsthandwerksmarkt mit liebevoll gestalteten Ständen und weihnachtlicher Atmosphäre.
 
