@@ -2229,6 +2229,7 @@ body.menu-open .leaflet-container {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+    flex: 1;               /* fills remaining card height */
 }
 
 .ew-group-flag {
@@ -2272,13 +2273,15 @@ body.menu-open .leaflet-container {
 .ew-group-link {
     text-decoration: none;
     color: inherit;
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 .ew-group-link.ew-group-pair-link {
     grid-column: span 2;
 }
 .ew-group-link .ew-group-card {
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    flex: 1;                /* fill the full height of the <a> wrapper */
 }
 .ew-group-link:hover .ew-group-card,
 .ew-group-link:active .ew-group-card {
@@ -2295,7 +2298,8 @@ body.menu-open .leaflet-container {
     font-size: 0.72rem;
     font-weight: 700;
     color: var(--primary);
-    margin-top: 0.6rem;
+    margin-top: auto;      /* pushes hint to bottom of card body */
+    padding-top: 0.6rem;
     letter-spacing: 0.02em;
 }
 .ew-group-pair .ew-group-link-hint {
@@ -4346,6 +4350,9 @@ section.team-section.bg-cream {
 
 .markt-image img {
     width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
     border-radius: 2px;
 }
 
@@ -6228,3 +6235,274 @@ section.team-section.bg-cream {
     }
 }
 /* deploy-test 1775911286 */
+
+/* ==========================================
+   PORTRAIT MODE — alle Geräte
+   In portrait = Phone-Layout; in landscape = Desktop-Layout
+   Gilt für Tablets (≥769px) in Hochformat.
+   Phones (≤768px) greifen ohnehin auf die 768px-Regeln zu.
+   ========================================== */
+@media (orientation: portrait) and (min-width: 769px) {
+
+    /* --- HEADER: Hamburger statt Desktop-Nav --- */
+    .header-inner {
+        padding: 0.5rem 1rem;
+    }
+    .lang-switch {
+        display: none;
+    }
+    .menu-toggle {
+        font-size: 0;
+        gap: 0;
+        padding: 0.5rem;
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu-icon {
+        font-size: var(--fs-h2);
+    }
+
+    /* --- HERO: gestapelt --- */
+    .announcement-banner {
+        margin-top: 75px;
+    }
+    .hero-section {
+        margin-top: 0;
+    }
+    .hero-inner {
+        flex-direction: column;
+    }
+    .hero-text {
+        flex: none;
+        width: 100%;
+        padding: 3rem 1.5rem 2rem;
+        text-align: center;
+    }
+    .hero-text-inner {
+        max-width: 100%;
+    }
+    .hero-image {
+        flex: none;
+        width: 100%;
+        margin: 0;
+    }
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.6rem;
+        margin-top: 1.5rem;
+    }
+    .btn-hero {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    /* --- SECTION TITLES: zentriert --- */
+    .section-title {
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .section-subtitle {
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* --- HOME CIRCLES: vertikal --- */
+    .circle-bottom-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        margin-top: 1rem;
+    }
+
+    /* --- EVENTS: gestapelt --- */
+    .event-row,
+    .event-row:nth-child(even) {
+        flex-direction: column;
+    }
+    .event-image {
+        flex: none;
+        height: 300px;
+    }
+    .event-info {
+        flex: none;
+        padding: 2.5rem 2rem;
+    }
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- EUROWOCHE GRUPPENRASTER: 2 Spalten --- */
+    .ew-groups-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ew-group-pair,
+    .ew-group-link.ew-group-pair-link {
+        grid-column: span 2;
+    }
+
+    /* --- VORSTAND: 2 Spalten (passt auf Tablet) --- */
+    .vorstand-section {
+        padding: 1.5rem 1.5rem 2rem;
+    }
+    .vorstand-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 1rem;
+        gap: 2rem 2rem;
+    }
+    .vorstand-photo {
+        width: 100%;
+        max-width: 220px;
+    }
+    .vorstand-photo img {
+        height: 275px;
+        object-fit: cover;
+        object-position: center top;
+    }
+    .vorstand-banner {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .vorstand-kontakt .email,
+    .vorstand-kontakt .tel {
+        white-space: normal;
+    }
+    .erweiterter-vorstand {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- KONTAKT HERO --- */
+    .kontakt-hero-container {
+        margin-top: 0;
+        padding: 0.5rem 1rem 0;
+    }
+    .kontakt-hero-image {
+        width: 100%;
+        height: auto;
+        object-fit: unset;
+    }
+    .bg-cream,
+    .bg-light {
+        margin: 1rem auto;
+        padding: 1.5rem;
+    }
+    .honorary-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- MÄRKTE: 1 Spalte, Bild mit fixer Höhe --- */
+    .maerkte-grid {
+        grid-template-columns: 1fr;
+    }
+    .maerkte-section-inner,
+    .maerkte-section-inner-reverse {
+        grid-template-columns: 1fr;
+    }
+    .maerkte-image-with-overlay img {
+        height: 300px;
+    }
+    .maerkte-teaser-split {
+        flex-direction: column;
+    }
+
+    /* --- CONTACT / MACH-MIT GRIDS --- */
+    .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .mach-mit-cards {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- FESTIVAL --- */
+    .burg-split-section {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+    .burg-split-image {
+        flex: none;
+        width: 100%;
+        height: 300px;
+        position: relative;
+    }
+    .burg-split-image img {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+    .burg-split-text {
+        padding: 2.5rem 1.5rem;
+    }
+
+    /* --- SHOP / TESTIMONIALS --- */
+    .shop-teaser-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .testimonials-inner {
+        flex-direction: column;
+    }
+
+    /* --- VEREIN --- */
+    .verein-zweck-inner,
+    .verein-split-inner,
+    .verein-split-inner.reverse {
+        flex-direction: column;
+    }
+    .verein-galerie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* --- GESCHICHTE --- */
+    .geschichte-white-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .geschichte-split-inner,
+    .geschichte-split-inner.reverse {
+        flex-direction: column;
+    }
+
+    /* --- FOOTER --- */
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    .footer-divider {
+        display: none;
+    }
+
+    /* --- PAGE HERO BANNER --- */
+    .page-hero-banner {
+        height: 35vh;
+        min-height: 220px;
+    }
+    .page-images-row {
+        grid-template-columns: 1fr;
+    }
+}
