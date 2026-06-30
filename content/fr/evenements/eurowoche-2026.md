@@ -89,7 +89,6 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
 
 <div class="ew-program-group">
   <h3 class="ew-program-group-label">Représentations publiques du soir</h3>
-  <p class="ew-section-note">Toutes les représentations du soir à la Jugendburg Ludwigstein sont gratuites. Exceptions : la représentation folklorique à Bad Sooden-Allendorf (dim., 02 août) et la Grande Eurokirmes (sam., 08 août) sont des événements payants.</p>
 
   <div class="ew-event-card">
     <div class="ew-event-main">
@@ -99,6 +98,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Sam., 01 août 2026</span>
       <span class="ew-meta-item">🕗 20h00</span>
+      <span class="ew-meta-item">🎟 Entrée libre</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Marktplatz+Witzenhausen+37213" target="_blank">Marktplatz Witzenhausen</a></span>
     </div>
   </div>
@@ -111,6 +111,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Dim., 02 août 2026</span>
       <span class="ew-meta-item">🕕 18h00</span>
+      <span class="ew-meta-item">🎟 10 € plein tarif · 7 € tarif réduit</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Werratal+Kultur+und+Kongresszentrum+Bad+Sooden-Allendorf" target="_blank">Werratal Kultur- und Kongresszentrum, Bad Sooden-Allendorf</a></span>
     </div>
   </div>
@@ -123,6 +124,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Lun., 03 août 2026</span>
       <span class="ew-meta-item">🕗 20h00</span>
+      <span class="ew-meta-item">🎟 Entrée libre</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>
@@ -135,6 +137,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Mar., 04 août 2026</span>
       <span class="ew-meta-item">🕗 20h00</span>
+      <span class="ew-meta-item">🎟 Entrée libre</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>
@@ -142,11 +145,12 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
   <div class="ew-event-card">
     <div class="ew-event-main">
       <div class="ew-event-name">🇮🇹 Journée italienne – Centro Culturale Terrazzani</div>
-      <div class="ew-event-desc">Représentation de gala de l'ensemble sicilien de Palerme, suivie de danses libres.</div>
+      <div class="ew-event-desc">Représentation de gala de l'ensemble sicilien de Trabia, suivie de danses libres.</div>
     </div>
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Mer., 05 août 2026</span>
       <span class="ew-meta-item">🕗 20h00</span>
+      <span class="ew-meta-item">🎟 Entrée libre</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>
@@ -159,6 +163,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Jeu., 06 août 2026</span>
       <span class="ew-meta-item">🕗 20h00</span>
+      <span class="ew-meta-item">🎟 Entrée libre</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>
@@ -171,6 +176,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Ven., 07 août 2026</span>
       <span class="ew-meta-item">🕗 20h00</span>
+      <span class="ew-meta-item">🎟 Entrée libre</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>
@@ -183,6 +189,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Sam., 08 août 2026</span>
       <span class="ew-meta-item">🕑 15h00–18h00</span>
+      <span class="ew-meta-item">🎟 10 € plein tarif · 7 € tarif réduit</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>
