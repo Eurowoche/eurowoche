@@ -2121,6 +2121,20 @@ body.menu-open .leaflet-container {
     line-height: 1.5;
 }
 
+.ew-event-list {
+    margin: 0.25rem 0 0;
+    padding-left: 1.1rem;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: #7a6055;
+    line-height: 1.6;
+    list-style: disc;
+}
+
+.ew-event-list li {
+    margin-bottom: 0.1rem;
+}
+
 .ew-event-meta {
     display: flex;
     flex-wrap: wrap;

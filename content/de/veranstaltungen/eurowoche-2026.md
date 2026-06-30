@@ -200,11 +200,12 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
   <div class="ew-event-card">
     <div class="ew-event-main">
       <div class="ew-event-name">Burgrally &amp; Programmvorstellung</div>
-      <div class="ew-event-desc">Vorstellung der Workshops und des Ablaufs der Europäischen Jugendwoche. Eintritt frei.</div>
+      <div class="ew-event-desc">Vorstellung der Workshops und des Ablaufs der Europäischen Jugendwoche.</div>
     </div>
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 So., 02. August 2026</span>
       <span class="ew-meta-item">🕤 09:30–12:30 Uhr</span>
+      <span class="ew-meta-item">🎟 Eintritt frei</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>
@@ -212,10 +213,15 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
   <div class="ew-event-card">
     <div class="ew-event-main">
       <div class="ew-event-name">Tägliche Angebote</div>
-      <div class="ew-event-desc">Offenes Singen mit Vorstellung der Gruppe des Nationentages (09:30–10:30 Uhr) · Mitmach-Workshops in Tanz, Gesang und mehr (10:30–12:30 Uhr) · Gemeinsames Volkstanzen (Mo., Di. &amp; Fr., 17:30–18:30 Uhr). Eintritt frei.</div>
+      <ul class="ew-event-list">
+        <li>Offenes Singen mit Vorstellung der Gruppe des Nationentages (09:30–10:30 Uhr)</li>
+        <li>Mitmach-Workshops in Tanz, Gesang und mehr (10:30–12:30 Uhr)</li>
+        <li>Gemeinsames Volkstanzen (Mo., Di. &amp; Fr., 17:30–18:30 Uhr)</li>
+      </ul>
     </div>
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Mo.–Fr., 03.–07. August 2026</span>
+      <span class="ew-meta-item">🎟 Eintritt frei</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>

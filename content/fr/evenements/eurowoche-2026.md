@@ -201,11 +201,12 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
   <div class="ew-event-card">
     <div class="ew-event-main">
       <div class="ew-event-name">Burgrally &amp; Présentation du programme</div>
-      <div class="ew-event-desc">Présentation des ateliers et du déroulement de la Semaine européenne de la jeunesse. Entrée libre.</div>
+      <div class="ew-event-desc">Présentation des ateliers et du déroulement de la Semaine européenne de la jeunesse.</div>
     </div>
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Dim., 02 août 2026</span>
       <span class="ew-meta-item">🕤 09h30–12h30</span>
+      <span class="ew-meta-item">🎟 Entrée libre</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>
@@ -213,10 +214,15 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
   <div class="ew-event-card">
     <div class="ew-event-main">
       <div class="ew-event-name">Activités quotidiennes</div>
-      <div class="ew-event-desc">Chant libre avec présentation du groupe du jour (09h30–10h30) · Ateliers participatifs en danse, chant et plus (10h30–12h30) · Apprentissage de danses folkloriques (lun., mar. &amp; ven., 17h30–18h30). Entrée libre.</div>
+      <ul class="ew-event-list">
+        <li>Chant libre avec présentation du groupe du jour (09h30–10h30)</li>
+        <li>Ateliers participatifs en danse, chant et plus (10h30–12h30)</li>
+        <li>Apprentissage de danses folkloriques (lun., mar. &amp; ven., 17h30–18h30)</li>
+      </ul>
     </div>
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Lun.–Ven., 03–07 août 2026</span>
+      <span class="ew-meta-item">🎟 Entrée libre</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>

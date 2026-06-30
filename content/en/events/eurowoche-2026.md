@@ -202,11 +202,12 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
   <div class="ew-event-card">
     <div class="ew-event-main">
       <div class="ew-event-name">Burgrally &amp; Programme Preview</div>
-      <div class="ew-event-desc">Introduction to the workshops and the schedule of the European Youth Week. Free admission.</div>
+      <div class="ew-event-desc">Introduction to the workshops and the schedule of the European Youth Week.</div>
     </div>
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Sun, 02 August 2026</span>
       <span class="ew-meta-item">🕤 9:30 am–12:30 pm</span>
+      <span class="ew-meta-item">🎟 Free admission</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>
@@ -214,10 +215,15 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
   <div class="ew-event-card">
     <div class="ew-event-main">
       <div class="ew-event-name">Daily Activities</div>
-      <div class="ew-event-desc">Open Singing with an introduction by the group of the day (9:30–10:30 am) · Participatory workshops in dance, song and more (10:30 am–12:30 pm) · Folk dance session (Mon, Tue &amp; Fri, 5:30–6:30 pm). Free admission.</div>
+      <ul class="ew-event-list">
+        <li>Open Singing with introduction by the group of the day (9:30–10:30 am)</li>
+        <li>Participatory workshops in dance, song and more (10:30 am–12:30 pm)</li>
+        <li>Folk dance session (Mon, Tue &amp; Fri, 5:30–6:30 pm)</li>
+      </ul>
     </div>
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Mon–Fri, 03–07 August 2026</span>
+      <span class="ew-meta-item">🎟 Free admission</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>
