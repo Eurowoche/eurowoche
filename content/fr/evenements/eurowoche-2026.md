@@ -89,6 +89,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
 
 <div class="ew-program-group">
   <h3 class="ew-program-group-label">Représentations publiques du soir</h3>
+  <p class="ew-section-note">Toutes les représentations du soir à la Jugendburg Ludwigstein sont gratuites. Exceptions : la représentation folklorique à Bad Sooden-Allendorf (dim., 02 août) et la Grande Eurokirmes (sam., 08 août) sont des événements payants.</p>
 
   <div class="ew-event-card">
     <div class="ew-event-main">
@@ -204,36 +205,11 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">Chant libre</div>
-      <div class="ew-event-desc">Chant collectif avec présentation du groupe du jour. Entrée libre.</div>
+      <div class="ew-event-name">Activités quotidiennes</div>
+      <div class="ew-event-desc">Chant libre avec présentation du groupe du jour (09h30–10h30) · Ateliers participatifs en danse, chant et plus (10h30–12h30) · Apprentissage de danses folkloriques (lun., mar. &amp; ven., 17h30–18h30). Entrée libre.</div>
     </div>
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Lun.–Ven., 03–07 août 2026</span>
-      <span class="ew-meta-item">🕤 09h30–10h30</span>
-      <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
-    </div>
-  </div>
-
-  <div class="ew-event-card">
-    <div class="ew-event-main">
-      <div class="ew-event-name">Ateliers</div>
-      <div class="ew-event-desc">Ateliers participatifs en danse, chant et autres domaines. Entrée libre.</div>
-    </div>
-    <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Lun.–Ven., 03–07 août 2026</span>
-      <span class="ew-meta-item">🕥 10h30–12h30</span>
-      <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
-    </div>
-  </div>
-
-  <div class="ew-event-card">
-    <div class="ew-event-main">
-      <div class="ew-event-name">Apprentissage de danses folkloriques</div>
-      <div class="ew-event-desc">Apprenez ensemble les danses folkloriques du pays du jour. Entrée libre.</div>
-    </div>
-    <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Lun., Mar. &amp; Ven., 03, 04 &amp; 07 août 2026</span>
-      <span class="ew-meta-item">🕔 17h30–18h30</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>

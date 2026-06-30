@@ -88,6 +88,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 
 <div class="ew-program-group">
   <h3 class="ew-program-group-label">Öffentliche Abendveranstaltungen</h3>
+  <p class="ew-section-note">Alle Abendveranstaltungen auf der Jugendburg Ludwigstein sind kostenlos. Ausnahmen: die Folkloredarbietung in Bad Sooden-Allendorf (So., 02.08.) und die Große Eurokirmes (Sa., 08.08.) sind kostenpflichtig.</p>
 
   <div class="ew-event-card">
     <div class="ew-event-main">
@@ -203,36 +204,11 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 
   <div class="ew-event-card">
     <div class="ew-event-main">
-      <div class="ew-event-name">Offenes Singen</div>
-      <div class="ew-event-desc">Gemeinsames Singen mit Vorstellung der Gruppe des jeweiligen Nationentages. Eintritt frei.</div>
+      <div class="ew-event-name">Tägliche Angebote</div>
+      <div class="ew-event-desc">Offenes Singen mit Vorstellung der Gruppe des Nationentages (09:30–10:30 Uhr) · Mitmach-Workshops in Tanz, Gesang und mehr (10:30–12:30 Uhr) · Gemeinsames Volkstanzen (Mo., Di. &amp; Fr., 17:30–18:30 Uhr). Eintritt frei.</div>
     </div>
     <div class="ew-event-meta">
       <span class="ew-meta-item">📅 Mo.–Fr., 03.–07. August 2026</span>
-      <span class="ew-meta-item">🕤 09:30–10:30 Uhr</span>
-      <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
-    </div>
-  </div>
-
-  <div class="ew-event-card">
-    <div class="ew-event-main">
-      <div class="ew-event-name">Workshops</div>
-      <div class="ew-event-desc">Mitmach-Workshops in Tanz, Gesang und weiteren Bereichen. Eintritt frei.</div>
-    </div>
-    <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Mo.–Fr., 03.–07. August 2026</span>
-      <span class="ew-meta-item">🕥 10:30–12:30 Uhr</span>
-      <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
-    </div>
-  </div>
-
-  <div class="ew-event-card">
-    <div class="ew-event-main">
-      <div class="ew-event-name">Gemeinsames Volkstanzen</div>
-      <div class="ew-event-desc">Volkstänze des jeweiligen Nationentages gemeinsam erlernen. Eintritt frei.</div>
-    </div>
-    <div class="ew-event-meta">
-      <span class="ew-meta-item">📅 Mo., Di. &amp; Fr., 03., 04. &amp; 07. August 2026</span>
-      <span class="ew-meta-item">🕔 17:30–18:30 Uhr</span>
       <span class="ew-meta-item">📍 <a href="https://maps.google.com/?q=Jugendburg+Ludwigstein+37214+Witzenhausen" target="_blank">Jugendburg Ludwigstein</a></span>
     </div>
   </div>
