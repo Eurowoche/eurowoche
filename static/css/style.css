@@ -6234,6 +6234,39 @@ section.team-section.bg-cream {
 /* deploy-test 1775911286 */
 
 /* ==========================================
+   LANDSCAPE TABLET — iPad landscape fix
+   Targets tablets in landscape (769–1300px) where the
+   4-column Vorstand grid would overflow due to fixed widths.
+   ========================================== */
+@media (orientation: landscape) and (min-width: 769px) and (max-width: 1300px) {
+    .vorstand-grid {
+        padding: 0 1rem;
+    }
+    .vorstand-photo {
+        width: 100%;
+        max-width: 220px;
+    }
+    .vorstand-photo img {
+        height: 220px;
+        object-fit: cover;
+        object-position: center top;
+    }
+    .vorstand-banner {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .vorstand-kontakt .email,
+    .vorstand-kontakt .tel {
+        white-space: normal;
+        font-size: var(--fs-xs);
+    }
+    .erweiterter-vorstand {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================
    PORTRAIT MODE — alle Geräte
    In portrait = Phone-Layout; in landscape = Desktop-Layout
    Gilt für Tablets (≥769px) in Hochformat.
