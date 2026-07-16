@@ -4484,6 +4484,21 @@ section.team-section.bg-cream {
     max-width: 800px;
     margin: 0 auto;
 }
+.mitglied-block {
+    margin-top: 2rem;
+}
+.mitglied-block-foerder {
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(139, 83, 77, 0.25);
+}
+.mitglied-section h3 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-lg);
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+}
 .mitglied-section h2 {
     font-family: var(--font-heading);
     font-size: var(--fs-xl);

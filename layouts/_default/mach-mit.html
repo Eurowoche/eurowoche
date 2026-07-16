@@ -83,10 +83,25 @@
     <div class="mitglied-section">
         <div class="mitglied-inner">
             <h2>{{ i18n "become_member" }}</h2>
-            <p>{{ i18n "become_member_text" }}</p>
-            <div class="button-row">
-                <a href="{{ if eq .Lang "de" }}/downloads/beitritt.pdf{{ else if eq .Lang "en" }}/downloads/beitritt.pdf{{ else if eq .Lang "fr" }}/downloads/beitritt.pdf{{ end }}" class="btn btn-primary" target="_blank">{{ i18n "membership_form" }}</a>
-                <a href="{{ if eq .Lang "de" }}/kontakt/{{ else if eq .Lang "en" }}/en/contact/{{ else if eq .Lang "fr" }}/fr/contact/{{ end }}" class="btn btn-outline">{{ i18n "contact_board" }}</a>
+
+            <!-- Ordentliche Mitgliedschaft -->
+            <div class="mitglied-block">
+                <h3>{{ i18n "mitglied_regular_title" }}</h3>
+                <p>{{ i18n "become_member_text" }}</p>
+                <div class="button-row">
+                    <a href="{{ if eq .Lang "de" }}/downloads/beitritt.pdf{{ else if eq .Lang "en" }}/downloads/beitritt.pdf{{ else if eq .Lang "fr" }}/downloads/beitritt.pdf{{ end }}" class="btn btn-primary" target="_blank">{{ i18n "membership_form" }}</a>
+                    <a href="{{ if eq .Lang "de" }}/kontakt/{{ else if eq .Lang "en" }}/en/contact/{{ else if eq .Lang "fr" }}/fr/contact/{{ end }}" class="btn btn-outline">{{ i18n "contact_board" }}</a>
+                </div>
+            </div>
+
+            <!-- Fördermitgliedschaft -->
+            <div class="mitglied-block mitglied-block-foerder">
+                <h3>{{ i18n "foerdermitglied_title" }}</h3>
+                <p>{{ i18n "foerdermitglied_text" }}</p>
+                <div class="button-row">
+                    <a href="{{ if eq .Lang "de" }}/downloads/beitritt-foerder.pdf{{ else if eq .Lang "en" }}/downloads/beitritt-foerder.pdf{{ else if eq .Lang "fr" }}/downloads/beitritt-foerder.pdf{{ end }}" class="btn btn-primary" target="_blank">{{ i18n "foerdermitglied_form" }}</a>
+                    <a href="{{ if eq .Lang "de" }}/kontakt/{{ else if eq .Lang "en" }}/en/contact/{{ else if eq .Lang "fr" }}/fr/contact/{{ end }}" class="btn btn-outline">{{ i18n "contact_board" }}</a>
+                </div>
             </div>
         </div>
     </div>

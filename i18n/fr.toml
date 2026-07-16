@@ -136,6 +136,18 @@ other = "Formulaire d'adhésion (PDF)"
 [contact_board]
 other = "Contacter le conseil d'administration"
 
+[mitglied_regular_title]
+other = "Adhésion ordinaire"
+
+[foerdermitglied_title]
+other = "Adhésion de soutien"
+
+[foerdermitglied_text]
+other = "Vous souhaitez soutenir l'Eurowoche sans prendre d'engagements actifs au sein de l'association ? En tant que membre bienfaiteur, vous apportez une contribution précieuse au financement de notre travail – sans présence régulière ni bénévolat obligatoire."
+
+[foerdermitglied_form]
+other = "Formulaire d'adhésion de soutien (PDF)"
+
 [our_board]
 other = "Notre conseil"
 

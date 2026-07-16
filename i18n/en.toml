@@ -136,6 +136,18 @@ other = "Membership form (PDF)"
 [contact_board]
 other = "Contact the Board"
 
+[mitglied_regular_title]
+other = "Full Membership"
+
+[foerdermitglied_title]
+other = "Supporting Membership"
+
+[foerdermitglied_text]
+other = "Would you like to support the Eurowoche without taking on active club responsibilities? As a supporting member, you make a valuable contribution to financing our work – with no requirement for regular attendance or volunteering."
+
+[foerdermitglied_form]
+other = "Supporting member form (PDF)"
+
 [our_board]
 other = "Our Board"
 

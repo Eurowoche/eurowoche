@@ -136,6 +136,18 @@ other = "Mitgliedsantrag (PDF)"
 [contact_board]
 other = "Vorstand kontaktieren"
 
+[mitglied_regular_title]
+other = "Ordentliche Mitgliedschaft"
+
+[foerdermitglied_title]
+other = "Fördermitgliedschaft"
+
+[foerdermitglied_text]
+other = "Sie möchten die Eurowoche unterstützen, ohne aktive Vereinspflichten zu übernehmen? Als Fördermitglied leisten Sie einen wertvollen Beitrag zur Finanzierung unserer Arbeit – ganz ohne regelmäßige Präsenz oder Ehrenamt."
+
+[foerdermitglied_form]
+other = "Förderantrag (PDF)"
+
 [our_board]
 other = "Unser Vorstand"
 
