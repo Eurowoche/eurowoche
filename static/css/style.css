@@ -241,6 +241,17 @@ h3 {
     color: var(--text-light);
 }
 
+.btn-beige {
+    background: var(--bg-mauve);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-beige:hover {
+    background: #e0d0b0;
+    color: var(--primary);
+}
+
 .btn-full {
     display: block;
     width: 100%;
