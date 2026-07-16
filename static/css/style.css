@@ -4842,23 +4842,23 @@ section.team-section.bg-cream {
 .verein-cioff {
     background: #E3D1D1;
     padding: 3.5rem 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1.5rem;
 }
 
-.verein-cioff .cioff-logo {
-    flex-shrink: 0;
+.verein-cioff-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3.5rem;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .verein-cioff-text {
-    max-width: 720px;
+    flex: 1;
 }
 
 .verein-cioff h2 {
-    text-align: center;
+    text-align: left;
     margin-top: 0;
     margin-bottom: 1rem;
 }
@@ -4867,6 +4867,7 @@ section.team-section.bg-cream {
     font-size: var(--fs-base);
     line-height: 1.8;
     margin-bottom: 1rem;
+    text-align: left;
 }
 
 /* --- Zweck des Vereins: Aufzählung --- */
@@ -6243,11 +6244,12 @@ section.team-section.bg-cream {
    CIOFF LOGO — alle Stellen
    ========================================== */
 
-/* Verein-Seite: Logo zentriert über dem Text */
+/* Verein-Seite: Logo links neben dem Text */
 .cioff-logo {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
+    flex-shrink: 0;
 }
 
 /* Festival-Seite: großer CIOFF-Abschlussbereich am Ende der Seite */
@@ -6325,10 +6327,16 @@ section.team-section.bg-cream {
     letter-spacing: 0.03em;
 }
 
-/* Mobile: Verein-CIOFF kompakter */
+/* Mobile: Verein-CIOFF stapeln */
 @media (max-width: 768px) {
-    .verein-cioff {
-        padding: 2.5rem 1.2rem;
+    .verein-cioff-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    .verein-cioff h2,
+    .verein-cioff p {
+        text-align: center;
     }
 }
 
