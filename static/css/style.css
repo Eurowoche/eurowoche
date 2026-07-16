@@ -260,7 +260,7 @@ h3 {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 1000; /* über Leaflet-Karten-Ebenen (bis ~800) */
     background: rgba(240, 238, 233, 0.97);
     backdrop-filter: blur(10px);
     border-top: none;
