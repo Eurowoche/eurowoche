@@ -4842,17 +4842,11 @@ section.team-section.bg-cream {
 .verein-cioff {
     background: #E3D1D1;
     padding: 3.5rem 2rem;
-    text-align: center;
+    text-align: left;
 }
 
-.verein-cioff .page-body-inner {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.verein-cioff h2,
-.verein-cioff .page-body-inner h2 {
-    text-align: center;
+.verein-cioff h2 {
+    text-align: left;
     margin-top: 0;
     margin-bottom: 1.5rem;
 }
@@ -6259,34 +6253,28 @@ section.team-section.bg-cream {
     margin-top: 0;
 }
 
-/* Festival-Seite: schmale zentrierte Leiste zwischen Terminen und Teilnahme */
-.cioff-festival-bar {
+/* Festival-Seite: großer CIOFF-Abschlussbereich am Ende der Seite */
+.cioff-festival-section {
     background: var(--bg-cream);
-    padding: 1.8rem 1rem;
+    padding: 3rem 1rem;
     text-align: center;
     border-top: 1px solid var(--border-light, #e0d8d0);
-    border-bottom: 1px solid var(--border-light, #e0d8d0);
-}
-.cioff-festival-link {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 1rem;
-    text-decoration: none;
-    color: var(--text-dark);
 }
-.cioff-festival-link:hover {
-    opacity: 0.8;
-}
-.cioff-festival-logo {
-    width: 64px;
-    height: 64px;
+.cioff-festival-logo-big {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
 }
-.cioff-festival-text {
+.cioff-festival-label {
     font-size: var(--fs-sm);
     font-family: var(--font-body);
     color: var(--gray-mid, #7A6A68);
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
+    margin: 0;
 }
 
 /* Homepage: schmale Leiste vor dem Kontakt-Bereich */
@@ -6347,6 +6335,12 @@ section.team-section.bg-cream {
 
 /* Mobile: Verein-CIOFF stapeln */
 @media (max-width: 768px) {
+    .verein-cioff {
+        text-align: center;
+    }
+    .verein-cioff h2 {
+        text-align: center;
+    }
     .verein-cioff-inner {
         flex-direction: column;
         text-align: center;
