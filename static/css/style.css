@@ -6277,26 +6277,20 @@ section.team-section.bg-cream {
     margin: 0;
 }
 
-/* Homepage: schmale Leiste vor dem Kontakt-Bereich */
+/* Homepage: CIOFF-Bereich vor dem Kontakt-Bereich */
 .cioff-strip {
     background: var(--bg-cream);
-    padding: 1.5rem 1rem;
+    padding: 3rem 1rem;
     text-align: center;
     border-top: 1px solid var(--border-light, #e0d8d0);
-}
-.cioff-strip-link {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.9rem;
-    text-decoration: none;
-    color: var(--text-dark);
-}
-.cioff-strip-link:hover {
-    opacity: 0.8;
+    gap: 1rem;
 }
 .cioff-strip-logo {
-    width: 52px;
-    height: 52px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
 }
 .cioff-strip-text {
@@ -6304,6 +6298,7 @@ section.team-section.bg-cream {
     font-family: var(--font-body);
     color: var(--gray-mid, #7A6A68);
     letter-spacing: 0.03em;
+    margin: 0;
 }
 
 /* Footer: CIOFF-Leiste über der footer-bottom */
