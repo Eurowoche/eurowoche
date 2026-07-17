@@ -242,13 +242,13 @@ h3 {
 }
 
 .btn-beige {
-    background: var(--bg-mauve);
+    background: #E8E4DC;
     color: var(--primary);
     border-color: var(--primary);
 }
 
 .btn-beige:hover {
-    background: #e0d0b0;
+    background: #d8d4cc;
     color: var(--primary);
 }
 
