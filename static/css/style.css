@@ -3411,7 +3411,7 @@ section.team-section.bg-cream {
     text-transform: uppercase;
     text-align: center;
     padding: 14px 0;
-    transform: rotate(30deg);
+    transform: rotate(45deg);
     pointer-events: none;
     z-index: 2;
 }
