@@ -9,7 +9,7 @@
                 {{ with .Params.image }}
                 <div class="event-card-image">
                     <img src="{{ . }}" alt="{{ $page.Title }}" loading="lazy">
-                    {{ with $page.Params.ribbon }}<div class="event-card-ribbon-wrap"><span class="event-card-ribbon">{{ . }}</span></div>{{ end }}
+                    {{ with $page.Params.ribbon }}<span class="event-card-ribbon">{{ . }}</span>{{ end }}
                 </div>
                 {{ end }}
                 <div class="event-card-body">
