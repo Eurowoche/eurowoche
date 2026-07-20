@@ -3399,18 +3399,18 @@ section.team-section.bg-cream {
 
 .event-card-ribbon {
     position: absolute;
-    top: 22px;
-    right: -30px;
-    width: 120px;
+    top: 38px;
+    right: -45px;
+    width: 190px;
     background: var(--primary);
     color: #fff;
     font-family: var(--font-body);
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     text-align: center;
-    padding: 6px 0;
+    padding: 10px 0;
     transform: rotate(45deg);
     pointer-events: none;
     z-index: 2;
