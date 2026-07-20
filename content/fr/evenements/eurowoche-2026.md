@@ -108,7 +108,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
 <div class="ew-program-group">
   <h3 class="ew-program-group-label">Représentations publiques</h3>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" data-date="2026-08-01">
     <div class="ew-event-date">Sam., 01 août 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Soirée d'ouverture à Witzenhausen</div>
@@ -121,7 +121,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" data-date="2026-08-02">
     <div class="ew-event-date">Dim., 02 août 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Soirée folklorique à Bad Sooden-Allendorf</div>
@@ -134,7 +134,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     </div>
   </div>
 
-  <div class="ew-event-card" id="event-german">
+  <div class="ew-event-card" id="event-german" data-date="2026-08-03">
     <div class="ew-event-date">Lun., 03 août 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇩🇪 Soirée allemande à Burg Ludwigstein – Die Ludwigsteiner</div>
@@ -147,7 +147,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     </div>
   </div>
 
-  <div class="ew-event-card" id="event-czech">
+  <div class="ew-event-card" id="event-czech" data-date="2026-08-04">
     <div class="ew-event-date">Mar., 04 août 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇨🇿 Soirée tchèque à Burg Ludwigstein</div>
@@ -160,7 +160,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     </div>
   </div>
 
-  <div class="ew-event-card" id="event-italian">
+  <div class="ew-event-card" id="event-italian" data-date="2026-08-05">
     <div class="ew-event-date">Mer., 05 août 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇮🇹 Soirée italienne à Burg Ludwigstein – Centro Culturale Terrazzani</div>
@@ -173,7 +173,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     </div>
   </div>
 
-  <div class="ew-event-card" id="event-french">
+  <div class="ew-event-card" id="event-french" data-date="2026-08-06">
     <div class="ew-event-date">Jeu., 06 août 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇫🇷 Soirée française à Burg Ludwigstein – Le Quadrille Occitan</div>
@@ -186,7 +186,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     </div>
   </div>
 
-  <div class="ew-event-card" id="event-estonian">
+  <div class="ew-event-card" id="event-estonian" data-date="2026-08-07">
     <div class="ew-event-date">Ven., 07 août 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇪🇪 Soirée estonienne à Burg Ludwigstein – Leigarid</div>
@@ -199,7 +199,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" data-date="2026-08-08">
     <div class="ew-event-date">Sam., 08 août 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Grande Eurokirmes à Burg Ludwigstein</div>
@@ -216,7 +216,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
 <div class="ew-program-group ew-program-free">
   <h3 class="ew-program-group-label">Activités gratuites pour les visiteurs</h3>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" data-date="2026-08-02">
     <div class="ew-event-date">Dim., 02 août 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Burgrally &amp; Présentation du programme</div>
@@ -229,7 +229,7 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" data-date-start="2026-08-03" data-date-end="2026-08-07">
     <div class="ew-event-date">Lun.–Ven., 03–07 août 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Activités quotidiennes</div>
@@ -247,3 +247,33 @@ L'objectif de l'Eurowoche, créée en 1953 par Hella Heynmöller, est de réunir
 </div>
 
 </div>
+
+<script>
+document.querySelectorAll('.ew-event-card').forEach(function(card) {
+    var dateStr = card.dataset.date;
+    var startStr = card.dataset.dateStart;
+    var endStr = card.dataset.dateEnd;
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    if (dateStr) {
+        var eventDate = new Date(dateStr);
+        var nextDay = new Date(dateStr);
+        nextDay.setDate(nextDay.getDate() + 1);
+        if (today >= nextDay) {
+            card.classList.add('ew-event-past');
+        } else if (today.getTime() === eventDate.getTime()) {
+            card.classList.add('ew-event-today');
+        }
+    } else if (startStr && endStr) {
+        var start = new Date(startStr);
+        var end = new Date(endStr);
+        var endNext = new Date(endStr);
+        endNext.setDate(endNext.getDate() + 1);
+        if (today >= endNext) {
+            card.classList.add('ew-event-past');
+        } else if (today >= start && today <= end) {
+            card.classList.add('ew-event-today');
+        }
+    }
+});
+</script>

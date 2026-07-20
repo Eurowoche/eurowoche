@@ -108,7 +108,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
 <div class="ew-program-group">
   <h3 class="ew-program-group-label">Public Performances</h3>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" data-date="2026-08-01">
     <div class="ew-event-date">Sat, 01 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Opening Evening in Witzenhausen</div>
@@ -121,7 +121,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" data-date="2026-08-02">
     <div class="ew-event-date">Sun, 02 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Folklore Evening in Bad Sooden-Allendorf</div>
@@ -134,7 +134,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     </div>
   </div>
 
-  <div class="ew-event-card" id="event-german">
+  <div class="ew-event-card" id="event-german" data-date="2026-08-03">
     <div class="ew-event-date">Mon, 03 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇩🇪 German Evening at Burg Ludwigstein – Die Ludwigsteiner</div>
@@ -147,7 +147,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     </div>
   </div>
 
-  <div class="ew-event-card" id="event-czech">
+  <div class="ew-event-card" id="event-czech" data-date="2026-08-04">
     <div class="ew-event-date">Tue, 04 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇨🇿 Czech Evening at Burg Ludwigstein</div>
@@ -160,7 +160,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     </div>
   </div>
 
-  <div class="ew-event-card" id="event-italian">
+  <div class="ew-event-card" id="event-italian" data-date="2026-08-05">
     <div class="ew-event-date">Wed, 05 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇮🇹 Italian Evening at Burg Ludwigstein – Centro Culturale Terrazzani</div>
@@ -173,7 +173,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     </div>
   </div>
 
-  <div class="ew-event-card" id="event-french">
+  <div class="ew-event-card" id="event-french" data-date="2026-08-06">
     <div class="ew-event-date">Thu, 06 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇫🇷 French Evening at Burg Ludwigstein – Le Quadrille Occitan</div>
@@ -186,7 +186,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     </div>
   </div>
 
-  <div class="ew-event-card" id="event-estonian">
+  <div class="ew-event-card" id="event-estonian" data-date="2026-08-07">
     <div class="ew-event-date">Fri, 07 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇪🇪 Estonian Evening at Burg Ludwigstein – Leigarid</div>
@@ -199,7 +199,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" data-date="2026-08-08">
     <div class="ew-event-date">Sat, 08 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Grand Eurokirmes at Burg Ludwigstein</div>
@@ -216,7 +216,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
 <div class="ew-program-group ew-program-free">
   <h3 class="ew-program-group-label">Free Activities for Visitors</h3>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" data-date="2026-08-02">
     <div class="ew-event-date">Sun, 02 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Burgrally &amp; Programme Preview</div>
@@ -229,7 +229,7 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" data-date-start="2026-08-03" data-date-end="2026-08-07">
     <div class="ew-event-date">Mon–Fri, 03–07 August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Daily Activities</div>
@@ -247,3 +247,33 @@ The Eurowoche was founded in 1953 by Hella Heynmöller with the goal of bringing
 </div>
 
 </div>
+
+<script>
+document.querySelectorAll('.ew-event-card').forEach(function(card) {
+    var dateStr = card.dataset.date;
+    var startStr = card.dataset.dateStart;
+    var endStr = card.dataset.dateEnd;
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    if (dateStr) {
+        var eventDate = new Date(dateStr);
+        var nextDay = new Date(dateStr);
+        nextDay.setDate(nextDay.getDate() + 1);
+        if (today >= nextDay) {
+            card.classList.add('ew-event-past');
+        } else if (today.getTime() === eventDate.getTime()) {
+            card.classList.add('ew-event-today');
+        }
+    } else if (startStr && endStr) {
+        var start = new Date(startStr);
+        var end = new Date(endStr);
+        var endNext = new Date(endStr);
+        endNext.setDate(endNext.getDate() + 1);
+        if (today >= endNext) {
+            card.classList.add('ew-event-past');
+        } else if (today >= start && today <= end) {
+            card.classList.add('ew-event-today');
+        }
+    }
+});
+</script>

@@ -107,7 +107,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 <div class="ew-program-group">
   <h3 class="ew-program-group-label">Öffentliche Veranstaltungen</h3>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" data-date="2026-08-01">
     <div class="ew-event-date">Sa., 01. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Eröffnungsabend in Witzenhausen</div>
@@ -120,7 +120,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" data-date="2026-08-02">
     <div class="ew-event-date">So., 02. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Folkloreabend in Bad Sooden-Allendorf</div>
@@ -133,7 +133,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     </div>
   </div>
 
-  <div class="ew-event-card" id="event-german">
+  <div class="ew-event-card" id="event-german" data-date="2026-08-03">
     <div class="ew-event-date">Mo., 03. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇩🇪 Deutscher Abend auf Burg Ludwigstein – Die Ludwigsteiner</div>
@@ -146,7 +146,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     </div>
   </div>
 
-  <div class="ew-event-card" id="event-czech">
+  <div class="ew-event-card" id="event-czech" data-date="2026-08-04">
     <div class="ew-event-date">Di., 04. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇨🇿 Tschechischer Abend auf Burg Ludwigstein</div>
@@ -159,7 +159,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     </div>
   </div>
 
-  <div class="ew-event-card" id="event-italian">
+  <div class="ew-event-card" id="event-italian" data-date="2026-08-05">
     <div class="ew-event-date">Mi., 05. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇮🇹 Italienischer Abend auf Burg Ludwigstein – Centro Culturale Terrazzani</div>
@@ -172,7 +172,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     </div>
   </div>
 
-  <div class="ew-event-card" id="event-french">
+  <div class="ew-event-card" id="event-french" data-date="2026-08-06">
     <div class="ew-event-date">Do., 06. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇫🇷 Französischer Abend auf Burg Ludwigstein – Le Quadrille Occitan</div>
@@ -185,7 +185,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     </div>
   </div>
 
-  <div class="ew-event-card" id="event-estonian">
+  <div class="ew-event-card" id="event-estonian" data-date="2026-08-07">
     <div class="ew-event-date">Fr., 07. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">🇪🇪 Estnischer Abend auf Burg Ludwigstein – Leigarid</div>
@@ -198,7 +198,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" data-date="2026-08-08">
     <div class="ew-event-date">Sa., 08. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Große Eurokirmes auf Burg Ludwigstein</div>
@@ -215,7 +215,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 <div class="ew-program-group ew-program-free">
   <h3 class="ew-program-group-label">Kostenlose Angebote für externe Besucher</h3>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" data-date="2026-08-02">
     <div class="ew-event-date">So., 02. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Burgrally &amp; Programmvorstellung</div>
@@ -228,7 +228,7 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
     </div>
   </div>
 
-  <div class="ew-event-card">
+  <div class="ew-event-card" data-date-start="2026-08-03" data-date-end="2026-08-07">
     <div class="ew-event-date">Mo.–Fr., 03.–07. August 2026</div>
     <div class="ew-event-main">
       <div class="ew-event-name">Tägliche Angebote</div>
@@ -246,3 +246,33 @@ Es ist das Ziel der 1953 von Hella Heynmöller ins Leben gerufenen Eurowoche, ju
 </div>
 
 </div>
+
+<script>
+document.querySelectorAll('.ew-event-card').forEach(function(card) {
+    var dateStr = card.dataset.date;
+    var startStr = card.dataset.dateStart;
+    var endStr = card.dataset.dateEnd;
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    if (dateStr) {
+        var eventDate = new Date(dateStr);
+        var nextDay = new Date(dateStr);
+        nextDay.setDate(nextDay.getDate() + 1);
+        if (today >= nextDay) {
+            card.classList.add('ew-event-past');
+        } else if (today.getTime() === eventDate.getTime()) {
+            card.classList.add('ew-event-today');
+        }
+    } else if (startStr && endStr) {
+        var start = new Date(startStr);
+        var end = new Date(endStr);
+        var endNext = new Date(endStr);
+        endNext.setDate(endNext.getDate() + 1);
+        if (today >= endNext) {
+            card.classList.add('ew-event-past');
+        } else if (today >= start && today <= end) {
+            card.classList.add('ew-event-today');
+        }
+    }
+});
+</script>

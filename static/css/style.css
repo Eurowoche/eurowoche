@@ -2119,6 +2119,20 @@ body.menu-open .leaflet-container {
     border-color: #c5dcc5;
 }
 
+.ew-event-card.ew-event-past {
+    opacity: 0.4;
+    filter: grayscale(60%);
+}
+
+.ew-event-card.ew-event-today {
+    border-left: 3px solid var(--primary);
+    background: #f9f5f0;
+}
+
+.ew-program-free .ew-event-card.ew-event-today {
+    background: #eef5ee;
+}
+
 .ew-event-name {
     font-family: var(--font-heading);
     font-size: 1rem;
