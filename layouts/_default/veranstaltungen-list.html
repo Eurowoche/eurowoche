@@ -9,7 +9,11 @@
                 {{ with .Params.image }}
                 <div class="event-card-image">
                     <img src="{{ . }}" alt="{{ $page.Title }}" loading="lazy">
-                    {{ with $page.Params.ribbon }}<span class="event-card-ribbon">{{ . }}</span>{{ end }}
+                    {{ with $page.Params.ribbon }}<span class="event-card-ribbon"
+                        data-soon="{{ . }}"
+                        data-live="{{ $page.Params.ribbon_live }}"
+                        data-start="{{ $page.Params.date_start }}"
+                        data-end="{{ $page.Params.date_end }}">{{ . }}</span>{{ end }}
                 </div>
                 {{ end }}
                 <div class="event-card-body">
@@ -25,4 +29,20 @@
         </div>
     </div>
 </article>
+<script>
+document.querySelectorAll('.event-card-ribbon').forEach(function(el) {
+    var start = el.dataset.start;
+    var end = el.dataset.end;
+    var live = el.dataset.live;
+    if (!start) return;
+    var now = new Date();
+    var startDate = new Date(start);
+    var endDate = end ? new Date(new Date(end).getTime() + 86400000) : null;
+    if (endDate && now >= endDate) {
+        el.parentElement.removeChild(el);
+    } else if (now >= startDate && live) {
+        el.textContent = live;
+    }
+});
+</script>
 {{ end }}
