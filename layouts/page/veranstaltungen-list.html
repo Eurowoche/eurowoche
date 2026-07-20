@@ -4,11 +4,12 @@
         <h1 class="veranstaltungen-heading">{{ .Title }}</h1>
         <div class="events-grid">
             {{ range sort .Pages "Params.date_start" "asc" }}
+            {{ $page := . }}
             <div class="event-card">
                 {{ with .Params.image }}
                 <div class="event-card-image">
-                    <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
-                    {{ with $.Params.ribbon }}<span class="event-card-ribbon">{{ . }}</span>{{ end }}
+                    <img src="{{ . }}" alt="{{ $page.Title }}" loading="lazy">
+                    {{ with $page.Params.ribbon }}<span class="event-card-ribbon">{{ . }}</span>{{ end }}
                 </div>
                 {{ end }}
                 <div class="event-card-body">
