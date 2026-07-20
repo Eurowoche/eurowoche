@@ -3394,6 +3394,26 @@ section.team-section.bg-cream {
     border-radius: 0;
     aspect-ratio: 1 / 1;
     width: 100%;
+    position: relative;
+}
+
+.event-card-ribbon {
+    position: absolute;
+    top: 22px;
+    right: -30px;
+    width: 120px;
+    background: var(--primary);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 6px 0;
+    transform: rotate(45deg);
+    pointer-events: none;
+    z-index: 2;
 }
 
 .event-card img {

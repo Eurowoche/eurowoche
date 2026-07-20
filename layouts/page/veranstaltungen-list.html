@@ -8,6 +8,7 @@
                 {{ with .Params.image }}
                 <div class="event-card-image">
                     <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+                    {{ with $.Params.ribbon }}<span class="event-card-ribbon">{{ . }}</span>{{ end }}
                 </div>
                 {{ end }}
                 <div class="event-card-body">
