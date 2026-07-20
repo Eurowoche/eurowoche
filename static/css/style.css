@@ -3397,11 +3397,22 @@ section.team-section.bg-cream {
     position: relative;
 }
 
+.event-card-ribbon-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+
 .event-card-ribbon {
     position: absolute;
-    top: 58px;
-    right: -70px;
-    width: 280px;
+    top: 42px;
+    right: -42px;
+    width: 200px;
     background: var(--primary);
     color: #fff;
     font-family: var(--font-body);
@@ -3412,8 +3423,6 @@ section.team-section.bg-cream {
     text-align: center;
     padding: 14px 0;
     transform: rotate(45deg);
-    pointer-events: none;
-    z-index: 2;
 }
 
 .event-card img {
