@@ -726,8 +726,8 @@
             });
             tr.classList.add('archiv-row-highlight');
 
-            // ISO ermitteln → Marker + Panel + Pin
-            var iso = findISOfromEntry(year, gruppeNorm);
+            // ISO ermitteln → direkt aus data-iso (zuverlässig auch bei leeren Gruppennamen)
+            var iso = tr.dataset.iso || findISOfromEntry(year, gruppeNorm);
             if (iso) {
               highlightMarker(iso);
               var country = mapCountries.find(function(c) { return c.iso === iso; });
