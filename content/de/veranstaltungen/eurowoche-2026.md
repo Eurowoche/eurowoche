@@ -5,8 +5,6 @@ date_end: "2026-08-09"
 date_display: "Sa., 01. Aug. 2026 – So., 09. Aug. 2026"
 location: "Burg Ludwigstein, Witzenhausen"
 image: "/img/events/eurowoche-2026.jpg"
-ribbon: "Startet bald"
-ribbon_live: "Diese Woche"
 translationKey: "eurowoche-2026"
 _build:
   list: never
