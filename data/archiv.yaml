@@ -1,24 +1,21 @@
 - nummer: 65
   jahr: 2026
   gruppen:
-  - land: Germany
-    stadt: Witzenhausen
-    tanzgruppe: Die Ludwigsteiner
+  - land: France
+    stadt: Toulouse
+    tanzgruppe: Le Quadrille Occitan
   - land: Czech Republic
     stadt: Chrast
     tanzgruppe: Lidová muzika z Chrástu
   - land: Czech Republic
     stadt: Mělník
-    tanzgruppe: Jarošovci Mělník
-  - land: Italy
-    stadt: Trabia
-    tanzgruppe: Centro Culturale Terrazzani
-  - land: France
-    stadt: Toulouse
-    tanzgruppe: Le Quadrille Occitan
+    tanzgruppe: Jarosovci Mělník
   - land: Estonia
     stadt: Tallinn
     tanzgruppe: Leigarid
+  - land: Germany
+    stadt: Witzenhausen
+    tanzgruppe: Die Ludwigsteiner
 - nummer: 64
   jahr: 2025
   gruppen:
