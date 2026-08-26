@@ -44,8 +44,8 @@
     stadt: Donotia
     tanzgruppe: Gero Axular Dantza Taldea
   - land: USA
-    stadt: Helmhurst
-    tanzgruppe: Irish-Folk Ensemble "Trinity
+    stadt: Chicago
+    tanzgruppe: 'Irish-Folk Ensemble "Trinity"'
   - land: Romania
     stadt: Cluj
     tanzgruppe: Somesul Napoca Ensemble
@@ -60,7 +60,7 @@
     tanzgruppe: Motora
   - land: France
     stadt: Toulouse
-    tanzgruppe: Le Quadrille Occitan/
+    tanzgruppe: Le Quadrille Occitan
   - land: North Macedonia
     stadt: Ohrid
     tanzgruppe: KUD Oteks Folk
@@ -75,19 +75,19 @@
   gruppen:
   - land: Belgium
     stadt: Schoten
-    tanzgruppe: Folklore Ensemble "Gelmel
+    tanzgruppe: 'Folklore Ensemble "Gelmel"'
   - land: Croatia
     stadt: Solin
-    tanzgruppe: Folklore Ensemble KUD "Salona
+    tanzgruppe: 'Folklore Ensemble KUD "Salona"'
   - land: USA
-    stadt: Helmhurst
-    tanzgruppe: Irish-Folk Ensemble "Trinity
+    stadt: Chicago
+    tanzgruppe: 'Irish-Folk Ensemble "Trinity"'
   - land: France
     stadt: Toulouse
-    tanzgruppe: Le Quadrille Occitan" TOULOUSE
+    tanzgruppe: Le Quadrille Occitan
   - land: Germany
     stadt: Witzenhausen
-    tanzgruppe: Folklore-Kooperationsgruppe "Ludwigsteiner" and "Hessische Volkstanzfreunde
+    tanzgruppe: 'Folklore-Kooperationsgruppe "Ludwigsteiner" and "Hessische Volkstanzfreunde"'
 - nummer: 60
   jahr: 2018
   gruppen:
@@ -96,7 +96,7 @@
     tanzgruppe: TLÜ rahvatantsuansamble SOLVEDAJA
   - land: Poland
     stadt: Koscierzyna
-    tanzgruppe: Kaszubskie Nuty" KOSCIERZYNA
+    tanzgruppe: Kaszubskie Nuty
   - land: Belarus
     stadt: Minsk
     tanzgruppe: Folk group VALACHOBNIKI of the Belarusian State University of Culture
@@ -118,10 +118,10 @@
     tanzgruppe: Merzifon Belediyesi Halkoyunlari Toplulugu
   - land: Latvia
     stadt: Sigulda
-    tanzgruppe: Volkstanzensemble JDK "Vizbulite
+    tanzgruppe: 'Volkstanzensemble JDK "Vizbulite"'
   - land: Netherlands
     stadt: Nijmegen
-    tanzgruppe: Volkstanzgruppe "Kansemble
+    tanzgruppe: 'Volkstanzgruppe "Kansemble"'
   - land: Germany
     stadt: Witzenhausen
     tanzgruppe: Die Ludwigsteiner
@@ -130,7 +130,7 @@
   gruppen:
   - land: Georgia
     stadt: Tbilisi
-    tanzgruppe: Folkloreensemble "Marula
+    tanzgruppe: 'Folkloreensemble "Marula"'
   - land: Italy
     stadt: Trabia
     tanzgruppe: Centro Culturale TERRAZZANI
@@ -154,7 +154,7 @@
     tanzgruppe: The Children of Sevlievo
   - land: Germany
     stadt: Schlitz
-    tanzgruppe: Jugendgruppe des "Schlitzerländer Trachten- und Volkstanzkreises
+    tanzgruppe: 'Jugendgruppe des "Schlitzerländer Trachten- und Volkstanzkreises"'
 - nummer: 56
   jahr: 2013
   gruppen:
@@ -196,7 +196,7 @@
     tanzgruppe: Nartebi
   - land: Poland
     stadt: Bielsko Biala
-    tanzgruppe: Folcloristic Dance Ensemble "Bielsko
+    tanzgruppe: 'Folcloristic Dance Ensemble "Bielsko"'
   - land: The Netherlands
     stadt: Nijmegen
     tanzgruppe: Holland Express
@@ -235,7 +235,7 @@
     tanzgruppe: Ex-Vizbulite
   - land: Mexico
     stadt: Puebla, Pue Mexico
-    tanzgruppe: Folkloreensemble "Tsasnà
+    tanzgruppe: 'Folkloreensemble "Tsasnà"'
   - land: Greece
     stadt: Thessaloniki
     tanzgruppe: Cultural Association of Lagadas
@@ -274,7 +274,7 @@
     tanzgruppe: Ex-Vizbulite
   - land: Denmark
     stadt: Kopenhagen
-    tanzgruppe: Dancing Danes" "Dancing Danes"-Video
+    tanzgruppe: Dancing Danes
   - land: Poland
     stadt: Koscierzyna
     tanzgruppe: Kaszubskie Nuty
@@ -286,7 +286,7 @@
   gruppen:
   - land: Russia
     stadt: Perm
-    tanzgruppe: Russian Group Tziganes "Romen
+    tanzgruppe: 'Russian Group Tziganes "Romen"'
   - land: Croatia
     stadt: Split
     tanzgruppe: Kud Jedinstvo
@@ -304,7 +304,7 @@
     tanzgruppe: I Timetos
   - land: Denmark
     stadt: Kopenhagen
-    tanzgruppe: Dancing Danes" "Dancing Danes"-Video
+    tanzgruppe: Dancing Danes
   - land: Romania
     stadt: Lugoj
     tanzgruppe: Lugojana
@@ -439,7 +439,7 @@
     tanzgruppe: Vidroczici
   - land: Spain
     stadt: Burgos
-    tanzgruppe: Asociacion Ballet "Elena Munguia
+    tanzgruppe: 'Asociacion Ballet "Elena Munguia"'
   - land: Greece
     stadt: Alexandria
     tanzgruppe: Musical Dancing Club of Alexandria
@@ -907,7 +907,7 @@
     tanzgruppe: De Langman
   - land: France
     stadt: Bayonne
-    tanzgruppe: Groupe d'Art Basque "Crai Bat
+    tanzgruppe: "Groupe d'Art Basque \"Crai Bat\""
   - land: Yugoslavia
     stadt: Zagreb
     tanzgruppe: Koleda
