@@ -102,6 +102,11 @@
         <div class="event-row">
             <div class="event-image">
                 <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+                {{ $page := . }}{{ with .Params.ribbon }}<span class="event-card-ribbon"
+                    data-soon="{{ . }}"
+                    data-live="{{ $page.Params.ribbon_live }}"
+                    data-start="{{ $page.Params.date_start }}"
+                    data-end="{{ $page.Params.date_end }}">{{ . }}</span>{{ end }}
             </div>
             <div class="event-info">
                 <h3>{{ .Title }}</h3>

@@ -888,6 +888,7 @@ body.menu-open .leaflet-container {
 .event-image {
     flex: 0 0 50%;
     overflow: hidden;
+    position: relative;
 }
 
 .event-image img {
