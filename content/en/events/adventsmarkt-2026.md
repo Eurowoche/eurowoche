@@ -5,6 +5,7 @@ date_end: "2026-12-06"
 date_display: "Sat, Dec 05 – Sun, Dec 06, 2026"
 location: "Burg Ludwigstein, Witzenhausen"
 image: "/img/events/adventsmarkt-2026.jpg"
+ribbon: "Coming Soon"
 translationKey: "adventsmarkt-2026"
 ---
 
