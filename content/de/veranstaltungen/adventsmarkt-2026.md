@@ -11,7 +11,7 @@ Am zweiten Adventswochenende öffnet die Jugendburg Ludwigstein erneut ihre Tore
 
 Zahlreiche Ausstellende präsentieren ihre handgefertigten Produkte, verteilt über die gesamte Burganlage. Ob Bio-Honig, Engelskerzen, handgearbeitete Wollwaren, Töpferkunst, Patchwork-Arbeiten, Hundeleinen und Halsbänder, regionale Schäferprodukte, Pralinen, Marmeladen, Holzschnitzereien, Naturseifen oder kreative Geschenkideen – hier findet sich für jeden Geschmack etwas.
 
-Ein besonderer Höhepunkt ist auch in diesem Jahr die internationale Krippenausstellung. Gezeigt werden Krippenfiguren aus dem Brennofen, also getöpferte große und kleinere Kunstwerke aus mehr als 20 verschiedenen Ländern. Zudem können die Besucher selbst Lebkuchen mit der traditionellen tschechischen Zuckerguss-Technik verzieren.
+Ein besonderer Höhepunkt ist auch in diesem Jahr die internationale Krippenausstellung. Über viele Jahrzehnte haben Mitglieder des Arbeitskreises sich für die Tradition des Krippenbaus interessiert, Reisen in europäische Regionen mit besonderen Krippentraditionen unternommen und selbst Krippen gesammelt. Unter dem Motto „Lieblingskrippen" zeigt die diesjährige Krippenausstellung Exponate von Menschen, die die Krippenausstellung auf der Burg geprägt haben. Zudem können die Besucher selbst Lebkuchen mit der traditionellen tschechischen Zuckerguss-Technik verzieren.
 
 Für Familien bietet der Markt ein abwechslungsreiches Programm: Eine Bastelstube für Kinder, eine Tombola, kulinarische Genüsse von der Bratwurst- und Crêpes-Bude, Reibekuchen und Glühwein, sowie eine Cafeteria mit Kuchen, Kaffee und Softdrinks laden zum Verweilen ein.
 
