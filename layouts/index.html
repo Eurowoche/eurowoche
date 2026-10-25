@@ -97,7 +97,7 @@
     <p class="section-subtitle">{{ i18n "upcoming_subtitle" }}</p>
 
     <div class="events-list">
-        {{ $events := where .Site.RegularPages "Section" "veranstaltungen" }}
+        {{ $events := where .Site.RegularPages "Section" (cond (eq .Lang "en") "events" (cond (eq .Lang "fr") "evenements" "veranstaltungen")) }}
         {{ range sort $events "Params.date_start" }}
         <div class="event-row">
             <div class="event-image">
